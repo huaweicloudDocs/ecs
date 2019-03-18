@@ -7,10 +7,6 @@
         -   [购买P1型云服务器](购买P1型云服务器.md)
         -   [购买P2v型云服务器](购买P2v型云服务器.md)
 
-    -   [预留实例]
-        -   [购买预留实例](购买预留实例.md)
-        -   [修改预留实例](修改预留实例.md)
-
     -   [查看云服务器信息]
         -   [查看创建状态](查看创建状态.md)
         -   [查看失败任务](查看失败任务.md)
@@ -19,7 +15,7 @@
 
     -   [安装驱动和工具包（可选）]
         -   [安装Grid驱动](安装Grid驱动.md)
-        -   [安装NVIDIA GPU驱动和CUDA工具包（推荐使用）](安装NVIDIA-GPU驱动和CUDA工具包（推荐使用）.md)
+        -   [\(推荐使用\)安装NVIDIA GPU驱动和CUDA工具包]((推荐使用)安装NVIDIA-GPU驱动和CUDA工具包.md)
         -   [安装NVIDIA GPU驱动及CUDA工具包](安装NVIDIA-GPU驱动及CUDA工具包.md)
 
     -   [管理操作系统]
@@ -39,7 +35,7 @@
 
 -   [登录弹性云服务器]
     -   [登录Windows弹性云服务器]
-        -   [Windows云服务器登录方式概述](Windows云服务器登录方式概述.md)
+        -   [Windows云服务器登录方式概述]
         -   [Windows云服务器远程登录（VNC方式）](Windows云服务器远程登录（VNC方式）.md)
         -   [MSTSC密码方式登录](MSTSC密码方式登录.md)
 
@@ -58,7 +54,7 @@
         -   [重置Windows弹性云服务器的密码](重置Windows弹性云服务器的密码.md)
         -   [重置Linux弹性云服务器的密码](重置Linux弹性云服务器的密码.md)
 
-    -   [创建密钥对](创建密钥对.md)
+    -   [创建密钥对]
     -   [安装一键式重置密码插件（可选）](安装一键式重置密码插件（可选）.md)
     -   [获取Windows弹性云服务器的密码](获取Windows弹性云服务器的密码.md)
     -   [清除Windows弹性云服务器的密码](清除Windows弹性云服务器的密码.md)
@@ -145,5 +141,6 @@
     -   [弹性云服务器启动缓慢](弹性云服务器启动缓慢.md)
     -   [启动弹性云服务器时卡在“Waiting for cloudResetPwdAgent”](启动弹性云服务器时卡在-Waiting-for-cloudResetPwdAgent.md)
     -   [python升级导致cloud-init不工作](python升级导致cloud-init不工作.md)
+    -   [G系列弹性云服务器GPU驱动故障](G系列弹性云服务器GPU驱动故障.md)
 
 
