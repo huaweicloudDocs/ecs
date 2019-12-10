@@ -6,7 +6,7 @@
 
 ## 接口约束<a name="zh-cn_topic_0057972835_section7965739"></a>
 
--   该API准备废弃，建议直接使用对应的网络服务接口["查询网络"](https://support.huaweicloud.com/api-vpc/zh-cn_topic_0060495801.html)。
+该API准备废弃，建议直接使用对应的网络服务接口["查询网络"](https://support.huaweicloud.com/api-vpc/zh-cn_topic_0060495801.html)。
 
 接口参数为：router:external=True
 
@@ -15,8 +15,6 @@ GET /networks?router:external=True 返回结果中的name字段
 ```
 
 ## URI<a name="zh-cn_topic_0057972835_section885082"></a>
-
-GET /v2/\{project\_id\}/os-floating-ip-pools
 
 GET /v2.1/\{project\_id\}/os-floating-ip-pools
 
@@ -46,100 +44,66 @@ GET /v2.1/\{project\_id\}/os-floating-ip-pools
 
 ## 请求消息<a name="zh-cn_topic_0057972835_section4582792"></a>
 
-**请求参数**
-
-请求参数如[表2](#zh-cn_topic_0057972835_table51488960)所示。
-
-**表 2**  请求参数
-
-<a name="zh-cn_topic_0057972835_table51488960"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0057972835_row34407239"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="zh-cn_topic_0057972670_p57733603"><a name="zh-cn_topic_0057972670_p57733603"></a><a name="zh-cn_topic_0057972670_p57733603"></a>参数</p>
-</th>
-<th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.2"><p id="zh-cn_topic_0057972670_p45910260"><a name="zh-cn_topic_0057972670_p45910260"></a><a name="zh-cn_topic_0057972670_p45910260"></a>参数类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="16.73%" id="mcps1.2.5.1.3"><p id="zh-cn_topic_0057972670_p27743545"><a name="zh-cn_topic_0057972670_p27743545"></a><a name="zh-cn_topic_0057972670_p27743545"></a>是否必选</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.269999999999996%" id="mcps1.2.5.1.4"><p id="zh-cn_topic_0057972670_p32634650"><a name="zh-cn_topic_0057972670_p32634650"></a><a name="zh-cn_topic_0057972670_p32634650"></a>描述</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="zh-cn_topic_0057972835_row51383952"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0057972835_p1350554"><a name="zh-cn_topic_0057972835_p1350554"></a><a name="zh-cn_topic_0057972835_p1350554"></a>tenant_id</p>
-</td>
-<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0057972835_p42286032"><a name="zh-cn_topic_0057972835_p42286032"></a><a name="zh-cn_topic_0057972835_p42286032"></a>String</p>
-</td>
-<td class="cellrowborder" valign="top" width="16.73%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972835_p2616604"><a name="zh-cn_topic_0057972835_p2616604"></a><a name="zh-cn_topic_0057972835_p2616604"></a>是</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.269999999999996%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972835_p10618339"><a name="zh-cn_topic_0057972835_p10618339"></a><a name="zh-cn_topic_0057972835_p10618339"></a>租户ID，在URI中指定。</p>
-<p id="p4231132048"><a name="p4231132048"></a><a name="p4231132048"></a>UUID格式。</p>
-</td>
-</tr>
-</tbody>
-</table>
+无
 
 ## 响应消息<a name="zh-cn_topic_0057972835_section41245128"></a>
 
-**响应参数**
+响应参数如[表2](#zh-cn_topic_0057972835_table54779151)所示。
 
-响应参数如[表3](#zh-cn_topic_0057972835_table54779151)所示。
-
-**表 3**  响应参数
+**表 2**  响应参数
 
 <a name="zh-cn_topic_0057972835_table54779151"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0057972835_row21723514"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p2181159142617"><a name="p2181159142617"></a><a name="p2181159142617"></a>参数</p>
+<table><thead align="left"><tr id="zh-cn_topic_0057972835_row21723514"><th class="cellrowborder" valign="top" width="19.18808119188081%" id="mcps1.2.5.1.1"><p id="p2181159142617"><a name="p2181159142617"></a><a name="p2181159142617"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.2"><p id="p1418119982619"><a name="p1418119982619"></a><a name="p1418119982619"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="17.13828617138286%" id="mcps1.2.5.1.2"><p id="p20648171253016"><a name="p20648171253016"></a><a name="p20648171253016"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="16.919999999999998%" id="mcps1.2.5.1.3"><p id="p018139112615"><a name="p018139112615"></a><a name="p018139112615"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="27.407259274072594%" id="mcps1.2.5.1.3"><p id="p1418119982619"><a name="p1418119982619"></a><a name="p1418119982619"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="33.08%" id="mcps1.2.5.1.4"><p id="p1218116952619"><a name="p1218116952619"></a><a name="p1218116952619"></a>描述</p>
+<th class="cellrowborder" valign="top" width="36.266373362663735%" id="mcps1.2.5.1.4"><p id="p1218116952619"><a name="p1218116952619"></a><a name="p1218116952619"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0057972835_row56262227"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0057972835_p60946511"><a name="zh-cn_topic_0057972835_p60946511"></a><a name="zh-cn_topic_0057972835_p60946511"></a>floating_ip_pools</p>
+<tbody><tr id="zh-cn_topic_0057972835_row56262227"><td class="cellrowborder" valign="top" width="19.18808119188081%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0057972835_p60946511"><a name="zh-cn_topic_0057972835_p60946511"></a><a name="zh-cn_topic_0057972835_p60946511"></a>floating_ip_pools</p>
 </td>
-<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0057972835_p37720384"><a name="zh-cn_topic_0057972835_p37720384"></a><a name="zh-cn_topic_0057972835_p37720384"></a>List</p>
+<td class="cellrowborder" valign="top" width="17.13828617138286%" headers="mcps1.2.5.1.2 "><p id="p264811215307"><a name="p264811215307"></a><a name="p264811215307"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="16.919999999999998%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972835_p35452302"><a name="zh-cn_topic_0057972835_p35452302"></a><a name="zh-cn_topic_0057972835_p35452302"></a>是</p>
+<td class="cellrowborder" valign="top" width="27.407259274072594%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972835_p37720384"><a name="zh-cn_topic_0057972835_p37720384"></a><a name="zh-cn_topic_0057972835_p37720384"></a>Array of objects</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.08%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972835_p53064224"><a name="zh-cn_topic_0057972835_p53064224"></a><a name="zh-cn_topic_0057972835_p53064224"></a>floating_ip_pools对象。</p>
+<td class="cellrowborder" valign="top" width="36.266373362663735%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972835_p53064224"><a name="zh-cn_topic_0057972835_p53064224"></a><a name="zh-cn_topic_0057972835_p53064224"></a>floating_ip_pools对象。</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0057972835_row7815975"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0057972835_p29114202"><a name="zh-cn_topic_0057972835_p29114202"></a><a name="zh-cn_topic_0057972835_p29114202"></a>name</p>
+<tr id="zh-cn_topic_0057972835_row7815975"><td class="cellrowborder" valign="top" width="19.18808119188081%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0057972835_p29114202"><a name="zh-cn_topic_0057972835_p29114202"></a><a name="zh-cn_topic_0057972835_p29114202"></a>name</p>
 </td>
-<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0057972835_p9440199"><a name="zh-cn_topic_0057972835_p9440199"></a><a name="zh-cn_topic_0057972835_p9440199"></a>String</p>
+<td class="cellrowborder" valign="top" width="17.13828617138286%" headers="mcps1.2.5.1.2 "><p id="p764815127301"><a name="p764815127301"></a><a name="p764815127301"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="16.919999999999998%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972835_p26458644"><a name="zh-cn_topic_0057972835_p26458644"></a><a name="zh-cn_topic_0057972835_p26458644"></a>是</p>
+<td class="cellrowborder" valign="top" width="27.407259274072594%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972835_p9440199"><a name="zh-cn_topic_0057972835_p9440199"></a><a name="zh-cn_topic_0057972835_p9440199"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.08%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972835_p62775401"><a name="zh-cn_topic_0057972835_p62775401"></a><a name="zh-cn_topic_0057972835_p62775401"></a>floating ip pool的名字。</p>
+<td class="cellrowborder" valign="top" width="36.266373362663735%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972835_p62775401"><a name="zh-cn_topic_0057972835_p62775401"></a><a name="zh-cn_topic_0057972835_p62775401"></a>floating ip pool的名字。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## 示例<a name="zh-cn_topic_0057972835_section35661838"></a>
+## 请求示例<a name="zh-cn_topic_0057972835_section35661838"></a>
 
--   请求示例
+```
+GET https://{endpoint}/v2.1/e73621affb8f44e1bc01898747ca09d4/os-floating-ip-pools
+```
 
-    ```
-    GET /v2/e73621affb8f44e1bc01898747ca09d4/os-floating-ip-pools
-    GET /v2.1/e73621affb8f44e1bc01898747ca09d4/os-floating-ip-pools
-    ```
+## 响应示例<a name="section96791312115012"></a>
 
--   响应示例
-
-    ```
-    {
-        "floating_ip_pools": [
-            {
-                "name": "pool1"
-            },
-            {
-                "name": "pool2"
-            }
-        ]
-    }
-    ```
-
+```
+{
+    "floating_ip_pools": [
+        {
+            "name": "pool1"
+        },
+        {
+            "name": "pool2"
+        }
+    ]
+}
+```
 
 ## 返回值<a name="zh-cn_topic_0057972835_zh-cn_topic_0020212692_section22960139"></a>
 

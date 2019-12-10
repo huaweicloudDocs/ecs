@@ -1,4 +1,4 @@
-# 查询云服务器网卡信息<a name="ZH-CN_TOPIC_0121978383"></a>
+# 查询云服务器网卡信息<a name="ZH-CN_TOPIC_0020212661"></a>
 
 ## 功能介绍<a name="section36073588"></a>
 
@@ -6,18 +6,18 @@
 
 ## URI<a name="section56226836"></a>
 
-GET /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-interface
+GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-interface
 
 参数说明请参见[表1](#table38523909)。
 
 **表 1**  参数说明
 
 <a name="table38523909"></a>
-<table><thead align="left"><tr id="row15247616"><th class="cellrowborder" valign="top" width="21.12%" id="mcps1.2.4.1.1"><p id="p27097356"><a name="p27097356"></a><a name="p27097356"></a>参数</p>
+<table><thead align="left"><tr id="row15247616"><th class="cellrowborder" valign="top" width="21.12%" id="mcps1.2.4.1.1"><p id="p5187119"><a name="p5187119"></a><a name="p5187119"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="25.06%" id="mcps1.2.4.1.2"><p id="p47402253"><a name="p47402253"></a><a name="p47402253"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="25.06%" id="mcps1.2.4.1.2"><p id="p17503500"><a name="p17503500"></a><a name="p17503500"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="53.82%" id="mcps1.2.4.1.3"><p id="p14377323"><a name="p14377323"></a><a name="p14377323"></a>描述</p>
+<th class="cellrowborder" valign="top" width="53.82%" id="mcps1.2.4.1.3"><p id="p8497414"><a name="p8497414"></a><a name="p8497414"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -33,7 +33,7 @@ GET /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-interface
 </td>
 <td class="cellrowborder" valign="top" width="25.06%" headers="mcps1.2.4.1.2 "><p id="p55279920114812"><a name="p55279920114812"></a><a name="p55279920114812"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="53.82%" headers="mcps1.2.4.1.3 "><p id="p48488537114812"><a name="p48488537114812"></a><a name="p48488537114812"></a>云服务器ID。</p>
+<td class="cellrowborder" valign="top" width="53.82%" headers="mcps1.2.4.1.3 "><p id="p48488537114812"><a name="p48488537114812"></a><a name="p48488537114812"></a>云服务器ID</p>
 </td>
 </tr>
 </tbody>
@@ -50,11 +50,11 @@ GET /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-interface
 **表 2**  响应参数
 
 <a name="table25276401"></a>
-<table><thead align="left"><tr id="row30840926"><th class="cellrowborder" valign="top" width="32.46%" id="mcps1.2.4.1.1"><p id="p21494305"><a name="p21494305"></a><a name="p21494305"></a>参数</p>
+<table><thead align="left"><tr id="row30840926"><th class="cellrowborder" valign="top" width="32.46%" id="mcps1.2.4.1.1"><p id="p137113478283"><a name="p137113478283"></a><a name="p137113478283"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="30.2%" id="mcps1.2.4.1.2"><p id="p673716201611"><a name="p673716201611"></a><a name="p673716201611"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="30.2%" id="mcps1.2.4.1.2"><p id="p748676"><a name="p748676"></a><a name="p748676"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="37.34%" id="mcps1.2.4.1.3"><p id="p28416672"><a name="p28416672"></a><a name="p28416672"></a>描述</p>
+<th class="cellrowborder" valign="top" width="37.34%" id="mcps1.2.4.1.3"><p id="p60642794"><a name="p60642794"></a><a name="p60642794"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -71,11 +71,11 @@ GET /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-interface
 **表 3**  interfaceAttachments字段数据结构说明
 
 <a name="table49805933"></a>
-<table><thead align="left"><tr id="row9026257"><th class="cellrowborder" valign="top" width="25.81741825817418%" id="mcps1.2.4.1.1"><p id="p0434174414615"><a name="p0434174414615"></a><a name="p0434174414615"></a>参数</p>
+<table><thead align="left"><tr id="row9026257"><th class="cellrowborder" valign="top" width="25.81741825817418%" id="mcps1.2.4.1.1"><p id="p0275155662814"><a name="p0275155662814"></a><a name="p0275155662814"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="29.947005299470053%" id="mcps1.2.4.1.2"><p id="p8434144415614"><a name="p8434144415614"></a><a name="p8434144415614"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="29.947005299470053%" id="mcps1.2.4.1.2"><p id="p15275145672813"><a name="p15275145672813"></a><a name="p15275145672813"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="44.235576442355764%" id="mcps1.2.4.1.3"><p id="p143414418610"><a name="p143414418610"></a><a name="p143414418610"></a>描述</p>
+<th class="cellrowborder" valign="top" width="44.235576442355764%" id="mcps1.2.4.1.3"><p id="p182751256102814"><a name="p182751256102814"></a><a name="p182751256102814"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -97,7 +97,7 @@ GET /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-interface
 </td>
 <td class="cellrowborder" valign="top" width="29.947005299470053%" headers="mcps1.2.4.1.2 "><p id="p10966323"><a name="p10966323"></a><a name="p10966323"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="44.235576442355764%" headers="mcps1.2.4.1.3 "><p id="p8495130"><a name="p8495130"></a><a name="p8495130"></a>网卡端口所属网络ID（netword_id）。</p>
+<td class="cellrowborder" valign="top" width="44.235576442355764%" headers="mcps1.2.4.1.3 "><p id="p8495130"><a name="p8495130"></a><a name="p8495130"></a>网卡端口所属网络ID（network_id）。</p>
 </td>
 </tr>
 <tr id="row9347313"><td class="cellrowborder" valign="top" width="25.81741825817418%" headers="mcps1.2.4.1.1 "><p id="p18934887"><a name="p18934887"></a><a name="p18934887"></a>port_id</p>
@@ -120,11 +120,11 @@ GET /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-interface
 **表 4**  fixed\_ips字段数据结构说明
 
 <a name="table19750463"></a>
-<table><thead align="left"><tr id="row60761195"><th class="cellrowborder" valign="top" width="25.937406259374065%" id="mcps1.2.4.1.1"><p id="p2757204717619"><a name="p2757204717619"></a><a name="p2757204717619"></a>参数</p>
+<table><thead align="left"><tr id="row60761195"><th class="cellrowborder" valign="top" width="25.937406259374065%" id="mcps1.2.4.1.1"><p id="p1495811588288"><a name="p1495811588288"></a><a name="p1495811588288"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="29.887011298870114%" id="mcps1.2.4.1.2"><p id="p1775713471961"><a name="p1775713471961"></a><a name="p1775713471961"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="29.887011298870114%" id="mcps1.2.4.1.2"><p id="p5958105810282"><a name="p5958105810282"></a><a name="p5958105810282"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="44.17558244175583%" id="mcps1.2.4.1.3"><p id="p1075710471363"><a name="p1075710471363"></a><a name="p1075710471363"></a>描述</p>
+<th class="cellrowborder" valign="top" width="44.17558244175583%" id="mcps1.2.4.1.3"><p id="p1495816587288"><a name="p1495816587288"></a><a name="p1495816587288"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -145,13 +145,13 @@ GET /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-interface
 </tbody>
 </table>
 
-## 请求示例<a name="section99031450181116"></a>
+## 请求示例<a name="section10941134193415"></a>
 
 ```
-GET https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/os-interface
+GET https://{endpoint}/v2.1/{project_id}/servers/{server_id}/os-interface
 ```
 
-## 响应示例<a name="section1093717612910"></a>
+## 响应示例<a name="section1829831018292"></a>
 
 ```
 {
