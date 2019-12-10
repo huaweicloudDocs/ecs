@@ -6,6 +6,9 @@
 
 FPGA镜像是指用户开发的FPGA逻辑文件，通常也称为AEI（Accelerated Engine Image）。在注册FPGA镜像时，该逻辑文件需要存放在用户的OBS（Object Storage Service）桶中。
 
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>目前仅“华北-北京一、华东-上海二、华南-广州”区域支持，其他区域暂未支持。  
+
 ## URI<a name="section62251638211311"></a>
 
 POST /v1/\{project\_id\}/cloudservers/fpga\_image
@@ -36,11 +39,34 @@ POST /v1/\{project\_id\}/cloudservers/fpga\_image
 
 ## 请求消息<a name="section20272402211311"></a>
 
-**请求参数**
-
-请求参数如[表2](#table36632723211311)所示。
+请求参数如[表2](#table5698154011375)所示。
 
 **表 2**  请求参数
+
+<a name="table5698154011375"></a>
+<table><thead align="left"><tr id="row18698940103719"><th class="cellrowborder" valign="top" width="18.35%" id="mcps1.2.5.1.1"><p id="p1569884093712"><a name="p1569884093712"></a><a name="p1569884093712"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="15.02%" id="mcps1.2.5.1.2"><p id="p9699184073710"><a name="p9699184073710"></a><a name="p9699184073710"></a>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="15.1%" id="mcps1.2.5.1.3"><p id="p1769974053715"><a name="p1769974053715"></a><a name="p1769974053715"></a>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="51.53%" id="mcps1.2.5.1.4"><p id="p469974003711"><a name="p469974003711"></a><a name="p469974003711"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row769974019371"><td class="cellrowborder" valign="top" width="18.35%" headers="mcps1.2.5.1.1 "><p id="p1378615433718"><a name="p1378615433718"></a><a name="p1378615433718"></a>fpga_image</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.02%" headers="mcps1.2.5.1.2 "><p id="p769911401374"><a name="p769911401374"></a><a name="p769911401374"></a>Object</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.1%" headers="mcps1.2.5.1.3 "><p id="p18699104011370"><a name="p18699104011370"></a><a name="p18699104011370"></a>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="51.53%" headers="mcps1.2.5.1.4 "><p id="p19699134073719"><a name="p19699134073719"></a><a name="p19699134073719"></a>FPGA镜像信息详情。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 3**  fpga\_image字段结构说明
 
 <a name="table36632723211311"></a>
 <table><thead align="left"><tr id="row6485675211311"><th class="cellrowborder" valign="top" width="18.42%" id="mcps1.2.5.1.1"><p id="p22916806211311"><a name="p22916806211311"></a><a name="p22916806211311"></a>参数</p>
@@ -79,7 +105,7 @@ POST /v1/\{project\_id\}/cloudservers/fpga\_image
 </tr>
 <tr id="row49437453114111"><td class="cellrowborder" valign="top" width="18.42%" headers="mcps1.2.5.1.1 "><p id="p32309183114120"><a name="p32309183114120"></a><a name="p32309183114120"></a>metadata</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.85%" headers="mcps1.2.5.1.2 "><p id="p45454409114125"><a name="p45454409114125"></a><a name="p45454409114125"></a>Dict</p>
+<td class="cellrowborder" valign="top" width="14.85%" headers="mcps1.2.5.1.2 "><p id="p45454409114125"><a name="p45454409114125"></a><a name="p45454409114125"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="15.409999999999998%" headers="mcps1.2.5.1.3 "><p id="p36703951114111"><a name="p36703951114111"></a><a name="p36703951114111"></a>是</p>
 </td>
@@ -101,11 +127,30 @@ POST /v1/\{project\_id\}/cloudservers/fpga\_image
 
 ## 响应消息<a name="section55994659211311"></a>
 
-**响应参数**
+响应参数如[表4](#table551653634018)所示。
 
-响应参数如[表3](#table8648200211311)所示。
+**表 4**  响应参数
 
-**表 3**  响应参数
+<a name="table551653634018"></a>
+<table><thead align="left"><tr id="row17516036104012"><th class="cellrowborder" valign="top" width="23.792379237923793%" id="mcps1.2.4.1.1"><p id="p75161336124015"><a name="p75161336124015"></a><a name="p75161336124015"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.583058305830583%" id="mcps1.2.4.1.2"><p id="p14517136124013"><a name="p14517136124013"></a><a name="p14517136124013"></a>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="45.62456245624562%" id="mcps1.2.4.1.3"><p id="p751711364402"><a name="p751711364402"></a><a name="p751711364402"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1551763664016"><td class="cellrowborder" valign="top" width="23.792379237923793%" headers="mcps1.2.4.1.1 "><p id="p8517103634019"><a name="p8517103634019"></a><a name="p8517103634019"></a>fpga_image</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.583058305830583%" headers="mcps1.2.4.1.2 "><p id="p6517173604019"><a name="p6517173604019"></a><a name="p6517173604019"></a>Object</p>
+</td>
+<td class="cellrowborder" valign="top" width="45.62456245624562%" headers="mcps1.2.4.1.3 "><p id="p1451793612400"><a name="p1451793612400"></a><a name="p1451793612400"></a>FPGA镜像信息详情。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 5**  fpga\_image字段结构说明
 
 <a name="table8648200211311"></a>
 <table><thead align="left"><tr id="row47349056211311"><th class="cellrowborder" valign="top" width="23.87%" id="mcps1.2.4.1.1"><p id="p15806308"><a name="p15806308"></a><a name="p15806308"></a>参数</p>
@@ -127,41 +172,43 @@ POST /v1/\{project\_id\}/cloudservers/fpga\_image
 </td>
 <td class="cellrowborder" valign="top" width="30.64%" headers="mcps1.2.4.1.2 "><p id="p64423181211311"><a name="p64423181211311"></a><a name="p64423181211311"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="45.49%" headers="mcps1.2.4.1.3 "><p id="p63235550211311"><a name="p63235550211311"></a><a name="p63235550211311"></a>FPGA镜像的保存状态。</p>
+<td class="cellrowborder" valign="top" width="45.49%" headers="mcps1.2.4.1.3 "><p id="p63235550211311"><a name="p63235550211311"></a><a name="p63235550211311"></a>FPGA镜像状态。取值如下：</p>
+<a name="ul10437195973916"></a><a name="ul10437195973916"></a><ul id="ul10437195973916"><li>saving：表示FPGA镜像正在上传文件到后端存储。</li><li>deleting：表示FPGA镜像正在删除中。</li><li>error：表示FPGA镜像创建失败。</li><li>active：表示FPGA镜像可以正常使用。</li></ul>
 </td>
 </tr>
 </tbody>
 </table>
 
-## 示例<a name="section11362753211311"></a>
+## 请求示例<a name="section11362753211311"></a>
 
--   请求示例
+```
+POST https://{endpoint}/v1/{project_id}/cloudservers/fpga_image
+```
 
-    ```
-    { 
-      "fpga_image": { 
-        "location": "obs-fpga:fpga.bin", 
-        "name": "fpga-image-test", 
-        "description": "fpga description", 
-        "metadata": { 
-          "shell_type": "OCL", 
-          "shell_version": "1.0" 
-        } 
-      } 
-    }
-    ```
+```
+{ 
+  "fpga_image": { 
+    "location": "obs-fpga:fpga.bin", 
+    "name": "fpga-image-test", 
+    "description": "fpga description", 
+    "metadata": { 
+      "shell_type": "OCL", 
+      "shell_version": "1.0" 
+    } 
+  } 
+}
+```
 
--   响应示例
+## 响应示例<a name="section7937164492610"></a>
 
-    ```
-    {
-      "fpga_image": {
-        "status": "saving",
-        "id": "4010a32c5c62bad9015c62dc2290002b"
-      }
-    }
-    ```
-
+```
+{
+  "fpga_image": {
+    "status": "saving",
+    "id": "4010a32c5c62bad9015c62dc2290002b"
+  }
+}
+```
 
 ## 返回值<a name="section3477250491225"></a>
 

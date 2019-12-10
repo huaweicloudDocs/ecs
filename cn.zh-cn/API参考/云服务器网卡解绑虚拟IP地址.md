@@ -43,8 +43,6 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 
 ## 请求消息<a name="section63292653"></a>
 
-**请求参数**
-
 请求参数如[表2](#table21989419)所示。
 
 **表 2**  请求参数
@@ -64,9 +62,9 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="14.471447144714473%" headers="mcps1.2.5.1.2 "><p id="p21118492"><a name="p21118492"></a><a name="p21118492"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="24.62246224622462%" headers="mcps1.2.5.1.3 "><p id="p32876269"><a name="p32876269"></a><a name="p32876269"></a>字典数据结构</p>
+<td class="cellrowborder" valign="top" width="24.62246224622462%" headers="mcps1.2.5.1.3 "><p id="p32876269"><a name="p32876269"></a><a name="p32876269"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.713571357135706%" headers="mcps1.2.5.1.4 "><p id="p8936292"><a name="p8936292"></a><a name="p8936292"></a>需要配置虚拟IP的网卡参数列表。更多信息请参见<a href="#table44975500">表3</a>。</p>
+<td class="cellrowborder" valign="top" width="35.713571357135706%" headers="mcps1.2.5.1.4 "><p id="p8936292"><a name="p8936292"></a><a name="p8936292"></a>需要解绑虚拟IP的网卡参数列表。更多信息请参见<a href="#table44975500">表3</a>。</p>
 </td>
 </tr>
 </tbody>
@@ -91,7 +89,7 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="26.69%" headers="mcps1.2.5.1.3 "><p id="p50225666204513"><a name="p50225666204513"></a><a name="p50225666204513"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40.22%" headers="mcps1.2.5.1.4 "><p id="p5211081204513"><a name="p5211081204513"></a><a name="p5211081204513"></a>网卡的子网ID。</p>
+<td class="cellrowborder" valign="top" width="40.22%" headers="mcps1.2.5.1.4 "><p id="p52170790174229"><a name="p52170790174229"></a><a name="p52170790174229"></a>云服务器添加网卡的信息。</p>
 <p id="p60897809205048"><a name="p60897809205048"></a><a name="p60897809205048"></a>约束：解绑虚拟IP时，subnet_id为空字符串</p>
 </td>
 </tr>
@@ -119,8 +117,6 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 
 ## 响应消息<a name="section32762966"></a>
 
-**响应参数**
-
 响应参数如[表4](#table54154414204821)所示。
 
 **表 4**  响应参数
@@ -144,28 +140,29 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 </tbody>
 </table>
 
-## 示例<a name="section157005917910"></a>
+## 请求示例<a name="section157005917910"></a>
 
--   请求样例
+```
+PUT https://{endpoint}/v1/{project_id}/cloudservers/nics/{nic_id}
+```
 
-    ```
-    {
-        "nic": { 
-               "subnet_id": "",
-               "ip_address": "",
-               "reverse_binding": false
-        }
+```
+{
+    "nic": { 
+           "subnet_id": "",
+           "ip_address": "",
+           "reverse_binding": false
     }
-    ```
+}
+```
 
--   响应样例
+## 响应示例<a name="section3608142813812"></a>
 
-    ```
-    {
-       "port_id": "d32019d3-bc6e-4319-9c1d-6722fc136a23"
-    }
-    ```
-
+```
+{
+   "port_id": "d32019d3-bc6e-4319-9c1d-6722fc136a23"
+}
+```
 
 ## 返回值<a name="section26431238"></a>
 

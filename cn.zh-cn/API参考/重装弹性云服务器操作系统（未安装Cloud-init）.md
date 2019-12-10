@@ -50,8 +50,6 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 
 ## 请求消息<a name="section5126234"></a>
 
-**请求参数**
-
 请求参数如[表2](#table2840889)所示。
 
 **表 2**  请求参数
@@ -71,7 +69,7 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 </td>
 <td class="cellrowborder" valign="top" width="13.720000000000002%" headers="mcps1.2.5.1.2 "><p id="p49770771"><a name="p49770771"></a><a name="p49770771"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="21.620000000000005%" headers="mcps1.2.5.1.3 "><p id="p4900679"><a name="p4900679"></a><a name="p4900679"></a>Dict</p>
+<td class="cellrowborder" valign="top" width="21.620000000000005%" headers="mcps1.2.5.1.3 "><p id="p4900679"><a name="p4900679"></a><a name="p4900679"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="42.86000000000001%" headers="mcps1.2.5.1.4 "><p id="p61410719"><a name="p61410719"></a><a name="p61410719"></a>重装弹性云服务器。</p>
 </td>
@@ -101,7 +99,7 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16847167112050"><a name="p16847167112050"></a><a name="p16847167112050"></a>云服务器管理员帐户的初始登录密码。</p>
 <p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员帐户的用户名为Administrator。</p>
 <p id="p11576631102714"><a name="p11576631102714"></a><a name="p11576631102714"></a>建议密码复杂度如下：</p>
-<a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。</li></ul>
+<a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?~#*）中的三种。</li></ul>
 <div class="note" id="note65349643112129"><a name="note65349643112129"></a><a name="note65349643112129"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul8134516175112"></a><a name="ul8134516175112"></a><ul id="ul8134516175112"><li>对于Windows弹性云服务器，密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>adminpass和keyname不能同时为空。</li></ul>
 </div></div>
 </td>
@@ -124,42 +122,6 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。</p>
 </td>
 </tr>
-<tr id="row6144862102847"><td class="cellrowborder" valign="top" width="21.62216221622162%" headers="mcps1.2.5.1.1 "><p id="p27971812102847"><a name="p27971812102847"></a><a name="p27971812102847"></a>metadata</p>
-</td>
-<td class="cellrowborder" valign="top" width="13.72137213721372%" headers="mcps1.2.5.1.2 "><p id="p51124270102847"><a name="p51124270102847"></a><a name="p51124270102847"></a>否</p>
-</td>
-<td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p47425188102847"><a name="p47425188102847"></a><a name="p47425188102847"></a><em id="i26084682112857"><a name="i26084682112857"></a><a name="i26084682112857"></a>字典数据结构</em></p>
-</td>
-<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16235056102847"><a name="p16235056102847"></a><a name="p16235056102847"></a>重装云服务器的元数据。</p>
-<p id="p3830913711291"><a name="p3830913711291"></a><a name="p3830913711291"></a>更多信息，请参见<a href="#table9120223">表4</a>。</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-**表 4**  metadata字段数据结构说明
-
-<a name="table9120223"></a>
-<table><thead align="left"><tr id="row45607220"><th class="cellrowborder" valign="top" width="21.62%" id="mcps1.2.5.1.1"><p id="p281394610369"><a name="p281394610369"></a><a name="p281394610369"></a>参数</p>
-</th>
-<th class="cellrowborder" valign="top" width="13.719999999999999%" id="mcps1.2.5.1.2"><p id="p188291346183618"><a name="p188291346183618"></a><a name="p188291346183618"></a>是否必选</p>
-</th>
-<th class="cellrowborder" valign="top" width="21.42%" id="mcps1.2.5.1.3"><p id="p682911463367"><a name="p682911463367"></a><a name="p682911463367"></a>参数类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="43.24%" id="mcps1.2.5.1.4"><p id="p98291846203618"><a name="p98291846203618"></a><a name="p98291846203618"></a>描述</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row11285618104313"><td class="cellrowborder" valign="top" width="21.62%" headers="mcps1.2.5.1.1 "><p id="p1737951110318"><a name="p1737951110318"></a><a name="p1737951110318"></a>user_data</p>
-</td>
-<td class="cellrowborder" valign="top" width="13.719999999999999%" headers="mcps1.2.5.1.2 "><p id="p39934810104313"><a name="p39934810104313"></a><a name="p39934810104313"></a>否</p>
-</td>
-<td class="cellrowborder" valign="top" width="21.42%" headers="mcps1.2.5.1.3 "><p id="p13494158104313"><a name="p13494158104313"></a><a name="p13494158104313"></a>String</p>
-</td>
-<td class="cellrowborder" valign="top" width="43.24%" headers="mcps1.2.5.1.4 "><p id="p6228133220240"><a name="p6228133220240"></a><a name="p6228133220240"></a>云服务器管理员帐户的初始登录密码。</p>
-<p id="p2175474720240"><a name="p2175474720240"></a><a name="p2175474720240"></a>Linux管理员帐户为root，密码需要加盐加密后传入。</p>
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -167,22 +129,24 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 
 请参考[响应（任务类）](响应（任务类）.md)。
 
-## 示例<a name="section15863105410364"></a>
+## 请求示例<a name="section15863105410364"></a>
 
--   请求样例
+```
+POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/reinstallos
+```
 
-    ```
-    {
-        "os-reinstall": {
-            "keyname": "KeyPair-350b", 
-            "userid": "7e25b1da389f4697a79df3a0e5bd494e", 
-            "metadata": {
-                  "BYOL": "false"
-            }
-        }
+```
+{
+    "os-reinstall": {
+        "keyname": "KeyPair-350b", 
+        "userid": "7e25b1da389f4697a79df3a0e5bd494e"
     }
-    ```
+}
+```
 
+## 响应示例<a name="section1760151015465"></a>
+
+无
 
 ## 返回值<a name="section27037160"></a>
 

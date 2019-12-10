@@ -7,7 +7,10 @@
 该接口用于给云服务器网卡配置虚拟IP地址：
 
 -   当指定的IP地址是一个不存在的虚拟IP地址时，系统会创建该虚拟IP，并绑定至对应网卡。
--   当指定的IP地址是一个已经创建好的虚拟IP时，系统会将指定的网卡和虚拟IP绑定。
+-   当指定的IP地址是一个已经创建好的私有IP时，系统会将指定的网卡和虚拟IP绑定。如果该IP的device\_owner为空，则仅支持VPC内二三层通信；如果该IP的device\_owner为neutron:VIP\_PORT，则支持VPC内二三层通信、VPC之间对等连接访问，以及弹性公网IP、VPN、云专线等Internet接入。
+
+    了解更多请参考[虚拟IP简介](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0097595314.html)。
+
 
 ## URI<a name="section29402138"></a>
 
@@ -46,8 +49,6 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 
 ## 请求消息<a name="section63292653"></a>
 
-**请求参数**
-
 请求参数如[表2](#table21989419)所示。
 
 **表 2**  请求参数
@@ -67,7 +68,7 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="14.099999999999998%" headers="mcps1.2.5.1.2 "><p id="p21118492"><a name="p21118492"></a><a name="p21118492"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.93%" headers="mcps1.2.5.1.3 "><p id="p32876269"><a name="p32876269"></a><a name="p32876269"></a>字典数据结构</p>
+<td class="cellrowborder" valign="top" width="22.93%" headers="mcps1.2.5.1.3 "><p id="p32876269"><a name="p32876269"></a><a name="p32876269"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.980000000000004%" headers="mcps1.2.5.1.4 "><p id="p8936292"><a name="p8936292"></a><a name="p8936292"></a>需要配置私有IP的网卡参数列表。更多信息请参见<a href="#table44975500">表3</a>。</p>
 </td>
@@ -94,7 +95,8 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="22.93%" headers="mcps1.2.5.1.3 "><p id="p50225666204513"><a name="p50225666204513"></a><a name="p50225666204513"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.980000000000004%" headers="mcps1.2.5.1.4 "><p id="p5211081204513"><a name="p5211081204513"></a><a name="p5211081204513"></a>网卡的子网ID。</p>
+<td class="cellrowborder" valign="top" width="43.980000000000004%" headers="mcps1.2.5.1.4 "><p id="p52170790174229"><a name="p52170790174229"></a><a name="p52170790174229"></a>云服务器添加网卡的信息。</p>
+<p id="p43287089174217"><a name="p43287089174217"></a><a name="p43287089174217"></a>需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。</p>
 </td>
 </tr>
 <tr id="row65287294"><td class="cellrowborder" valign="top" width="18.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p63725211204513"><a name="p63725211204513"></a><a name="p63725211204513"></a>ip_address</p>
@@ -115,22 +117,10 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 <td class="cellrowborder" valign="top" width="43.980000000000004%" headers="mcps1.2.5.1.4 "><p id="p63072380204513"><a name="p63072380204513"></a><a name="p63072380204513"></a>虚拟IP的allowed_address_pairs属性是否添加网卡的IP/Mac对。</p>
 </td>
 </tr>
-<tr id="row8971572204532"><td class="cellrowborder" valign="top" width="18.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p61369336204542"><a name="p61369336204542"></a><a name="p61369336204542"></a>device_owner</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.099999999999998%" headers="mcps1.2.5.1.2 "><p id="p43905807204542"><a name="p43905807204542"></a><a name="p43905807204542"></a>否</p>
-</td>
-<td class="cellrowborder" valign="top" width="22.93%" headers="mcps1.2.5.1.3 "><p id="p13137450204542"><a name="p13137450204542"></a><a name="p13137450204542"></a>String</p>
-</td>
-<td class="cellrowborder" valign="top" width="43.980000000000004%" headers="mcps1.2.5.1.4 "><p id="p6698825204542"><a name="p6698825204542"></a><a name="p6698825204542"></a>设备所属（DHCP/Router/ lb/Nova）。</p>
-<p id="p32770490204542"><a name="p32770490204542"></a><a name="p32770490204542"></a>约束：不支持设置和更新，由系统自动维护</p>
-</td>
-</tr>
 </tbody>
 </table>
 
 ## 响应消息<a name="section32762966"></a>
-
-**响应参数**
 
 响应参数如[表4](#table54154414204821)所示。
 
@@ -155,28 +145,29 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 </tbody>
 </table>
 
-## 示例<a name="section134013181077"></a>
+## 请求示例<a name="section134013181077"></a>
 
--   请求样例
+```
+PUT https://{endpoint}/v1/{project_id}/cloudservers/nics/{nic_id}
+```
 
-    ```
-    {
-        "nic": { 
-               "subnet_id": "d32019d3-bc6e-4319-9c1d-6722fc136a23",
-               "ip_address": "192.168.0.7",
-               "reverse_binding": true
-        }
+```
+{
+    "nic": { 
+           "subnet_id": "d32019d3-bc6e-4319-9c1d-6722fc136a23",
+           "ip_address": "192.168.0.7",
+           "reverse_binding": true
     }
-    ```
+}
+```
 
--   响应样例
+## 响应示例<a name="section83154521272"></a>
 
-    ```
-    {
-       "port_id": "d32019d3-bc6e-4319-9c1d-6722fc136a23"
-    }
-    ```
-
+```
+{
+   "port_id": "d32019d3-bc6e-4319-9c1d-6722fc136a23"
+}
+```
 
 ## 返回值<a name="section26431238"></a>
 
