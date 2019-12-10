@@ -49,23 +49,23 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 **表 2**  请求参数
 
 <a name="table2421133916364"></a>
-<table><thead align="left"><tr id="row15425153973610"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p1542663953616"><a name="p1542663953616"></a><a name="p1542663953616"></a>参数</p>
+<table><thead align="left"><tr id="row15425153973610"><th class="cellrowborder" valign="top" width="18.27817218278172%" id="mcps1.2.5.1.1"><p id="p1542663953616"><a name="p1542663953616"></a><a name="p1542663953616"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="16.35%" id="mcps1.2.5.1.2"><p id="p11427173918366"><a name="p11427173918366"></a><a name="p11427173918366"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="16.268373162683734%" id="mcps1.2.5.1.2"><p id="p16512193593516"><a name="p16512193593516"></a><a name="p16512193593516"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="12.22%" id="mcps1.2.5.1.3"><p id="p1042812399364"><a name="p1042812399364"></a><a name="p1042812399364"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="17.04829517048295%" id="mcps1.2.5.1.3"><p id="p11427173918366"><a name="p11427173918366"></a><a name="p11427173918366"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="46.43%" id="mcps1.2.5.1.4"><p id="p1842973903611"><a name="p1842973903611"></a><a name="p1842973903611"></a>描述</p>
+<th class="cellrowborder" valign="top" width="48.40515948405159%" id="mcps1.2.5.1.4"><p id="p1842973903611"><a name="p1842973903611"></a><a name="p1842973903611"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row16430153914363"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p498319273719"><a name="p498319273719"></a><a name="p498319273719"></a>remote_console</p>
+<tbody><tr id="row16430153914363"><td class="cellrowborder" valign="top" width="18.27817218278172%" headers="mcps1.2.5.1.1 "><p id="p498319273719"><a name="p498319273719"></a><a name="p498319273719"></a>remote_console</p>
 </td>
-<td class="cellrowborder" valign="top" width="16.35%" headers="mcps1.2.5.1.2 "><p id="p898215212374"><a name="p898215212374"></a><a name="p898215212374"></a>Dic</p>
+<td class="cellrowborder" valign="top" width="16.268373162683734%" headers="mcps1.2.5.1.2 "><p id="p105121035103517"><a name="p105121035103517"></a><a name="p105121035103517"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="12.22%" headers="mcps1.2.5.1.3 "><p id="p109821213717"><a name="p109821213717"></a><a name="p109821213717"></a>是</p>
+<td class="cellrowborder" valign="top" width="17.04829517048295%" headers="mcps1.2.5.1.3 "><p id="p898215212374"><a name="p898215212374"></a><a name="p898215212374"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="46.43%" headers="mcps1.2.5.1.4 "><p id="p9978132133714"><a name="p9978132133714"></a><a name="p9978132133714"></a>弹性云服务器获取VNC远程登录地址。</p>
+<td class="cellrowborder" valign="top" width="48.40515948405159%" headers="mcps1.2.5.1.4 "><p id="p9978132133714"><a name="p9978132133714"></a><a name="p9978132133714"></a>弹性云服务器获取VNC远程登录地址。</p>
 </td>
 </tr>
 </tbody>
@@ -74,40 +74,38 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 **表 3**  type参数信息
 
 <a name="table19959184318164"></a>
-<table><thead align="left"><tr id="row129653435167"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p1296704318169"><a name="p1296704318169"></a><a name="p1296704318169"></a>参数</p>
+<table><thead align="left"><tr id="row129653435167"><th class="cellrowborder" valign="top" width="18.17818218178182%" id="mcps1.2.5.1.1"><p id="p1296704318169"><a name="p1296704318169"></a><a name="p1296704318169"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="16.35%" id="mcps1.2.5.1.2"><p id="p109701443181618"><a name="p109701443181618"></a><a name="p109701443181618"></a>类型</p>
+<th class="cellrowborder" valign="top" width="16.368363163683632%" id="mcps1.2.5.1.2"><p id="p1149238163514"><a name="p1149238163514"></a><a name="p1149238163514"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="12.22%" id="mcps1.2.5.1.3"><p id="p39731434169"><a name="p39731434169"></a><a name="p39731434169"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="17.04829517048295%" id="mcps1.2.5.1.3"><p id="p109701443181618"><a name="p109701443181618"></a><a name="p109701443181618"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="46.43%" id="mcps1.2.5.1.4"><p id="p597624311615"><a name="p597624311615"></a><a name="p597624311615"></a>描述</p>
+<th class="cellrowborder" valign="top" width="48.40515948405159%" id="mcps1.2.5.1.4"><p id="p597624311615"><a name="p597624311615"></a><a name="p597624311615"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row39781443181610"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p10980144310164"><a name="p10980144310164"></a><a name="p10980144310164"></a>type</p>
+<tbody><tr id="row39781443181610"><td class="cellrowborder" valign="top" width="18.17818218178182%" headers="mcps1.2.5.1.1 "><p id="p10980144310164"><a name="p10980144310164"></a><a name="p10980144310164"></a>type</p>
 </td>
-<td class="cellrowborder" valign="top" width="16.35%" headers="mcps1.2.5.1.2 "><p id="p189829437166"><a name="p189829437166"></a><a name="p189829437166"></a>String</p>
+<td class="cellrowborder" valign="top" width="16.368363163683632%" headers="mcps1.2.5.1.2 "><p id="p6149203820355"><a name="p6149203820355"></a><a name="p6149203820355"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="12.22%" headers="mcps1.2.5.1.3 "><p id="p10984114311166"><a name="p10984114311166"></a><a name="p10984114311166"></a>是</p>
+<td class="cellrowborder" valign="top" width="17.04829517048295%" headers="mcps1.2.5.1.3 "><p id="p189829437166"><a name="p189829437166"></a><a name="p189829437166"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="46.43%" headers="mcps1.2.5.1.4 "><p id="p1498612438166"><a name="p1498612438166"></a><a name="p1498612438166"></a>远程登录的类型，请将type配置为“novnc”。</p>
+<td class="cellrowborder" valign="top" width="48.40515948405159%" headers="mcps1.2.5.1.4 "><p id="p1498612438166"><a name="p1498612438166"></a><a name="p1498612438166"></a>远程登录的类型，请将type配置为“novnc”。</p>
 </td>
 </tr>
-<tr id="row11987144391610"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p2098904311617"><a name="p2098904311617"></a><a name="p2098904311617"></a>protocol</p>
+<tr id="row11987144391610"><td class="cellrowborder" valign="top" width="18.17818218178182%" headers="mcps1.2.5.1.1 "><p id="p2098904311617"><a name="p2098904311617"></a><a name="p2098904311617"></a>protocol</p>
 </td>
-<td class="cellrowborder" valign="top" width="16.35%" headers="mcps1.2.5.1.2 "><p id="p599184312166"><a name="p599184312166"></a><a name="p599184312166"></a>String</p>
+<td class="cellrowborder" valign="top" width="16.368363163683632%" headers="mcps1.2.5.1.2 "><p id="p614923863516"><a name="p614923863516"></a><a name="p614923863516"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="12.22%" headers="mcps1.2.5.1.3 "><p id="p79941343191613"><a name="p79941343191613"></a><a name="p79941343191613"></a>是</p>
+<td class="cellrowborder" valign="top" width="17.04829517048295%" headers="mcps1.2.5.1.3 "><p id="p599184312166"><a name="p599184312166"></a><a name="p599184312166"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="46.43%" headers="mcps1.2.5.1.4 "><p id="p599510433169"><a name="p599510433169"></a><a name="p599510433169"></a>远程登录协议，请将protocol配置为“vnc”。</p>
+<td class="cellrowborder" valign="top" width="48.40515948405159%" headers="mcps1.2.5.1.4 "><p id="p599510433169"><a name="p599510433169"></a><a name="p599510433169"></a>远程登录协议，请将protocol配置为“vnc”。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
 ## 响应消息<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section41457614"></a>
-
-**响应参数**
 
 响应参数如[表4](#table8420447171011)所示。
 
@@ -116,7 +114,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 <a name="table8420447171011"></a>
 <table><thead align="left"><tr id="row19425134710106"><th class="cellrowborder" valign="top" width="28.48%" id="mcps1.2.4.1.1"><p id="p1542644714106"><a name="p1542644714106"></a><a name="p1542644714106"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="18.63%" id="mcps1.2.4.1.2"><p id="p2426104761014"><a name="p2426104761014"></a><a name="p2426104761014"></a>类型</p>
+<th class="cellrowborder" valign="top" width="18.63%" id="mcps1.2.4.1.2"><p id="p2426104761014"><a name="p2426104761014"></a><a name="p2426104761014"></a>参数类型</p>
 </th>
 <th class="cellrowborder" valign="top" width="52.89%" id="mcps1.2.4.1.3"><p id="p204289475101"><a name="p204289475101"></a><a name="p204289475101"></a>描述</p>
 </th>
@@ -124,7 +122,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 </thead>
 <tbody><tr id="row20429447201017"><td class="cellrowborder" valign="top" width="28.48%" headers="mcps1.2.4.1.1 "><p id="p743019477102"><a name="p743019477102"></a><a name="p743019477102"></a>remote_console</p>
 </td>
-<td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p343116478104"><a name="p343116478104"></a><a name="p343116478104"></a>Dict</p>
+<td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p343116478104"><a name="p343116478104"></a><a name="p343116478104"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p44331647131017"><a name="p44331647131017"></a><a name="p44331647131017"></a>弹性云服务器获取远程登录地址。</p>
 </td>
@@ -137,7 +135,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 <a name="table12434194718104"></a>
 <table><thead align="left"><tr id="row11437194781018"><th class="cellrowborder" valign="top" width="28.48%" id="mcps1.2.4.1.1"><p id="p10438104701020"><a name="p10438104701020"></a><a name="p10438104701020"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="18.63%" id="mcps1.2.4.1.2"><p id="p644124714100"><a name="p644124714100"></a><a name="p644124714100"></a>类型</p>
+<th class="cellrowborder" valign="top" width="18.63%" id="mcps1.2.4.1.2"><p id="p644124714100"><a name="p644124714100"></a><a name="p644124714100"></a>参数类型</p>
 </th>
 <th class="cellrowborder" valign="top" width="52.89%" id="mcps1.2.4.1.3"><p id="p1044224771012"><a name="p1044224771012"></a><a name="p1044224771012"></a>描述</p>
 </th>
@@ -168,28 +166,32 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 </tbody>
 </table>
 
-## 示例<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section37574207"></a>
+## 请求示例<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section37574207"></a>
 
--   请求示例
+```
+POST https://{endpoint}/v2.1/13c67a214ced4afb88d911ae4bd5721a/servers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote-consoles
+```
 
-    ```
-    POST v2.1/13c67a214ced4afb88d911ae4bd5721a/servers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote-consoles
-    {
-       "remote_console" : {
-            "type" : "novnc",
-            "protocol": "vnc"
-        }
+```
+{
+   "remote_console" : {
+        "type" : "novnc",
+        "protocol": "vnc"
     }
-    ```
+}
+```
 
--   响应示例
+## 响应示例<a name="section1713910142558"></a>
 
-    ```
-    {
-        "remote_console":{"url": "https://nova-novncproxy.az21.dc1.domainname.com:8002/vnc.auto.html?token=80fa7c8d-37fe-451e-8b08-bfbd9fb6a4df&lang=EN","type":"novnc","protocol": "vnc"}
-    }
-    ```
-
+```
+{
+	"remote_console": {
+		"url": "https://nova-novncproxy.az21.dc1.domainname.com:8002/vnc.auto.html?token=80fa7c8d-37fe-451e-8b08-bfbd9fb6a4df&lang=EN",
+		"type": "novnc",
+		"protocol": "vnc"
+	}
+}
+```
 
 ## 返回值<a name="zh-cn_topic_0092803065_zh-cn_topic_0020212692_section22960139"></a>
 

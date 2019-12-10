@@ -1,4 +1,4 @@
-# 更新云服务器元数据<a name="ZH-CN_TOPIC_0122110044"></a>
+# 更新云服务器元数据<a name="ZH-CN_TOPIC_0025560298"></a>
 
 ## 功能介绍<a name="section61558535185333"></a>
 
@@ -8,22 +8,24 @@
 -   如果元数据中已存在待更新字段，则直接更新字段值。
 -   如果元数据中的字段不再请求参数中，则保持不变
 
-## 接口约束<a name="zh-cn_topic_0057973153_section32752180"></a>
+## 接口约束<a name="section39865556127"></a>
 
 云服务器状态（云服务器的OS-EXT-STS:vm\_state属性）必须是active，stopped，paused或者suspended。
 
 ## URI<a name="section47451206185333"></a>
 
-POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/metadata
+POST /v2.1/\{project\_id\}/servers/\{server\_id\}/metadata
+
+参数说明请参见[表1](#table18618337185333)。
 
 **表 1**  参数说明
 
 <a name="table18618337185333"></a>
-<table><thead align="left"><tr id="row17183202185333"><th class="cellrowborder" valign="top" width="19.99%" id="mcps1.2.4.1.1"><p id="p49662088185333"><a name="p49662088185333"></a><a name="p49662088185333"></a>参数</p>
+<table><thead align="left"><tr id="row17183202185333"><th class="cellrowborder" valign="top" width="19.99%" id="mcps1.2.4.1.1"><p id="p5187119"><a name="p5187119"></a><a name="p5187119"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="18.67%" id="mcps1.2.4.1.2"><p id="p63206191185333"><a name="p63206191185333"></a><a name="p63206191185333"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="18.67%" id="mcps1.2.4.1.2"><p id="p17503500"><a name="p17503500"></a><a name="p17503500"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="61.339999999999996%" id="mcps1.2.4.1.3"><p id="p19427838185333"><a name="p19427838185333"></a><a name="p19427838185333"></a>描述</p>
+<th class="cellrowborder" valign="top" width="61.339999999999996%" id="mcps1.2.4.1.3"><p id="p8497414"><a name="p8497414"></a><a name="p8497414"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -47,16 +49,18 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/metadata
 
 ## 请求消息<a name="section14818796185333"></a>
 
-**表 2**  请求参数说明
+请求参数如[表2](#table52485804185333)所示。
+
+**表 2**  请求参数
 
 <a name="table52485804185333"></a>
 <table><thead align="left"><tr id="row22430249185333"><th class="cellrowborder" valign="top" width="15.229999999999999%" id="mcps1.2.5.1.1"><p id="p4910858185333"><a name="p4910858185333"></a><a name="p4910858185333"></a>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="17.29%" id="mcps1.2.5.1.2"><p id="p62235249185333"><a name="p62235249185333"></a><a name="p62235249185333"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="16.74%" id="mcps1.2.5.1.3"><p id="p7890371185333"><a name="p7890371185333"></a><a name="p7890371185333"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="24.060000000000002%" id="mcps1.2.5.1.3"><p id="p7890371185333"><a name="p7890371185333"></a><a name="p7890371185333"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="50.739999999999995%" id="mcps1.2.5.1.4"><p id="p35140330185333"><a name="p35140330185333"></a><a name="p35140330185333"></a>说明</p>
+<th class="cellrowborder" valign="top" width="43.419999999999995%" id="mcps1.2.5.1.4"><p id="p35140330185333"><a name="p35140330185333"></a><a name="p35140330185333"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -64,10 +68,9 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/metadata
 </td>
 <td class="cellrowborder" valign="top" width="17.29%" headers="mcps1.2.5.1.2 "><p id="p24999915185333"><a name="p24999915185333"></a><a name="p24999915185333"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="16.74%" headers="mcps1.2.5.1.3 "><p id="p11727220185333"><a name="p11727220185333"></a><a name="p11727220185333"></a>Object</p>
+<td class="cellrowborder" valign="top" width="24.060000000000002%" headers="mcps1.2.5.1.3 "><p id="p11727220185333"><a name="p11727220185333"></a><a name="p11727220185333"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="50.739999999999995%" headers="mcps1.2.5.1.4 "><p id="p26317995185333"><a name="p26317995185333"></a><a name="p26317995185333"></a>用户自定义metadata键值对。</p>
-<p id="p8262254217"><a name="p8262254217"></a><a name="p8262254217"></a>结构体允许为空，取值为空时不更新数据。</p>
+<td class="cellrowborder" valign="top" width="43.419999999999995%" headers="mcps1.2.5.1.4 "><p id="p26317995185333"><a name="p26317995185333"></a><a name="p26317995185333"></a>用户自定义metadata键值对。</p>
 </td>
 </tr>
 </tbody>
@@ -76,33 +79,33 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/metadata
 **表 3**  metadata数据结构说明
 
 <a name="table59792218185333"></a>
-<table><thead align="left"><tr id="row39910345185333"><th class="cellrowborder" valign="top" width="14.99%" id="mcps1.2.5.1.1"><p id="p11512487185333"><a name="p11512487185333"></a><a name="p11512487185333"></a>参数</p>
+<table><thead align="left"><tr id="row39910345185333"><th class="cellrowborder" valign="top" width="24.060000000000002%" id="mcps1.2.5.1.1"><p id="p11512487185333"><a name="p11512487185333"></a><a name="p11512487185333"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="17.31%" id="mcps1.2.5.1.2"><p id="p60096221185333"><a name="p60096221185333"></a><a name="p60096221185333"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="14.85%" id="mcps1.2.5.1.2"><p id="p60096221185333"><a name="p60096221185333"></a><a name="p60096221185333"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="17.599999999999998%" id="mcps1.2.5.1.3"><p id="p35955732185333"><a name="p35955732185333"></a><a name="p35955732185333"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="17.86%" id="mcps1.2.5.1.3"><p id="p35955732185333"><a name="p35955732185333"></a><a name="p35955732185333"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="50.1%" id="mcps1.2.5.1.4"><p id="p26733171185333"><a name="p26733171185333"></a><a name="p26733171185333"></a>说明</p>
+<th class="cellrowborder" valign="top" width="43.230000000000004%" id="mcps1.2.5.1.4"><p id="p26733171185333"><a name="p26733171185333"></a><a name="p26733171185333"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row15890112034514"><td class="cellrowborder" valign="top" width="14.99%" headers="mcps1.2.5.1.1 "><p id="p1089262011454"><a name="p1089262011454"></a><a name="p1089262011454"></a>key</p>
+<tbody><tr id="row15890112034514"><td class="cellrowborder" valign="top" width="24.060000000000002%" headers="mcps1.2.5.1.1 "><p id="p1089262011454"><a name="p1089262011454"></a><a name="p1089262011454"></a>key</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.31%" headers="mcps1.2.5.1.2 "><p id="p18894122014512"><a name="p18894122014512"></a><a name="p18894122014512"></a>是</p>
+<td class="cellrowborder" valign="top" width="14.85%" headers="mcps1.2.5.1.2 "><p id="p18894122014512"><a name="p18894122014512"></a><a name="p18894122014512"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.599999999999998%" headers="mcps1.2.5.1.3 "><p id="p220493014454"><a name="p220493014454"></a><a name="p220493014454"></a>String</p>
+<td class="cellrowborder" valign="top" width="17.86%" headers="mcps1.2.5.1.3 "><p id="p220493014454"><a name="p220493014454"></a><a name="p220493014454"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="50.1%" headers="mcps1.2.5.1.4 "><p id="p19894192011457"><a name="p19894192011457"></a><a name="p19894192011457"></a>键。</p>
+<td class="cellrowborder" valign="top" width="43.230000000000004%" headers="mcps1.2.5.1.4 "><p id="p19894192011457"><a name="p19894192011457"></a><a name="p19894192011457"></a>键。</p>
 <p id="p146113814453"><a name="p146113814453"></a><a name="p146113814453"></a>最大长度255个Unicode字符，不能为空。可以为大写字母（A-Z）、小写字母（a-z）、数字（0-9）、中划线（-）、下划线（_）、冒号（:）和小数点（.）。</p>
 </td>
 </tr>
-<tr id="row17903267185333"><td class="cellrowborder" valign="top" width="14.99%" headers="mcps1.2.5.1.1 "><p id="p40878540185333"><a name="p40878540185333"></a><a name="p40878540185333"></a>value</p>
+<tr id="row17903267185333"><td class="cellrowborder" valign="top" width="24.060000000000002%" headers="mcps1.2.5.1.1 "><p id="p40878540185333"><a name="p40878540185333"></a><a name="p40878540185333"></a>value</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.31%" headers="mcps1.2.5.1.2 "><p id="p22827413185333"><a name="p22827413185333"></a><a name="p22827413185333"></a>是</p>
+<td class="cellrowborder" valign="top" width="14.85%" headers="mcps1.2.5.1.2 "><p id="p22827413185333"><a name="p22827413185333"></a><a name="p22827413185333"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.599999999999998%" headers="mcps1.2.5.1.3 "><p id="p37081126185333"><a name="p37081126185333"></a><a name="p37081126185333"></a>String</p>
+<td class="cellrowborder" valign="top" width="17.86%" headers="mcps1.2.5.1.3 "><p id="p37081126185333"><a name="p37081126185333"></a><a name="p37081126185333"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="50.1%" headers="mcps1.2.5.1.4 "><p id="p999582373317"><a name="p999582373317"></a><a name="p999582373317"></a>值。</p>
+<td class="cellrowborder" valign="top" width="43.230000000000004%" headers="mcps1.2.5.1.4 "><p id="p999582373317"><a name="p999582373317"></a><a name="p999582373317"></a>值。</p>
 <p id="p58906615396"><a name="p58906615396"></a><a name="p58906615396"></a>最大长度为255个Unicode字符。</p>
 </td>
 </tr>
@@ -111,14 +114,16 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/metadata
 
 ## 响应消息<a name="section22254218185333"></a>
 
-**表 4**  参数说明
+响应参数如[表4](#table48150236185333)所示。
+
+**表 4**  响应参数
 
 <a name="table48150236185333"></a>
 <table><thead align="left"><tr id="row64499137185333"><th class="cellrowborder" valign="top" width="21.93%" id="mcps1.2.4.1.1"><p id="p57047574185333"><a name="p57047574185333"></a><a name="p57047574185333"></a>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="27.189999999999998%" id="mcps1.2.4.1.2"><p id="p57450759185333"><a name="p57450759185333"></a><a name="p57450759185333"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="50.88%" id="mcps1.2.4.1.3"><p id="p22999934185333"><a name="p22999934185333"></a><a name="p22999934185333"></a>说明</p>
+<th class="cellrowborder" valign="top" width="50.88%" id="mcps1.2.4.1.3"><p id="p22999934185333"><a name="p22999934185333"></a><a name="p22999934185333"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -132,10 +137,10 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/metadata
 </tbody>
 </table>
 
-## 请求示例<a name="section7698444111410"></a>
+## 请求示例<a name="section1124134931510"></a>
 
 ```
-POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/metadata
+POST https://{endpoint}/v2.1/{project_id}/servers/{server_id}/metadata
 ```
 
 ```
@@ -146,7 +151,7 @@ POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/metadata
 }
 ```
 
-## 响应示例<a name="section1877694911416"></a>
+## 响应示例<a name="section111751241184111"></a>
 
 ```
 {

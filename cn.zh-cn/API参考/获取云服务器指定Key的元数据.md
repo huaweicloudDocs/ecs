@@ -2,11 +2,9 @@
 
 ## 功能介绍<a name="zh-cn_topic_0057973169_section56350203"></a>
 
-获取弹性云服务器指定key的元数据信息。
+获取云服务器指定key的元数据信息。
 
 ## URI<a name="zh-cn_topic_0057973169_section37389779"></a>
-
-GET /v2/\{project\_id\}/servers/\{server\_id\}/metadata/\{key\}
 
 GET /v2.1/\{project\_id\}/servers/\{server\_id\}/metadata/\{key\}
 
@@ -50,11 +48,9 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/metadata/\{key\}
 
 ## 请求消息<a name="zh-cn_topic_0057973169_section10950734"></a>
 
-不涉及
+无
 
 ## 响应消息<a name="zh-cn_topic_0057973169_section31447750"></a>
-
-**响应参数**
 
 响应参数如[表2](#zh-cn_topic_0057973169_table40140147)所示。
 
@@ -79,25 +75,21 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/metadata/\{key\}
 </tbody>
 </table>
 
-## 示例<a name="zh-cn_topic_0057973169_section14594295"></a>
+## 请求示例<a name="zh-cn_topic_0057973169_section14594295"></a>
 
--   请求示例
+```
+GET https://{endpoint}/v2.1/9c53a566cb3443ab910cf0daebca90c4/servers/998af54b-5762-4041-abc1-f98a2c27b3a2/metadata/key1
+```
 
-    ```
-    GET /v2/9c53a566cb3443ab910cf0daebca90c4/servers/998af54b-5762-4041-abc1-f98a2c27b3a2/metadata/key1
-    GET /v2.1/9c53a566cb3443ab910cf0daebca90c4/servers/998af54b-5762-4041-abc1-f98a2c27b3a2/metadata/key1
-    ```
+## 响应示例<a name="section148361253124314"></a>
 
--   响应示例
-
-    ```
-    {
-    "meta": {
-                "key1": "value1"
-        }
-    }
-    ```
-
+```
+{
+	"meta": {
+		"key1": "value1"
+	}
+}
+```
 
 ## 返回值<a name="zh-cn_topic_0057973169_zh-cn_topic_0020212692_section22960139"></a>
 

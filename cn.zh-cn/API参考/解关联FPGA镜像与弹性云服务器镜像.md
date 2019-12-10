@@ -4,6 +4,9 @@
 
 本接口用于删除FPGA镜像与弹性云服务器镜像之间的关联映射关系。
 
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>目前仅“华北-北京一、华东-上海二、华南-广州”区域支持，其他区域暂未支持。  
+
 ## URI<a name="section28033540211632"></a>
 
 DELETE /v1/\{project\_id\}/cloudservers/fpga\_image/\{fpga\_image\_id\}/association
@@ -41,30 +44,53 @@ DELETE /v1/\{project\_id\}/cloudservers/fpga\_image/\{fpga\_image\_id\}/associat
 
 ## 请求消息<a name="section3313651211632"></a>
 
-**请求参数**
-
-请求参数如[表2](#table39016918211632)所示。
+请求参数如[表2](#table41782128362)所示。
 
 **表 2**  请求参数
 
-<a name="table39016918211632"></a>
-<table><thead align="left"><tr id="row31417811211632"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p13501148211632"><a name="p13501148211632"></a><a name="p13501148211632"></a>参数名称</p>
+<a name="table41782128362"></a>
+<table><thead align="left"><tr id="row17178181253615"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p3178612173615"><a name="p3178612173615"></a><a name="p3178612173615"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.2"><p id="p32752343211632"><a name="p32752343211632"></a><a name="p32752343211632"></a>类型</p>
+<th class="cellrowborder" valign="top" width="24.94%" id="mcps1.2.5.1.2"><p id="p2017861210364"><a name="p2017861210364"></a><a name="p2017861210364"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="16.73%" id="mcps1.2.5.1.3"><p id="p47957996211632"><a name="p47957996211632"></a><a name="p47957996211632"></a>必选</p>
+<th class="cellrowborder" valign="top" width="16.74%" id="mcps1.2.5.1.3"><p id="p1775122317363"><a name="p1775122317363"></a><a name="p1775122317363"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="33.269999999999996%" id="mcps1.2.5.1.4"><p id="p51666370211632"><a name="p51666370211632"></a><a name="p51666370211632"></a>说明</p>
+<th class="cellrowborder" valign="top" width="33.32%" id="mcps1.2.5.1.4"><p id="p71791812113610"><a name="p71791812113610"></a><a name="p71791812113610"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row22126978211632"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p24226259211632"><a name="p24226259211632"></a><a name="p24226259211632"></a>id</p>
+<tbody><tr id="row817971293614"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p54426520364"><a name="p54426520364"></a><a name="p54426520364"></a>image</p>
 </td>
-<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p42610398211632"><a name="p42610398211632"></a><a name="p42610398211632"></a>String</p>
+<td class="cellrowborder" valign="top" width="24.94%" headers="mcps1.2.5.1.2 "><p id="p12442185213364"><a name="p12442185213364"></a><a name="p12442185213364"></a>Object</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.74%" headers="mcps1.2.5.1.3 "><p id="p16442195218369"><a name="p16442195218369"></a><a name="p16442195218369"></a>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.32%" headers="mcps1.2.5.1.4 "><p id="p15444145213368"><a name="p15444145213368"></a><a name="p15444145213368"></a>ECS镜像信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 3**  image字段结构说明
+
+<a name="table9461983324"></a>
+<table><thead align="left"><tr id="row1546112813212"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p14613820329"><a name="p14613820329"></a><a name="p14613820329"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.2"><p id="p946168183217"><a name="p946168183217"></a><a name="p946168183217"></a>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="16.73%" id="mcps1.2.5.1.3"><p id="p47957996211632"><a name="p47957996211632"></a><a name="p47957996211632"></a>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.269999999999996%" id="mcps1.2.5.1.4"><p id="p184616815328"><a name="p184616815328"></a><a name="p184616815328"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row346158143218"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p8461188173210"><a name="p8461188173210"></a><a name="p8461188173210"></a>id</p>
+</td>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p946220803218"><a name="p946220803218"></a><a name="p946220803218"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.73%" headers="mcps1.2.5.1.3 "><p id="p27767370211632"><a name="p27767370211632"></a><a name="p27767370211632"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.269999999999996%" headers="mcps1.2.5.1.4 "><p id="p57026368211632"><a name="p57026368211632"></a><a name="p57026368211632"></a>ECS镜像ID。</p>
+<td class="cellrowborder" valign="top" width="33.269999999999996%" headers="mcps1.2.5.1.4 "><p id="p046218183218"><a name="p046218183218"></a><a name="p046218183218"></a>ECS镜像ID。</p>
 </td>
 </tr>
 </tbody>
@@ -74,22 +100,23 @@ DELETE /v1/\{project\_id\}/cloudservers/fpga\_image/\{fpga\_image\_id\}/associat
 
 无
 
-## 示例<a name="section47627159211632"></a>
+## 请求示例<a name="section47627159211632"></a>
 
--   请求示例
+```
+DELETE https://{endpoint}/v1/{project_id}/cloudservers/fpga_image/{fpga_image_id}/association
+```
 
-    ```
-    {
-      "image": {
-        "id": "18efee75-e058-4c52-a49c-9e3ba4d1c8de"
-      }
-    }
-    ```
+```
+{
+  "image": {
+    "id": "18efee75-e058-4c52-a49c-9e3ba4d1c8de"
+  }
+}
+```
 
--   响应示例
+## 响应示例<a name="section15218105142815"></a>
 
-    无
-
+无
 
 ## 返回值<a name="section3477250491225"></a>
 
