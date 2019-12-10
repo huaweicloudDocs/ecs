@@ -6,8 +6,6 @@
 
 ## URI<a name="section29753161"></a>
 
-DELETE /v2/\{project\_id\}/os-keypairs/\{keypair\_name\}
-
 DELETE /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 
 参数说明请参见[表1](#table48776445)。
@@ -43,11 +41,21 @@ DELETE /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 
 ## 请求消息<a name="section66451858"></a>
 
-不涉及
+无
 
 ## 响应消息<a name="section61195818"></a>
 
-不涉及
+无
+
+## 请求示例<a name="section118665219435"></a>
+
+```
+DELETE https://{endpoint}/v2.1/{project_id}/os-keypairs/{keypair_name}
+```
+
+## 响应示例<a name="section19716123044320"></a>
+
+无
 
 ## 返回值<a name="section13891457"></a>
 

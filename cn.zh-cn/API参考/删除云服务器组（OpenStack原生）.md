@@ -1,14 +1,12 @@
-# 删除云服务器组<a name="ZH-CN_TOPIC_0161097719"></a>
+# 删除云服务器组<a name="ZH-CN_TOPIC_0065817723"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057973160_section59750848"></a>
 
 删除云服务器组。
 
-与原生的删除云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
-
 ## URI<a name="zh-cn_topic_0057973160_section886720"></a>
 
-DELETE /v1/\{project\_id\}/cloudservers/os-server-groups/\{server\_group\_id\}
+DELETE /v2.1/\{project\_id\}/os-server-groups/\{server\_group\_id\}
 
 参数说明请参见[表1](#zh-cn_topic_0057973160_zh-cn_topic_0020212650_table62669527)。
 
@@ -41,29 +39,21 @@ DELETE /v1/\{project\_id\}/cloudservers/os-server-groups/\{server\_group\_id\}
 </tbody>
 </table>
 
-## 请求参数<a name="section5232129133214"></a>
+## 请求消息<a name="section8486123205213"></a>
 
 无
 
-## 响应参数<a name="section1083161923214"></a>
+## 响应消息<a name="section164423895218"></a>
 
 无
 
 ## 请求示例<a name="zh-cn_topic_0057973160_section15049613"></a>
 
 ```
-DELETE https://{endpoint}/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}
+DELETE https://{endpoint}/v2.1/9c53a566cb3443ab910cf0daebca90c4/os-server-groups/5bbcc3c4-1da2-4437-a48a-66f15b1b13f9
 ```
-
-## 响应示例<a name="section7280144719328"></a>
-
-无
 
 ## 返回值<a name="zh-cn_topic_0057973160_section11059103"></a>
 
 请参考[通用请求返回值](通用请求返回值.md)。
-
-## 错误码<a name="section85821649202813"></a>
-
-请参考[错误码说明](错误码说明.md)。
 

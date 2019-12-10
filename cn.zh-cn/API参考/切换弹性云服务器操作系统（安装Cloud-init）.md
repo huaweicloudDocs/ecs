@@ -51,8 +51,6 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 
 ## 请求消息<a name="section5126234"></a>
 
-**请求参数**
-
 请求参数如[表2](#table2840889)所示。
 
 **表 2**  请求参数
@@ -72,7 +70,7 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </td>
 <td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.5.1.2 "><p id="p49770771"><a name="p49770771"></a><a name="p49770771"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p4900679"><a name="p4900679"></a><a name="p4900679"></a>Dict</p>
+<td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p4900679"><a name="p4900679"></a><a name="p4900679"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p61410719"><a name="p61410719"></a><a name="p61410719"></a>切换弹性云服务器操作系统。</p>
 </td>
@@ -83,9 +81,9 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 **表 3**  os-change字段数据结构说明
 
 <a name="table32200631"></a>
-<table><thead align="left"><tr id="row47660253"><th class="cellrowborder" valign="top" width="22%" id="mcps1.2.5.1.1"><p id="p121269618348"><a name="p121269618348"></a><a name="p121269618348"></a>参数</p>
+<table><thead align="left"><tr id="row47660253"><th class="cellrowborder" valign="top" width="21.990000000000002%" id="mcps1.2.5.1.1"><p id="p121269618348"><a name="p121269618348"></a><a name="p121269618348"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="14.000000000000002%" id="mcps1.2.5.1.2"><p id="p1312613618346"><a name="p1312613618346"></a><a name="p1312613618346"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="14.01%" id="mcps1.2.5.1.2"><p id="p1312613618346"><a name="p1312613618346"></a><a name="p1312613618346"></a>是否必选</p>
 </th>
 <th class="cellrowborder" valign="top" width="16%" id="mcps1.2.5.1.3"><p id="p51418673415"><a name="p51418673415"></a><a name="p51418673415"></a>参数类型</p>
 </th>
@@ -93,52 +91,52 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </th>
 </tr>
 </thead>
-<tbody><tr id="row65851064"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p32335967"><a name="p32335967"></a><a name="p32335967"></a>adminpass</p>
+<tbody><tr id="row65851064"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p32335967"><a name="p32335967"></a><a name="p32335967"></a>adminpass</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.5.1.2 "><p id="p1967662"><a name="p1967662"></a><a name="p1967662"></a>否</p>
+<td class="cellrowborder" valign="top" width="14.01%" headers="mcps1.2.5.1.2 "><p id="p1967662"><a name="p1967662"></a><a name="p1967662"></a>否</p>
 </td>
 <td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p25162958"><a name="p25162958"></a><a name="p25162958"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p47739706113712"><a name="p47739706113712"></a><a name="p47739706113712"></a>云服务器管理员帐户的初始登录密码。</p>
 <p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员帐户的用户名为Administrator。</p>
 <p id="p11576631102714"><a name="p11576631102714"></a><a name="p11576631102714"></a>建议密码复杂度如下：</p>
-<a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。</li></ul>
-<div class="note" id="note15723730113732"><a name="note15723730113732"></a><a name="note15723730113732"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul1384211203571"></a><a name="ul1384211203571"></a><ul id="ul1384211203571"><li>Windows云服务器的密码，不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>adminpass和keyname不能同时有值。</li><li>adminpass和keyname如果同时为空，此时，metadata中的user_data属性必须有值。</li></ul>
+<a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?~#*）中的三种。</li></ul>
+<div class="note" id="note15723730113732"><a name="note15723730113732"></a><a name="note15723730113732"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul1384211203571"></a><a name="ul1384211203571"></a><ul id="ul1384211203571"><li>Windows云服务器的密码，不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>对于Linux弹性云服务器也可使用user_data字段实现密码注入，此时adminpass字段无效。</li><li>adminpass和keyname不能同时有值。</li><li>adminpass和keyname如果同时为空，此时，metadata中的user_data属性必须有值。</li><li>对于已安装Cloud-init的云服务器，使用adminpass字段切换操作系统时，系统如果提示您使用keypair方式切换操作系统，表示当前区域暂不支持使用密码方式。</li></ul>
 </div></div>
 </td>
 </tr>
-<tr id="row45934497"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p29706771"><a name="p29706771"></a><a name="p29706771"></a>keyname</p>
+<tr id="row45934497"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p29706771"><a name="p29706771"></a><a name="p29706771"></a>keyname</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.5.1.2 "><p id="p57438237"><a name="p57438237"></a><a name="p57438237"></a>否</p>
+<td class="cellrowborder" valign="top" width="14.01%" headers="mcps1.2.5.1.2 "><p id="p57438237"><a name="p57438237"></a><a name="p57438237"></a>否</p>
 </td>
 <td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p21985640"><a name="p21985640"></a><a name="p21985640"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p36006428"><a name="p36006428"></a><a name="p36006428"></a>密钥名称。</p>
 </td>
 </tr>
-<tr id="row2345411710289"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p2073531110289"><a name="p2073531110289"></a><a name="p2073531110289"></a>userid</p>
+<tr id="row2345411710289"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p2073531110289"><a name="p2073531110289"></a><a name="p2073531110289"></a>userid</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.5.1.2 "><p id="p183865010289"><a name="p183865010289"></a><a name="p183865010289"></a>否</p>
+<td class="cellrowborder" valign="top" width="14.01%" headers="mcps1.2.5.1.2 "><p id="p183865010289"><a name="p183865010289"></a><a name="p183865010289"></a>否</p>
 </td>
 <td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p1471297410289"><a name="p1471297410289"></a><a name="p1471297410289"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。</p>
 </td>
 </tr>
-<tr id="row13463057104537"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p16765867104537"><a name="p16765867104537"></a><a name="p16765867104537"></a>imageid</p>
+<tr id="row13463057104537"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p16765867104537"><a name="p16765867104537"></a><a name="p16765867104537"></a>imageid</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.5.1.2 "><p id="p15858014104537"><a name="p15858014104537"></a><a name="p15858014104537"></a>是</p>
+<td class="cellrowborder" valign="top" width="14.01%" headers="mcps1.2.5.1.2 "><p id="p15858014104537"><a name="p15858014104537"></a><a name="p15858014104537"></a>是</p>
 </td>
 <td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p9430737104537"><a name="p9430737104537"></a><a name="p9430737104537"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p25692204104537"><a name="p25692204104537"></a><a name="p25692204104537"></a>切换系统所使用的新镜像的ID，格式为UUID。</p>
 </td>
 </tr>
-<tr id="row6144862102847"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p27971812102847"><a name="p27971812102847"></a><a name="p27971812102847"></a>metadata</p>
+<tr id="row6144862102847"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p27971812102847"><a name="p27971812102847"></a><a name="p27971812102847"></a>metadata</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.5.1.2 "><p id="p51124270102847"><a name="p51124270102847"></a><a name="p51124270102847"></a>否</p>
+<td class="cellrowborder" valign="top" width="14.01%" headers="mcps1.2.5.1.2 "><p id="p51124270102847"><a name="p51124270102847"></a><a name="p51124270102847"></a>否</p>
 </td>
-<td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p47425188102847"><a name="p47425188102847"></a><a name="p47425188102847"></a><em id="i47887956113548"><a name="i47887956113548"></a><a name="i47887956113548"></a>字典数据结构</em></p>
+<td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p47425188102847"><a name="p47425188102847"></a><a name="p47425188102847"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p16235056102847"><a name="p16235056102847"></a><a name="p16235056102847"></a>切换云服务器的元数据。</p>
 <p id="p45467933113554"><a name="p45467933113554"></a><a name="p45467933113554"></a>更多信息，请参见<a href="#table9120223">表4</a>。</p>
@@ -152,9 +150,9 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <a name="table9120223"></a>
 <table><thead align="left"><tr id="row45607220"><th class="cellrowborder" valign="top" width="22%" id="mcps1.2.5.1.1"><p id="p5260151013341"><a name="p5260151013341"></a><a name="p5260151013341"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="14.000000000000002%" id="mcps1.2.5.1.2"><p id="p1226017106348"><a name="p1226017106348"></a><a name="p1226017106348"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="14.09%" id="mcps1.2.5.1.2"><p id="p1226017106348"><a name="p1226017106348"></a><a name="p1226017106348"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="16%" id="mcps1.2.5.1.3"><p id="p226013107341"><a name="p226013107341"></a><a name="p226013107341"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="15.909999999999998%" id="mcps1.2.5.1.3"><p id="p226013107341"><a name="p226013107341"></a><a name="p226013107341"></a>参数类型</p>
 </th>
 <th class="cellrowborder" valign="top" width="48%" id="mcps1.2.5.1.4"><p id="p526021019349"><a name="p526021019349"></a><a name="p526021019349"></a>描述</p>
 </th>
@@ -162,12 +160,13 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </thead>
 <tbody><tr id="row11285618104313"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p1737951110318"><a name="p1737951110318"></a><a name="p1737951110318"></a>user_data</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.5.1.2 "><p id="p39934810104313"><a name="p39934810104313"></a><a name="p39934810104313"></a>否</p>
+<td class="cellrowborder" valign="top" width="14.09%" headers="mcps1.2.5.1.2 "><p id="p39934810104313"><a name="p39934810104313"></a><a name="p39934810104313"></a>否</p>
 </td>
-<td class="cellrowborder" valign="top" width="16%" headers="mcps1.2.5.1.3 "><p id="p13494158104313"><a name="p13494158104313"></a><a name="p13494158104313"></a>String</p>
+<td class="cellrowborder" valign="top" width="15.909999999999998%" headers="mcps1.2.5.1.3 "><p id="p13494158104313"><a name="p13494158104313"></a><a name="p13494158104313"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p509712594125"><a name="p509712594125"></a><a name="p509712594125"></a>切换云服务器操作系统过程中注入用户数据。</p>
 <p id="p4587413094125"><a name="p4587413094125"></a><a name="p4587413094125"></a>支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。</p>
+<p id="p10685165919553"><a name="p10685165919553"></a><a name="p10685165919553"></a>了解更多用户数据注入请参考<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html" target="_blank" rel="noopener noreferrer">用户数据注入</a>。</p>
 </td>
 </tr>
 </tbody>
@@ -177,23 +176,45 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 
 请参考[响应（任务类）](响应（任务类）.md)。
 
-## 示例<a name="section6230163813416"></a>
+## 请求示例<a name="section6230163813416"></a>
 
--   请求样例
+-   请求URL示例
+
+    ```
+    POST https://{endpoint}/v2/{project_id}/cloudservers/{server_id}/changeos
+    ```
+
+
+-   请求示例1（使用密码方式远程登录重装后的系统）
+
+    ```
+    {
+        "os-change": {
+            "adminpass": "1qazXSW@", 
+            "userid": "7e25b1da389f4697a79df3a0e5bd494e", 
+            "imageid": "e215580f-73ad-429d-b6f2-5433947433b0",
+            "mode": "withStopServer"
+        }
+    }
+    ```
+
+
+-   请求示例2（使用密钥方式远程登录重装后的系统）
 
     ```
     {
         "os-change": {
             "keyname": "KeyPair-350b", 
             "userid": "7e25b1da389f4697a79df3a0e5bd494e", 
-            "imageid": "e215580f-73ad-429d-b6f2-5433947433b0", 
-            "metadata": {
-                  "BYOL": "false"
-            }
+            "imageid": "e215580f-73ad-429d-b6f2-5433947433b0"
         }
     }
     ```
 
+
+## 响应示例<a name="section449243013451"></a>
+
+无
 
 ## 返回值<a name="section27037160"></a>
 
