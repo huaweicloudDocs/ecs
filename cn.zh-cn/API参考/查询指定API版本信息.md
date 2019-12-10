@@ -9,6 +9,11 @@
 -   "主版本号": 具有独立的url。
 -   "微版本号": 通过Http请求头X-OpenStack-Nova-API-Version来使用。
 
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >如果使用OpenStack-API-Version的请求头，version对应的value取值格式为compute 微版本号。  
+    >例如：key为OpenStack-API-Version的时候value需要填compute 2.27。  
+
+
 ## URI<a name="section961608182144"></a>
 
 GET /\{api\_version\}
@@ -36,41 +41,46 @@ GET /\{api\_version\}
 </tbody>
 </table>
 
-## 示例<a name="section19667838182144"></a>
+## 请求消息<a name="section108201017144216"></a>
 
--   请求示例
+无
 
-    ```
-    GET /v2
-    ```
+## 响应消息<a name="section89511024194216"></a>
 
--   响应示例
+无
 
-    ```
-    {
-     "version": {
-      "min_version": "",
-      "media-types": [{
-       "type": "application/vnd.openstack.compute+json;version=2",
-       "base": "application/json"
-      }],
-      "links": [{
-       "rel": "self",
-       "href": "https://ecs.service.domain.com:443/v2/"
-      },
-      {
-       "rel": "describedby",
-       "href": "http://docs.openstack.org/",
-       "type": "text/html"
-      }],
-      "id": "v2.0",
-      "updated": "1999-02-20T11:33:21Z",
-      "version": "",
-      "status": "SUPPORTED"
-     }
-    }
-    ```
+## 请求示例<a name="section19667838182144"></a>
 
+```
+GET https://{endpoint}/v2
+```
+
+## 响应示例<a name="section20327115469"></a>
+
+```
+{
+ "version": {
+  "min_version": "",
+  "media-types": [{
+   "type": "application/vnd.openstack.compute+json;version=2",
+   "base": "application/json"
+  }],
+  "links": [{
+   "rel": "self",
+   "href": "https://ecs.service.domain.com:443/v2/"
+  },
+  {
+   "rel": "describedby",
+   "href": "http://docs.openstack.org/",
+   "type": "text/html"
+  }],
+  "id": "v2.0",
+  "updated": "1999-02-20T11:33:21Z",
+  "version": "",
+  "status": "SUPPORTED"
+ }
+}
+```
 
 ## 返回值<a name="section12571834"></a>
 

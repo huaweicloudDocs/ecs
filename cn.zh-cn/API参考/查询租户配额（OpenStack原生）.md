@@ -2,15 +2,11 @@
 
 ## 功能介绍<a name="zh-cn_topic_0057973199_section15804956"></a>
 
-查询配额，包括弹性云服务器、CPU、内存等计算资源的规格。
-
-## 扩展说明<a name="zh-cn_topic_0057973199_section46197261"></a>
+查询配额，包括云服务器、CPU、内存等计算资源的规格。
 
 提供user\_id参数，对应user执行相应操作，获取指定user的quota配置。
 
 ## URI<a name="zh-cn_topic_0057973199_section8026877"></a>
-
-GET /v2/\{project\_id\}/os-quota-sets/\{project\_id\}?user\_id=\{user\_id\}
 
 GET /v2.1/\{project\_id\}/os-quota-sets/\{project\_id\}?user\_id=\{user\_id\}
 
@@ -31,7 +27,7 @@ GET /v2.1/\{project\_id\}/os-quota-sets/\{project\_id\}?user\_id=\{user\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="17.24%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0057973199_p22901046657"><a name="zh-cn_topic_0057973199_p22901046657"></a><a name="zh-cn_topic_0057973199_p22901046657"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="62.07%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0057973199_p1129212464514"><a name="zh-cn_topic_0057973199_p1129212464514"></a><a name="zh-cn_topic_0057973199_p1129212464514"></a>租户ID，如果指定的租户不存在，返回系统默认quota。</p>
+<td class="cellrowborder" valign="top" width="62.07%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0057973199_p1129212464514"><a name="zh-cn_topic_0057973199_p1129212464514"></a><a name="zh-cn_topic_0057973199_p1129212464514"></a>项目ID，如果指定的租户不存在，返回系统默认quota。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0057973199_row132920461656"><td class="cellrowborder" valign="top" width="20.69%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0057973199_p102952462511"><a name="zh-cn_topic_0057973199_p102952462511"></a><a name="zh-cn_topic_0057973199_p102952462511"></a>user_id</p>
@@ -46,11 +42,9 @@ GET /v2.1/\{project\_id\}/os-quota-sets/\{project\_id\}?user\_id=\{user\_id\}
 
 ## 请求消息<a name="zh-cn_topic_0057973199_section13122166"></a>
 
-不涉及
+无
 
 ## 响应消息<a name="zh-cn_topic_0057973199_section50990633"></a>
-
-**响应参数**
 
 响应参数如[表2](#zh-cn_topic_0057973199_zh-cn_topic_0057973197_table62068690)所示。
 
@@ -67,7 +61,7 @@ GET /v2.1/\{project\_id\}/os-quota-sets/\{project\_id\}?user\_id=\{user\_id\}
 </thead>
 <tbody><tr id="zh-cn_topic_0057973199_zh-cn_topic_0057973197_row59767919"><td class="cellrowborder" valign="top" width="30.643064306430645%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p9363310"><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p9363310"></a><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p9363310"></a>quota_set</p>
 </td>
-<td class="cellrowborder" valign="top" width="30.643064306430645%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p20230678"><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p20230678"></a><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p20230678"></a>Dict</p>
+<td class="cellrowborder" valign="top" width="30.643064306430645%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p20230678"><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p20230678"></a><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p20230678"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.71387138713872%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p59256190"><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p59256190"></a><a name="zh-cn_topic_0057973199_zh-cn_topic_0057973197_p59256190"></a>quota_set对象</p>
 </td>
@@ -167,7 +161,7 @@ GET /v2.1/\{project\_id\}/os-quota-sets/\{project\_id\}?user\_id=\{user\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="21.54%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0057973199_p19881144163"><a name="zh-cn_topic_0057973199_p19881144163"></a><a name="zh-cn_topic_0057973199_p19881144163"></a>Integer</p>
 </td>
-<td class="cellrowborder" valign="top" width="47.69%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0057973199_p97671453913"><a name="zh-cn_topic_0057973199_p97671453913"></a><a name="zh-cn_topic_0057973199_p97671453913"></a>每个安全组的规则配额，目前不支持此参数</p>
+<td class="cellrowborder" valign="top" width="47.69%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0057973199_p97671453913"><a name="zh-cn_topic_0057973199_p97671453913"></a><a name="zh-cn_topic_0057973199_p97671453913"></a>每个安全组规则的配额，目前不支持此参数</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0057973199_row50813968"><td class="cellrowborder" valign="top" width="30.769999999999996%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0057973199_p22290707"><a name="zh-cn_topic_0057973199_p22290707"></a><a name="zh-cn_topic_0057973199_p22290707"></a>security_groups</p>
@@ -194,39 +188,35 @@ GET /v2.1/\{project\_id\}/os-quota-sets/\{project\_id\}?user\_id=\{user\_id\}
 </tbody>
 </table>
 
-## 示例<a name="zh-cn_topic_0057973199_section56262520"></a>
+## 请求示例<a name="zh-cn_topic_0057973199_section56262520"></a>
 
--   请求示例
+```
+GET https://{endpoint}/v2.1/d9ebe43510414ef590a4aa158605329e/os-quota-sets/d9ebe43510414ef590a4aa158605329e
+```
 
-    ```
-    GET /v2/d9ebe43510414ef590a4aa158605329e/os-quota-sets/d9ebe43510414ef590a4aa158605329e
-    GET /v2.1/d9ebe43510414ef590a4aa158605329e/os-quota-sets/d9ebe43510414ef590a4aa158605329e
-    ```
+## 响应示例<a name="section1965011613499"></a>
 
--   响应示例
-
-    ```
-    {
-        "quota_set": {
-            "cores": 20,
-            "fixed_ips": 40,
-            "floating_ips": 10,
-            "id": "d9ebe43510414ef590a4aa158605329e",
-            "injected_file_content_bytes": 10240,
-            "injected_file_path_bytes": 255,
-            "injected_files": 5,
-            "instances": 20,
-            "key_pairs": 100,
-            "metadata_items": 128,
-            "ram": 51200,
-            "security_group_rules": 20,
-            "security_groups": 50,
-    "server_group_members": 10,
-            "server_groups": 10
+```
+{
+    "quota_set": {
+        "cores": 20,
+        "fixed_ips": 40,
+        "floating_ips": 10,
+        "id": "d9ebe43510414ef590a4aa158605329e",
+        "injected_file_content_bytes": 10240,
+        "injected_file_path_bytes": 255,
+        "injected_files": 5,
+        "instances": 20,
+        "key_pairs": 100,
+        "metadata_items": 128,
+        "ram": 51200,
+        "security_group_rules": 20,
+        "security_groups": 50,
+        "server_group_members": 10,
+        "server_groups": 10
     }
-    }
-    ```
-
+}
+```
 
 ## 返回值<a name="zh-cn_topic_0057973199_zh-cn_topic_0020212692_section22960139"></a>
 

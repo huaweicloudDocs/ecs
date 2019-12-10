@@ -4,11 +4,9 @@
 
 创建SSH密钥，或把公钥导入系统，生成密钥对。
 
-创建SSH密钥成功后，请把响应数据中的私钥内容保存到本地文件，用户使用该私钥登录云服务器。为保证云服务器安全，私钥数据只能读取一次，请妥善保管。
+创建SSH密钥成功后，请把响应数据中的私钥内容保存到本地文件，用户使用该私钥登录云服务器。为保证云服务器器安全，私钥数据只能读取一次，请妥善保管。
 
 ## URI<a name="section6615485"></a>
-
-POST /v2/\{project\_id\}/os-keypairs
 
 POST /v2.1/\{project\_id\}/os-keypairs
 
@@ -38,8 +36,6 @@ POST /v2.1/\{project\_id\}/os-keypairs
 
 ## 请求消息<a name="section59539371"></a>
 
-**请求参数**
-
 请求参数如[表2](#table8287277)所示。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -62,7 +58,7 @@ POST /v2.1/\{project\_id\}/os-keypairs
 </td>
 <td class="cellrowborder" valign="top" width="14.66%" headers="mcps1.2.5.1.2 "><p id="p57522049"><a name="p57522049"></a><a name="p57522049"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.2.5.1.3 "><p id="p28774374"><a name="p28774374"></a><a name="p28774374"></a>字典数据结构</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.2.5.1.3 "><p id="p28774374"><a name="p28774374"></a><a name="p28774374"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="44.17%" headers="mcps1.2.5.1.4 "><p id="p38553569"><a name="p38553569"></a><a name="p38553569"></a>创建或导入的SSH密钥信息，详情请参见<a href="#table54046809">表3</a>。</p>
 </td>
@@ -132,8 +128,6 @@ POST /v2.1/\{project\_id\}/os-keypairs
 
 ## 响应消息<a name="section66092295"></a>
 
-**响应参数**
-
 响应参数如[表4](#table51598880)所示。
 
 **表 4**  响应参数
@@ -149,7 +143,7 @@ POST /v2.1/\{project\_id\}/os-keypairs
 </thead>
 <tbody><tr id="row23474126"><td class="cellrowborder" valign="top" width="25.687431256874316%" headers="mcps1.2.4.1.1 "><p id="p22356031"><a name="p22356031"></a><a name="p22356031"></a>keypair</p>
 </td>
-<td class="cellrowborder" valign="top" width="27.567243275672432%" headers="mcps1.2.4.1.2 "><p id="p45057304"><a name="p45057304"></a><a name="p45057304"></a>字典数据结构</p>
+<td class="cellrowborder" valign="top" width="27.567243275672432%" headers="mcps1.2.4.1.2 "><p id="p45057304"><a name="p45057304"></a><a name="p45057304"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="46.745325467453256%" headers="mcps1.2.4.1.3 "><p id="p30540622"><a name="p30540622"></a><a name="p30540622"></a>SSH密钥信息，详情请参见<a href="#table51079899">表5</a>。</p>
 </td>
@@ -216,57 +210,50 @@ POST /v2.1/\{project\_id\}/os-keypairs
 </tbody>
 </table>
 
-## 示例1<a name="section1176153117145"></a>
+## 请求示例（导入SSH密钥）<a name="section1176153117145"></a>
 
-**导入SSH密钥**
+```
+POST https://{endpoint}/v2.1/{project_id}/os-keypairs
+```
 
--   请求示例
-
-    ```
-    {
-        "keypair": {
-            "public_key": "ssh-rsaAAAAB3NzaC1yc2EAAAADAQABAAABAQDWNgTxQYeBzK9LYy4IakX7IsIl5j5zqR6BU2GJaEg3RK6dlS7rKFQhvy/V/1emK+GT/7P8up9VsMZ9Dx6PBOLow5p+2/wGsMlwDJpWiQ8zNnEMg+u/Ar/ZhYHAMyKEAOOJxIcnPoUgxfNdj/eiXV98AabsBdUA7QD30Og8F4Bmn2lii/WD9KbQQVjb7kbB3gNIJpGTUcoX73arorqkq/ppaLRmmwMJ7bTIGl8/0MWU2Dy+eTByOaDMb2htbB+j8ZXyEu7Oooy0NaSd+PNHv3PZ9OIVO7gd1lyoTRvCMK/F346+zmZtk5EASSOx5RifnSwk3NtugVjXs9GMJfFLBRibGenerated-by-Nova\\n\n",
-            "type": "ssh",
-            "name": "demo1",
-            "user_id": "fake"
-        }
+```
+{
+    "keypair": {
+        "public_key": "ssh-rsaAAAAB3NzaC1yc2EAAAADAQABAAABAQDWNgTxQYeBzK9LYy4IakX7IsIl5j5zqR6BU2GJaEg3RK6dlS7rKFQhvy/V/1emK+GT/7P8up9VsMZ9Dx6PBOLow5p+2/wGsMlwDJpWiQ8zNnEMg+u/Ar/ZhYHAMyKEAOOJxIcnPoUgxfNdj/eiXV98AabsBdUA7QD30Og8F4Bmn2lii/WD9KbQQVjb7kbB3gNIJpGTUcoX73arorqkq/ppaLRmmwMJ7bTIGl8/0MWU2Dy+eTByOaDMb2htbB+j8ZXyEu7Oooy0NaSd+PNHv3PZ9OIVO7gd1lyoTRvCMK/F346+zmZtk5EASSOx5RifnSwk3NtugVjXs9GMJfFLBRibGenerated-by-Nova\\n\n",
+        "type": "ssh",
+        "name": "demo1",
+        "user_id": "fake"
     }
-    ```
+}
+```
 
+## 响应示例（导入SSH密钥）<a name="section8681151155119"></a>
 
--   响应示例
-
-    ```
-    {
-        "keypair": {
-            "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWNgTxQYeBzK9LYy4IakX7IsIl5j5zqR6BU2GJaEg3RK6dlS7rKFQhvy/V/1emK+GT/7P8up9VsMZ9Dx6PBOLow5p+2/wGsMlwDJpWiQ8zNnEMg+u/Ar/ZhYHAMyKEAOOJxIcnPoUgxfNdj/eiXV98AabsBdUA7QD30Og8F4Bmn2lii/WD9KbQQVjb7kbB3gNIJpGTUcoX73arorqkq/ppaLRmmwMJ7bTIGl8/0MWU2Dy+eTByOaDMb2htbB+j8ZXyEu7Oooy0NaSd+PNHv3PZ9OIVO7gd1lyoTRvCMK/F346+zmZtk5EASSOx5RifnSwk3NtugVjXs9GMJfFLBRib Generated-by-Nova\\n\n",
-            "user_id": "6fc0d2cbbfab40b199874b97097e913d",
-            "name": "demo1",
-            "fingerprint": "fc:47:b5:c3:7d:25:32:d5:d2:0c:19:f9:62:ac:8c:5a"
-        }
+```
+{
+    "keypair": {
+        "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWNgTxQYeBzK9LYy4IakX7IsIl5j5zqR6BU2GJaEg3RK6dlS7rKFQhvy/V/1emK+GT/7P8up9VsMZ9Dx6PBOLow5p+2/wGsMlwDJpWiQ8zNnEMg+u/Ar/ZhYHAMyKEAOOJxIcnPoUgxfNdj/eiXV98AabsBdUA7QD30Og8F4Bmn2lii/WD9KbQQVjb7kbB3gNIJpGTUcoX73arorqkq/ppaLRmmwMJ7bTIGl8/0MWU2Dy+eTByOaDMb2htbB+j8ZXyEu7Oooy0NaSd+PNHv3PZ9OIVO7gd1lyoTRvCMK/F346+zmZtk5EASSOx5RifnSwk3NtugVjXs9GMJfFLBRib Generated-by-Nova\\n\n",
+        "user_id": "6fc0d2cbbfab40b199874b97097e913d",
+        "name": "demo1",
+        "fingerprint": "fc:47:b5:c3:7d:25:32:d5:d2:0c:19:f9:62:ac:8c:5a"
     }
-    ```
+}
+```
 
+## 响应示例（创建SSH密钥）<a name="section97601124125214"></a>
 
-## 示例2<a name="section1231123781613"></a>
-
-**创建SSH密钥**
-
--   响应样例
-
-    ```
-    {
-        "keypair": {
-            "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWNgTxQYeBzK9LYy4IakX7IsIl5j5zqR6BU2GJaEg3RK6dlS7rKFQhvy/V/1emK+GT/7P8up9VsMZ9Dx6PBOLow5p+2/wGsMlwDJpWiQ8zNnEMg+u/Ar/ZhYHAMyKEAOOJxIcnPoUgxfNdj/eiXV98AabsBdUA7QD30Og8F4Bmn2lii/WD9KbQQVjb7kbB3gNIJpGTUcoX73arorqkq/ppaLRmmwMJ7bTIGl8/0MWU2Dy+eTByOaDMb2htbB+j8ZXyEu7Oooy0NaSd+PNHv3PZ9OIVO7gd1lyoTRvCMK/F346+zmZtk5EASSOx5RifnSwk3NtugVjXs9GMJfFLBRib Generated-by-Nova\n",
-            "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEA1jYE8UGHgcyvS2MuCGpF+yLCJeY+c6kegVNhiWhIN0SunZUu\n6yhUIb8v1f9Xpivhk/+z/LqfVbDGfQ8ejwTi6MOaftv8BrDJcAyaVokPMzZxDIPr\nvwK/2YWBwDMihADjicSHJz6FIMXzXY/3ol1ffAGm7AXVAO0A99DoPBeAZp9pYov1\ng/Sm0EFY2+5Gwd4DSCaRk1HKF+92q6K6pKv6aWi0ZpsDCe20yBpfP9DFlNg8vnkw\ncjmgzG9obWwfo/GV8hLuzqKMtDWknfjzR79z2fTiFTu4HdZcqE0bwjCvxd+Ovs5m\nbZORAEkjseUYn50sJNzbboFY17PRjCXxSwUYmwIDAQABAoIBADNKQ+ywUA3YQLDA\nUqlZKOB09h+0/YccG13D5TrNaV0yaMz6h31u7pYV/RI0TXxQTXbuZt5AoR4Xca9I\nC30bImmxTDDL45CGi/T0T5AgyS7t/iuM+smFkwI2YVbv53fL7q9yCxpucdnjC95/\nNj/+M3qxupIQ42uRVAYCU1jwF6J6YLy/9UamrmVd4bWFRtT19O7uszUhHLqJOZXq\n3ItqnMyD5bSMkzMN+RxmZVXAPkBOonGVeBBInCjvHv23REkngX38zcUSc543H3Di\n4673helqSdMnI0/TgyfLQcNuOsfQcD02ABWlGBe0nCTqP8pTRo86nzK1+AoCUp72\nIsTeviECgYEA8yHKeo/eZw25eDb3YTJovbgzA61n6AYQlDQv7rBGQDwKKQHdEqhR\nP0PbScaoT7wSeLtYV0vxxA6qjEEuHhZIk/t2wEILu+AH4AK88SUbUn6ZoYu+XmTA\nx26e2QRo8Ngi/KtIfeOGXx1PM/H2/OjEN3XjkfwJsj5bB+HjpF/wsnUCgYEA4Yxg\nWJYNrvSkmvXmDgxHwdxfUpVAcp40bvomNgYpKn9R2TyjMCSDIw8vVC6cGCFB9/Pc\nG0pr8RN2SvbTaPo/96DkKdHz7NAWkzUSChD4Oy7ZNXw6GK3x1tGwMWeTs1hQDHhO\nrjS+E3bV2jC4EIvLLBxCNCbhtmQwlGUj7ZhgHM8CgYEA14UGpWpOrW8/D086LpCu\nxC46GnJmfwiRPa6dJqpfO6V9JCigvV8y1i/ifR16KWP/w8HeZ1PMtgyCJd3JcaYz\nI+pus7JYEGxgzrPepKxN8eyDZu4nDCmnsaFfceQ02fnd2bhDhERh4oJqqRM966ax\n+K+p0MhoF/aqXuxgDF93T9kCgYEAw7TsfLFnGiJJGfS4NARP11UCmUPMcif4UztX\nIJVj7u4e9SJ6bvGfoDIy3Ra8duuUtDOzDzMaSkqa4B0f//z0uEew8uCsiRVeIUlx\nZ66l1aSm8JPkTTnRmJbGDXhUXtAIVWmmy94T+AurL/IKJMFH//RdNadvPrXcuUax\nUB5hd10CgYEA3JBuX4BriSk6Bii0kYniqFM/1tEgVelAP6DT6uePvzTFdSJ0dMQo\nzwgWNmm43CyoKW/rw8yIbtIQZKBfHudSNx72nSmnBKaf3QPB40xsCip90ZUTfZdn\nLJzX1t4clg1wNsN4mJDwiYM9k3rB/8EY1fh9gUYI84X6xFAHllkv0To=\n-----END RSA PRIVATE KEY-----\n",
-            "user_id": "6fc0d2cbbfab40b199874b97097e913d",
-            "type": "ssh",
-            "name": "demo",
-            "fingerprint": "fc:47:b5:c3:7d:25:32:d5:d2:0c:19:f9:62:ac:8c:5a"
-       }
-    }
-    ```
-
+```
+{
+    "keypair": {
+        "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWNgTxQYeBzK9LYy4IakX7IsIl5j5zqR6BU2GJaEg3RK6dlS7rKFQhvy/V/1emK+GT/7P8up9VsMZ9Dx6PBOLow5p+2/wGsMlwDJpWiQ8zNnEMg+u/Ar/ZhYHAMyKEAOOJxIcnPoUgxfNdj/eiXV98AabsBdUA7QD30Og8F4Bmn2lii/WD9KbQQVjb7kbB3gNIJpGTUcoX73arorqkq/ppaLRmmwMJ7bTIGl8/0MWU2Dy+eTByOaDMb2htbB+j8ZXyEu7Oooy0NaSd+PNHv3PZ9OIVO7gd1lyoTRvCMK/F346+zmZtk5EASSOx5RifnSwk3NtugVjXs9GMJfFLBRib Generated-by-Nova\n",
+        "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEA1jYE8UGHgcyvS2MuCGpF+yLCJeY+c6kegVNhiWhIN0SunZUu\n6yhUIb8v1f9Xpivhk/+z/LqfVbDGfQ8ejwTi6MOaftv8BrDJcAyaVokPMzZxDIPr\nvwK/2YWBwDMihADjicSHJz6FIMXzXY/3ol1ffAGm7AXVAO0A99DoPBeAZp9pYov1\ng/Sm0EFY2+5Gwd4DSCaRk1HKF+92q6K6pKv6aWi0ZpsDCe20yBpfP9DFlNg8vnkw\ncjmgzG9obWwfo/GV8hLuzqKMtDWknfjzR79z2fTiFTu4HdZcqE0bwjCvxd+Ovs5m\nbZORAEkjseUYn50sJNzbboFY17PRjCXxSwUYmwIDAQABAoIBADNKQ+ywUA3YQLDA\nUqlZKOB09h+0/YccG13D5TrNaV0yaMz6h31u7pYV/RI0TXxQTXbuZt5AoR4Xca9I\nC30bImmxTDDL45CGi/T0T5AgyS7t/iuM+smFkwI2YVbv53fL7q9yCxpucdnjC95/\nNj/+M3qxupIQ42uRVAYCU1jwF6J6YLy/9UamrmVd4bWFRtT19O7uszUhHLqJOZXq\n3ItqnMyD5bSMkzMN+RxmZVXAPkBOonGVeBBInCjvHv23REkngX38zcUSc543H3Di\n4673helqSdMnI0/TgyfLQcNuOsfQcD02ABWlGBe0nCTqP8pTRo86nzK1+AoCUp72\nIsTeviECgYEA8yHKeo/eZw25eDb3YTJovbgzA61n6AYQlDQv7rBGQDwKKQHdEqhR\nP0PbScaoT7wSeLtYV0vxxA6qjEEuHhZIk/t2wEILu+AH4AK88SUbUn6ZoYu+XmTA\nx26e2QRo8Ngi/KtIfeOGXx1PM/H2/OjEN3XjkfwJsj5bB+HjpF/wsnUCgYEA4Yxg\nWJYNrvSkmvXmDgxHwdxfUpVAcp40bvomNgYpKn9R2TyjMCSDIw8vVC6cGCFB9/Pc\nG0pr8RN2SvbTaPo/96DkKdHz7NAWkzUSChD4Oy7ZNXw6GK3x1tGwMWeTs1hQDHhO\nrjS+E3bV2jC4EIvLLBxCNCbhtmQwlGUj7ZhgHM8CgYEA14UGpWpOrW8/D086LpCu\nxC46GnJmfwiRPa6dJqpfO6V9JCigvV8y1i/ifR16KWP/w8HeZ1PMtgyCJd3JcaYz\nI+pus7JYEGxgzrPepKxN8eyDZu4nDCmnsaFfceQ02fnd2bhDhERh4oJqqRM966ax\n+K+p0MhoF/aqXuxgDF93T9kCgYEAw7TsfLFnGiJJGfS4NARP11UCmUPMcif4UztX\nIJVj7u4e9SJ6bvGfoDIy3Ra8duuUtDOzDzMaSkqa4B0f//z0uEew8uCsiRVeIUlx\nZ66l1aSm8JPkTTnRmJbGDXhUXtAIVWmmy94T+AurL/IKJMFH//RdNadvPrXcuUax\nUB5hd10CgYEA3JBuX4BriSk6Bii0kYniqFM/1tEgVelAP6DT6uePvzTFdSJ0dMQo\nzwgWNmm43CyoKW/rw8yIbtIQZKBfHudSNx72nSmnBKaf3QPB40xsCip90ZUTfZdn\nLJzX1t4clg1wNsN4mJDwiYM9k3rB/8EY1fh9gUYI84X6xFAHllkv0To=\n-----END RSA PRIVATE KEY-----\n",
+        "user_id": "6fc0d2cbbfab40b199874b97097e913d",
+        "type": "ssh",
+        "name": "demo",
+        "fingerprint": "fc:47:b5:c3:7d:25:32:d5:d2:0c:19:f9:62:ac:8c:5a"
+   }
+}
+```
 
 ## 返回值<a name="section57959746"></a>
 
