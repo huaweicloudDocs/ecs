@@ -4,15 +4,17 @@
 
 使用P1型、P2v型、Pi1型弹性云服务器时，需确保云服务器已安装GPU驱动和CUDA工具包，否则无法实现计算加速功能。
 
-安装GPU驱动和CUDA工具包的方式包括“自动安装”和“手动安装”：
+-   已创建弹性云服务器。
+-   使用公共镜像创建的云服务器，默认已安装GPU驱动和CUDA工具包。
+-   使用私有镜像创建云服务器，需检查是否已安装GPU驱动和CUDA工具包，详细操作请参考[检查是否已安装GPU驱动和CUDA工具包](#section11444117152017)。
 
--   自动安装：创建弹性云服务器时，公有云平台提供了自动安装功能，具体操作请参见[购买并登录Windows弹性云服务器](https://support.huaweicloud.com/qs-ecs/zh-cn_topic_0021831611.html)、[购买并登录Linux弹性云服务器](https://support.huaweicloud.com/qs-ecs/zh-cn_topic_0092494193.html)。
--   手动安装：如果自动安装失败，或者创建云服务器时未使用自动安装功能，您可以在云服务器创建成功后，手动安装所需的驱动和工具包。具体操作请参见本节内容。
+    如果使用的镜像中没有安装GPU驱动和CUDA工具包，您可以在云服务器创建成功后，手动安装所需的驱动和工具包。具体操作请参见[安装指引](#section541712554262)。
+
 
 本节内容主要解决如下问题：
 
--   自动安装的GPU驱动和CUDA工具包是否安装成功？
--   弹性云服务器是否已安装GPU驱动和CUDA工具包？
+-   检查GPU驱动和CUDA工具包是否安装成功？
+-   云服务器是否已安装GPU驱动和CUDA工具包？
 -   如何手动安装所需的GPU驱动和CUDA工具包？
 
 ## 安装须知<a name="section75624461422"></a>
@@ -79,7 +81,10 @@
 
 1.  从内源下载Windows弹性云服务器所需的GPU驱动和CUDA工具包。
 
-    下载地址：[http://mirrors.huaweicloud.com/ecs/windows/exe/](http://mirrors.huaweicloud.com/ecs/windows/exe/)
+    下载地址：[http://mirrors.myhuaweicloud.com/ecs/windows/exe/](http://mirrors.myhuaweicloud.com/ecs/windows/exe/)
+
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >请在弹性云服务器中访问此地址。  
 
     打开该地址后，能够看到“win2008r2“、“win2012r2“、“win2016“三个版本的文件夹，每个文件夹下包括了“cuda“和“driver“两个文件夹，这两个文件夹中的文件即为不同版本的cuda和driver安装包。
 
@@ -89,7 +94,10 @@
 
     假设您的弹性云服务器操作系统为Windows 2016，则GPU驱动和CUDA工具包的获取方式为：
 
-    1.  打开链接[http://mirrors.huaweicloud.com/ecs/windows/exe/](http://mirrors.huaweicloud.com/ecs/windows/exe/)。
+    1.  打开链接[http://mirrors.myhuaweicloud.com/ecs/windows/exe/](http://mirrors.myhuaweicloud.com/ecs/windows/exe/)。
+
+        >![](public_sys-resources/icon-note.gif) **说明：**   
+        >请在弹性云服务器中访问此地址。  
 
         可以看到三个文件夹：win2008r2、“win2012r2“和“win2016“
 
@@ -102,7 +110,6 @@
         cuda：cuda\_9.0.176\_windows.exe
 
         driver：385.08-tesla-desktop-winserver-international.exe
-
 
 2.  安装GPU驱动和CUDA工具包。
 
@@ -132,14 +139,19 @@
 
         ```
         [ecs-cuda] 
-        name=ecs-cuda-$basearch baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/cuda/7/$basearch 
-        enabled=1 
-        gpgcheck=0  
-        [ecs-driver] 
-        name=ecs-driver-$basearch baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/driver/7/$basearch enabled=1 gpgcheck=0  
+        name=ecs-cuda-$basearch
+        baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/cuda/7/$basearch 
+        enabled=1
+        gpgcheck=0
+        [ecs-driver]
+        name=ecs-driver-$basearch
+        baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/driver/7/$basearch
+        enabled=1
+        gpgcheck=0
         [ecs-package] 
-        name=ecs-package-$basearch baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/package/7/$basearch 
-        enabled=1 
+        name=ecs-package-$basearch
+        baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/package/7/$basearch
+        enabled=1
         gpgcheck=0
         ```
 
@@ -160,7 +172,6 @@
 
             **curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.myhuaweicloud.com/repo/CentOS-Base-7.repo**
 
-
         -   如果是EulerOS系统软件仓库
 
             **curl -o /etc/yum.repos.d/EulerOS-Base.repo http://mirrors.myhuaweicloud.com/repo/euler/EulerOS\_2\_2\_base.repo**
@@ -168,7 +179,6 @@
             **curl -o /etc/yum.repos.d/EulerOS-Base.repo http://mirrors.myhuaweicloud.com/repo/euler/EulerOS\_2\_3\_base.repo**
 
         -   Red Hat Enterprise Linux已经有系统RHUI软件仓库了。
-
 
 2.  CentOS 7.x &RHEL 7.x &EulerOS 2.x CUDA安装
     1.  执行如下命令，安装与内核版本匹配的kernel-devel。
@@ -235,17 +245,20 @@
     3.  在新建文件nvidia-centos6.repo中添加如下内容：
 
         ```
-        [ecs-cuda] 
-        name=ecs-cuda-$basearch baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/cuda/6/$basearch 
-        enabled=1 
-        gpgcheck=0  
+        [ecs-cuda]
+        name=ecs-cuda-$basearch
+        baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/cuda/6/$basearch
+        enabled=1
+        gpgcheck=0
         [ecs-driver] 
-        name=ecs-driver-$basearch baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/driver/6/$basearch 
-        enabled=1 
-        gpgcheck=0  
-        [ecs-package] 
-        name=ecs-package-$basearch baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/package/6/$basearch 
-        enabled=1 
+        name=ecs-driver-$basearch
+        baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/driver/6/$basearch
+        enabled=1
+        gpgcheck=0
+        [ecs-package]
+        name=ecs-package-$basearch
+        baseurl=http://mirrors.myhuaweicloud.com/ecs/linux/rpm/package/6/$basearch
+        enabled=1
         gpgcheck=0
         ```
 
@@ -267,7 +280,6 @@
             **curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.myhuaweicloud.com/repo/CentOS-Base-6.repo**
 
         -   Red Hat Enterprise Linux已经有系统RHUI软件仓库了。
-
 
 2.  CentOS 6.x &RHEL 6.x CUDA安装
     1.  执行如下命令，安装与内核版本匹配的kernel-devel。
@@ -374,7 +386,6 @@
         apt update
         ```
 
-
 2.  Ubuntu 14.04 &Ubuntu 16.04 CUDA安装
     1.  执行如下命令，安装与内核版本匹配的kernel-devel。
 
@@ -467,7 +478,6 @@
         type=rpm-md 
         gpgcheck=0
         ```
-
 
 3.  执行以下命令，安装CUDA。
     1.  执行如下命令，安装kernel-devel。

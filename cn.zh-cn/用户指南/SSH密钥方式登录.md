@@ -1,9 +1,13 @@
 # SSH密钥方式登录<a name="ZH-CN_TOPIC_0017955380"></a>
 
+## 操作场景<a name="section1547194115913"></a>
+
+本节操作介绍在Windows和Linux环境中使用SSH密钥对方式远程登录Linux云服务器的操作步骤。
+
 ## 前提条件<a name="section6801971111724"></a>
 
 -   已获取创建该弹性云服务器时使用的密钥对私钥文件。
--   弹性云服务器已经绑定弹性公网IP，绑定方式请参见[查看详细信息](查看详细信息.md)。
+-   弹性云服务器已经绑定弹性公网IP，绑定方式请参见[查看云服务器详细信息（列表视图）](查看云服务器详细信息（列表视图）.md)。
 
 -   已配置安全组入方向的访问规则，配置方式请参见[配置安全组规则](配置安全组规则.md)。
 -   使用的登录工具（如PuTTY）与待登录的弹性云服务器之间网络连通。例如，默认的22端口没有被防火墙屏蔽。
@@ -22,7 +26,7 @@
 
 2.  <a name="li8851985111724"></a>在以下路径中下载PuTTY和PuTTYgen。
 
-    [http://www.chiark.greenend.org.uk/\~sgtatham/putty/latest.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+    [https://www.chiark.greenend.org.uk/\~sgtatham/putty/latest.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >PuTTYgen是密钥生成器，用于创建密钥对，生成一对公钥和私钥供PuTTY使用。  
@@ -67,7 +71,7 @@
 3.  （可选）如果系统弹窗提示“SSH安全警告”，此时需单击“接受并保存”。
 
     **图 2**  SSH安全警告<a name="fig680319562495"></a>  
-    ![](figures/SSH安全警告.jpg "SSH安全警告")
+    ![](figures/SSH安全警告.png "SSH安全警告")
 
 4.  选择“Public Key”，并单击“用户密钥\(K\)”栏的“浏览”。
 5.  在“用户密钥”窗口中，单击“导入”。
@@ -80,18 +84,18 @@
 
 1.  在您的linux计算机的命令行中执行如下命令，变更权限。
 
-    **chmod 400 /_path_/kp-123**
+    **chmod 400 /_path_/kp-123.pem**
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >上述命令的path为密钥文件的存放路径。  
 
 2.  执行如下命令，登录弹性云服务器。
 
-    **ssh -i /_path_/kp-123** _**默认用户名**_**@_弹性云服务器_**
+    **ssh -i /_path_/kp-123.pem** _**默认用户名**_**@**_****_**_弹性公网IP_**
 
-    假设Linux弹性云服务器的默认用户名是linux，则命令如下：
+    假设Linux弹性云服务器的默认用户名是linux，弹性公网IP为123.123.123.123，则命令如下：
 
-    **ssh -i /_path_/kp-123 linux@**_**弹性公网IP**_
+    **ssh -i /_path_/kp-123.pem linux@123.123.123.123**
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   path为密钥文件的存放路径。  
@@ -101,4 +105,9 @@
 ## 后续处理<a name="section51158488121525"></a>
 
 -   以SSH密钥方式登录弹性云服务器后，可以通过设置密码，后续使用VNC方式登录Linux弹性云服务器。
+
+## 相关链接<a name="section2826432183510"></a>
+
+-   [云服务器登录前的准备工作有哪些？](https://support.huaweicloud.com/ecs_faq/zh-cn_topic_0163540201.html)
+-   [无法登录到Linux云服务器怎么办？](https://support.huaweicloud.com/ecs_faq/zh-cn_topic_0105127983.html)
 
