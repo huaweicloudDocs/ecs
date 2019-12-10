@@ -6,8 +6,6 @@
 
 ## URI<a name="section29616056"></a>
 
-GET /v2/\{project\_id\}/os-keypairs/\{keypair\_name\}
-
 GET /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 
 参数说明请参见[表1](#table51931981)。
@@ -43,11 +41,9 @@ GET /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 
 ## 请求消息<a name="section65217919"></a>
 
-不涉及
+无
 
 ## 响应消息<a name="section50090360"></a>
-
-**响应参数**
 
 响应参数如[表2](#table49096623)所示。
 
@@ -64,7 +60,7 @@ GET /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 </thead>
 <tbody><tr id="row31470474"><td class="cellrowborder" valign="top" width="23.057694230576942%" headers="mcps1.2.4.1.1 "><p id="p66080459"><a name="p66080459"></a><a name="p66080459"></a>keypair</p>
 </td>
-<td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p30630481"><a name="p30630481"></a><a name="p30630481"></a>字典数据结构</p>
+<td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p30630481"><a name="p30630481"></a><a name="p30630481"></a>Object</p>
 </td>
 <td class="cellrowborder" valign="top" width="46.17538246175382%" headers="mcps1.2.4.1.3 "><p id="p49478440"><a name="p49478440"></a><a name="p49478440"></a>SSH密钥信息，详情请参见<a href="#table32323009">表3</a>。</p>
 </td>
@@ -106,7 +102,7 @@ GET /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 </tr>
 <tr id="row5852437"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.4.1.1 "><p id="p4285383"><a name="p4285383"></a><a name="p4285383"></a>created_at</p>
 </td>
-<td class="cellrowborder" valign="top" width="27%" headers="mcps1.2.4.1.2 "><p id="p64894876"><a name="p64894876"></a><a name="p64894876"></a>String:DateTime</p>
+<td class="cellrowborder" valign="top" width="27%" headers="mcps1.2.4.1.2 "><p id="p64894876"><a name="p64894876"></a><a name="p64894876"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.4.1.3 "><p id="p63724816"><a name="p63724816"></a><a name="p63724816"></a>密钥创建时间。</p>
 </td>
@@ -121,7 +117,7 @@ GET /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 </tr>
 <tr id="row39255446"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.4.1.1 "><p id="p25574597"><a name="p25574597"></a><a name="p25574597"></a>deleted_at</p>
 </td>
-<td class="cellrowborder" valign="top" width="27%" headers="mcps1.2.4.1.2 "><p id="p22776773"><a name="p22776773"></a><a name="p22776773"></a>String:DateTime</p>
+<td class="cellrowborder" valign="top" width="27%" headers="mcps1.2.4.1.2 "><p id="p22776773"><a name="p22776773"></a><a name="p22776773"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.4.1.3 "><p id="p28378258"><a name="p28378258"></a><a name="p28378258"></a>密钥删除时间。</p>
 </td>
@@ -135,7 +131,7 @@ GET /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 </tr>
 <tr id="row62953674"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.4.1.1 "><p id="p66082838"><a name="p66082838"></a><a name="p66082838"></a>updated_at</p>
 </td>
-<td class="cellrowborder" valign="top" width="27%" headers="mcps1.2.4.1.2 "><p id="p46241663"><a name="p46241663"></a><a name="p46241663"></a>String:DateTime</p>
+<td class="cellrowborder" valign="top" width="27%" headers="mcps1.2.4.1.2 "><p id="p46241663"><a name="p46241663"></a><a name="p46241663"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.4.1.3 "><p id="p21523158"><a name="p21523158"></a><a name="p21523158"></a>密钥更新时间。</p>
 </td>
@@ -147,29 +143,40 @@ GET /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.4.1.3 "><p id="p30428869"><a name="p30428869"></a><a name="p30428869"></a>密钥所属用户信息。</p>
 </td>
 </tr>
+<tr id="row462920453538"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.4.1.1 "><p id="p199751011803"><a name="p199751011803"></a><a name="p199751011803"></a>type</p>
+</td>
+<td class="cellrowborder" valign="top" width="27%" headers="mcps1.2.4.1.2 "><p id="p139751111204"><a name="p139751111204"></a><a name="p139751111204"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.4.1.3 "><p id="p1097512112013"><a name="p1097512112013"></a><a name="p1097512112013"></a>密钥类型，默认“ssh”</p>
+<p id="p144811212011"><a name="p144811212011"></a><a name="p144811212011"></a>微版本2.2以上支持</p>
+</td>
+</tr>
 </tbody>
 </table>
 
-## 示例<a name="section13613112651113"></a>
+## 请求示例<a name="section4978145455016"></a>
 
--   响应样例
+```
+GET https://{endpoint}/v2.1/{project_id}/os-keypairs/{keypair_name}
+```
 
-    ```
-    {
-        "keypair": {
-            "created_at": "2014-05-07T12:06:13.681238",
-            "deleted": false,
-            "deleted_at": null,
-            "fingerprint": "9d:00:f4:d7:26:6e:52:06:4c:c1:d3:1d:fd:06:66:01",
-            "id": 1,
-            "name": "keypair-3582d8b7-e588-4aad-b7f7-f4e76f0e4314",
-            "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYJrTVpcMwFqQy/oMvtUSRofZdSRHEwrsX8AYkRvn2ZnCXM+b6+GZ2NQuuWj+ocznlnwiGFQDsL/yeE+/kurqcPJFKKp60mToXIMyzioFxW88fJtwEWawHKAclbHWpR1t4fQ4DS+/sIbX/Yd9btlVQ2tpQjodGDbM9Tr9/+/3i6rcR+EoLqmbgCgAiGiVV6VbM2Zx79yUwd+GnQejHX8BlYZoOjCnt3NREsITcmWE9FVFy6TnLmahs3FkEO/QGgWGkaohAJlsgaVvSWGgDn2AujKYwyDokK3dXyeX3m2Vmc3ejiqPa/C4nRrCOlko5nSgV/9IXRx1ERImsqZnE9usB Generated-by-Nova\n",
-            "updated_at": null,
-            "user_id": "fake"
-        }
+## 响应示例<a name="section13613112651113"></a>
+
+```
+{
+    "keypair": {
+        "created_at": "2014-05-07T12:06:13.681238",
+        "deleted": false,
+        "deleted_at": null,
+        "fingerprint": "9d:00:f4:d7:26:6e:52:06:4c:c1:d3:1d:fd:06:66:01",
+        "id": 1,
+        "name": "keypair-3582d8b7-e588-4aad-b7f7-f4e76f0e4314",
+        "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYJrTVpcMwFqQy/oMvtUSRofZdSRHEwrsX8AYkRvn2ZnCXM+b6+GZ2NQuuWj+ocznlnwiGFQDsL/yeE+/kurqcPJFKKp60mToXIMyzioFxW88fJtwEWawHKAclbHWpR1t4fQ4DS+/sIbX/Yd9btlVQ2tpQjodGDbM9Tr9/+/3i6rcR+EoLqmbgCgAiGiVV6VbM2Zx79yUwd+GnQejHX8BlYZoOjCnt3NREsITcmWE9FVFy6TnLmahs3FkEO/QGgWGkaohAJlsgaVvSWGgDn2AujKYwyDokK3dXyeX3m2Vmc3ejiqPa/C4nRrCOlko5nSgV/9IXRx1ERImsqZnE9usB Generated-by-Nova\n",
+        "updated_at": null,
+        "user_id": "fake"
     }
-    ```
-
+}
+```
 
 ## 返回值<a name="section48160062"></a>
 

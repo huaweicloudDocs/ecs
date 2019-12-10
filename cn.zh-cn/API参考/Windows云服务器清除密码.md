@@ -6,8 +6,6 @@
 
 ## URI<a name="section50165025"></a>
 
-DELETE /v2/\{project\_id\}/servers/\{server\_id\}/os-server-password
-
 DELETE /v2.1/\{project\_id\}/servers/\{server\_id\}/os-server-password
 
 参数说明请参见[表1](#table46110007)。
@@ -43,11 +41,21 @@ DELETE /v2.1/\{project\_id\}/servers/\{server\_id\}/os-server-password
 
 ## 请求消息<a name="section48832041"></a>
 
-不涉及
+无
 
 ## 响应消息<a name="section1927776"></a>
 
-不涉及
+无
+
+## 请求示例<a name="section118665219435"></a>
+
+```
+DELETE https://{endpoint}/v2.1/{project_id}/servers/{server_id}/os-server-password
+```
+
+## 响应示例<a name="section19716123044320"></a>
+
+无
 
 ## 返回值<a name="section17349988"></a>
 

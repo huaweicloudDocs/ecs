@@ -8,8 +8,6 @@
 
 ## URI<a name="section50165025"></a>
 
-GET /v2/\{project\_id\}/servers/\{server\_id\}/os-server-password
-
 GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-server-password
 
 参数说明请参见[表1](#table46110007)。
@@ -45,22 +43,20 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-server-password
 
 ## 请求消息<a name="section48832041"></a>
 
-不涉及
+无
 
 ## 响应消息<a name="section36835188"></a>
-
-**响应参数**
 
 响应参数如[表2](#table23477058)所示。
 
 **表 2**  响应参数
 
 <a name="table23477058"></a>
-<table><thead align="left"><tr id="row2792905"><th class="cellrowborder" valign="top" width="22.052205220522055%" id="mcps1.2.4.1.1"><p id="p24898733"><a name="p24898733"></a><a name="p24898733"></a>名称</p>
+<table><thead align="left"><tr id="row2792905"><th class="cellrowborder" valign="top" width="22.052205220522055%" id="mcps1.2.4.1.1"><p id="p24898733"><a name="p24898733"></a><a name="p24898733"></a>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="32.20322032203221%" id="mcps1.2.4.1.2"><p id="p17614915"><a name="p17614915"></a><a name="p17614915"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="45.744574457445744%" id="mcps1.2.4.1.3"><p id="p17521988"><a name="p17521988"></a><a name="p17521988"></a>说明</p>
+<th class="cellrowborder" valign="top" width="45.744574457445744%" id="mcps1.2.4.1.3"><p id="p17521988"><a name="p17521988"></a><a name="p17521988"></a>描述</p>
 </th>
 </tr>
 </thead>
@@ -74,16 +70,19 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-server-password
 </tbody>
 </table>
 
-## 示例<a name="section15240205325510"></a>
+## 请求示例<a name="section10960125004315"></a>
 
--   响应样例：
+```
+GET https://{endpoint}/v2.1/{project_id}/servers/{server_id}/os-server-password
+```
 
-    ```
-    {
-        "password": "UHC9+YW1xDC1Yu8Mg9n+tnOp7euEO/cW//9KgdJKWhr5w=="
-    }
-    ```
+## 响应示例<a name="section15240205325510"></a>
 
+```
+{
+    "password": "UHC9+YW1xDC1Yu8Mg9n+tnOp7euEO/cW//9KgdJKWhr5w=="
+}
+```
 
 ## 返回值<a name="section63081244"></a>
 

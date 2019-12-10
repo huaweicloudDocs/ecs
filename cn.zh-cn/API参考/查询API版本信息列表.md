@@ -7,36 +7,41 @@
 为了支持功能不断扩展，Nova API支持版本号区分。Nova中有两种形式的版本号：
 
 -   "主版本号": 具有独立的url。
--   "微版本号": 通过Http请求头X-OpenStack-Nova-API-Version来使用，。
+-   "微版本号": 通过Http请求头X-OpenStack-Nova-API-Version来使用。
 
 ## URI<a name="section53791107181842"></a>
 
 GET /
 
-## 示例<a name="section39878380181842"></a>
+## 请求消息<a name="section108201017144216"></a>
 
--   请求示例
+无
 
-    ```
-    GET /
-    ```
+## 响应消息<a name="section89511024194216"></a>
 
--   响应示例
+无
 
-    ```
-    {
-     "versions": [{
-      "links": [{
-       "rel": "self",
-       "href": "https://192.168.82.231:443/v2/"
-      }],
-      "id": "v2.0",
-      "updated": "2001-09-21T12:33:21Z",
-      "status": "SUPPORTED"
-     }]
-    }
-    ```
+## 请求示例<a name="section39878380181842"></a>
 
+```
+GET https://{endpoint}/
+```
+
+## 响应示例<a name="section569124244211"></a>
+
+```
+{
+ "versions": [{
+  "links": [{
+   "rel": "self",
+   "href": "https://ecs.service.domain.com:443/v2/"
+  }],
+  "id": "v2.0",
+  "updated": "2001-09-21T12:33:21Z",
+  "status": "SUPPORTED"
+ }]
+}
+```
 
 ## 返回值<a name="section12571834"></a>
 

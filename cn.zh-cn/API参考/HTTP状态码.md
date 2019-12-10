@@ -31,65 +31,65 @@
 </table>
 
 <a name="zh-cn_topic_0057973167_table28267100"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0057973167_row30325805"><th class="cellrowborder" valign="top" width="31.680000000000003%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0057973167_p40471155"><a name="zh-cn_topic_0057973167_p40471155"></a><a name="zh-cn_topic_0057973167_p40471155"></a>错误状态码</p>
+<table><thead align="left"><tr id="zh-cn_topic_0057973167_row30325805"><th class="cellrowborder" valign="top" width="31.319999999999997%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0057973167_p40471155"><a name="zh-cn_topic_0057973167_p40471155"></a><a name="zh-cn_topic_0057973167_p40471155"></a>错误状态码</p>
 </th>
-<th class="cellrowborder" valign="top" width="68.32000000000001%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0057973167_p56938129"><a name="zh-cn_topic_0057973167_p56938129"></a><a name="zh-cn_topic_0057973167_p56938129"></a>描述</p>
+<th class="cellrowborder" valign="top" width="68.67999999999999%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0057973167_p56938129"><a name="zh-cn_topic_0057973167_p56938129"></a><a name="zh-cn_topic_0057973167_p56938129"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0057973167_row48585776"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p43133816"><a name="zh-cn_topic_0057973167_p43133816"></a><a name="zh-cn_topic_0057973167_p43133816"></a>400</p>
+<tbody><tr id="zh-cn_topic_0057973167_row48585776"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p43133816"><a name="zh-cn_topic_0057973167_p43133816"></a><a name="zh-cn_topic_0057973167_p43133816"></a>400</p>
 </td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p4178192"><a name="zh-cn_topic_0057973167_p4178192"></a><a name="zh-cn_topic_0057973167_p4178192"></a>Bad Request</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0057973167_row37603729"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p26003237"><a name="zh-cn_topic_0057973167_p26003237"></a><a name="zh-cn_topic_0057973167_p26003237"></a>401</p>
-</td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p25887453"><a name="zh-cn_topic_0057973167_p25887453"></a><a name="zh-cn_topic_0057973167_p25887453"></a>Unauthorized</p>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p4178192"><a name="zh-cn_topic_0057973167_p4178192"></a><a name="zh-cn_topic_0057973167_p4178192"></a>Bad Request</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0057973167_row31660490"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p14362932"><a name="zh-cn_topic_0057973167_p14362932"></a><a name="zh-cn_topic_0057973167_p14362932"></a>403</p>
+<tr id="zh-cn_topic_0057973167_row37603729"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p26003237"><a name="zh-cn_topic_0057973167_p26003237"></a><a name="zh-cn_topic_0057973167_p26003237"></a>401</p>
 </td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p22546871"><a name="zh-cn_topic_0057973167_p22546871"></a><a name="zh-cn_topic_0057973167_p22546871"></a>Forbidden</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0057973167_row1595249"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p62106315"><a name="zh-cn_topic_0057973167_p62106315"></a><a name="zh-cn_topic_0057973167_p62106315"></a>404</p>
-</td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p64555601"><a name="zh-cn_topic_0057973167_p64555601"></a><a name="zh-cn_topic_0057973167_p64555601"></a>Not Found</p>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p25887453"><a name="zh-cn_topic_0057973167_p25887453"></a><a name="zh-cn_topic_0057973167_p25887453"></a>Unauthorized</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0057973167_row44129505"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p17720149"><a name="zh-cn_topic_0057973167_p17720149"></a><a name="zh-cn_topic_0057973167_p17720149"></a>405</p>
+<tr id="zh-cn_topic_0057973167_row31660490"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p14362932"><a name="zh-cn_topic_0057973167_p14362932"></a><a name="zh-cn_topic_0057973167_p14362932"></a>403</p>
 </td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p26045994"><a name="zh-cn_topic_0057973167_p26045994"></a><a name="zh-cn_topic_0057973167_p26045994"></a>Method Not Allowed</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0057973167_row33087360"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p62830537"><a name="zh-cn_topic_0057973167_p62830537"></a><a name="zh-cn_topic_0057973167_p62830537"></a>409</p>
-</td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p56108742"><a name="zh-cn_topic_0057973167_p56108742"></a><a name="zh-cn_topic_0057973167_p56108742"></a>Conflict</p>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p22546871"><a name="zh-cn_topic_0057973167_p22546871"></a><a name="zh-cn_topic_0057973167_p22546871"></a>Forbidden</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0057973167_row35216636"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p33975267"><a name="zh-cn_topic_0057973167_p33975267"></a><a name="zh-cn_topic_0057973167_p33975267"></a>413</p>
+<tr id="zh-cn_topic_0057973167_row1595249"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p62106315"><a name="zh-cn_topic_0057973167_p62106315"></a><a name="zh-cn_topic_0057973167_p62106315"></a>404</p>
 </td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p533234"><a name="zh-cn_topic_0057973167_p533234"></a><a name="zh-cn_topic_0057973167_p533234"></a>Request Entity Too Large</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0057973167_row4799113"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p53183848"><a name="zh-cn_topic_0057973167_p53183848"></a><a name="zh-cn_topic_0057973167_p53183848"></a>415</p>
-</td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p12924420"><a name="zh-cn_topic_0057973167_p12924420"></a><a name="zh-cn_topic_0057973167_p12924420"></a>Unsupported Media Type</p>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p64555601"><a name="zh-cn_topic_0057973167_p64555601"></a><a name="zh-cn_topic_0057973167_p64555601"></a>Not Found</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0057973167_row49210916"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p26661221"><a name="zh-cn_topic_0057973167_p26661221"></a><a name="zh-cn_topic_0057973167_p26661221"></a>500</p>
+<tr id="zh-cn_topic_0057973167_row44129505"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p17720149"><a name="zh-cn_topic_0057973167_p17720149"></a><a name="zh-cn_topic_0057973167_p17720149"></a>405</p>
 </td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p12075287"><a name="zh-cn_topic_0057973167_p12075287"></a><a name="zh-cn_topic_0057973167_p12075287"></a>Internal Server Error</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0057973167_row41568721"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p11623279"><a name="zh-cn_topic_0057973167_p11623279"></a><a name="zh-cn_topic_0057973167_p11623279"></a>501</p>
-</td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p1961553"><a name="zh-cn_topic_0057973167_p1961553"></a><a name="zh-cn_topic_0057973167_p1961553"></a>Not Implemented</p>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p26045994"><a name="zh-cn_topic_0057973167_p26045994"></a><a name="zh-cn_topic_0057973167_p26045994"></a>Method Not Allowed</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0057973167_row17653984"><td class="cellrowborder" valign="top" width="31.680000000000003%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p20686563"><a name="zh-cn_topic_0057973167_p20686563"></a><a name="zh-cn_topic_0057973167_p20686563"></a>503</p>
+<tr id="zh-cn_topic_0057973167_row33087360"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p62830537"><a name="zh-cn_topic_0057973167_p62830537"></a><a name="zh-cn_topic_0057973167_p62830537"></a>409</p>
 </td>
-<td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p64998944"><a name="zh-cn_topic_0057973167_p64998944"></a><a name="zh-cn_topic_0057973167_p64998944"></a>Service Unavailable</p>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p56108742"><a name="zh-cn_topic_0057973167_p56108742"></a><a name="zh-cn_topic_0057973167_p56108742"></a>Conflict</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0057973167_row35216636"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p33975267"><a name="zh-cn_topic_0057973167_p33975267"></a><a name="zh-cn_topic_0057973167_p33975267"></a>413</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p533234"><a name="zh-cn_topic_0057973167_p533234"></a><a name="zh-cn_topic_0057973167_p533234"></a>Request Entity Too Large</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0057973167_row4799113"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p53183848"><a name="zh-cn_topic_0057973167_p53183848"></a><a name="zh-cn_topic_0057973167_p53183848"></a>415</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p12924420"><a name="zh-cn_topic_0057973167_p12924420"></a><a name="zh-cn_topic_0057973167_p12924420"></a>Unsupported Media Type</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0057973167_row49210916"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p26661221"><a name="zh-cn_topic_0057973167_p26661221"></a><a name="zh-cn_topic_0057973167_p26661221"></a>500</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p12075287"><a name="zh-cn_topic_0057973167_p12075287"></a><a name="zh-cn_topic_0057973167_p12075287"></a>Internal Server Error</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0057973167_row41568721"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p11623279"><a name="zh-cn_topic_0057973167_p11623279"></a><a name="zh-cn_topic_0057973167_p11623279"></a>501</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p1961553"><a name="zh-cn_topic_0057973167_p1961553"></a><a name="zh-cn_topic_0057973167_p1961553"></a>Not Implemented</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0057973167_row17653984"><td class="cellrowborder" valign="top" width="31.319999999999997%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0057973167_p20686563"><a name="zh-cn_topic_0057973167_p20686563"></a><a name="zh-cn_topic_0057973167_p20686563"></a>503</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.67999999999999%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0057973167_p64998944"><a name="zh-cn_topic_0057973167_p64998944"></a><a name="zh-cn_topic_0057973167_p64998944"></a>Service Unavailable</p>
 </td>
 </tr>
 </tbody>

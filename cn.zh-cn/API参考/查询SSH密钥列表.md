@@ -6,8 +6,6 @@
 
 ## URI<a name="section60057706"></a>
 
-GET /v2/\{project\_id\}/os-keypairs
-
 GET /v2.1/\{project\_id\}/os-keypairs
 
 参数说明请参见[表1](#table38623499)。
@@ -36,11 +34,9 @@ GET /v2.1/\{project\_id\}/os-keypairs
 
 ## 请求消息<a name="section3648444"></a>
 
-不涉及
+无
 
 ## 响应消息<a name="section32836002"></a>
-
-**响应参数**
 
 响应参数如[表2](#table46959463)所示。
 
@@ -57,7 +53,7 @@ GET /v2.1/\{project\_id\}/os-keypairs
 </thead>
 <tbody><tr id="row34909498"><td class="cellrowborder" valign="top" width="24.122412241224122%" headers="mcps1.2.4.1.1 "><p id="p9097072"><a name="p9097072"></a><a name="p9097072"></a>keypairs</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.453145314531454%" headers="mcps1.2.4.1.2 "><p id="p26115459"><a name="p26115459"></a><a name="p26115459"></a>列表数据结构</p>
+<td class="cellrowborder" valign="top" width="31.453145314531454%" headers="mcps1.2.4.1.2 "><p id="p26115459"><a name="p26115459"></a><a name="p26115459"></a>Array of objects</p>
 </td>
 <td class="cellrowborder" valign="top" width="44.42444244424442%" headers="mcps1.2.4.1.3 "><p id="p46361647"><a name="p46361647"></a><a name="p46361647"></a>密钥信息列表，详情请参见<a href="#table41882197">表3</a>。</p>
 </td>
@@ -78,7 +74,7 @@ GET /v2.1/\{project\_id\}/os-keypairs
 </thead>
 <tbody><tr id="row34772456"><td class="cellrowborder" valign="top" width="23.932393239323932%" headers="mcps1.2.4.1.1 "><p id="p65105571"><a name="p65105571"></a><a name="p65105571"></a>keypair</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.83318331833183%" headers="mcps1.2.4.1.2 "><p id="p9736186"><a name="p9736186"></a><a name="p9736186"></a>字典数据结构</p>
+<td class="cellrowborder" valign="top" width="31.83318331833183%" headers="mcps1.2.4.1.2 "><p id="p9736186"><a name="p9736186"></a><a name="p9736186"></a>Obejct</p>
 </td>
 <td class="cellrowborder" valign="top" width="44.23442344234424%" headers="mcps1.2.4.1.3 "><p id="p51249570"><a name="p51249570"></a><a name="p51249570"></a>密钥信息详情，详情请参见<a href="#table48408329">表4</a>。</p>
 </td>
@@ -111,6 +107,14 @@ GET /v2.1/\{project\_id\}/os-keypairs
 <td class="cellrowborder" valign="top" width="44.05%" headers="mcps1.2.4.1.3 "><p id="p9140568"><a name="p9140568"></a><a name="p9140568"></a>密钥名称。</p>
 </td>
 </tr>
+<tr id="row199744112018"><td class="cellrowborder" valign="top" width="23.93%" headers="mcps1.2.4.1.1 "><p id="p199751011803"><a name="p199751011803"></a><a name="p199751011803"></a>type</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.019999999999996%" headers="mcps1.2.4.1.2 "><p id="p139751111204"><a name="p139751111204"></a><a name="p139751111204"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.05%" headers="mcps1.2.4.1.3 "><p id="p1097512112013"><a name="p1097512112013"></a><a name="p1097512112013"></a>密钥类型，默认“ssh”</p>
+<p id="p144811212011"><a name="p144811212011"></a><a name="p144811212011"></a>微版本2.2以上支持</p>
+</td>
+</tr>
 <tr id="row15156252"><td class="cellrowborder" valign="top" width="23.93%" headers="mcps1.2.4.1.1 "><p id="p19696890"><a name="p19696890"></a><a name="p19696890"></a>public_key</p>
 </td>
 <td class="cellrowborder" valign="top" width="32.019999999999996%" headers="mcps1.2.4.1.2 "><p id="p46735588"><a name="p46735588"></a><a name="p46735588"></a>String</p>
@@ -121,24 +125,28 @@ GET /v2.1/\{project\_id\}/os-keypairs
 </tbody>
 </table>
 
-## 示例<a name="section4713102134415"></a>
+## 请求示例<a name="section13755153085015"></a>
 
--   响应样例
+```
+GET https://{endpoint}/v2.1/{project_id}/os-keypairs
+```
 
-    ```
-    {
-        "keypairs": [
-            {
-                "keypair": {
-                    "fingerprint": "15:b0:f8:b3:f9:48:63:71:cf:7b:5b:38:6d:44:2d:4a",
-                    "name": "keypair-601a2305-4f25-41ed-89c6-2a966fc8027a",
-                    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQC+Eo/RZRngaGTkFs7I62ZjsIlO79KklKbMXi8F+KITD4bVQHHn+kV+4gRgkgCRbdoDqoGfpaDFs877DYX9n4z6FrAIZ4PES8TNKhatifpn9NdQYWA+IkU8CuvlEKGuFpKRi/k7JLos/gHi2hy7QUwgtRvcefvD/vgQZOVw/mGR9Q== Generated-by-Nova\n"
-                }
+## 响应示例<a name="section4713102134415"></a>
+
+```
+{
+    "keypairs": [
+        {
+            "keypair": {
+                "fingerprint": "15:b0:f8:b3:f9:48:63:71:cf:7b:5b:38:6d:44:2d:4a",
+                "name": "keypair-601a2305-4f25-41ed-89c6-2a966fc8027a",
+                "type": "ssh",
+                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQC+Eo/RZRngaGTkFs7I62ZjsIlO79KklKbMXi8F+KITD4bVQHHn+kV+4gRgkgCRbdoDqoGfpaDFs877DYX9n4z6FrAIZ4PES8TNKhatifpn9NdQYWA+IkU8CuvlEKGuFpKRi/k7JLos/gHi2hy7QUwgtRvcefvD/vgQZOVw/mGR9Q== Generated-by-Nova\n"
             }
-        ]
-    }
-    ```
-
+        }
+    ]
+}
+```
 
 ## 返回值<a name="section27088563"></a>
 

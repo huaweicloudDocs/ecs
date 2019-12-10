@@ -6,11 +6,13 @@
 
 对于运行中的弹性云服务器，系统会自动关机，并将弹性云服务器中的数据拷贝到目标节点（目标节点可与源节点相同）后重新启动弹性云服务器。
 
-该接口不单独使用，需配合“确认变更云服务器规格（POST /v2/\{project\_id\}/servers/\{server\_id\}/action）”或“回退变更云服务器规格（POST /v2/\{project\_id\}/servers/\{server\_id\}/action）”两个接口一起使用。
+底层资源不足时，该接口会自动回滚。
+
+该接口不单独使用**，**需要轮询判断虚拟机状态，当虚拟机同时满足"status"为"VERIFY\_RESIZE"、"OS-EXT-STS:task\_state"为""、"OS-EXT-STS:vm\_state"为"RESIZED"时，配合“确认变更云服务器规格（POST /v2/\{project\_id\}/servers/\{server\_id\}/action）”或“回退变更云服务器规格（POST /v2/\{project\_id\}/servers/\{server\_id\}/action）”两个接口一起使用。
+
+变更弹性云服务器规格应用示例请参考[示例3：变更弹性云服务器规格](示例3-变更弹性云服务器规格.md)。
 
 ## URI<a name="section934152916457"></a>
-
-POST /v2/\{project\_id\}/servers/\{server\_id\}/action
 
 POST /v2.1/\{project\_id\}/servers/\{server\_id\}/action
 
@@ -47,39 +49,28 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/action
 
 ## 请求消息<a name="section5517568016457"></a>
 
-**请求参数**
-
 请求参数如[表2](#table2242889516457)所示。
 
 **表 2**  请求参数
 
 <a name="table2242889516457"></a>
-<table><thead align="left"><tr id="row3650219016457"><th class="cellrowborder" valign="top" width="21.557844215578445%" id="mcps1.2.5.1.1"><p id="zh-cn_topic_0057973030_p1494644"><a name="zh-cn_topic_0057973030_p1494644"></a><a name="zh-cn_topic_0057973030_p1494644"></a>参数</p>
+<table><thead align="left"><tr id="row3650219016457"><th class="cellrowborder" valign="top" width="20.11%" id="mcps1.2.5.1.1"><p id="zh-cn_topic_0057973030_p1494644"><a name="zh-cn_topic_0057973030_p1494644"></a><a name="zh-cn_topic_0057973030_p1494644"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="16.58834116588341%" id="mcps1.2.5.1.2"><p id="zh-cn_topic_0057973030_p53957349"><a name="zh-cn_topic_0057973030_p53957349"></a><a name="zh-cn_topic_0057973030_p53957349"></a>参数类型</p>
+<th class="cellrowborder" valign="top" width="12.629999999999999%" id="mcps1.2.5.1.2"><p id="zh-cn_topic_0057973030_p8469150"><a name="zh-cn_topic_0057973030_p8469150"></a><a name="zh-cn_topic_0057973030_p8469150"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="17.44825517448255%" id="mcps1.2.5.1.3"><p id="zh-cn_topic_0057973030_p8469150"><a name="zh-cn_topic_0057973030_p8469150"></a><a name="zh-cn_topic_0057973030_p8469150"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="18.29%" id="mcps1.2.5.1.3"><p id="zh-cn_topic_0057973030_p53957349"><a name="zh-cn_topic_0057973030_p53957349"></a><a name="zh-cn_topic_0057973030_p53957349"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="44.40555944405559%" id="mcps1.2.5.1.4"><p id="zh-cn_topic_0057973030_p14912584"><a name="zh-cn_topic_0057973030_p14912584"></a><a name="zh-cn_topic_0057973030_p14912584"></a>描述</p>
+<th class="cellrowborder" valign="top" width="48.97%" id="mcps1.2.5.1.4"><p id="zh-cn_topic_0057973030_p14912584"><a name="zh-cn_topic_0057973030_p14912584"></a><a name="zh-cn_topic_0057973030_p14912584"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1418337416457"><td class="cellrowborder" valign="top" width="21.557844215578445%" headers="mcps1.2.5.1.1 "><p id="p800266116457"><a name="p800266116457"></a><a name="p800266116457"></a>flavorRef</p>
+<tbody><tr id="row1418337416457"><td class="cellrowborder" valign="top" width="20.11%" headers="mcps1.2.5.1.1 "><p id="p800266116457"><a name="p800266116457"></a><a name="p800266116457"></a>flavorRef</p>
 </td>
-<td class="cellrowborder" valign="top" width="16.58834116588341%" headers="mcps1.2.5.1.2 "><p id="p4423583316457"><a name="p4423583316457"></a><a name="p4423583316457"></a>是</p>
+<td class="cellrowborder" valign="top" width="12.629999999999999%" headers="mcps1.2.5.1.2 "><p id="p2633272116457"><a name="p2633272116457"></a><a name="p2633272116457"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.44825517448255%" headers="mcps1.2.5.1.3 "><p id="p2633272116457"><a name="p2633272116457"></a><a name="p2633272116457"></a>String</p>
+<td class="cellrowborder" valign="top" width="18.29%" headers="mcps1.2.5.1.3 "><p id="p4423583316457"><a name="p4423583316457"></a><a name="p4423583316457"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="44.40555944405559%" headers="mcps1.2.5.1.4 "><p id="p341898416457"><a name="p341898416457"></a><a name="p341898416457"></a>新规格ID或URI。</p>
-</td>
-</tr>
-<tr id="row6013179512935"><td class="cellrowborder" valign="top" width="21.557844215578445%" headers="mcps1.2.5.1.1 "><p id="p2840141712945"><a name="p2840141712945"></a><a name="p2840141712945"></a>dedicated_host_id</p>
-</td>
-<td class="cellrowborder" valign="top" width="16.58834116588341%" headers="mcps1.2.5.1.2 "><p id="p5880503012935"><a name="p5880503012935"></a><a name="p5880503012935"></a>否</p>
-</td>
-<td class="cellrowborder" valign="top" width="17.44825517448255%" headers="mcps1.2.5.1.3 "><p id="p6558702312935"><a name="p6558702312935"></a><a name="p6558702312935"></a>String</p>
-</td>
-<td class="cellrowborder" valign="top" width="44.40555944405559%" headers="mcps1.2.5.1.4 "><p id="p1094865212935"><a name="p1094865212935"></a><a name="p1094865212935"></a>新专属主机ID（仅适用于专属主机上的弹性云服务器）。</p>
+<td class="cellrowborder" valign="top" width="48.97%" headers="mcps1.2.5.1.4 "><p id="p341898416457"><a name="p341898416457"></a><a name="p341898416457"></a>新规格ID或URI。</p>
 </td>
 </tr>
 </tbody>
@@ -87,21 +78,26 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/action
 
 ## 响应消息<a name="section1759889416457"></a>
 
-不涉及
+无
 
-## 示例<a name="section1264820314241"></a>
+## 请求示例<a name="section1264820314241"></a>
 
--   请求样例
+```
+POST https://{endpoint}/v2.1/{project_id}/servers/{server_id}/action
+```
 
-    ```
-    {
-        "resize" : {
-            "flavorRef" : "4",
-            "dedicated_host_id": "459a2b9d-804a-4745-ab19-a113bb1b4ddc"
-        }
+```
+{
+    "resize" : {
+        "flavorRef" : "4",
+        "dedicated_host_id": "459a2b9d-804a-4745-ab19-a113bb1b4ddc"
     }
-    ```
+}
+```
 
+## 响应示例<a name="section47159401499"></a>
+
+无
 
 ## 返回值<a name="section1180080516457"></a>
 
