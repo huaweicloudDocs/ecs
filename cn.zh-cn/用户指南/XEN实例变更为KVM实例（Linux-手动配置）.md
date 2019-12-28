@@ -6,9 +6,9 @@ Linux操作系统XEN实例变更为KVM实例前，必须完成驱动的安装和
 
 本节操作指导您手动安装Linux云服务器驱动、配置磁盘自动挂载等，并将XEN实例变更为KVM实例。
 
-使用自动化脚本安装驱动的方法请参考[XEN实例变更为KVM实例（Linux-自动配置）](XEN实例变更为KVM实例（Linux-自动配置）.md)。
+如需使用自动化脚本安装驱动的方法请参考[XEN实例变更为KVM实例（Linux-自动配置）](XEN实例变更为KVM实例（Linux-自动配置）.md)。
 
->![](public_sys-resources/icon-notice.gif) **须知：**   
+>![](public_sys-resources/icon-note.gif) **说明：**   
 >-   XEN实例：S1、C1、C2、M1型弹性云服务器。  
 >-   KVM实例：参考[规格清单](https://support.huaweicloud.com/productdesc-ecs/zh-cn_topic_0159822360.html)，查询对应规格的虚拟化类型。  
 >-   为了同时支持XEN虚拟化和KVM虚拟化，Linux弹性云服务器的正常运行需依赖于xen-pv驱动、virtio驱动等。XEN实例变更为KVM实例前，需要确保Linux弹性云服务器已完成相关配置，包括安装驱动、配置磁盘自动挂载等。  
@@ -79,19 +79,19 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig11687951132115)所示。
 1.  登录弹性云服务器。
 2.  卸载云服务器中已安装的Tools。
 
-    卸载操作请参见[在Linux系统中卸载Tools](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0037352186.html)。
+    卸载操作请参见[在Linux系统中卸载Tools](https://support.huaweicloud.com/zh-cn/usermanual-ims/ims_01_0323.html)。
 
 3.  修改grub的UUID。
 
-    具体操作请参见[修改grub文件磁盘标识方式为UUID](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0086020895.html)。
+    具体操作请参见[修改grub文件磁盘标识方式为UUID](https://support.huaweicloud.com/zh-cn/usermanual-ims/ims_01_0324.html)。
 
 4.  修改fstab的UUID。
 
-    具体操作请参见[修改fstab文件磁盘标识方式为UUID](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0086024961.html)。
+    具体操作请参见[修改fstab文件磁盘标识方式为UUID](https://support.huaweicloud.com/zh-cn/usermanual-ims/ims_01_0325.html)。
 
 5.  安装原生的XEN和KVM驱动。
 
-    安装方法请参见[安装原生的XEN和KVM驱动](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0086020894.html)。
+    安装方法请参见[安装原生的XEN和KVM驱动](https://support.huaweicloud.com/zh-cn/usermanual-ims/ims_01_0326.html)。
 
 
 ## 步骤3：检查云服务器配置是否成功<a name="section181471144418"></a>
@@ -212,54 +212,7 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig11687951132115)所示。
 
 XEN实例变更为KVM实例时，可能会发生磁盘挂载失败的情况，因此，变更规格后，需检查磁盘挂载状态是否正常。如果正常，则变更成功。
 
-1.  以root用户登录弹性云服务器。
-2.  <a name="li218141135312"></a>执行以下命令，查询磁盘信息。
-
-    **fdisk -l** **| grep 'Disk /dev/'**
-
-    **图 2**  查看磁盘信息<a name="fig10595124010458"></a>  
-    ![](figures/查看磁盘信息.png "查看磁盘信息")
-
-    如[图2](#fig10595124010458)所示，弹性云服务器共有3块磁盘：/dev/vda、/dev/vdb、/dev/vdc。
-
-3.  <a name="li161843557534"></a>执行以下命令，查看磁盘挂载情况。
-
-    **df -h| grep '/dev/'**
-
-    **图 3**  查看磁盘挂载情况<a name="fig692535712437"></a>  
-    ![](figures/查看磁盘挂载情况.png "查看磁盘挂载情况")
-
-    如[图3](#fig692535712437)所示，弹性云服务器只挂载了1块磁盘/dev/vda。
-
-4.  对比[2](#li218141135312)和[3](#li161843557534)中查询的磁盘个数是否一致。
-    -   是，表示变更成功，结束。
-    -   否，表示存在磁盘挂载失败，执行[5](#li1478325211557)。
-
-5.  <a name="li1478325211557"></a>使用**mount**命令挂载磁盘。
-
-    示例：
-
-    **mount /dev/vbd1 /mnt/vbd1**
-
-    其中，/dev/vbd1是待挂载的磁盘，/mnt/vbd1是待挂载磁盘的路径。
-
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >待挂载磁盘的文件夹/mnt/vbd1必须是空文件夹，否则会挂载失败。  
-
-6.  再次执行以下命令，对比查询的磁盘个数是否一致。
-
-    **fdisk -l** **| grep 'Disk /dev/'**
-
-    **df -h| grep '/dev/'**
-
-    -   是，结束。
-    -   否，请联系客服获取技术支持。
-
-    **图 4**  检查磁盘的个数是否一致<a name="fig722411124917"></a>  
-    ![](figures/检查磁盘的个数是否一致.png "检查磁盘的个数是否一致")
-
-    如[图4](#fig722411124917)所示，使用两个命令查询的弹性云服务器磁盘个数一致，分别是：/dev/vda、/dev/vdb、/dev/vdc。
-
+详细操作请参考[Linux云服务器变更规格后数据盘脱机怎么办？](https://support.huaweicloud.com/ecs_faq/ecs_faq_0619.html)
 
 ## 后续处理<a name="section7460163511720"></a>
 

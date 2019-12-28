@@ -6,7 +6,7 @@ XEN实例变更为KVM实例前，需要确保Windows弹性云服务器已安装�
 
 本节指导您安装PV driver和UVP VMTools，将XEN实例变更为KVM实例。
 
->![](public_sys-resources/icon-notice.gif) **须知：**   
+>![](public_sys-resources/icon-note.gif) **说明：**   
 >-   XEN实例：S1、C1、C2、M1型弹性云服务器。  
 >-   KVM实例：参考[规格清单](https://support.huaweicloud.com/productdesc-ecs/zh-cn_topic_0159822360.html)，查询对应规格的虚拟化类型。  
 >-   “XEN实例”变更为“KVM实例”必须先安装对应的驱动，然后再变更规格。否则，规格变更后的弹性云服务器不可用（如操作系统无法启动等问题）。  
@@ -42,12 +42,12 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig125527421191)所示。
 </tr>
 <tr id="row23661419599"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0100593628_p1636634114592"><a name="zh-cn_topic_0100593628_p1636634114592"></a><a name="zh-cn_topic_0100593628_p1636634114592"></a>步骤2</p>
 </td>
-<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p436634118592"><a name="zh-cn_topic_0100593628_p436634118592"></a><a name="zh-cn_topic_0100593628_p436634118592"></a><a href="#section1424018509446">步骤2：检查弹性云服务器是否安装驱动</a></p>
+<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p436634118592"><a name="zh-cn_topic_0100593628_p436634118592"></a><a name="zh-cn_topic_0100593628_p436634118592"></a><a href="#section1424018509446">步骤2：检查UVP VMTools版本</a></p>
 </td>
 </tr>
 <tr id="row636694135916"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0100593628_p14366164118597"><a name="zh-cn_topic_0100593628_p14366164118597"></a><a name="zh-cn_topic_0100593628_p14366164118597"></a>步骤3</p>
 </td>
-<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p53661441115918"><a name="zh-cn_topic_0100593628_p53661441115918"></a><a name="zh-cn_topic_0100593628_p53661441115918"></a><a href="#section013845014418">步骤3：安装驱动</a></p>
+<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p53661441115918"><a name="zh-cn_topic_0100593628_p53661441115918"></a><a name="zh-cn_topic_0100593628_p53661441115918"></a><a href="#section884919094417">步骤3：安装或升级UVP VMTools</a></p>
 </td>
 </tr>
 <tr id="row1136644155912"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0100593628_p236624118593"><a name="zh-cn_topic_0100593628_p236624118593"></a><a name="zh-cn_topic_0100593628_p236624118593"></a>步骤4</p>
@@ -72,21 +72,10 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig125527421191)所示。
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >变更规格完成后，如已确认业务恢复正常，请在快照页面手动删除快照。  
 
-## 步骤2：检查弹性云服务器是否安装驱动<a name="section1424018509446"></a>
+## 步骤2：检查UVP VMTools版本<a name="section1424018509446"></a>
 
 1.  登录弹性云服务器。
-2.  检查是否已安装5.0及以上版本的PV driver。
-
-    进入目录“C:\\Program Files \(x86\)\\Xen PV Drivers\\bin“，打开文件“version.ini“，查看PV driver版本号。
-
-    ```
-    pvdriverVersion=5.0.104.010
-    ```
-
-    -   如果存在目录，且驱动版本高于5.0，表示PV driver已安装且满足版本要求。
-    -   反之，表示PV driver未正常安装或版本不满足要求，请参见[步骤3：安装驱动](#section013845014418)重装PV driver。
-
-3.  检查是否已安装2.5及以上版本的UVP VMTools。
+2.  检查是否已安装2.5及以上版本的UVP VMTools。
 
     进入目录“C:\\Program Files \(x86\)\\virtio\\bin“，打开文件“version.ini“，查看UVP VMTools版本号。
 
@@ -94,31 +83,68 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig125527421191)所示。
     cur_vmtools_ver=2.5.0.105org_vmtools_ver=0cur_daemon_ver=2.5.0.105-010cur_drivers_ver=2.5.0.105-010
     ```
 
-    -   如果存在目录，且驱动版本高于2.5，表示UVP VMTools已安装成功且满足版本要求。
-    -   反之，表示UVP VMTools未正确安装或版本不满足要求，请参见[步骤3：安装驱动](#section013845014418)重装UVP VMTools。
-
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >请务必确保云服务器配置成功，否则，可能会导致变更规格后的弹性云服务器不可用。  
+    -   如果存在目录，且驱动版本高于2.5，表示UVP VMTools已安装成功且满足版本要求。请执行[步骤4：变更规格](#section1815152131917)。
+    -   反之，表示UVP VMTools未正确安装或版本不满足要求，请参见[步骤3：安装或升级UVP VMTools](#section884919094417)安装或升级UVP VMTools。
 
 
-## 步骤3：安装驱动<a name="section013845014418"></a>
+## 步骤3：安装或升级UVP VMTools<a name="section884919094417"></a>
 
-1.  以Administrator用户登录弹性云服务器。
-2.  安装PV Driver。
+安装或升级UVP VMTools时，如果云服务器中已安装PV Driver，会对其版本进行校验，为了避免在云服务器上安装UVP VMTools失败，需确保PV Driver版本满足要求。本小节介绍检查安装PV Driver、UVP VMTools的操作步骤。
 
-    详细操作请参考在[Windows系统中安装PV driver](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0037352182.html)。
+>![](public_sys-resources/icon-caution.gif) **注意：**   
+>安装PV Driver或UVP VMTools前请确保云服务器满足以下条件：  
+>-   云服务器的系统盘的剩余空间必须大于2GB。  
+>-   为了避免在云服务器上安装驱动失败，安装前请先卸载第三方虚拟化平台的工具（例如：Citrix Xen Tools、VMware Tools），相关卸载方法请参考对应的工具的官方文档。  
+>-   禁用防病毒软件或入侵检测软件，您可以在驱动安装完成后，再启用这些软件。  
+
+1.  安装前请先检查PV Driver版本是否满足UVP VMTools依赖。
+
+    进入目录“C:\\Program Files \(x86\)\\Xen PV Drivers\\bin“，打开文件“version.ini“，查看PV driver版本号。
+
+    ```
+    pvdriverVersion=5.0.104.010
+    ```
+
+    -   如果存在目录，且驱动版本高于5.0，表示PV driver已安装且满足版本要求，请执行[6](#li1950201211120)安装UVP VMTools。
+    -   反之，表示PV driver未正常安装或版本不满足要求，请执行以下步骤卸载旧版本PV driver，安装新版本的PV driver。
+
+2.  <a name="li20502191213114"></a>记录当前云服务器的UAC（User Account Control）配置。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >安装完成后请根据提示重启云服务器。  
+    >PV Driver版本低于5.0时，为实现静默升级功能（防止升级过程中弹窗过多），安装PV Driver时在注册表中加入了Disable LUA操作，卸载PV Driver时在注册表中加入了Enable LUA操作（5.0及以上版本已优化解决此问题）。为避免对您的业务造成影响，如果PV Driver版本低于5.0，请在卸载前先记录UAC配置，并在安装新版本PV Driver后检查并恢复注册表中Enable LUA配置。了解更多UAC配置请参考[微软官方文档](https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/user-account-control-overview)。  
 
-3.  安装UVP VMTools。
+    1.  打开“运行”窗口，输入“regedit”，打开“注册表编辑器”。
+    2.  记录HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\EnableLUA 键值。
 
-    详细操作请参考[Windows上安装UVP VMTools](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0037352061.html)
+        **图 2**  EnableLUA<a name="fig1757419164344"></a>  
+        ![](figures/EnableLUA.jpg "EnableLUA")
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >安装完成后请根据提示重启云服务器。  
+3.  卸载旧版本PV driver。
+    1.  在云服务器云主机操作系统界面，选择“开始 \> 控制面板”。
+    2.  单击“卸载程序”。
+    3.  按照提示，卸载“GPL PV Drivers for Windows x.x.x.xx”。
+    4.  重启云服务器。
 
-4.  驱动安装完成后，需检查驱动是否安装成功。检查方法请参考[步骤2：检查弹性云服务器是否安装驱动](#section1424018509446)。
+4.  安装新版本PV driver。
+    1.  下载PV Driver的安装包。
+    2.  解压PV driver软件包。
+    3.  运行“Setup.exe”，根据界面提示安装PV Driver。
+    4.  根据提示重启云服务器，使PV driver生效。
+
+5.  检查并恢复UAC配置。
+    1.  打开“运行”窗口，输入“regedit”，打开“注册表编辑器”。
+    2.  查看HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\EnableLUA 键值，与卸载PV Driver前记录的键值比较，如果不同请将键值修改为[2](#li20502191213114)中记录的值。
+
+6.  <a name="li1950201211120"></a>安装或升级UVP VMTools。
+    1.  下载UVP VMTools的安装包。
+    2.  解压UVP VMTools的安装包。
+    3.  运行“Setup.exe”，根据界面提示安装UVP VMTools。
+
+        安装程序会自动匹配当前操作系统版本，并识别新安装或升级场景。
+
+    4.  根据提示重启云服务器，使UVP VMTools驱动生效。
+    5.  驱动安装完成并重启云服务器后，需检查驱动是否安装成功。检查方法请参考[步骤2：检查UVP VMTools版本](#section1424018509446)。
+
 
 ## 步骤4：变更规格<a name="section1815152131917"></a>
 
@@ -140,7 +166,7 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig125527421191)所示。
 
     此时，您可以单击下拉列表，选择更换专属主机。如果下拉列表中无可用的专属主机，说明专属主机所剩资源不足，不能用于创建变更规格后的弹性云服务器。
 
-8.  勾选复选框“我确认已完成对弹性云服务器的配置”，确认已完成[步骤3：安装驱动](#section013845014418)。
+8.  勾选复选框“我确认已完成对弹性云服务器的配置”，确认已完成[步骤3：安装或升级UVP VMTools](#section884919094417)。
 9.  单击“确定”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -152,47 +178,7 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig125527421191)所示。
 
 XEN实例变更为KVM实例时，可能会发生磁盘脱机，因此，变更规格后，需检查磁盘挂载状态是否正常。如果正常，则变更成功。
 
-1.  对比规格变更前、后，在“计算机”中查询的磁盘个数是否一致。
-
-    -   是，表示磁盘挂载状态正常，结束。
-    -   否，表示存在磁盘脱机，执行[2](#li1476865113179)。
-
-    示例：
-
-    以使用Windows 2008镜像的弹性云服务器为例，假设变更规格前，弹性云服务器挂载有1块系统盘、2块数据盘，如[图2](#fig21898319615)所示。
-
-    **图 2**  变更规格前磁盘挂载情况<a name="fig21898319615"></a>  
-    ![](figures/变更规格前磁盘挂载情况.png "变更规格前磁盘挂载情况")
-
-    变更规格后，查看磁盘挂载情况，如[图3](#fig577522321219)所示。
-
-    **图 3**  变更规格后磁盘挂载情况<a name="fig577522321219"></a>  
-    ![](figures/变更规格后磁盘挂载情况.png "变更规格后磁盘挂载情况")
-
-    只查询到1块系统盘，因此，变更规格前、后，显示的磁盘个数不一致，表示数据盘处于“脱机”状态。
-
-2.  <a name="li1476865113179"></a>将磁盘设置为“联机”状态。
-    1.  选择“开始”菜单，右键单击“计算机”，并选择“管理”。
-
-        系统弹窗显示“服务器管理器”页面。
-
-    2.  在左侧导航栏，选择“存储 \> 磁盘管理”。
-
-        进入“磁盘管理页面”。
-
-    3.  在左侧窗格中出现磁盘列表，分别右键单击脱机的磁盘，并选择“联机”，将脱机磁盘进行联机。
-
-        **图 4**  联机<a name="fig2680331163510"></a>  
-        ![](figures/联机.png "联机")
-
-3.  再次在“计算机”中查询磁盘的个数，检查与变更规格前是否一致。
-
-    -   是，结束。
-    -   否，请联系客服获取技术支持。
-
-    **图 5**  联机后磁盘挂载情况<a name="fig746964620392"></a>  
-    ![](figures/联机后磁盘挂载情况.png "联机后磁盘挂载情况")
-
+详细操作请参考[Windows云服务器变更规格后数据盘脱机怎么办？](https://support.huaweicloud.com/ecs_faq/ecs_faq_0618.html)
 
 ## 后续处理<a name="section76661826131619"></a>
 
