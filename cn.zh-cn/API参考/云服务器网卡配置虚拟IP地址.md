@@ -7,7 +7,7 @@
 该接口用于给云服务器网卡配置虚拟IP地址：
 
 -   当指定的IP地址是一个不存在的虚拟IP地址时，系统会创建该虚拟IP，并绑定至对应网卡。
--   当指定的IP地址是一个已经创建好的私有IP时，系统会将指定的网卡和虚拟IP绑定。如果该IP的device\_owner为空，则仅支持VPC内二三层通信；如果该IP的device\_owner为neutron:VIP\_PORT，则支持VPC内二三层通信、VPC之间对等连接访问，以及弹性公网IP、VPN、云专线等Internet接入。
+-   当指定的IP地址是一个已经创建好的私有IP时，系统会将指定的网卡和私有IP绑定。如果该IP的device\_owner为空，则仅支持VPC内二三层通信；如果该IP的device\_owner为neutron:VIP\_PORT，则支持VPC内二三层通信、VPC之间对等连接访问，以及弹性公网IP、VPN、云专线等Internet接入。
 
     了解更多请参考[虚拟IP简介](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0097595314.html)。
 
