@@ -23,6 +23,7 @@
     -   [登录Windows弹性云服务器]
         -   [Windows弹性云服务器登录方式概述](Windows弹性云服务器登录方式概述.md)
         -   [Windows弹性云服务器管理控制台远程登录（VNC方式）](Windows弹性云服务器管理控制台远程登录（VNC方式）.md)
+        -   [使用RDP文件登录Windows云服务器](使用RDP文件登录Windows云服务器.md)
         -   [远程桌面连接（MSTSC方式）](远程桌面连接（MSTSC方式）.md)
         -   [在移动设备上登录Windows弹性云服务器](在移动设备上登录Windows弹性云服务器.md)
         -   [Mac OS系统登录Windows弹性云服务器](Mac-OS系统登录Windows弹性云服务器.md)
@@ -56,10 +57,11 @@
 
     -   [配置主机名与IP地址的映射（可选）](配置主机名与IP地址的映射（可选）.md)
     -   [安装驱动和工具包（可选）]
-        -   [GPU加速型实例安装GRID/vGPU驱动](GPU加速型实例安装GRID-vGPU驱动.md)
+        -   [GPU驱动概述](GPU驱动概述.md)
+        -   [GPU加速型实例安装GRID驱动](GPU加速型实例安装GRID驱动.md)
         -   [\(推荐使用\)安装NVIDIA GPU驱动和CUDA工具包]((推荐使用)安装NVIDIA-GPU驱动和CUDA工具包.md)
-        -   [NVIDIA GPU驱动及CUDA工具包获取方式](NVIDIA-GPU驱动及CUDA工具包获取方式.md)
-        -   [GPU加速型实例安装NVIDIA GPU驱动及CUDA工具包](GPU加速型实例安装NVIDIA-GPU驱动及CUDA工具包.md)
+        -   [Tesla驱动及CUDA工具包获取方式](Tesla驱动及CUDA工具包获取方式.md)
+        -   [GPU加速型实例安装Tesla驱动及CUDA工具包](GPU加速型实例安装Tesla驱动及CUDA工具包.md)
         -   [安装SRIOV驱动](安装SRIOV驱动.md)
 
 
