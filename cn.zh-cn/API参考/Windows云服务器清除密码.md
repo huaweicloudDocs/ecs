@@ -1,4 +1,4 @@
-# Windows云服务器清除密码<a name="ZH-CN_TOPIC_0031176554"></a>
+# Windows云服务器清除密码<a name="ZH-CN_TOPIC_0125983478"></a>
 
 ## 功能介绍<a name="section57769674"></a>
 
@@ -6,34 +6,34 @@
 
 ## URI<a name="section50165025"></a>
 
-DELETE /v2.1/\{project\_id\}/servers/\{server\_id\}/os-server-password
+DELETE /v1/\{project\_id\}/cloudservers/\{server\_id\}/os-server-password
 
-参数说明请参见[表1](#table46110007)。
+参数说明请参见[表1](#table35528365105553)。
 
 **表 1**  参数说明
 
-<a name="table46110007"></a>
-<table><thead align="left"><tr id="row14148614"><th class="cellrowborder" valign="top" width="20.74%" id="mcps1.2.4.1.1"><p id="p5187119"><a name="p5187119"></a><a name="p5187119"></a>参数</p>
+<a name="table35528365105553"></a>
+<table><thead align="left"><tr id="row17119455105553"><th class="cellrowborder" valign="top" width="33.33333333333333%" id="mcps1.2.4.1.1"><p id="p37105578"><a name="p37105578"></a><a name="p37105578"></a>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="19.99%" id="mcps1.2.4.1.2"><p id="p17503500"><a name="p17503500"></a><a name="p17503500"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="33.33333333333333%" id="mcps1.2.4.1.2"><p id="p52761866"><a name="p52761866"></a><a name="p52761866"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="59.27%" id="mcps1.2.4.1.3"><p id="p8497414"><a name="p8497414"></a><a name="p8497414"></a>描述</p>
+<th class="cellrowborder" valign="top" width="33.33333333333333%" id="mcps1.2.4.1.3"><p id="p45852771"><a name="p45852771"></a><a name="p45852771"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row17201924"><td class="cellrowborder" valign="top" width="20.74%" headers="mcps1.2.4.1.1 "><p id="p51178607"><a name="p51178607"></a><a name="p51178607"></a>project_id</p>
+<tbody><tr id="row39853249105553"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p6887725105553"><a name="p6887725105553"></a><a name="p6887725105553"></a>project_id</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.99%" headers="mcps1.2.4.1.2 "><p id="p51826478"><a name="p51826478"></a><a name="p51826478"></a>是</p>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p21034813105553"><a name="p21034813105553"></a><a name="p21034813105553"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="59.27%" headers="mcps1.2.4.1.3 "><p id="p37593705"><a name="p37593705"></a><a name="p37593705"></a>项目ID。</p>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p37593705"><a name="p37593705"></a><a name="p37593705"></a>项目ID。</p>
 <p id="p1180512217438"><a name="p1180512217438"></a><a name="p1180512217438"></a>获取方法请参见<a href="获取项目ID.md">获取项目ID</a>。</p>
 </td>
 </tr>
-<tr id="row615338831654"><td class="cellrowborder" valign="top" width="20.74%" headers="mcps1.2.4.1.1 "><p id="p519996316521"><a name="p519996316521"></a><a name="p519996316521"></a>server_id</p>
+<tr id="row670727210579"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p41505172105731"><a name="p41505172105731"></a><a name="p41505172105731"></a>server_id</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.99%" headers="mcps1.2.4.1.2 "><p id="p5588153816521"><a name="p5588153816521"></a><a name="p5588153816521"></a>是</p>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p6475762105731"><a name="p6475762105731"></a><a name="p6475762105731"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="59.27%" headers="mcps1.2.4.1.3 "><p id="p1719074216521"><a name="p1719074216521"></a><a name="p1719074216521"></a>云服务器ID。</p>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p54774717105731"><a name="p54774717105731"></a><a name="p54774717105731"></a>云服务器ID。</p>
 </td>
 </tr>
 </tbody>
@@ -47,13 +47,13 @@ DELETE /v2.1/\{project\_id\}/servers/\{server\_id\}/os-server-password
 
 无
 
-## 请求示例<a name="section118665219435"></a>
+## 请求示例<a name="section270013359259"></a>
 
 ```
-DELETE https://{endpoint}/v2.1/{project_id}/servers/{server_id}/os-server-password
+DELETE https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/os-server-password
 ```
 
-## 响应示例<a name="section19716123044320"></a>
+## 响应示例<a name="section53023424257"></a>
 
 无
 
