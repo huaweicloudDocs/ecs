@@ -1,0 +1,230 @@
+# 生命周期管理<a name="ZH-CN_TOPIC_0103071510"></a>
+
+<a name="table1587111571724"></a>
+<table><thead align="left"><tr id="row5871165713215"><th class="cellrowborder" valign="top" width="14.928507149285075%" id="mcps1.1.7.1.1"><p id="p106166215195"><a name="p106166215195"></a><a name="p106166215195"></a>权限</p>
+</th>
+<th class="cellrowborder" valign="top" width="25.36746325367464%" id="mcps1.1.7.1.2"><p id="p11871195719215"><a name="p11871195719215"></a><a name="p11871195719215"></a>对应的API接口</p>
+</th>
+<th class="cellrowborder" valign="top" width="19.41805819418059%" id="mcps1.1.7.1.3"><p id="p38711657129"><a name="p38711657129"></a><a name="p38711657129"></a>授权项（Action）</p>
+</th>
+<th class="cellrowborder" valign="top" width="18.258174182581747%" id="mcps1.1.7.1.4"><p id="p1195652816409"><a name="p1195652816409"></a><a name="p1195652816409"></a>依赖的授权项</p>
+</th>
+<th class="cellrowborder" valign="top" width="11.238876112388764%" id="mcps1.1.7.1.5"><p id="p12900195215510"><a name="p12900195215510"></a><a name="p12900195215510"></a>IAM项目</p>
+<p id="p12578131324712"><a name="p12578131324712"></a><a name="p12578131324712"></a>(Project)</p>
+</th>
+<th class="cellrowborder" valign="top" width="10.788921107889212%" id="mcps1.1.7.1.6"><p id="p1999212348459"><a name="p1999212348459"></a><a name="p1999212348459"></a>企业项目</p>
+<p id="p1026502118478"><a name="p1026502118478"></a><a name="p1026502118478"></a>(Enterprise Project)</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row96181535163919"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p122161658171920"><a name="p122161658171920"></a><a name="p122161658171920"></a>创建云服务器</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p4619183516390"><a name="p4619183516390"></a><a name="p4619183516390"></a>POST /v1.1/{project_id}/cloudservers</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><a name="ul11737193963914"></a><a name="ul11737193963914"></a><ul id="ul11737193963914"><li>创建云服务器时新创建弹性IP<p id="p47747478588"><a name="p47747478588"></a><a name="p47747478588"></a>ecs:cloudServers:create</p>
+</li><li>创建云服务器时绑定已有的弹性IP<p id="p1914418214596"><a name="p1914418214596"></a><a name="p1914418214596"></a>ecs:cloudServers:create</p>
+</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><a name="ul83982616571"></a><a name="ul83982616571"></a><ul id="ul83982616571"><li>创建云服务器时新创建弹性IP<p id="p18508513145910"><a name="p18508513145910"></a><a name="p18508513145910"></a>vpc:publicIps:create</p>
+</li><li>创建云服务器时绑定已有的弹性IP<p id="p1810051519596"><a name="p1810051519596"></a><a name="p1810051519596"></a>vpc:publicIps:update</p>
+</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p973716392393"><a name="p973716392393"></a><a name="p973716392393"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p14600205184015"><a name="p14600205184015"></a><a name="p14600205184015"></a>√</p>
+</td>
+</tr>
+<tr id="row6118143811524"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p221611586197"><a name="p221611586197"></a><a name="p221611586197"></a>创建云服务器（按需）</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p9828202281915"><a name="p9828202281915"></a><a name="p9828202281915"></a>POST /v1/{project_id}/cloudservers</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><a name="ul9828142210192"></a><a name="ul9828142210192"></a><ul id="ul9828142210192"><li>创建云服务器时新创建弹性IP<p id="p74921947175918"><a name="p74921947175918"></a><a name="p74921947175918"></a>ecs:cloudServers:create</p>
+</li><li>创建云服务器时绑定已有的弹性IP<p id="p6633194895913"><a name="p6633194895913"></a><a name="p6633194895913"></a>ecs:cloudServers:create</p>
+</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><a name="ul4754142218594"></a><a name="ul4754142218594"></a><ul id="ul4754142218594"><li>创建云服务器时新创建弹性IP<p id="p991382817594"><a name="p991382817594"></a><a name="p991382817594"></a>vpc:publicIps:create</p>
+</li><li>创建云服务器时绑定已有的弹性IP<p id="p633823425910"><a name="p633823425910"></a><a name="p633823425910"></a>vpc:publicIps:update</p>
+</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p12801816111510"><a name="p12801816111510"></a><a name="p12801816111510"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p560012512403"><a name="p560012512403"></a><a name="p560012512403"></a>√</p>
+</td>
+</tr>
+<tr id="row78644281610"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p192161758101911"><a name="p192161758101911"></a><a name="p192161758101911"></a>删除云服务器</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p1382822218198"><a name="p1382822218198"></a><a name="p1382822218198"></a>POST /v1/{project_id}/cloudservers/delete</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p117915413011"><a name="p117915413011"></a><a name="p117915413011"></a>ecs:cloudServers:delete</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p14956628144012"><a name="p14956628144012"></a><a name="p14956628144012"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p171167111294"><a name="p171167111294"></a><a name="p171167111294"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p060045154011"><a name="p060045154011"></a><a name="p060045154011"></a>√</p>
+</td>
+</tr>
+<tr id="row18675729"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p521695815198"><a name="p521695815198"></a><a name="p521695815198"></a>查询云服务器详情列表</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p72614261323"><a name="p72614261323"></a><a name="p72614261323"></a>GET /v1/{project_id}/cloudservers/detail</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p10835544012"><a name="p10835544012"></a><a name="p10835544012"></a>ecs:cloudServers:list</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p69571328194018"><a name="p69571328194018"></a><a name="p69571328194018"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p146344104312"><a name="p146344104312"></a><a name="p146344104312"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p13600135116407"><a name="p13600135116407"></a><a name="p13600135116407"></a>√</p>
+</td>
+</tr>
+<tr id="row1321071111217"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p1021614582197"><a name="p1021614582197"></a><a name="p1021614582197"></a>查询云服务器详情</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p1826214268219"><a name="p1826214268219"></a><a name="p1826214268219"></a>GET /v1/{project_id}/cloudservers/{server_id}</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p35581753016"><a name="p35581753016"></a><a name="p35581753016"></a>ecs:cloudServers:get</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p149571928184014"><a name="p149571928184014"></a><a name="p149571928184014"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p6285184719434"><a name="p6285184719434"></a><a name="p6285184719434"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p7601155110407"><a name="p7601155110407"></a><a name="p7601155110407"></a>√</p>
+</td>
+</tr>
+<tr id="row1634414911210"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p8216115818198"><a name="p8216115818198"></a><a name="p8216115818198"></a>修改弹性云服务器</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p42624262210"><a name="p42624262210"></a><a name="p42624262210"></a>PUT /v1/{project_id}/cloudservers/{server_id}</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p151918618012"><a name="p151918618012"></a><a name="p151918618012"></a>ecs:cloudServers:put</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p695715281405"><a name="p695715281405"></a><a name="p695715281405"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p1035013495436"><a name="p1035013495436"></a><a name="p1035013495436"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p11601151104012"><a name="p11601151104012"></a><a name="p11601151104012"></a>√</p>
+</td>
+</tr>
+<tr id="row38713577219"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p1621635816195"><a name="p1621635816195"></a><a name="p1621635816195"></a>查询云服务器详情列表（OpenStack原生）</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p16337193516315"><a name="p16337193516315"></a><a name="p16337193516315"></a>GET /v2.1/{project_id}/servers/detail</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p6604318658"><a name="p6604318658"></a><a name="p6604318658"></a>ecs:servers:list</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p315116813517"><a name="p315116813517"></a><a name="p315116813517"></a>ecs:servers:get</p>
+<p id="p1288394510"><a name="p1288394510"></a><a name="p1288394510"></a>ecs:serverVolumes:use</p>
+<p id="p61781012516"><a name="p61781012516"></a><a name="p61781012516"></a>ecs:diskConfigs:use</p>
+<p id="p949514114510"><a name="p949514114510"></a><a name="p949514114510"></a>ecs:securityGroups:use</p>
+<p id="p7319171210518"><a name="p7319171210518"></a><a name="p7319171210518"></a>ecs:serverKeypairs:get</p>
+<p id="p159031112453"><a name="p159031112453"></a><a name="p159031112453"></a>vpc:securityGroups:get</p>
+<p id="p125431131515"><a name="p125431131515"></a><a name="p125431131515"></a>vpc:securityGroupRules:get</p>
+<p id="p454217141250"><a name="p454217141250"></a><a name="p454217141250"></a>vpc:networks:get</p>
+<p id="p1352915154511"><a name="p1352915154511"></a><a name="p1352915154511"></a>vpc:subnets:get</p>
+<p id="p260561611515"><a name="p260561611515"></a><a name="p260561611515"></a>vpc:ports:get</p>
+<p id="p1630721720517"><a name="p1630721720517"></a><a name="p1630721720517"></a>vpc:routers:get</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p131419642219"><a name="p131419642219"></a><a name="p131419642219"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p1760114517401"><a name="p1760114517401"></a><a name="p1760114517401"></a>×</p>
+</td>
+</tr>
+<tr id="row58713574219"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p11216105819192"><a name="p11216105819192"></a><a name="p11216105819192"></a>查询云服务器列表（OpenStack原生）</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p292383619252"><a name="p292383619252"></a><a name="p292383619252"></a>GET /v2.1/{project_id}/servers</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p73591966513"><a name="p73591966513"></a><a name="p73591966513"></a>ecs:servers:list</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p189571028164011"><a name="p189571028164011"></a><a name="p189571028164011"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p347123713448"><a name="p347123713448"></a><a name="p347123713448"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p247123764417"><a name="p247123764417"></a><a name="p247123764417"></a>×</p>
+</td>
+</tr>
+<tr id="row88711057321"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p142161158151913"><a name="p142161158151913"></a><a name="p142161158151913"></a>查询云服务器详情（OpenStack原生）</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p41651192619"><a name="p41651192619"></a><a name="p41651192619"></a>GET /v2.1/{project_id}/servers/{server_id}</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p1847815513513"><a name="p1847815513513"></a><a name="p1847815513513"></a>ecs:servers:get</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p162461156142"><a name="p162461156142"></a><a name="p162461156142"></a>ecs:serverVolumes:use</p>
+<p id="p7691557449"><a name="p7691557449"></a><a name="p7691557449"></a>ecs:diskConfigs:use</p>
+<p id="p178831657640"><a name="p178831657640"></a><a name="p178831657640"></a>ecs:securityGroups:use</p>
+<p id="p17822145815413"><a name="p17822145815413"></a><a name="p17822145815413"></a>ecs:serverKeypairs:get</p>
+<p id="p962816599417"><a name="p962816599417"></a><a name="p962816599417"></a>vpc:securityGroups:get</p>
+<p id="p1739870658"><a name="p1739870658"></a><a name="p1739870658"></a>vpc:securityGroupRules:get</p>
+<p id="p551513114517"><a name="p551513114517"></a><a name="p551513114517"></a>vpc:networks:get</p>
+<p id="p22721829510"><a name="p22721829510"></a><a name="p22721829510"></a>vpc:subnets:get</p>
+<p id="p125781537512"><a name="p125781537512"></a><a name="p125781537512"></a>vpc:ports:get</p>
+<p id="p102321047517"><a name="p102321047517"></a><a name="p102321047517"></a>vpc:routers:get</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p788384310448"><a name="p788384310448"></a><a name="p788384310448"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p28836436446"><a name="p28836436446"></a><a name="p28836436446"></a>×</p>
+</td>
+</tr>
+<tr id="row19755103191416"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p14216155891912"><a name="p14216155891912"></a><a name="p14216155891912"></a>创建云服务器（OpenStack原生）</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p5883772911"><a name="p5883772911"></a><a name="p5883772911"></a>POST /v2.1/{project_id}/servers</p>
+<p id="p11883670913"><a name="p11883670913"></a><a name="p11883670913"></a>POST /v2.1/{project_id}/os-volumes_boot</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p44811654644"><a name="p44811654644"></a><a name="p44811654644"></a>ecs:servers:create</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p15185262314"><a name="p15185262314"></a><a name="p15185262314"></a>ecs:servers:get</p>
+<p id="p1525902711312"><a name="p1525902711312"></a><a name="p1525902711312"></a>ecs:serverInterfaces:use</p>
+<p id="p420411288316"><a name="p420411288316"></a><a name="p420411288316"></a>ecs:serverInterfaces:get</p>
+<p id="p11926291311"><a name="p11926291311"></a><a name="p11926291311"></a>ecs:flavors:get</p>
+<p id="p885613292038"><a name="p885613292038"></a><a name="p885613292038"></a>ecs:securityGroups:use</p>
+<p id="p87160306315"><a name="p87160306315"></a><a name="p87160306315"></a>evs:volumes:list</p>
+<p id="p151011311538"><a name="p151011311538"></a><a name="p151011311538"></a>evs:volumes:get</p>
+<p id="p201876326316"><a name="p201876326316"></a><a name="p201876326316"></a>evs:volumes:create</p>
+<p id="p1317918330319"><a name="p1317918330319"></a><a name="p1317918330319"></a>evs:volumes:attach</p>
+<p id="p158823412313"><a name="p158823412313"></a><a name="p158823412313"></a>evs:volumes:manage</p>
+<p id="p177497341737"><a name="p177497341737"></a><a name="p177497341737"></a>vpc:securityGroups:get</p>
+<p id="p29679368317"><a name="p29679368317"></a><a name="p29679368317"></a>vpc:networks:get</p>
+<p id="p0718837433"><a name="p0718837433"></a><a name="p0718837433"></a>vpc:networks:update</p>
+<p id="p576103813316"><a name="p576103813316"></a><a name="p576103813316"></a>vpc:subnets:get</p>
+<p id="p10320103918312"><a name="p10320103918312"></a><a name="p10320103918312"></a>vpc:subnets:update</p>
+<p id="p13941540131"><a name="p13941540131"></a><a name="p13941540131"></a>vpc:ports:create</p>
+<p id="p2077713404313"><a name="p2077713404313"></a><a name="p2077713404313"></a>vpc:ports:update</p>
+<p id="p45700412314"><a name="p45700412314"></a><a name="p45700412314"></a>vpc:ports:get</p>
+<p id="p1971184912315"><a name="p1971184912315"></a><a name="p1971184912315"></a>vpc:ports:delete</p>
+<p id="p147281049938"><a name="p147281049938"></a><a name="p147281049938"></a>vpc:networks:create</p>
+<p id="p1155512505311"><a name="p1155512505311"></a><a name="p1155512505311"></a>vpc:subnets:create</p>
+<p id="p1578545116310"><a name="p1578545116310"></a><a name="p1578545116310"></a>vpc:routers:get</p>
+<p id="p16643125213317"><a name="p16643125213317"></a><a name="p16643125213317"></a>vpc:routers:update</p>
+<p id="p54831531835"><a name="p54831531835"></a><a name="p54831531835"></a>ims:images:list</p>
+<p id="p1333412544310"><a name="p1333412544310"></a><a name="p1333412544310"></a>ims:images:get</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p2056414734420"><a name="p2056414734420"></a><a name="p2056414734420"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p256424794411"><a name="p256424794411"></a><a name="p256424794411"></a>×</p>
+</td>
+</tr>
+<tr id="row328513471419"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p1721655891911"><a name="p1721655891911"></a><a name="p1721655891911"></a>删除云服务器（OpenStack原生）</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p33197248919"><a name="p33197248919"></a><a name="p33197248919"></a>DELETE /v2.1/{project_id}/servers/{server_id}</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p689410635"><a name="p689410635"></a><a name="p689410635"></a>ecs:servers:delete</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p2957192844016"><a name="p2957192844016"></a><a name="p2957192844016"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p434635218449"><a name="p434635218449"></a><a name="p434635218449"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p103461652124416"><a name="p103461652124416"></a><a name="p103461652124416"></a>×</p>
+</td>
+</tr>
+<tr id="row1262503681417"><td class="cellrowborder" valign="top" width="14.928507149285075%" headers="mcps1.1.7.1.1 "><p id="p3216258121913"><a name="p3216258121913"></a><a name="p3216258121913"></a>修改云服务器（OpenStack原生）</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.36746325367464%" headers="mcps1.1.7.1.2 "><p id="p731918241919"><a name="p731918241919"></a><a name="p731918241919"></a>PUT /v2.1/{project_id}/servers/{server_id}</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.41805819418059%" headers="mcps1.1.7.1.3 "><p id="p314812816316"><a name="p314812816316"></a><a name="p314812816316"></a>ecs:servers:update</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.258174182581747%" headers="mcps1.1.7.1.4 "><p id="p395742813403"><a name="p395742813403"></a><a name="p395742813403"></a>ecs:servers:get</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.238876112388764%" headers="mcps1.1.7.1.5 "><p id="p1786195484414"><a name="p1786195484414"></a><a name="p1786195484414"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.788921107889212%" headers="mcps1.1.7.1.6 "><p id="p1186165417446"><a name="p1186165417446"></a><a name="p1186165417446"></a>×</p>
+</td>
+</tr>
+</tbody>
+</table>
+
