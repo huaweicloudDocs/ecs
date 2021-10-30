@@ -1,4 +1,4 @@
-# 登录Windows弹性云服务器<a name="ZH-CN_TOPIC_0030888079"></a>
+# 登录Windows弹性云服务器<a name="ecs_03_0125"></a>
 
 -   **[Windows弹性云服务器登录方式概述](Windows弹性云服务器登录方式概述.md)**  
 

@@ -1,4 +1,4 @@
-# 登录Linux弹性云服务器<a name="ZH-CN_TOPIC_0030831990"></a>
+# 登录Linux弹性云服务器<a name="ecs_03_0134"></a>
 
 -   **[Linux弹性云服务器登录方式概述](Linux弹性云服务器登录方式概述.md)**  
 
@@ -11,6 +11,8 @@
 -   **[SSH密码方式登录](SSH密码方式登录.md)**  
 
 -   **[在移动设备上登录Linux云服务器](在移动设备上登录Linux云服务器.md)**  
+
+-   **[Mac OS系统登录Linux弹性云服务器](Mac-OS系统登录Linux弹性云服务器.md)**  
 
 -   **[使用华为云APP连接Linux云服务器](使用华为云APP连接Linux云服务器.md)**  
 

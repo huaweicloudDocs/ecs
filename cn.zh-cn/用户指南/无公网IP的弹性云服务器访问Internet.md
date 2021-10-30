@@ -1,4 +1,4 @@
-# 无公网IP的弹性云服务器访问Internet<a name="ZH-CN_TOPIC_0027157850"></a>
+# 无公网IP的弹性云服务器访问Internet<a name="ecs_03_0705"></a>
 
 ## 操作场景<a name="section6427533194453"></a>
 
@@ -66,12 +66,16 @@
 
     **sysctl -p /etc/sysctl.conf**
 
-15. 执行以下命令，清除原有iptables规则。
+15. 执行以下命令，配置默认的iptables规则。
 
-    **iptables -F**
+    **iptables -P INPUT ACCEPT**
+
+    **iptables -P OUTPUT ACCEPT**
+
+    **iptables -P FORWARD ACCEPT**
 
     >![](public_sys-resources/icon-caution.gif) **注意：** 
-    >如果存在之前配置的代理转发规则可以执行**iptables -F**命令清除规则，但是请注意该命令会清除全部的iptables规则。
+    >执行**iptables -P INPUT ACCEPT**，表示设置默认的INPUT策略为接受，存在一定的安全风险。建议您通过设置合适的安全组规则限制入方向的访问。
 
 16. <a name="li49419571113959"></a>执行以下命令，配置SNAT，使代理弹性云服务器所在的网段内其他弹性云服务器可通过代理弹性云服务器访问Internet。
 
@@ -88,7 +92,7 @@
 
     **service iptables save**
 
-    **systemctl enable iptables**
+    **chkconfig iptables on**
 
 18. 执行以下命令，查看SNAT配置是否成功。
 

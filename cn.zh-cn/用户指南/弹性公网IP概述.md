@@ -1,4 +1,4 @@
-# 弹性公网IP概述<a name="ZH-CN_TOPIC_0144542149"></a>
+# 弹性公网IP概述<a name="ecs_03_0701"></a>
 
 ## 弹性公网IP<a name="section56775128354"></a>
 

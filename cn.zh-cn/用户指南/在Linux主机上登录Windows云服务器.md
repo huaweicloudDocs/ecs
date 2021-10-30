@@ -1,4 +1,4 @@
-# 在Linux主机上登录Windows云服务器<a name="ZH-CN_TOPIC_0275383051"></a>
+# 在Linux主机上登录Windows云服务器<a name="ecs_03_0191"></a>
 
 ## 操作场景<a name="zh-cn_topic_0017955381_section119451029135512"></a>
 

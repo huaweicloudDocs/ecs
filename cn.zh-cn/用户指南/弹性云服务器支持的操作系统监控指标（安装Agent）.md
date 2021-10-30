@@ -1,4 +1,4 @@
-# 弹性云服务器支持的操作系统监控指标（安装Agent）<a name="ZH-CN_TOPIC_0197985578"></a>
+# 弹性云服务器支持的操作系统监控指标（安装Agent）<a name="ecs_03_1003"></a>
 
 ## 功能说明<a name="section12784212213"></a>
 
@@ -19,7 +19,7 @@
 </th>
 <th class="cellrowborder" valign="top" width="42.620000000000005%" id="mcps1.2.7.1.3"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p105546320367"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p105546320367"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p105546320367"></a>指标含义</p>
 </th>
-<th class="cellrowborder" valign="top" width="8.4%" id="mcps1.2.7.1.4"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_zh-cn_topic_0030911465_p64622851222846"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_zh-cn_topic_0030911465_p64622851222846"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_zh-cn_topic_0030911465_p64622851222846"></a>取值范围</p>
+<th class="cellrowborder" valign="top" width="8.4%" id="mcps1.2.7.1.4"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_ecs_03_1002_p64622851222846"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_ecs_03_1002_p64622851222846"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_ecs_03_1002_p64622851222846"></a>取值范围</p>
 </th>
 <th class="cellrowborder" valign="top" width="8.3%" id="mcps1.2.7.1.5"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1383633412472"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1383633412472"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1383633412472"></a>测量对象</p>
 </th>

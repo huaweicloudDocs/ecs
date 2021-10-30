@@ -1,4 +1,4 @@
-# 在移动设备上登录Linux云服务器<a name="ZH-CN_TOPIC_0187052037"></a>
+# 在移动设备上登录Linux云服务器<a name="ecs_03_0143"></a>
 
 ## 操作场景<a name="zh-cn_topic_0186706399_section156992579576"></a>
 
@@ -21,7 +21,7 @@
 
 1.  启动Termius，单击New Host。
 
-    **图 1**  New Host<a name="zh-cn_topic_0027290684_fig22996848191913"></a>  
+    **图 1**  New Host<a name="ecs_03_0127_fig22996848191913"></a>  
     ![](figures/New-Host.png "New-Host")
 
 2.  在SSH页面上，输入连接信息后，单击 Save。需要输入的连接信息包括：

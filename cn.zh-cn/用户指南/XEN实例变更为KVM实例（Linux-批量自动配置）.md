@@ -1,4 +1,4 @@
-# XEN实例变更为KVM实例（Linux-批量自动配置）<a name="ZH-CN_TOPIC_0288245007"></a>
+# XEN实例变更为KVM实例（Linux-批量自动配置）<a name="ecs_03_0187"></a>
 
 ## 操作场景<a name="section18362920155819"></a>
 

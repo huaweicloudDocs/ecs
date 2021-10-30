@@ -1,4 +1,4 @@
-# 弹性云服务器支持的操作系统监控指标（安装Agent，简洁版）<a name="ZH-CN_TOPIC_0215513361"></a>
+# 弹性云服务器支持的操作系统监控指标（安装Agent，简洁版）<a name="ecs_03_1006"></a>
 
 ## 功能说明<a name="section1480011141417"></a>
 
@@ -6,7 +6,7 @@
 
 当前支持如下区域：
 
-“华东-上海一”、“华东-上海二”、“华北-北京一”、“华北-北京四”、“华南-广州”、“华南-深圳”、“西南-贵阳一”、“中国-香港”、“亚太-曼谷”、“亚太-新加坡”、“非洲-约翰内斯堡”。
+“华东-上海一”、“华东-上海二”、“华北-北京一”、“华北-北京四”、“华南-广州”、“华南-深圳”、“西南-贵阳一”、“中国-香港”、“亚太-曼谷”、“亚太-新加坡”、“非洲-约翰内斯堡”、“华北-乌兰察布一”。
 
 安装Agent后，您便可以查看弹性云服务器的操作系统监控指标。指标采集周期是1分钟。
 
@@ -21,7 +21,7 @@
 </th>
 <th class="cellrowborder" valign="top" width="40.75000000000001%" id="mcps1.2.7.1.3"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p105546320367"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p105546320367"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p105546320367"></a>指标含义</p>
 </th>
-<th class="cellrowborder" valign="top" width="8.400000000000002%" id="mcps1.2.7.1.4"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_zh-cn_topic_0030911465_p64622851222846"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_zh-cn_topic_0030911465_p64622851222846"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_zh-cn_topic_0030911465_p64622851222846"></a>取值范围</p>
+<th class="cellrowborder" valign="top" width="8.400000000000002%" id="mcps1.2.7.1.4"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_ecs_03_1002_p64622851222846"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_ecs_03_1002_p64622851222846"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_ecs_03_1002_p64622851222846"></a>取值范围</p>
 </th>
 <th class="cellrowborder" valign="top" width="8.300000000000002%" id="mcps1.2.7.1.5"><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1383633412472"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1383633412472"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1383633412472"></a>测量对象</p>
 </th>

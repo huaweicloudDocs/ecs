@@ -1,4 +1,4 @@
-# 创建用户并授权使用ECS<a name="ZH-CN_TOPIC_0170265913"></a>
+# 创建用户并授权使用ECS<a name="ecs_03_0802"></a>
 
 如果您需要对您所拥有的ECS进行精细的权限管理，您可以使用[统一身份认证服务](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)（Identity and Access Management，简称IAM），通过IAM，您可以：
 

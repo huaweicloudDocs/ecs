@@ -26,15 +26,16 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row716575515812"><td class="cellrowborder" rowspan="6" valign="top" width="12.58125812581258%" headers="mcps1.2.5.1.1 "><p id="p81651855380"><a name="p81651855380"></a><a name="p81651855380"></a>Linux</p>
+<tbody><tr id="row716575515812"><td class="cellrowborder" rowspan="7" valign="top" width="12.58125812581258%" headers="mcps1.2.5.1.1 "><p id="p81651855380"><a name="p81651855380"></a><a name="p81651855380"></a>Linux</p>
 </td>
 <td class="cellrowborder" valign="top" width="15.191519151915193%" headers="mcps1.2.5.1.2 "><p id="p9165355081"><a name="p9165355081"></a><a name="p9165355081"></a>Windows</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.154315431543154%" headers="mcps1.2.5.1.3 "><p id="p2971015171814"><a name="p2971015171814"></a><a name="p2971015171814"></a>（推荐使用）使用控制台提供的CloudShell登录云服务器。</p>
 <p id="p1816517551783"><a name="p1816517551783"></a><a name="p1816517551783"></a><a href="使用CloudShell登录云服务器.md">使用CloudShell登录云服务器</a>。</p>
 </td>
-<td class="cellrowborder" rowspan="5" valign="top" width="29.072907290729074%" headers="mcps1.2.5.1.4 "><p id="p196451914171"><a name="p196451914171"></a><a name="p196451914171"></a>云服务器绑定弹性公网IP。</p>
+<td class="cellrowborder" rowspan="6" valign="top" width="29.072907290729074%" headers="mcps1.2.5.1.4 "><p id="p196451914171"><a name="p196451914171"></a><a name="p196451914171"></a>云服务器绑定弹性公网IP。</p>
 <p id="p109678294370"><a name="p109678294370"></a><a name="p109678294370"></a>（通过内网登录云服务器时可以不绑定弹性公网IP，例如VPN、云专线等内网网络连通场景。）</p>
+<p id="p109224635614"><a name="p109224635614"></a><a name="p109224635614"></a></p>
 </td>
 </tr>
 <tr id="row20754202301818"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p575416238183"><a name="p575416238183"></a><a name="p575416238183"></a>Windows</p>
@@ -59,6 +60,12 @@
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p28456415616"><a name="p28456415616"></a><a name="p28456415616"></a>下载华为云APP连接云服务器。</p>
 <p id="p188451941565"><a name="p188451941565"></a><a name="p188451941565"></a><a href="使用华为云APP连接Linux云服务器.md">使用华为云APP连接Linux云服务器</a>。</p>
+</td>
+</tr>
+<tr id="row12926465567"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p5922469560"><a name="p5922469560"></a><a name="p5922469560"></a>Mac OS系统</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p792124655616"><a name="p792124655616"></a><a name="p792124655616"></a>使用系统自带的终端（Terminal）：</p>
+<p id="p12492045155716"><a name="p12492045155716"></a><a name="p12492045155716"></a><a href="Mac-OS系统登录Linux弹性云服务器.md">Mac OS系统登录Linux弹性云服务器</a>。</p>
 </td>
 </tr>
 <tr id="row11628142404520"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p5628324104515"><a name="p5628324104515"></a><a name="p5628324104515"></a>Windows</p>

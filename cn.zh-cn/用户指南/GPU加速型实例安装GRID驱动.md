@@ -52,9 +52,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     **表 1**  GPU实例类型支持的GRID驱动版本
 
     <a name="table188851534175019"></a>
-    <table><thead align="left"><tr id="row38821334115015"><th class="cellrowborder" valign="top" width="10.601060106010602%" id="mcps1.2.6.1.1"><p id="p11882134205019"><a name="p11882134205019"></a><a name="p11882134205019"></a>实例类型</p>
+    <table><thead align="left"><tr id="row38821334115015"><th class="cellrowborder" valign="top" width="10.59105910591059%" id="mcps1.2.6.1.1"><p id="p11882134205019"><a name="p11882134205019"></a><a name="p11882134205019"></a>实例类型</p>
     </th>
-    <th class="cellrowborder" valign="top" width="16.171617161716174%" id="mcps1.2.6.1.2"><p id="p15882113415507"><a name="p15882113415507"></a><a name="p15882113415507"></a>GPU挂载方式</p>
+    <th class="cellrowborder" valign="top" width="16.181618161816182%" id="mcps1.2.6.1.2"><p id="p15882113415507"><a name="p15882113415507"></a><a name="p15882113415507"></a>GPU挂载方式</p>
     </th>
     <th class="cellrowborder" valign="top" width="38.76387638763876%" id="mcps1.2.6.1.3"><p id="p68821634185016"><a name="p68821634185016"></a><a name="p68821634185016"></a>操作系统</p>
     </th>
@@ -64,9 +64,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     </th>
     </tr>
     </thead>
-    <tbody><tr id="row23595915223"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p123585952219"><a name="p123585952219"></a><a name="p123585952219"></a>G6v</p>
+    <tbody><tr id="row23595915223"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p123585952219"><a name="p123585952219"></a><a name="p123585952219"></a>G6v</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p2361596227"><a name="p2361596227"></a><a name="p2361596227"></a>GPU虚拟化型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p2361596227"><a name="p2361596227"></a><a name="p2361596227"></a>GPU虚拟化型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1362673810234"></a><a name="ul1362673810234"></a><ul id="ul1362673810234"><li>Windows Server 2016 Standard 64bit</li></ul>
     </td>
@@ -75,9 +75,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p4811121242315"><a name="p4811121242315"></a><a name="p4811121242315"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1288220341507"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p17882143415503"><a name="p17882143415503"></a><a name="p17882143415503"></a>G6</p>
+    <tr id="row1288220341507"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p17882143415503"><a name="p17882143415503"></a><a name="p17882143415503"></a>G6</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p11882634175015"><a name="p11882634175015"></a><a name="p11882634175015"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p11882634175015"><a name="p11882634175015"></a><a name="p11882634175015"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul128821934165016"></a><a name="ul128821934165016"></a><ul id="ul128821934165016"><li>Windows Server 2016 Standard 64bit</li></ul>
     </td>
@@ -86,9 +86,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p138821834155016"><a name="p138821834155016"></a><a name="p138821834155016"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1088383418500"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p988213340507"><a name="p988213340507"></a><a name="p988213340507"></a>G5</p>
+    <tr id="row1088383418500"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p988213340507"><a name="p988213340507"></a><a name="p988213340507"></a>G5</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p5882133411506"><a name="p5882133411506"></a><a name="p5882133411506"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p5882133411506"><a name="p5882133411506"></a><a name="p5882133411506"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul288211347506"></a><a name="ul288211347506"></a><ul id="ul288211347506"><li>Windows Server 2016 Standard 64bit</li><li>Windows Server 2012 R2 Standard 64bit</li><li>CentOS 7.5 64bit</li></ul>
     </td>
@@ -97,9 +97,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p888233485010"><a name="p888233485010"></a><a name="p888233485010"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row8883143415018"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p1088343415016"><a name="p1088343415016"></a><a name="p1088343415016"></a>G3</p>
+    <tr id="row8883143415018"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p1088343415016"><a name="p1088343415016"></a><a name="p1088343415016"></a>G3</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p1688363495015"><a name="p1688363495015"></a><a name="p1688363495015"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p1688363495015"><a name="p1688363495015"></a><a name="p1688363495015"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul4883534185016"></a><a name="ul4883534185016"></a><ul id="ul4883534185016"><li>Windows Server 2012 R2 Standard 64bit</li><li>Windows Server 2008 R2 Enterprise SP1 64bit</li></ul>
     </td>
@@ -108,9 +108,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p2883434145012"><a name="p2883434145012"></a><a name="p2883434145012"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1688333425020"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p5883234135012"><a name="p5883234135012"></a><a name="p5883234135012"></a>G1</p>
+    <tr id="row1688333425020"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p5883234135012"><a name="p5883234135012"></a><a name="p5883234135012"></a>G1</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p1788343411505"><a name="p1788343411505"></a><a name="p1788343411505"></a>GPU虚拟化型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p1788343411505"><a name="p1788343411505"></a><a name="p1788343411505"></a>GPU虚拟化型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul6883434145013"></a><a name="ul6883434145013"></a><ul id="ul6883434145013"><li>Windows Server 2012 R2 Standard 64bit</li><li>Windows Server 2008 R2 Enterprise SP1 64bit</li></ul>
     </td>
@@ -119,9 +119,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p1788318343509"><a name="p1788318343509"></a><a name="p1788318343509"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row18841534145013"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p15883133418509"><a name="p15883133418509"></a><a name="p15883133418509"></a>P2vs</p>
+    <tr id="row18841534145013"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p15883133418509"><a name="p15883133418509"></a><a name="p15883133418509"></a>P2vs</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p1988318348507"><a name="p1988318348507"></a><a name="p1988318348507"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p1988318348507"><a name="p1988318348507"></a><a name="p1988318348507"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1188310348506"></a><a name="ul1188310348506"></a><ul id="ul1188310348506"><li>Windows Server 2016 Standard 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>CentOS 7.5 64bit</li></ul>
     </td>
@@ -130,9 +130,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p588413341503"><a name="p588413341503"></a><a name="p588413341503"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row16884113418504"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p1688473412501"><a name="p1688473412501"></a><a name="p1688473412501"></a>P2s</p>
+    <tr id="row16884113418504"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p1688473412501"><a name="p1688473412501"></a><a name="p1688473412501"></a>P2s</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p68846348507"><a name="p68846348507"></a><a name="p68846348507"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p68846348507"><a name="p68846348507"></a><a name="p68846348507"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul19884193485017"></a><a name="ul19884193485017"></a><ul id="ul19884193485017"><li>Windows Server 2016 Standard 64bit</li><li>Windows Server 2012 R2 Standard 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>CentOS 7.7 64bit</li><li>CentOS 7.4 64bit</li></ul>
     </td>
@@ -141,9 +141,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p11884103413504"><a name="p11884103413504"></a><a name="p11884103413504"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row188463416506"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p88847349507"><a name="p88847349507"></a><a name="p88847349507"></a>P2v</p>
+    <tr id="row188463416506"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p88847349507"><a name="p88847349507"></a><a name="p88847349507"></a>P2v</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p78841634205014"><a name="p78841634205014"></a><a name="p78841634205014"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p78841634205014"><a name="p78841634205014"></a><a name="p78841634205014"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul188843346508"></a><a name="ul188843346508"></a><ul id="ul188843346508"><li>Windows Server 2016 Standard 64bit</li><li>Windows Server 2012 R2 Standard 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>CentOS 7.7 64bit</li><li>EulerOS 2.5 64bit</li></ul>
     </td>
@@ -152,9 +152,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p688413475015"><a name="p688413475015"></a><a name="p688413475015"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1088563415507"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p168841734135014"><a name="p168841734135014"></a><a name="p168841734135014"></a>P1</p>
+    <tr id="row1088563415507"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p168841734135014"><a name="p168841734135014"></a><a name="p168841734135014"></a>P1</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p19884113418507"><a name="p19884113418507"></a><a name="p19884113418507"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p19884113418507"><a name="p19884113418507"></a><a name="p19884113418507"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1888563455018"></a><a name="ul1888563455018"></a><ul id="ul1888563455018"><li>Windows Server 2012 R2 Standard 64bit</li><li>Debian 8.0 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>CentOS 7.3 64bit</li><li>EulerOS 2.2 64bit</li></ul>
     </td>
@@ -163,9 +163,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p15885203475011"><a name="p15885203475011"></a><a name="p15885203475011"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1885134185018"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p288510344504"><a name="p288510344504"></a><a name="p288510344504"></a>Pi2</p>
+    <tr id="row1885134185018"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p288510344504"><a name="p288510344504"></a><a name="p288510344504"></a>Pi2</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p148857346506"><a name="p148857346506"></a><a name="p148857346506"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p148857346506"><a name="p148857346506"></a><a name="p148857346506"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1376510289287"></a><a name="ul1376510289287"></a><ul id="ul1376510289287"><li>Windows Server 2016 Standard 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>CentOS 7.5 64bit</li></ul>
     </td>
@@ -174,9 +174,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulcan等图形加速能力则需�
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p11885934165013"><a name="p11885934165013"></a><a name="p11885934165013"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row48851834205018"><td class="cellrowborder" valign="top" width="10.601060106010602%" headers="mcps1.2.6.1.1 "><p id="p888523416502"><a name="p888523416502"></a><a name="p888523416502"></a>Pi1</p>
+    <tr id="row48851834205018"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p888523416502"><a name="p888523416502"></a><a name="p888523416502"></a>Pi1</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.171617161716174%" headers="mcps1.2.6.1.2 "><p id="p16885113414509"><a name="p16885113414509"></a><a name="p16885113414509"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p16885113414509"><a name="p16885113414509"></a><a name="p16885113414509"></a>GPU直通型实例</p>
     </td>
     <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul108851734175018"></a><a name="ul108851734175018"></a><ul id="ul108851734175018"><li>Ubuntu Server 16.04 64bit</li><li>Ubuntu Server 14.04 64bit</li><li>CentOS 7.3 64bit</li></ul>
     </td>

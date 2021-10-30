@@ -1,4 +1,4 @@
-# Windows弹性云服务器管理控制台远程登录（VNC方式）<a name="ZH-CN_TOPIC_0027290684"></a>
+# Windows弹性云服务器管理控制台远程登录（VNC方式）<a name="ecs_03_0127"></a>
 
 ## 操作场景<a name="section72402524547"></a>
 

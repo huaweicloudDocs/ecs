@@ -1,4 +1,4 @@
-# ECS自定义策略<a name="ZH-CN_TOPIC_0170265914"></a>
+# ECS自定义策略<a name="ecs_03_0803"></a>
 
 如果系统预置的ECS权限，不满足您的授权要求，可以创建自定义策略。自定义策略中可以添加的授权项（Action）请参考[《ECS API参考》](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020805967.html)中“ 策略及授权项说明”章节_。_
 

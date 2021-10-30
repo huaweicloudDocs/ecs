@@ -1,4 +1,4 @@
-# XEN实例变更为KVM实例（Windows）<a name="ZH-CN_TOPIC_0100593628"></a>
+# XEN实例变更为KVM实例（Windows）<a name="ecs_03_0161"></a>
 
 ## 操作场景<a name="section9265624184119"></a>
 
@@ -41,24 +41,24 @@ XEN实例变更为KVM实例的操作流程如[图1](#fig125527421191)所示。
 <td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="p1542162717357"><a name="p1542162717357"></a><a name="p1542162717357"></a><a href="#section15236154665218">步骤1：制作系统盘快照</a></p>
 </td>
 </tr>
-<tr id="row23661419599"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0100593628_p1636634114592"><a name="zh-cn_topic_0100593628_p1636634114592"></a><a name="zh-cn_topic_0100593628_p1636634114592"></a>步骤2</p>
+<tr id="row23661419599"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="ecs_03_0161_p1636634114592"><a name="ecs_03_0161_p1636634114592"></a><a name="ecs_03_0161_p1636634114592"></a>步骤2</p>
 </td>
-<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p436634118592"><a name="zh-cn_topic_0100593628_p436634118592"></a><a name="zh-cn_topic_0100593628_p436634118592"></a><a href="#section1424018509446">步骤2：检查UVP VMTools版本</a></p>
-</td>
-</tr>
-<tr id="row636694135916"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0100593628_p14366164118597"><a name="zh-cn_topic_0100593628_p14366164118597"></a><a name="zh-cn_topic_0100593628_p14366164118597"></a>步骤3</p>
-</td>
-<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p53661441115918"><a name="zh-cn_topic_0100593628_p53661441115918"></a><a name="zh-cn_topic_0100593628_p53661441115918"></a><a href="#section884919094417">步骤3：安装或升级UVP VMTools</a></p>
+<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="ecs_03_0161_p436634118592"><a name="ecs_03_0161_p436634118592"></a><a name="ecs_03_0161_p436634118592"></a><a href="#section1424018509446">步骤2：检查UVP VMTools版本</a></p>
 </td>
 </tr>
-<tr id="row1136644155912"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0100593628_p236624118593"><a name="zh-cn_topic_0100593628_p236624118593"></a><a name="zh-cn_topic_0100593628_p236624118593"></a>步骤4</p>
+<tr id="row636694135916"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="ecs_03_0161_p14366164118597"><a name="ecs_03_0161_p14366164118597"></a><a name="ecs_03_0161_p14366164118597"></a>步骤3</p>
 </td>
-<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p12366104118596"><a name="zh-cn_topic_0100593628_p12366104118596"></a><a name="zh-cn_topic_0100593628_p12366104118596"></a><a href="#section1815152131917">步骤4：变更规格</a></p>
+<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="ecs_03_0161_p53661441115918"><a name="ecs_03_0161_p53661441115918"></a><a name="ecs_03_0161_p53661441115918"></a><a href="#section884919094417">步骤3：安装或升级UVP VMTools</a></p>
 </td>
 </tr>
-<tr id="row03661441165910"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0100593628_p93661441145912"><a name="zh-cn_topic_0100593628_p93661441145912"></a><a name="zh-cn_topic_0100593628_p93661441145912"></a>步骤5</p>
+<tr id="row1136644155912"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="ecs_03_0161_p236624118593"><a name="ecs_03_0161_p236624118593"></a><a name="ecs_03_0161_p236624118593"></a>步骤4</p>
 </td>
-<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0100593628_p123666411590"><a name="zh-cn_topic_0100593628_p123666411590"></a><a name="zh-cn_topic_0100593628_p123666411590"></a><a href="#section2625525131519">（可选）步骤5：检查磁盘挂载状态</a></p>
+<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="ecs_03_0161_p12366104118596"><a name="ecs_03_0161_p12366104118596"></a><a name="ecs_03_0161_p12366104118596"></a><a href="#section1815152131917">步骤4：变更规格</a></p>
+</td>
+</tr>
+<tr id="row03661441165910"><td class="cellrowborder" valign="top" width="33.29%" headers="mcps1.2.3.1.1 "><p id="ecs_03_0161_p93661441145912"><a name="ecs_03_0161_p93661441145912"></a><a name="ecs_03_0161_p93661441145912"></a>步骤5</p>
+</td>
+<td class="cellrowborder" valign="top" width="66.71000000000001%" headers="mcps1.2.3.1.2 "><p id="ecs_03_0161_p123666411590"><a name="ecs_03_0161_p123666411590"></a><a name="ecs_03_0161_p123666411590"></a><a href="#section2625525131519">（可选）步骤5：检查磁盘挂载状态</a></p>
 </td>
 </tr>
 </tbody>
