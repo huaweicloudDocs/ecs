@@ -1,4 +1,4 @@
-# FPGA逻辑文件管理<a name="ZH-CN_TOPIC_0132778339"></a>
+# FPGA逻辑文件管理<a name="ecs_06_0020"></a>
 
 <a name="table141517564301"></a>
 <table><thead align="left"><tr id="row8415105683017"><th class="cellrowborder" valign="top" width="9.050905090509051%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

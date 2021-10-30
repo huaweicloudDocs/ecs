@@ -1,4 +1,4 @@
-# 可用区管理<a name="ZH-CN_TOPIC_0103071519"></a>
+# 可用区管理<a name="ecs_06_0018"></a>
 
 <a name="table1642432772714"></a>
 <table><thead align="left"><tr id="row18424102718278"><th class="cellrowborder" valign="top" width="10.108989101089891%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

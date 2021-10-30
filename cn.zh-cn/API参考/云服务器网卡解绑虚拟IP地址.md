@@ -1,4 +1,4 @@
-# 云服务器网卡解绑虚拟IP地址<a name="ZH-CN_TOPIC_0077846077"></a>
+# 云服务器网卡解绑虚拟IP地址<a name="ecs_02_0504"></a>
 
 ## 功能介绍<a name="section10723444"></a>
 
@@ -60,12 +60,11 @@ PUT /v1/\{project\_id\}/cloudservers/nics/\{nic\_id\}
 </thead>
 <tbody><tr id="row52301286"><td class="cellrowborder" valign="top" width="25.192519251925194%" headers="mcps1.2.5.1.1 "><p id="p8545767"><a name="p8545767"></a><a name="p8545767"></a>nic</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.471447144714473%" headers="mcps1.2.5.1.2 "><p id="p21118492"><a name="p21118492"></a><a name="p21118492"></a>否</p>
+<td class="cellrowborder" valign="top" width="14.471447144714473%" headers="mcps1.2.5.1.2 "><p id="p21118492"><a name="p21118492"></a><a name="p21118492"></a>是</p>
 </td>
 <td class="cellrowborder" valign="top" width="24.62246224622462%" headers="mcps1.2.5.1.3 "><p id="p32876269"><a name="p32876269"></a><a name="p32876269"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.713571357135706%" headers="mcps1.2.5.1.4 "><p id="p8936292"><a name="p8936292"></a><a name="p8936292"></a>填写时：需要解绑虚拟IP的网卡参数列表。更多信息请参见<a href="#table44975500">表3</a>。</p>
-<p id="p1510295141220"><a name="p1510295141220"></a><a name="p1510295141220"></a>不填写时：表示打开“源/目的检查”（打开情况下系统会检查弹性云服务器发送的报文中源IP地址是否正确，如果不正确，则不允许发送该报文）</p>
+<td class="cellrowborder" valign="top" width="35.713571357135706%" headers="mcps1.2.5.1.4 "><p id="p8936292"><a name="p8936292"></a><a name="p8936292"></a>需要解绑虚拟IP的网卡参数列表。更多信息请参见<a href="#table44975500">表3</a>。</p>
 </td>
 </tr>
 </tbody>

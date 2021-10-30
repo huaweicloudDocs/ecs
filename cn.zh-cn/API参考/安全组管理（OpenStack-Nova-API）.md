@@ -1,4 +1,4 @@
-# 安全组管理（OpenStack Nova API）<a name="ZH-CN_TOPIC_0267427144"></a>
+# 安全组管理（OpenStack Nova API）<a name="ecs_09_0001"></a>
 
 -   **[查询安全组列表（废弃）](查询安全组列表（废弃）.md)**  
 

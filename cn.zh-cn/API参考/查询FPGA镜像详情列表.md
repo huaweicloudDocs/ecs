@@ -1,4 +1,4 @@
-# 查询FPGA镜像详情列表<a name="ZH-CN_TOPIC_0065962600"></a>
+# 查询FPGA镜像详情列表<a name="ecs_02_1203"></a>
 
 ## 功能介绍<a name="section48834480211756"></a>
 

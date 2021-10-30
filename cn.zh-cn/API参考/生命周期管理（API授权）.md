@@ -1,4 +1,4 @@
-# 生命周期管理<a name="ZH-CN_TOPIC_0103071510"></a>
+# 生命周期管理<a name="ecs_06_0002"></a>
 
 <a name="table1587111571724"></a>
 <table><thead align="left"><tr id="row5871165713215"><th class="cellrowborder" valign="top" width="14.928507149285075%" id="mcps1.1.7.1.1"><p id="p106166215195"><a name="p106166215195"></a><a name="p106166215195"></a>权限</p>

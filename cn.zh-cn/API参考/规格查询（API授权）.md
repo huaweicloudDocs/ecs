@@ -1,4 +1,4 @@
-# 规格查询<a name="ZH-CN_TOPIC_0103071522"></a>
+# 规格查询<a name="ecs_06_0008"></a>
 
 <a name="table12528123592919"></a>
 <table><thead align="left"><tr id="row5528103512910"><th class="cellrowborder" valign="top" width="13.428657134286572%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

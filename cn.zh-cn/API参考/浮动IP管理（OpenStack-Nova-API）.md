@@ -1,4 +1,4 @@
-# 浮动IP管理（OpenStack Nova API）<a name="ZH-CN_TOPIC_0065817682"></a>
+# 浮动IP管理（OpenStack Nova API）<a name="ecs_03_1300"></a>
 
 -   **[分配浮动IP（废弃）](分配浮动IP（废弃）.md)**  
 

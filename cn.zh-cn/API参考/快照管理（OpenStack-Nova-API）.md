@@ -1,4 +1,4 @@
-# 快照管理（OpenStack Nova API）<a name="ZH-CN_TOPIC_0065817724"></a>
+# 快照管理（OpenStack Nova API）<a name="ecs_03_1700"></a>
 
 -   **[创建快照（废弃）](创建快照（废弃）.md)**  
 

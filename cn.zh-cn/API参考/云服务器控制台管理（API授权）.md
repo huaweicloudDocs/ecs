@@ -1,4 +1,4 @@
-# 云服务器控制台管理<a name="ZH-CN_TOPIC_0184192952"></a>
+# 云服务器控制台管理<a name="ecs_06_0017"></a>
 
 <a name="table12570457816"></a>
 <table><thead align="left"><tr id="row95826401976"><th class="cellrowborder" valign="top" width="10.12%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

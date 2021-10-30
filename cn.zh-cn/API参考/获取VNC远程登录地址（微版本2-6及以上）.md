@@ -1,10 +1,10 @@
-# 获取VNC远程登录地址（微版本2.6及以上）<a name="ZH-CN_TOPIC_0142763126"></a>
+# 获取VNC远程登录地址（微版本2.6及以上）<a name="ecs_03_1603"></a>
 
-## 功能介绍<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section16588975"></a>
+## 功能介绍<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section16588975"></a>
 
 获取弹性云服务器VNC远程登录地址。
 
-## URI<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section15083054"></a>
+## URI<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section15083054"></a>
 
 POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 
@@ -49,7 +49,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 
 -   获取的登录地址有效时间10min，超过10min请重新获取。
 
-## 请求消息<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section56802184"></a>
+## 请求消息<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section56802184"></a>
 
 **表 2**  请求参数
 
@@ -70,7 +70,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 </td>
 <td class="cellrowborder" valign="top" width="17.04829517048295%" headers="mcps1.2.5.1.3 "><p id="p898215212374"><a name="p898215212374"></a><a name="p898215212374"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="48.40515948405159%" headers="mcps1.2.5.1.4 "><p id="p9978132133714"><a name="p9978132133714"></a><a name="p9978132133714"></a><span id="text210616184915"><a name="text210616184915"></a><a name="text210616184915"></a>弹性云服务器</span>获取VNC远程登录地址。</p>
+<td class="cellrowborder" valign="top" width="48.40515948405159%" headers="mcps1.2.5.1.4 "><p id="p9978132133714"><a name="p9978132133714"></a><a name="p9978132133714"></a><span id="text210616184915"><a name="text210616184915"></a><a name="text210616184915"></a>弹性云服务器</span>获取VNC远程登录地址，参考<a href="#table19959184318164">表3</a>。</p>
 </td>
 </tr>
 </tbody>
@@ -110,7 +110,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 </tbody>
 </table>
 
-## 响应消息<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section41457614"></a>
+## 响应消息<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section41457614"></a>
 
 响应参数如[表4](#table8420447171011)所示。
 
@@ -129,7 +129,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 </td>
 <td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p343116478104"><a name="p343116478104"></a><a name="p343116478104"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p44331647131017"><a name="p44331647131017"></a><a name="p44331647131017"></a><span id="text55631561935"><a name="text55631561935"></a><a name="text55631561935"></a>弹性云服务器</span>获取远程登录地址。</p>
+<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p44331647131017"><a name="p44331647131017"></a><a name="p44331647131017"></a><span id="text55631561935"><a name="text55631561935"></a><a name="text55631561935"></a>弹性云服务器</span>获取远程登录地址，参考<a href="#table12434194718104">表5</a>。</p>
 </td>
 </tr>
 </tbody>
@@ -171,7 +171,7 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 </tbody>
 </table>
 
-## 请求示例<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section37574207"></a>
+## 请求示例<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section37574207"></a>
 
 ```
 POST https://{endpoint}/v2.1/13c67a214ced4afb88d911ae4bd5721a/servers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote-consoles
@@ -198,11 +198,11 @@ POST https://{endpoint}/v2.1/13c67a214ced4afb88d911ae4bd5721a/servers/47bc79ae-d
 }
 ```
 
-## 返回值<a name="zh-cn_topic_0092803065_zh-cn_topic_0020212692_section22960139"></a>
+## 返回值<a name="zh-cn_topic_0092803065_ecs_03_0202_section22960139"></a>
 
 请参考[通用请求返回值](通用请求返回值.md)。
 
-## 错误码<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section23611955"></a>
+## 错误码<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section23611955"></a>
 
 请参考[错误码](错误码.md)。
 

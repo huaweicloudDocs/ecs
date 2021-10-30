@@ -1,4 +1,4 @@
-# 浮动IP管理<a name="ZH-CN_TOPIC_0103072349"></a>
+# 浮动IP管理<a name="ecs_06_0015"></a>
 
 <a name="table597722943219"></a>
 <table><thead align="left"><tr id="row20978132943210"><th class="cellrowborder" valign="top" width="10.868913108689132%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

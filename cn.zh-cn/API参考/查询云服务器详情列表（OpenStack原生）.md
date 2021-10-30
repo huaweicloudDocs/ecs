@@ -1,4 +1,4 @@
-# 查询云服务器详情列表<a name="ZH-CN_TOPIC_0020212689"></a>
+# 查询云服务器详情列表<a name="ecs_03_0205"></a>
 
 ## 功能介绍<a name="section33716833"></a>
 
@@ -138,8 +138,8 @@ GET /v2.1/\{project\_id\}/servers/detail?changes-since=\{changes-since\}&image=\
 <td class="cellrowborder" valign="top" width="14.040000000000003%" headers="mcps1.2.5.1.3 "><p id="p2726607214343"><a name="p2726607214343"></a><a name="p2726607214343"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="57.00000000000001%" headers="mcps1.2.5.1.4 "><p id="p497882461442"><a name="p497882461442"></a><a name="p497882461442"></a>查询tag字段中不包含该值的<span id="text15793114173712"><a name="text15793114173712"></a><a name="text15793114173712"></a>云服务器</span>，值为标签的Key。</p>
-<div class="note" id="note124521913175616"><a name="note124521913175616"></a><a name="note124521913175616"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0020212688_p1745221311560"><a name="zh-cn_topic_0020212688_p1745221311560"></a><a name="zh-cn_topic_0020212688_p1745221311560"></a>系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。</p>
-<p id="zh-cn_topic_0020212688_p213418685710"><a name="zh-cn_topic_0020212688_p213418685710"></a><a name="zh-cn_topic_0020212688_p213418685710"></a>例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。</p>
+<div class="note" id="note124521913175616"><a name="note124521913175616"></a><a name="note124521913175616"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="ecs_03_0204_p1745221311560"><a name="ecs_03_0204_p1745221311560"></a><a name="ecs_03_0204_p1745221311560"></a>系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。</p>
+<p id="ecs_03_0204_p213418685710"><a name="ecs_03_0204_p213418685710"></a><a name="ecs_03_0204_p213418685710"></a>例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。</p>
 </div></div>
 </td>
 </tr>
@@ -162,13 +162,13 @@ GET /v2.1/\{project\_id\}/servers/detail?changes-since=\{changes-since\}&image=\
 <p id="p1631350906"><a name="p1631350906"></a><a name="p1631350906"></a>取值范围：created_at,auto_disk_config,availability_zone,display_description,display_name,host,host_name,image_ref,instance_type_id,kernel_id,key_name,launch_index,launched_at,locked_by,node,power_state,project_id,ramdisk_id,reservation_id,root_device_name,task_state,terminated_at,user_id,updated_at,uuid,vm_state</p>
 </td>
 </tr>
-<tr id="row1346404515154"><td class="cellrowborder" valign="top" width="19.050000000000004%" headers="mcps1.2.5.1.1 "><p id="p1646514518158"><a name="p1646514518158"></a><a name="p1646514518158"></a>ip</p>
+<tr id="row1346404515154"><td class="cellrowborder" valign="top" width="19.050000000000004%" headers="mcps1.2.5.1.1 "><p id="p1646514518158"><a name="p1646514518158"></a><a name="p1646514518158"></a><span>ip</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="9.91%" headers="mcps1.2.5.1.2 "><p id="p1446519457156"><a name="p1446519457156"></a><a name="p1446519457156"></a>否</p>
 </td>
 <td class="cellrowborder" valign="top" width="14.040000000000003%" headers="mcps1.2.5.1.3 "><p id="p1846584518155"><a name="p1846584518155"></a><a name="p1846584518155"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="57.00000000000001%" headers="mcps1.2.5.1.4 "><p id="p546524517153"><a name="p546524517153"></a><a name="p546524517153"></a>IPv4地址过滤结果，匹配规则为模糊匹配。</p>
+<td class="cellrowborder" valign="top" width="57.00000000000001%" headers="mcps1.2.5.1.4 "><p id="p546524517153"><a name="p546524517153"></a><a name="p546524517153"></a><span>IPv4地址过滤结果，匹配规则为模糊匹配。</span></p>
 </td>
 </tr>
 </tbody>

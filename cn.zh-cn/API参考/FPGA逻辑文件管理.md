@@ -1,4 +1,4 @@
-# FPGA逻辑文件管理<a name="ZH-CN_TOPIC_0065962596"></a>
+# FPGA逻辑文件管理<a name="ecs_02_1200"></a>
 
 -   **[注册FPGA镜像](注册FPGA镜像.md)**  
 

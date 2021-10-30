@@ -1,4 +1,4 @@
-# 镜像管理（OpenStack Nova API）<a name="ZH-CN_TOPIC_0065817680"></a>
+# 镜像管理（OpenStack Nova API）<a name="ecs_03_0500"></a>
 
 -   **[查询镜像列表（废弃）](查询镜像列表（废弃）.md)**  
 

@@ -1,4 +1,4 @@
-# 获取项目ID<a name="ZH-CN_TOPIC_0022670701"></a>
+# 获取项目ID<a name="ecs_01_0016"></a>
 
 ## 操作场景<a name="section164771624121415"></a>
 

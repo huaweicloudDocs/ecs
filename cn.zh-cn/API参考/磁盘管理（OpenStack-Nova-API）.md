@@ -1,4 +1,4 @@
-# 磁盘管理（OpenStack Nova API）<a name="ZH-CN_TOPIC_0267427881"></a>
+# 磁盘管理（OpenStack Nova API）<a name="ecs_09_0002"></a>
 
 -   **[查询磁盘列表（废弃）](查询磁盘列表（废弃）.md)**  
 

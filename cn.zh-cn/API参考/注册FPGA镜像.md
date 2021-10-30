@@ -1,4 +1,4 @@
-# 注册FPGA镜像<a name="ZH-CN_TOPIC_0065962597"></a>
+# 注册FPGA镜像<a name="ecs_02_1201"></a>
 
 ## 功能介绍<a name="section6847204211311"></a>
 

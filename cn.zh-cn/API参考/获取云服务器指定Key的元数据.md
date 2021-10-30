@@ -1,4 +1,4 @@
-# 获取云服务器指定Key的元数据<a name="ZH-CN_TOPIC_0065817714"></a>
+# 获取云服务器指定Key的元数据<a name="ecs_03_1005"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057973169_section56350203"></a>
 
@@ -91,7 +91,7 @@ GET https://{endpoint}/v2.1/9c53a566cb3443ab910cf0daebca90c4/servers/998af54b-57
 }
 ```
 
-## 返回值<a name="zh-cn_topic_0057973169_zh-cn_topic_0020212692_section22960139"></a>
+## 返回值<a name="zh-cn_topic_0057973169_ecs_03_0202_section22960139"></a>
 
 请参考[通用请求返回值](通用请求返回值.md)。
 

@@ -1,4 +1,4 @@
-# 获取Token并检验Token的有效期<a name="ZH-CN_TOPIC_0000001161966409"></a>
+# 获取Token并检验Token的有效期<a name="ecs_04_0008"></a>
 
 ## 操作场景<a name="section5686113311205"></a>
 

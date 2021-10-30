@@ -1,4 +1,4 @@
-# 创建云服务器<a name="ZH-CN_TOPIC_0068473331"></a>
+# 创建云服务器<a name="ecs_03_0201"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057972661_section31291646"></a>
 
@@ -149,7 +149,7 @@ POST /v2.1/\{project\_id\}/servers
 <td class="cellrowborder" valign="top" width="17.57%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972661_p52608144102658"><a name="zh-cn_topic_0057972661_p52608144102658"></a><a name="zh-cn_topic_0057972661_p52608144102658"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48.699999999999996%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972661_p21145347102658"><a name="zh-cn_topic_0057972661_p21145347102658"></a><a name="zh-cn_topic_0057972661_p21145347102658"></a>规格ID或URL。</p>
-<p id="p27315444412"><a name="p27315444412"></a><a name="p27315444412"></a>规格ID示例：c1.2xlarge</p>
+<p id="p27315444412"><a name="p27315444412"></a><a name="p27315444412"></a>规格ID示例：<span>c3.2xlarge</span></p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0057972661_row3565234102639"><td class="cellrowborder" valign="top" width="19.939999999999998%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0057972661_p47028347102658"><a name="zh-cn_topic_0057972661_p47028347102658"></a><a name="zh-cn_topic_0057972661_p47028347102658"></a>name</p>
@@ -169,7 +169,7 @@ POST /v2.1/\{project\_id\}/servers
 </td>
 <td class="cellrowborder" valign="top" width="17.57%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972661_p3629454102658"><a name="zh-cn_topic_0057972661_p3629454102658"></a><a name="zh-cn_topic_0057972661_p3629454102658"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="48.699999999999996%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972661_p14501627151547"><a name="zh-cn_topic_0057972661_p14501627151547"></a><a name="zh-cn_topic_0057972661_p14501627151547"></a><span id="text1161115945310"><a name="text1161115945310"></a><a name="text1161115945310"></a>弹性云服务器</span>元数据。参照<a href="#zh-cn_topic_0057972661_table2373623012315">表4</a>。</p>
+<td class="cellrowborder" valign="top" width="48.699999999999996%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972661_p14501627151547"><a name="zh-cn_topic_0057972661_p14501627151547"></a><a name="zh-cn_topic_0057972661_p14501627151547"></a><span id="text1161115945310"><a name="text1161115945310"></a><a name="text1161115945310"></a>弹性云服务器</span>元数据。参照 表 metadata字段数据结构说明。</p>
 <a name="zh-cn_topic_0057972661_ul18338492151614"></a><a name="zh-cn_topic_0057972661_ul18338492151614"></a><ul id="zh-cn_topic_0057972661_ul18338492151614"><li>key的长度大于0小于256字节</li><li>value的长度大于等于0小于256字节</li></ul>
 </td>
 </tr>
@@ -235,10 +235,10 @@ POST /v2.1/\{project\_id\}/servers
 </td>
 <td class="cellrowborder" valign="top" width="17.57%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972661_p21538656102658"><a name="zh-cn_topic_0057972661_p21538656102658"></a><a name="zh-cn_topic_0057972661_p21538656102658"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="48.699999999999996%" headers="mcps1.2.5.1.4 "><p id="p124835165514"><a name="p124835165514"></a><a name="p124835165514"></a>创建<span id="text86731033192216"><a name="text86731033192216"></a><a name="text86731033192216"></a>云服务器</span>过程中待注入用户数据。支持注入文本、文本文件。</p>
+<td class="cellrowborder" valign="top" width="48.699999999999996%" headers="mcps1.2.5.1.4 "><p id="p124835165514"><a name="p124835165514"></a><a name="p124835165514"></a>创建<span id="text86731033192216"><a name="text86731033192216"></a><a name="text86731033192216"></a>云服务器</span>过程中待注入实例自定义数据。支持注入文本、文本文件。</p>
 <div class="note" id="note1076765671813"><a name="note1076765671813"></a><a name="note1076765671813"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul749201611912"></a><a name="ul749201611912"></a><ul id="ul749201611912"><li>user_data的值为base64编码之后的内容。</li><li>注入内容（编码之前的内容）最大长度为32K。</li></ul>
 </div></div>
-<p id="p073141119521"><a name="p073141119521"></a><a name="p073141119521"></a>更多关于待注入用户数据的信息，请参见《弹性云服务器用户指南 》的“<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html" target="_blank" rel="noopener noreferrer">用户数据注入</a>”章节。</p>
+<p id="p073141119521"><a name="p073141119521"></a><a name="p073141119521"></a>更多关于注入实例自定义数据的信息，请参见《弹性云服务器用户指南 》的“<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html" target="_blank" rel="noopener noreferrer">用户数据注入</a>”章节。</p>
 <p id="p1633783620117"><a name="p1633783620117"></a><a name="p1633783620117"></a>示例：</p>
 <p id="p12545313524"><a name="p12545313524"></a><a name="p12545313524"></a>base64编码前：</p>
 <a name="ul13541314520"></a><a name="ul13541314520"></a><ul id="ul13541314520"><li>Linux服务器：<pre class="screen" id="screen16541531125220"><a name="screen16541531125220"></a><a name="screen16541531125220"></a>#! /bin/bash
@@ -335,7 +335,7 @@ echo 111 &gt; c:\aaa.txt</pre>
 <p id="p10361813174911"><a name="p10361813174911"></a><a name="p10361813174911"></a>如果秒（ss）取值不是 00，则自动取为当前分钟（mm）开始时。</p>
 <p id="p7365138494"><a name="p7365138494"></a><a name="p7365138494"></a>最短释放时间为当前时间半小时之后。</p>
 <p id="p73651311495"><a name="p73651311495"></a><a name="p73651311495"></a>最长释放时间不能超过当前时间三年。</p>
-<p id="p1025013618506"><a name="p1025013618506"></a><a name="p1025013618506"></a>示例：2020-09-25T12:05:00Z</p>
+<p id="p1025013618506"><a name="p1025013618506"></a><a name="p1025013618506"></a>示例：<span>2020-09-25T12:05:00Z</span></p>
 </td>
 </tr>
 </tbody>
@@ -441,7 +441,7 @@ echo 111 &gt; c:\aaa.txt</pre>
 </td>
 <td class="cellrowborder" valign="top" width="16.82%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0057972661_p3832668110546"><a name="zh-cn_topic_0057972661_p3832668110546"></a><a name="zh-cn_topic_0057972661_p3832668110546"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="11.09%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972661_p1745343110546"><a name="zh-cn_topic_0057972661_p1745343110546"></a><a name="zh-cn_topic_0057972661_p1745343110546"></a>是</p>
+<td class="cellrowborder" valign="top" width="11.09%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0057972661_p1745343110546"><a name="zh-cn_topic_0057972661_p1745343110546"></a><a name="zh-cn_topic_0057972661_p1745343110546"></a>否</p>
 </td>
 <td class="cellrowborder" valign="top" width="47.02%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0057972661_p444177310546"><a name="zh-cn_topic_0057972661_p444177310546"></a><a name="zh-cn_topic_0057972661_p444177310546"></a>启动标识，“0”代表启动盘，“-1“代表非启动盘。</p>
 <div class="note" id="zh-cn_topic_0057972661_note1430479894258"><a name="zh-cn_topic_0057972661_note1430479894258"></a><a name="zh-cn_topic_0057972661_note1430479894258"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0057972661_p6163432094258"><a name="zh-cn_topic_0057972661_p6163432094258"></a><a name="zh-cn_topic_0057972661_p6163432094258"></a>当卷设备的源头类型全为volume时，boot_index的值有一个为0。</p>

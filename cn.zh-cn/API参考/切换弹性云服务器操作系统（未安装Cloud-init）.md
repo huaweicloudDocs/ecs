@@ -1,4 +1,4 @@
-# 切换弹性云服务器操作系统（未安装Cloud-init）<a name="ZH-CN_TOPIC_0077841586"></a>
+# 切换弹性云服务器操作系统（未安装Cloud-init）<a name="ecs_02_0204"></a>
 
 ## 功能介绍<a name="section61372619"></a>
 
@@ -111,7 +111,7 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p21985640"><a name="p21985640"></a><a name="p21985640"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p36006428"><a name="p36006428"></a><a name="p36006428"></a>密钥名称。</p>
-<p id="p12355338417"><a name="p12355338417"></a><a name="p12355338417"></a>密钥可以通过密钥创建接口进行创建 <a href="创建和导入SSH密钥.md">创建和导入SSH密钥</a>（请参见），或使用SSH密钥查询接口查询已有的密钥（请参见<a href="查询SSH密钥列表.md">查询SSH密钥列表</a> ）。</p>
+<p id="p12355338417"><a name="p12355338417"></a><a name="p12355338417"></a><span>密钥可以通过密钥创建接口</span><span>进行</span><span>创建 </span><a href="创建和导入SSH密钥.md">创建和导入SSH密钥</a><span>（请参见），或使用SSH密钥查询接口</span><span>查</span><span>询已有的密钥（请参见</span><a href="查询SSH密钥列表.md">查询SSH密钥列表</a><span> ）。</span></p>
 </td>
 </tr>
 <tr id="row2345411710289"><td class="cellrowborder" valign="top" width="21.74217421742174%" headers="mcps1.2.5.1.1 "><p id="p2073531110289"><a name="p2073531110289"></a><a name="p2073531110289"></a>userid</p>
@@ -121,7 +121,7 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p1471297410289"><a name="p1471297410289"></a><a name="p1471297410289"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。当传入keyname参数时，此参数为必选。</p>
-<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="zh-cn_topic_0067876349_ol118119201404"></a><a name="zh-cn_topic_0067876349_ol118119201404"></a><ol id="zh-cn_topic_0067876349_ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看用户ID。</li></ol>
+<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ecs_02_0201_ol118119201404"></a><a name="ecs_02_0201_ol118119201404"></a><ol id="ecs_02_0201_ol118119201404"><li>登录管理控制台。</li><li><span>单击用户名，在下拉列表中单击“我的凭证”。</span>在该页面查看用户ID。</li></ol>
 </div>
 </td>
 </tr>

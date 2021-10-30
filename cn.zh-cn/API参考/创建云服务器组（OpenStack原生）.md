@@ -1,4 +1,4 @@
-# 创建云服务器组<a name="ZH-CN_TOPIC_0065817720"></a>
+# 创建云服务器组<a name="ecs_03_1401"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057973153_section31887518"></a>
 
@@ -59,7 +59,7 @@ POST /v2.1/\{project\_id\}/os-server-groups
 </td>
 <td class="cellrowborder" valign="top" width="21.91%" headers="mcps1.2.5.1.3 "><p id="p461561919149"><a name="p461561919149"></a><a name="p461561919149"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="42%" headers="mcps1.2.5.1.4 "><p id="p176151194142"><a name="p176151194142"></a><a name="p176151194142"></a><span id="text1461551910144"><a name="text1461551910144"></a><a name="text1461551910144"></a>弹性云服务器</span>组信息。</p>
+<td class="cellrowborder" valign="top" width="42%" headers="mcps1.2.5.1.4 "><p id="p176151194142"><a name="p176151194142"></a><a name="p176151194142"></a><span id="text1461551910144"><a name="text1461551910144"></a><a name="text1461551910144"></a>弹性云服务器</span>组信息，参考<a href="#zh-cn_topic_0057973153_table19917766">表3</a>。</p>
 </td>
 </tr>
 </tbody>
@@ -122,7 +122,7 @@ POST /v2.1/\{project\_id\}/os-server-groups
 </td>
 <td class="cellrowborder" valign="top" width="25.81258125812581%" headers="mcps1.2.4.1.2 "><p id="p170851161519"><a name="p170851161519"></a><a name="p170851161519"></a>Object</p>
 </td>
-<td class="cellrowborder" valign="top" width="46.78467846784679%" headers="mcps1.2.4.1.3 "><p id="p870816141515"><a name="p870816141515"></a><a name="p870816141515"></a><span id="text07081121512"><a name="text07081121512"></a><a name="text07081121512"></a>弹性云服务器</span>组信息</p>
+<td class="cellrowborder" valign="top" width="46.78467846784679%" headers="mcps1.2.4.1.3 "><p id="p870816141515"><a name="p870816141515"></a><a name="p870816141515"></a><span id="text07081121512"><a name="text07081121512"></a><a name="text07081121512"></a>弹性云服务器</span>组信息，参考<a href="#zh-cn_topic_0057973153_table7944126">表5</a>。</p>
 </td>
 </tr>
 </tbody>

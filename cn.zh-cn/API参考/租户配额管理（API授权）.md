@@ -1,4 +1,4 @@
-# 租户配额管理<a name="ZH-CN_TOPIC_0103071517"></a>
+# 租户配额管理<a name="ecs_06_0012"></a>
 
 <a name="table151682922617"></a>
 <table><thead align="left"><tr id="row19171029162611"><th class="cellrowborder" valign="top" width="11.498850114988501%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

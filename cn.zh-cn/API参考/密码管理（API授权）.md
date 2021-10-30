@@ -1,4 +1,4 @@
-# 密码管理<a name="ZH-CN_TOPIC_0161341998"></a>
+# 密码管理<a name="ecs_06_0014"></a>
 
 <a name="table1642432772714"></a>
 <table><thead align="left"><tr id="row18424102718278"><th class="cellrowborder" valign="top" width="11.028897110288971%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

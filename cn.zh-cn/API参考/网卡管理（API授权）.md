@@ -1,4 +1,4 @@
-# 网卡管理<a name="ZH-CN_TOPIC_0103071513"></a>
+# 网卡管理<a name="ecs_06_0009"></a>
 
 <a name="table166711250142311"></a>
 <table><thead align="left"><tr id="row16721750172310"><th class="cellrowborder" valign="top" width="12.64%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

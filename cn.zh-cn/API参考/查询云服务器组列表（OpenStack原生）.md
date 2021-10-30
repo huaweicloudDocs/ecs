@@ -1,4 +1,4 @@
-# 查询云服务器组列表<a name="ZH-CN_TOPIC_0065817721"></a>
+# 查询云服务器组列表<a name="ecs_03_1402"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057973158_section14574577"></a>
 
@@ -59,7 +59,7 @@ GET /v2.1/\{project\_id\}/os-server-groups
 </td>
 <td class="cellrowborder" valign="top" width="26.340000000000003%" headers="mcps1.2.4.1.2 "><p id="p66773471614"><a name="p66773471614"></a><a name="p66773471614"></a>Array of objects</p>
 </td>
-<td class="cellrowborder" valign="top" width="51.01%" headers="mcps1.2.4.1.3 "><p id="p116779419169"><a name="p116779419169"></a><a name="p116779419169"></a><span id="text1167724191615"><a name="text1167724191615"></a><a name="text1167724191615"></a>云服务器</span>组信息。</p>
+<td class="cellrowborder" valign="top" width="51.01%" headers="mcps1.2.4.1.3 "><p id="p116779419169"><a name="p116779419169"></a><a name="p116779419169"></a><span id="text1167724191615"><a name="text1167724191615"></a><a name="text1167724191615"></a>云服务器</span>组信息，参考<a href="#zh-cn_topic_0057973158_table47937085">表3</a>。</p>
 </td>
 </tr>
 </tbody>

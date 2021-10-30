@@ -1,4 +1,4 @@
-# 元数据管理<a name="ZH-CN_TOPIC_0103071516"></a>
+# 元数据管理<a name="ecs_06_0011"></a>
 
 <a name="table144485372515"></a>
 <table><thead align="left"><tr id="row7456538256"><th class="cellrowborder" valign="top" width="12.120000000000001%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

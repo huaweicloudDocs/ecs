@@ -1,6 +1,10 @@
-# API概览<a name="ZH-CN_TOPIC_0124306060"></a>
+# API概览<a name="ecs_01_0008"></a>
 
 弹性云服务器所提供的接口分为ECS接口与OpenStack原生接口。推荐您使用ECS接口。
+
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS)中直接运行调试接口。
 
 ## ECS接口说明<a name="section13231524145513"></a>
 

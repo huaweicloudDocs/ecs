@@ -1,4 +1,4 @@
-# API版本选择建议<a name="ZH-CN_TOPIC_0170928122"></a>
+# API版本选择建议<a name="ecs_01_0006"></a>
 
 ## API风格说明<a name="section18271554182719"></a>
 

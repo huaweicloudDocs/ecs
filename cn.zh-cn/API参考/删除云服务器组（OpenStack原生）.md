@@ -1,4 +1,4 @@
-# 删除云服务器组<a name="ZH-CN_TOPIC_0065817723"></a>
+# 删除云服务器组<a name="ecs_03_1404"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057973160_section59750848"></a>
 

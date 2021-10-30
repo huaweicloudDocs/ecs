@@ -1,4 +1,4 @@
-# 移除浮动IP（废弃）<a name="ZH-CN_TOPIC_0065817719"></a>
+# 移除浮动IP（废弃）<a name="ecs_03_1302"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057973008_section9177509"></a>
 
@@ -117,7 +117,7 @@ POST https://{endpoint}/v2.1/9c53a566cb3443ab910cf0daebca90c4/servers/47e9be4e-a
 
 无
 
-## 返回值<a name="zh-cn_topic_0057973008_zh-cn_topic_0020212692_section22960139"></a>
+## 返回值<a name="zh-cn_topic_0057973008_ecs_03_0202_section22960139"></a>
 
 请参考[通用请求返回值](通用请求返回值.md)。
 

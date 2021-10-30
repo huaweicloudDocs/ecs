@@ -1,4 +1,4 @@
-# 镜像管理<a name="ZH-CN_TOPIC_0103072348"></a>
+# 镜像管理<a name="ecs_06_0006"></a>
 
 <a name="table326212151339"></a>
 <table><thead align="left"><tr id="row3262101519333"><th class="cellrowborder" valign="top" width="13.96139613961396%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

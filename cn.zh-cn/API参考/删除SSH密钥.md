@@ -1,4 +1,4 @@
-# 删除SSH密钥<a name="ZH-CN_TOPIC_0020212680"></a>
+# 删除SSH密钥<a name="ecs_03_1204"></a>
 
 ## 功能介绍<a name="section33132068"></a>
 

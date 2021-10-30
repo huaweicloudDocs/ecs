@@ -1,4 +1,4 @@
-# 查询云服务器详情<a name="ZH-CN_TOPIC_0020212690"></a>
+# 查询云服务器详情<a name="ecs_03_0206"></a>
 
 ## 功能介绍<a name="section11242227"></a>
 
@@ -200,7 +200,7 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="51.48514851485149%" headers="mcps1.2.4.1.3 "><p id="p1620274611333"><a name="p1620274611333"></a><a name="p1620274611333"></a><span id="text106411040104412"><a name="text106411040104412"></a><a name="text106411040104412"></a>云服务器</span>的标签列表。</p>
 <p id="p1149310203247"><a name="p1149310203247"></a><a name="p1149310203247"></a>微版本2.26及以上版本支持，如果不使用微版本查询，响应中无tags字段。</p>
-<div class="p" id="p7300949059"><a name="p7300949059"></a><a name="p7300949059"></a>系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：<a name="zh-cn_topic_0020212689_ul871515496611"></a><a name="zh-cn_topic_0020212689_ul871515496611"></a><ul id="zh-cn_topic_0020212689_ul871515496611"><li>key与value使用“=”连接，如“key=value”。</li><li>如果value为空字符串，则仅返回key。</li></ul>
+<div class="p" id="p7300949059"><a name="p7300949059"></a><a name="p7300949059"></a>系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：<a name="ecs_03_0205_ul871515496611"></a><a name="ecs_03_0205_ul871515496611"></a><ul id="ecs_03_0205_ul871515496611"><li>key与value使用“=”连接，如“key=value”。</li><li>如果value为空字符串，则仅返回key。</li></ul>
 </div>
 </td>
 </tr>

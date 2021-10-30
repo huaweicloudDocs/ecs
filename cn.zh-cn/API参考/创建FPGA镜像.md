@@ -1,4 +1,4 @@
-# 创建FPGA镜像<a name="ZH-CN_TOPIC_0129111232"></a>
+# 创建FPGA镜像<a name="ecs_02_1207"></a>
 
 ## 功能介绍<a name="section6847204211311"></a>
 

@@ -1,4 +1,4 @@
-# 查询租户配额<a name="ZH-CN_TOPIC_0067298110"></a>
+# 查询租户配额<a name="ecs_03_1102"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057973199_section15804956"></a>
 
@@ -218,7 +218,7 @@ GET https://{endpoint}/v2.1/d9ebe43510414ef590a4aa158605329e/os-quota-sets/d9ebe
 }
 ```
 
-## 返回值<a name="zh-cn_topic_0057973199_zh-cn_topic_0020212692_section22960139"></a>
+## 返回值<a name="zh-cn_topic_0057973199_ecs_03_0202_section22960139"></a>
 
 请参考[通用请求返回值](通用请求返回值.md)。
 

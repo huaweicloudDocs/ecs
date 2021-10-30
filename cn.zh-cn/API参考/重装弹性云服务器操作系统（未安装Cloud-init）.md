@@ -1,4 +1,4 @@
-# 重装弹性云服务器操作系统（未安装Cloud-init）<a name="ZH-CN_TOPIC_0077841398"></a>
+# 重装弹性云服务器操作系统（未安装Cloud-init）<a name="ecs_02_0203"></a>
 
 ## 功能介绍<a name="section61372619"></a>
 

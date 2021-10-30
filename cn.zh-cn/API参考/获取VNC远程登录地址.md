@@ -1,10 +1,10 @@
-# 获取VNC远程登录地址<a name="ZH-CN_TOPIC_0118743814"></a>
+# 获取VNC远程登录地址<a name="ecs_02_0208"></a>
 
-## 功能介绍<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section16588975"></a>
+## 功能介绍<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section16588975"></a>
 
 获取弹性云服务器VNC远程登录地址。
 
-## URI<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section15083054"></a>
+## URI<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section15083054"></a>
 
 POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
 
@@ -39,7 +39,7 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
 </tbody>
 </table>
 
-## 请求消息<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section56802184"></a>
+## 请求消息<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section56802184"></a>
 
 **请求参数**
 
@@ -104,7 +104,7 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
 </tbody>
 </table>
 
-## 响应消息<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section41457614"></a>
+## 响应消息<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section41457614"></a>
 
 **响应参数**
 
@@ -153,20 +153,20 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
 </td>
 <td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p20448447111014"><a name="p20448447111014"></a><a name="p20448447111014"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p64491447131016"><a name="p64491447131016"></a><a name="p64491447131016"></a>远程登录的协议</p>
+<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p64491447131016"><a name="p64491447131016"></a><a name="p64491447131016"></a><span>远程登录的协议</span></p>
 </td>
 </tr>
 <tr id="row112741544151614"><td class="cellrowborder" valign="top" width="28.48%" headers="mcps1.2.4.1.1 "><p id="p627404410168"><a name="p627404410168"></a><a name="p627404410168"></a>url</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p92741044141612"><a name="p92741044141612"></a><a name="p92741044141612"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p10274544151617"><a name="p10274544151617"></a><a name="p10274544151617"></a>远程登录的url</p>
+<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p10274544151617"><a name="p10274544151617"></a><a name="p10274544151617"></a><span>远程登录</span>的url</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## 请求示例<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section37574207"></a>
+## 请求示例<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section37574207"></a>
 
 ```
 POST https://{endpoint}/v1/13c67a214ced4afb88d911ae4bd5721a/cloudservers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote_console
@@ -193,11 +193,11 @@ POST https://{endpoint}/v1/13c67a214ced4afb88d911ae4bd5721a/cloudservers/47bc79a
 }
 ```
 
-## 返回值<a name="zh-cn_topic_0092803065_zh-cn_topic_0020212692_section22960139"></a>
+## 返回值<a name="zh-cn_topic_0092803065_ecs_03_0202_section22960139"></a>
 
 请参考[通用请求返回值](通用请求返回值.md)。
 
-## 错误码<a name="zh-cn_topic_0092803065_zh-cn_topic_0067161469_zh-cn_topic_0057973179_section23611955"></a>
+## 错误码<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section23611955"></a>
 
 请参考[错误码](错误码.md)。
 

@@ -1,4 +1,4 @@
-# 历史API<a name="ZH-CN_TOPIC_0267425395"></a>
+# 历史API<a name="ecs_09_0000"></a>
 
 -   **[FPGA逻辑文件管理](FPGA逻辑文件管理.md)**  
 

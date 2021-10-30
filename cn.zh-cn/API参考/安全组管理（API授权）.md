@@ -1,4 +1,4 @@
-# 安全组管理<a name="ZH-CN_TOPIC_0103072347"></a>
+# 安全组管理<a name="ecs_06_0007"></a>
 
 <a name="table614680103012"></a>
 <table><thead align="left"><tr id="row121463017301"><th class="cellrowborder" valign="top" width="13.87%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

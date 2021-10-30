@@ -235,7 +235,7 @@ POST https://{endpoint}/v2.1/{project_id}/os-keypairs
 ```
 {
     "keypair": {
-        "name": "demo",
+        "name": "demo"
     }
 }
 ```

@@ -1,4 +1,4 @@
-# 批量操作<a name="ZH-CN_TOPIC_0184167662"></a>
+# 批量操作<a name="ecs_06_0004"></a>
 
 <a name="table1587111571724"></a>
 <table><thead align="left"><tr id="row20307121620133"><th class="cellrowborder" valign="top" width="14.3985601439856%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

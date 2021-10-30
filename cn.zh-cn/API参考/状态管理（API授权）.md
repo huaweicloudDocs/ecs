@@ -1,4 +1,4 @@
-# 状态管理<a name="ZH-CN_TOPIC_0103071511"></a>
+# 状态管理<a name="ecs_06_0003"></a>
 
 <a name="table12570457816"></a>
 <table><thead align="left"><tr id="row2025712451682"><th class="cellrowborder" valign="top" width="14.57%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

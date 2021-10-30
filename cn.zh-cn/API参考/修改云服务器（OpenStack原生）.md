@@ -1,4 +1,4 @@
-# 修改云服务器<a name="ZH-CN_TOPIC_0020212692"></a>
+# 修改云服务器<a name="ecs_03_0202"></a>
 
 ## 功能介绍<a name="section15039321"></a>
 
@@ -279,9 +279,9 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 </td>
 <td class="cellrowborder" valign="top" width="49.26%" headers="mcps1.2.4.1.3 "><p id="p1620274611333"><a name="p1620274611333"></a><a name="p1620274611333"></a>云服务器的标签列表。</p>
 <p id="p1149310203247"><a name="p1149310203247"></a><a name="p1149310203247"></a>微版本2.26及以上版本支持，如果不使用微版本查询，响应中无tags字段。</p>
-<div class="p" id="p7300949059"><a name="p7300949059"></a><a name="p7300949059"></a>系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：<a name="zh-cn_topic_0020212689_ul871515496611"></a><a name="zh-cn_topic_0020212689_ul871515496611"></a><ul id="zh-cn_topic_0020212689_ul871515496611"><li>key与value使用“=”连接，如“key=value”。</li><li>如果value为空字符串，则仅返回key。</li></ul>
+<div class="p" id="p7300949059"><a name="p7300949059"></a><a name="p7300949059"></a>系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：<a name="ecs_03_0205_ul871515496611"></a><a name="ecs_03_0205_ul871515496611"></a><ul id="ecs_03_0205_ul871515496611"><li>key与value使用“=”连接，如“key=value”。</li><li>如果value为空字符串，则仅返回key。</li></ul>
 </div>
-<a name="zh-cn_topic_0020212689_ul871515496611_1"></a><a name="zh-cn_topic_0020212689_ul871515496611_1"></a><ul id="zh-cn_topic_0020212689_ul871515496611_1"><li>key与value使用“=”连接，如“key=value”。</li><li>如果value为空字符串，则仅返回key。</li></ul>
+<a name="ecs_03_0205_ul871515496611_1"></a><a name="ecs_03_0205_ul871515496611_1"></a><ul id="ecs_03_0205_ul871515496611_1"><li>key与value使用“=”连接，如“key=value”。</li><li>如果value为空字符串，则仅返回key。</li></ul>
 </td>
 </tr>
 <tr id="row61813343508"><td class="cellrowborder" valign="top" width="20.979999999999997%" headers="mcps1.2.4.1.1 "><p id="p131883455011"><a name="p131883455011"></a><a name="p131883455011"></a>status</p>
@@ -376,7 +376,7 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 <p id="p779475014357"><a name="p779475014357"></a><a name="p779475014357"></a>微版本2.47及以上版本不支持。</p>
 </td>
 </tr>
-<tr id="row459852412198"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p19599132461915"><a name="p19599132461915"></a><a name="p19599132461915"></a>vcpus</p>
+<tr id="row459852412198"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p19599132461915"><a name="p19599132461915"></a><a name="p19599132461915"></a><span>vcpus</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="30.2%" headers="mcps1.2.4.1.2 "><p id="p175991624171920"><a name="p175991624171920"></a><a name="p175991624171920"></a>Integer</p>
 </td>
@@ -384,7 +384,7 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 <p id="p7411737161018"><a name="p7411737161018"></a><a name="p7411737161018"></a>在微版本2.47及以上版本支持。</p>
 </td>
 </tr>
-<tr id="row8675112731919"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p567542761913"><a name="p567542761913"></a><a name="p567542761913"></a>ram</p>
+<tr id="row8675112731919"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p567542761913"><a name="p567542761913"></a><a name="p567542761913"></a><span>ram</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="30.2%" headers="mcps1.2.4.1.2 "><p id="p367514278193"><a name="p367514278193"></a><a name="p367514278193"></a>Integer</p>
 </td>
@@ -392,7 +392,7 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 <p id="p0979145841010"><a name="p0979145841010"></a><a name="p0979145841010"></a>在微版本2.47及以上版本支持。</p>
 </td>
 </tr>
-<tr id="row1845083071918"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p10451173011194"><a name="p10451173011194"></a><a name="p10451173011194"></a>disk</p>
+<tr id="row1845083071918"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p10451173011194"><a name="p10451173011194"></a><a name="p10451173011194"></a><span>disk</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="30.2%" headers="mcps1.2.4.1.2 "><p id="p154512302198"><a name="p154512302198"></a><a name="p154512302198"></a>Integer</p>
 </td>
@@ -400,7 +400,7 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 <p id="p155897161110"><a name="p155897161110"></a><a name="p155897161110"></a>在微版本2.47及以上版本支持。</p>
 </td>
 </tr>
-<tr id="row74721233131911"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p1747213316192"><a name="p1747213316192"></a><a name="p1747213316192"></a>ephemeral</p>
+<tr id="row74721233131911"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p1747213316192"><a name="p1747213316192"></a><a name="p1747213316192"></a><span>ephemeral</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="30.2%" headers="mcps1.2.4.1.2 "><p id="p747211337198"><a name="p747211337198"></a><a name="p747211337198"></a>Integer</p>
 </td>
@@ -408,7 +408,7 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 <p id="p138227319114"><a name="p138227319114"></a><a name="p138227319114"></a>在微版本2.47及以上版本支持。</p>
 </td>
 </tr>
-<tr id="row167993851920"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p1079143841918"><a name="p1079143841918"></a><a name="p1079143841918"></a>swap</p>
+<tr id="row167993851920"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p1079143841918"><a name="p1079143841918"></a><a name="p1079143841918"></a><span>swap</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="30.2%" headers="mcps1.2.4.1.2 "><p id="p8791387199"><a name="p8791387199"></a><a name="p8791387199"></a>Integer</p>
 </td>
@@ -416,7 +416,7 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 <p id="p568210631113"><a name="p568210631113"></a><a name="p568210631113"></a>在微版本2.47及以上版本支持。</p>
 </td>
 </tr>
-<tr id="row1482714414193"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p88271141101919"><a name="p88271141101919"></a><a name="p88271141101919"></a>original_name</p>
+<tr id="row1482714414193"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p88271141101919"><a name="p88271141101919"></a><a name="p88271141101919"></a><span>original_name</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="30.2%" headers="mcps1.2.4.1.2 "><p id="p14827204116198"><a name="p14827204116198"></a><a name="p14827204116198"></a>String</p>
 </td>
@@ -424,7 +424,7 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}
 <p id="p47911894115"><a name="p47911894115"></a><a name="p47911894115"></a>在微版本2.47及以上版本支持。</p>
 </td>
 </tr>
-<tr id="row138261444131911"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p138262445198"><a name="p138262445198"></a><a name="p138262445198"></a>extra_specs</p>
+<tr id="row138261444131911"><td class="cellrowborder" valign="top" width="21.37%" headers="mcps1.2.4.1.1 "><p id="p138262445198"><a name="p138262445198"></a><a name="p138262445198"></a><span>extra_specs</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="30.2%" headers="mcps1.2.4.1.2 "><p id="p58261944101912"><a name="p58261944101912"></a><a name="p58261944101912"></a>Object</p>
 </td>

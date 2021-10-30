@@ -1,4 +1,4 @@
-# 查询浮动IP（废弃）<a name="ZH-CN_TOPIC_0065820818"></a>
+# 查询浮动IP（废弃）<a name="ecs_03_1305"></a>
 
 ## 功能介绍<a name="zh-cn_topic_0057972673_section10293088"></a>
 
@@ -155,7 +155,7 @@ GET https://{endpoint}/v2.1/e73621affb8f44e1bc01898747ca09d4/os-floating-ips/05f
 }
 ```
 
-## 返回值<a name="zh-cn_topic_0057972673_zh-cn_topic_0020212692_section22960139"></a>
+## 返回值<a name="zh-cn_topic_0057972673_ecs_03_0202_section22960139"></a>
 
 请参考[通用请求返回值](通用请求返回值.md)。
 

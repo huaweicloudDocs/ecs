@@ -1,4 +1,4 @@
-# 查询指定API版本信息<a name="ZH-CN_TOPIC_0065792794"></a>
+# 查询指定API版本信息<a name="ecs_03_0102"></a>
 
 ## 功能介绍<a name="section553655182144"></a>
 
@@ -62,7 +62,7 @@ GET /\{api\_version\}
 </thead>
 <tbody><tr id="row456582314010"><td class="cellrowborder" valign="top" width="21.69216921692169%" headers="mcps1.2.4.1.1 "><p id="p115651723008"><a name="p115651723008"></a><a name="p115651723008"></a>versions</p>
 </td>
-<td class="cellrowborder" valign="top" width="21.14211421142114%" headers="mcps1.2.4.1.2 "><p id="p8565122310019"><a name="p8565122310019"></a><a name="p8565122310019"></a>Object</p>
+<td class="cellrowborder" valign="top" width="21.14211421142114%" headers="mcps1.2.4.1.2 "><p id="p8565122310019"><a name="p8565122310019"></a><a name="p8565122310019"></a><span>Object</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.165716571657164%" headers="mcps1.2.4.1.3 "><p id="p125121301517"><a name="p125121301517"></a><a name="p125121301517"></a>指定版本信息，详情请参见<a href="#table1970522313484">表3</a>。</p>
 </td>
@@ -81,16 +81,16 @@ GET /\{api\_version\}
 </th>
 </tr>
 </thead>
-<tbody><tr id="row127051723154815"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p155331243134911"><a name="p155331243134911"></a><a name="p155331243134911"></a>id</p>
+<tbody><tr id="row127051723154815"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p155331243134911"><a name="p155331243134911"></a><a name="p155331243134911"></a><span>id</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p17051623154814"><a name="p17051623154814"></a><a name="p17051623154814"></a>string</p>
 </td>
 <td class="cellrowborder" valign="top" width="57.065706570657056%" headers="mcps1.2.4.1.3 "><p id="p6251730155117"><a name="p6251730155117"></a><a name="p6251730155117"></a>所讨论的版本的通用名称。仅仅是信息性的，它没有真正的语义。</p>
 </td>
 </tr>
-<tr id="row13161133211483"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p20162193264816"><a name="p20162193264816"></a><a name="p20162193264816"></a>links</p>
+<tr id="row13161133211483"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p20162193264816"><a name="p20162193264816"></a><a name="p20162193264816"></a><span>links</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p101624324488"><a name="p101624324488"></a><a name="p101624324488"></a>Object</p>
+<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p101624324488"><a name="p101624324488"></a><a name="p101624324488"></a><span>Object</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.065706570657056%" headers="mcps1.2.4.1.3 "><p id="p168341639155116"><a name="p168341639155116"></a><a name="p168341639155116"></a>链接到资源的问题。有关更多信息，请参见<a href="http://developer.openstack.org/api-guide/compute/links_and_references.html" target="_blank" rel="noopener noreferrer">OpenStack Documentation</a>。</p>
 <p id="p97381735319"><a name="p97381735319"></a><a name="p97381735319"></a>详情请参见<a href="#table1586318199718">表4</a>。</p>
@@ -98,7 +98,7 @@ GET /\{api\_version\}
 </tr>
 <tr id="row161541434114814"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p61541434154814"><a name="p61541434154814"></a><a name="p61541434154814"></a>media-types</p>
 </td>
-<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p14154153424815"><a name="p14154153424815"></a><a name="p14154153424815"></a>Object</p>
+<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p14154153424815"><a name="p14154153424815"></a><a name="p14154153424815"></a><span>Object</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.065706570657056%" headers="mcps1.2.4.1.3 "><p id="p15390144665112"><a name="p15390144665112"></a><a name="p15390144665112"></a>媒体类型。详情请参见<a href="#table1242753025619">表5</a>。</p>
 </td>
@@ -146,16 +146,16 @@ GET /\{api\_version\}
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1886419192713"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p48646193713"><a name="p48646193713"></a><a name="p48646193713"></a>href</p>
+<tbody><tr id="row1886419192713"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p48646193713"><a name="p48646193713"></a><a name="p48646193713"></a><span>href</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p786471915713"><a name="p786471915713"></a><a name="p786471915713"></a>string</p>
+<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p786471915713"><a name="p786471915713"></a><a name="p786471915713"></a><span>string</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.065706570657056%" headers="mcps1.2.4.1.3 "><p id="p55689555719"><a name="p55689555719"></a><a name="p55689555719"></a>相应资源的链接。</p>
 </td>
 </tr>
-<tr id="row178649191472"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p386411192074"><a name="p386411192074"></a><a name="p386411192074"></a>rel</p>
+<tr id="row178649191472"><td class="cellrowborder" valign="top" width="22.132213221322132%" headers="mcps1.2.4.1.1 "><p id="p386411192074"><a name="p386411192074"></a><a name="p386411192074"></a><span>rel</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p68646190716"><a name="p68646190716"></a><a name="p68646190716"></a>string</p>
+<td class="cellrowborder" valign="top" width="20.8020802080208%" headers="mcps1.2.4.1.2 "><p id="p68646190716"><a name="p68646190716"></a><a name="p68646190716"></a><span>string</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.065706570657056%" headers="mcps1.2.4.1.3 "><a name="ul06311647387"></a><a name="ul06311647387"></a><ul id="ul06311647387"><li>self：自助链接包含版本链接的资源。立即链接后使用这些链接。</li><li>bookmark：书签链接提供了一个永久资源的永久链接，该链接适合于长期存储。</li><li>alternate：备用链接可以包含资源的替换表示形式。例如，OpenStack计算映像可能在OpenStack映像服务中有一个替代表示。</li></ul>
 </td>
@@ -174,16 +174,16 @@ GET /\{api\_version\}
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1342719303565"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p742733065617"><a name="p742733065617"></a><a name="p742733065617"></a>base</p>
+<tbody><tr id="row1342719303565"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p742733065617"><a name="p742733065617"></a><a name="p742733065617"></a><span>base</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p4427193017566"><a name="p4427193017566"></a><a name="p4427193017566"></a>string</p>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p4427193017566"><a name="p4427193017566"></a><a name="p4427193017566"></a><span>string</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p9874125215560"><a name="p9874125215560"></a><a name="p9874125215560"></a>基础类型。</p>
 </td>
 </tr>
-<tr id="row44271330135612"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p742753019564"><a name="p742753019564"></a><a name="p742753019564"></a>type</p>
+<tr id="row44271330135612"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p742753019564"><a name="p742753019564"></a><a name="p742753019564"></a><span>type</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p1142743085619"><a name="p1142743085619"></a><a name="p1142743085619"></a>string</p>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p1142743085619"><a name="p1142743085619"></a><a name="p1142743085619"></a><span>string</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p13427113095613"><a name="p13427113095613"></a><a name="p13427113095613"></a>媒体类型。</p>
 </td>

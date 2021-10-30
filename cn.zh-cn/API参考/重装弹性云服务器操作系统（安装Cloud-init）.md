@@ -1,4 +1,4 @@
-# 重装弹性云服务器操作系统（安装Cloud-init）<a name="ZH-CN_TOPIC_0067876349"></a>
+# 重装弹性云服务器操作系统（安装Cloud-init）<a name="ecs_02_0201"></a>
 
 ## 功能介绍<a name="section61372619"></a>
 
@@ -110,7 +110,7 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p21985640"><a name="p21985640"></a><a name="p21985640"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p36006428"><a name="p36006428"></a><a name="p36006428"></a>密钥名称。</p>
-<p id="p12355338417"><a name="p12355338417"></a><a name="p12355338417"></a>密钥可以通过密钥创建接口进行创建 <a href="创建和导入SSH密钥.md">创建和导入SSH密钥</a>（请参见），或使用SSH密钥查询接口查询已有的密钥（请参见<a href="查询SSH密钥列表.md">查询SSH密钥列表</a> ）。</p>
+<p id="p12355338417"><a name="p12355338417"></a><a name="p12355338417"></a><span>密钥可以通过密钥创建接口</span><span>进行</span><span>创建 </span><a href="创建和导入SSH密钥.md">创建和导入SSH密钥</a><span>（请参见），或使用SSH密钥查询接口</span><span>查</span><span>询已有的密钥（请参见</span><a href="查询SSH密钥列表.md">查询SSH密钥列表</a><span> ）。</span></p>
 </td>
 </tr>
 <tr id="row2345411710289"><td class="cellrowborder" valign="top" width="21.67216721672167%" headers="mcps1.2.5.1.1 "><p id="p2073531110289"><a name="p2073531110289"></a><a name="p2073531110289"></a>userid</p>
@@ -120,7 +120,7 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p1471297410289"><a name="p1471297410289"></a><a name="p1471297410289"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。</p>
-<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ol118119201404"></a><a name="ol118119201404"></a><ol id="ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看用户ID。</li></ol>
+<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ol118119201404"></a><a name="ol118119201404"></a><ol id="ol118119201404"><li>登录管理控制台。</li><li><span>单击用户名，在下拉列表中单击“我的凭证”。</span>在该页面查看用户ID。</li></ol>
 </div>
 </td>
 </tr>
@@ -167,10 +167,10 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 </td>
 <td class="cellrowborder" valign="top" width="21.38%" headers="mcps1.2.5.1.3 "><p id="p13494158104313"><a name="p13494158104313"></a><a name="p13494158104313"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.24%" headers="mcps1.2.5.1.4 "><p id="p4078366294136"><a name="p4078366294136"></a><a name="p4078366294136"></a>创建<span id="text86731033192216"><a name="text86731033192216"></a><a name="text86731033192216"></a>云服务器</span>过程中待注入用户数据。支持注入文本、文本文件。</p>
+<td class="cellrowborder" valign="top" width="43.24%" headers="mcps1.2.5.1.4 "><p id="p4078366294136"><a name="p4078366294136"></a><a name="p4078366294136"></a>创建<span id="text86731033192216"><a name="text86731033192216"></a><a name="text86731033192216"></a>云服务器</span>过程中待注入实例自定义数据。支持注入文本、文本文件。</p>
 <div class="note" id="note1076765671813"><a name="note1076765671813"></a><a name="note1076765671813"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul749201611912"></a><a name="ul749201611912"></a><ul id="ul749201611912"><li>user_data的值为base64编码之后的内容。</li><li>注入内容（编码之前的内容）最大长度为32K。</li></ul>
 </div></div>
-<p id="p10685165919553"><a name="p10685165919553"></a><a name="p10685165919553"></a>了解更多用户数据注入请参考<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html" target="_blank" rel="noopener noreferrer">用户数据注入</a>。</p>
+<p id="p10685165919553"><a name="p10685165919553"></a><a name="p10685165919553"></a>了解更多实例自定义数据注入请参考<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html" target="_blank" rel="noopener noreferrer">用户数据注入</a>。</p>
 <p id="p1633783620117"><a name="p1633783620117"></a><a name="p1633783620117"></a>示例：</p>
 <p id="p12545313524"><a name="p12545313524"></a><a name="p12545313524"></a>base64编码前：</p>
 <a name="ul13541314520"></a><a name="ul13541314520"></a><ul id="ul13541314520"><li>Linux服务器：<pre class="screen" id="screen16541531125220"><a name="screen16541531125220"></a><a name="screen16541531125220"></a>#! /bin/bash

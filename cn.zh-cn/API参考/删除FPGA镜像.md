@@ -1,4 +1,4 @@
-# 删除FPGA镜像<a name="ZH-CN_TOPIC_0065962599"></a>
+# 删除FPGA镜像<a name="ecs_02_1202"></a>
 
 ## 功能介绍<a name="section19527005211725"></a>
 

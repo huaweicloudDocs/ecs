@@ -1,4 +1,4 @@
-# 标签管理<a name="ZH-CN_TOPIC_0103071521"></a>
+# 标签管理<a name="ecs_06_0019"></a>
 
 <a name="table4509123112811"></a>
 <table><thead align="left"><tr id="row19509193152818"><th class="cellrowborder" valign="top" width="10.12101210121012%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>

@@ -1,4 +1,4 @@
-# 磁盘管理<a name="ZH-CN_TOPIC_0103071514"></a>
+# 磁盘管理<a name="ecs_06_0010"></a>
 
 <a name="table88951955182420"></a>
 <table><thead align="left"><tr id="row2670183317019"><th class="cellrowborder" valign="top" width="12.121212121212121%" id="mcps1.1.7.1.1"><p id="p1959712364512"><a name="p1959712364512"></a><a name="p1959712364512"></a>权限</p>
@@ -71,7 +71,7 @@
 </tr>
 <tr id="row136039493553"><td class="cellrowborder" valign="top" width="12.121212121212121%" headers="mcps1.1.7.1.1 "><p id="p19647733137"><a name="p19647733137"></a><a name="p19647733137"></a>查询<span id="text7402624265"><a name="text7402624265"></a><a name="text7402624265"></a>弹性云服务器</span>单个磁盘挂载信息</p>
 </td>
-<td class="cellrowborder" valign="top" width="29.04290429042904%" headers="mcps1.1.7.1.2 "><p id="zh-cn_topic_0101860614_p248418710335"><a name="zh-cn_topic_0101860614_p248418710335"></a><a name="zh-cn_topic_0101860614_p248418710335"></a>GET /v1/cloudservers/{server_id}/block_device/{volume_id}</p>
+<td class="cellrowborder" valign="top" width="29.04290429042904%" headers="mcps1.1.7.1.2 "><p id="ecs_02_1404_p248418710335"><a name="ecs_02_1404_p248418710335"></a><a name="ecs_02_1404_p248418710335"></a>GET /v1/cloudservers/{server_id}/block_device/{volume_id}</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.142214221422144%" headers="mcps1.1.7.1.3 "><p id="p03113282193"><a name="p03113282193"></a><a name="p03113282193"></a>ecs:cloudServers:get</p>
 </td>
