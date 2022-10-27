@@ -2,35 +2,35 @@
 
 ## 操作场景<a name="section2067082251414"></a>
 
-本节内容介绍了使用API购买ECS过程中的一些常见问题及处理方法。
+本节内容介绍了使用API购买ECS过程中的一些高频场景。
 
-**表 1**  使用API创建ECS的常见问题及处理方法
+**表 1**  使用API创建ECS的高频场景
 
 <a name="table91827208246"></a>
-<table><thead align="left"><tr id="row13182112010248"><th class="cellrowborder" valign="top" width="30.270000000000003%" id="mcps1.2.3.1.1"><p id="p81821620162413"><a name="p81821620162413"></a><a name="p81821620162413"></a>问题描述</p>
+<table><thead align="left"><tr id="row13182112010248"><th class="cellrowborder" valign="top" width="30.270000000000003%" id="mcps1.2.3.1.1"><p id="p81821620162413"><a name="p81821620162413"></a><a name="p81821620162413"></a>场景</p>
 </th>
-<th class="cellrowborder" valign="top" width="69.73%" id="mcps1.2.3.1.2"><p id="p141821920122411"><a name="p141821920122411"></a><a name="p141821920122411"></a>处理方法</p>
+<th class="cellrowborder" valign="top" width="69.73%" id="mcps1.2.3.1.2"><p id="p141821920122411"><a name="p141821920122411"></a><a name="p141821920122411"></a>说明</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row718262062410"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p81821520132416"><a name="p81821520132416"></a><a name="p81821520132416"></a><a href="#section841342610363">购买包周期ECS</a></p>
+<tbody><tr id="row718262062410"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p81821520132416"><a name="p81821520132416"></a><a name="p81821520132416"></a><a href="#section841342610363">购买包年/包月ECS</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p41822206247"><a name="p41822206247"></a><a name="p41822206247"></a>为您介绍购买包周期资源的参数设置。</p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p41822206247"><a name="p41822206247"></a><a name="p41822206247"></a>为您介绍购买包年/包月资源的参数设置。</p>
 </td>
 </tr>
-<tr id="row618242016240"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p10182172011244"><a name="p10182172011244"></a><a name="p10182172011244"></a><a href="#section13736183144411">删除包周期ECS/退订包周期ECS</a></p>
+<tr id="row618242016240"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p10182172011244"><a name="p10182172011244"></a><a name="p10182172011244"></a><a href="#section13736183144411">删除包年/包月ECS/退订包年/包月ECS</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p181821420152412"><a name="p181821420152412"></a><a name="p181821420152412"></a>包周期资源需要通过退订的方式才可以被删除。</p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p181821420152412"><a name="p181821420152412"></a><a name="p181821420152412"></a>包年/包月资源需要通过退订的方式才可以被删除。</p>
 </td>
 </tr>
 <tr id="row6182620162418"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p118215201249"><a name="p118215201249"></a><a name="p118215201249"></a><a href="#section12338101168">查询可用的公共镜像</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p1018210208248"><a name="p1018210208248"></a><a name="p1018210208248"></a>购买ECS时候前查询公共镜像信息可以通过<span>在GET请求后通过‘?’和‘</span><span>&amp;</span><span>’添加不同的查询条件组合。</span></p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p1018210208248"><a name="p1018210208248"></a><a name="p1018210208248"></a>购买ECS时候前查询公共镜像信息可以通过在GET请求后通过‘?’和‘&amp;’添加不同的查询条件组合。</p>
 </td>
 </tr>
-<tr id="row918212205247"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p1218232016247"><a name="p1218232016247"></a><a name="p1218232016247"></a><a href="#section115381558613">包周期资源续费</a></p>
+<tr id="row918212205247"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p1218232016247"><a name="p1218232016247"></a><a name="p1218232016247"></a><a href="#section115381558613">包年/包月资源续费</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p81829206244"><a name="p81829206244"></a><a name="p81829206244"></a><span>包年/包月资源即将到期时，可进行包年/包月资源的续订</span>。指定资源ID，续费方式，续费时间，订单支付方式。</p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p81829206244"><a name="p81829206244"></a><a name="p81829206244"></a>包年/包月资源即将到期时，可进行包年/包月资源的续订。指定资源ID，续费方式，续费时间，订单支付方式。</p>
 </td>
 </tr>
 <tr id="row18182620172411"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p81822020112419"><a name="p81822020112419"></a><a name="p81822020112419"></a><a href="#section5431157557">创建订单后资源未开通</a></p>
@@ -40,32 +40,32 @@
 </tr>
 <tr id="row131828205247"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p201831120122414"><a name="p201831120122414"></a><a name="p201831120122414"></a><a href="#section413314335610">查询规格资源是否可购买/资源是否售罄</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p31834201241"><a name="p31834201241"></a><a name="p31834201241"></a>查询某一具体的云服务器规格在某可用区是否资源充足，通过响应信息中的<span>cond:operation:status</span>和<span>cond:operation:az字段的取值判断在区域和可用区的取值。</span></p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p31834201241"><a name="p31834201241"></a><a name="p31834201241"></a>查询某一具体的云服务器规格在某可用区是否资源充足，通过响应信息中的cond:operation:status和cond:operation:az字段的取值判断在区域和可用区的取值。</p>
 </td>
 </tr>
 <tr id="row1418316206248"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p61831520182410"><a name="p61831520182410"></a><a name="p61831520182410"></a><a href="#section171001547869">付费方式</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p1718392017249"><a name="p1718392017249"></a><a name="p1718392017249"></a>创建包周期的云服务器时（<span>chargingMode为prePaid</span>），通过extendparam.isAutoPay字段控制订单的支付方式。</p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p1718392017249"><a name="p1718392017249"></a><a name="p1718392017249"></a>创建包年/包月的云服务器时（chargingMode为prePaid），通过extendparam.isAutoPay字段控制订单的支付方式。</p>
 </td>
 </tr>
 <tr id="row17183152017241"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p3183172018245"><a name="p3183172018245"></a><a name="p3183172018245"></a><a href="#section14991749361">查询资源的可用配额</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p518352072420"><a name="p518352072420"></a><a name="p518352072420"></a>调用<a href="https://support.huaweicloud.com/api-ecs/ecs_02_0801.html" target="_blank" rel="noopener noreferrer">查询租户配额</a>接口，通过<span>maxTotalInstances</span>可以查看云服务器的最大申请数量，<span>通过totalInstancesUsed</span>可以查看<span>当前</span><span>云服务器</span><span>使用个数。</span></p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p518352072420"><a name="p518352072420"></a><a name="p518352072420"></a>调用<a href="https://support.huaweicloud.com/api-ecs/ecs_02_0801.html" target="_blank" rel="noopener noreferrer">查询租户配额</a>接口，通过maxTotalInstances可以查看云服务器的最大申请数量，通过totalInstancesUsed可以查看当前云服务器使用个数。</p>
 </td>
 </tr>
 <tr id="row1913017202619"><td class="cellrowborder" valign="top" width="30.270000000000003%" headers="mcps1.2.3.1.1 "><p id="p1791381792616"><a name="p1791381792616"></a><a name="p1791381792616"></a><a href="#section44361551269">查询资源价格</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p3913121772618"><a name="p3913121772618"></a><a name="p3913121772618"></a>使用<a href="https://support.huaweicloud.com/api-oce/bcloud_01001.html" target="_blank" rel="noopener noreferrer">查询按需产品价格</a>和<a href="https://support.huaweicloud.com/api-oce/bcloud_01002.html" target="_blank" rel="noopener noreferrer">查询包年/包月产品价格</a>，根据<span>云服务类型、资源类型、云服务区和资源规格四个条件来查询产品价格。</span></p>
+<td class="cellrowborder" valign="top" width="69.73%" headers="mcps1.2.3.1.2 "><p id="p3913121772618"><a name="p3913121772618"></a><a name="p3913121772618"></a>使用<a href="https://support.huaweicloud.com/api-oce/bcloud_01001.html" target="_blank" rel="noopener noreferrer">查询按需产品价格</a>和<a href="https://support.huaweicloud.com/api-oce/bcloud_01002.html" target="_blank" rel="noopener noreferrer">查询包年/包月产品价格</a>，根据云服务类型、资源类型、云服务区和资源规格四个条件来查询产品价格。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## 购买包周期ECS<a name="section841342610363"></a>
+## 购买包年/包月ECS<a name="section841342610363"></a>
 
-购买包周期ECS可以使用[创建弹性云服务](https://support.huaweicloud.com/api-ecs/ecs_02_0101.html)接口，相对于创建按需的ECS，只需要在请求body中指定extendparam.chargingMode参数值为“prePaid”，即包年包月，指定订购的周期等。extendparam的详细参数解释请参见[创建云服务器的extendparam字段数据结构说明](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0167957246.html#ZH-CN_TOPIC_0167957246__table7721122141311)。
+购买包年/包月ECS可以使用[创建弹性云服务](https://support.huaweicloud.com/api-ecs/ecs_02_0101.html)接口，相对于创建按需的ECS，只需要在请求body中指定extendparam.chargingMode参数值为“prePaid”，即包年包月，指定订购的周期等。extendparam的详细参数解释请参见[创建云服务器的extendparam字段数据结构说明](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0167957246.html#ZH-CN_TOPIC_0167957246__table7721122141311)。
 
-如下所示，在cn-north-1区域购买一台包周期ECS，时长为一个月，且下单后自动支付，自动续订。
+如下所示，在cn-north-1区域购买一台包年/包月ECS，时长为一个月，且下单后自动支付，自动续订。
 
 ```
 {
@@ -111,7 +111,7 @@
 }
 ```
 
-包周期ECS创建后会返回一个order\_id，即订单ID。
+包年/包月ECS创建后会返回一个order\_id，即订单ID。
 
 ```
 {
@@ -133,9 +133,9 @@ POST https://bss.myhuaweicloud.com/v2/orders/customer-orders/pay
 }
 ```
 
-## 删除包周期ECS/退订包周期ECS<a name="section13736183144411"></a>
+## 删除包年/包月ECS/退订包年/包月ECS<a name="section13736183144411"></a>
 
-包周期ECS无法直接调用ECS接口删除，需要调用[退订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00019.html)接口进行退订。
+包年/包月ECS无法直接调用ECS接口删除，需要调用[退订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00019.html)接口进行退订。
 
 ```
 POST https://bss.myhuaweicloud.com/v2/orders/subscriptions/resources/unsubscribe
@@ -148,7 +148,7 @@ POST https://bss.myhuaweicloud.com/v2/orders/subscriptions/resources/unsubscribe
 }
 ```
 
-其中resource\_ids表示资源ID，对退订ECS来说，就是购买包周期ECS时返回的serverIds。
+其中resource\_ids表示资源ID，对退订ECS来说，就是购买包年/包月ECS时返回的serverIds。
 
 ## 查询可用的公共镜像<a name="section12338101168"></a>
 
@@ -199,7 +199,7 @@ GET /v2/cloudimages?__imagetype=gold&visibility=public&protected=true&marker=af9
 
 如果未指定镜像类型，那么可以通过响应信息中的\_\_imagetype字段判断镜像类型。
 
-## 包周期资源续费<a name="section115381558613"></a>
+## 包年/包月资源续费<a name="section115381558613"></a>
 
 包年/包月资源即将到期时，可进行包年/包月资源的续订。通过调用[续订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00018.html)接口进行续费。
 
@@ -261,31 +261,27 @@ POST https://bss.myhuaweicloud.com/v2/orders/customer-orders/pay
 }
 ```
 
-通过调用[查询订单的资源开通详情](https://support.huaweicloud.com/api-oce/api_order_00001.html)接口查看订单的状态
+通过调用[查询订单详情](https://support.huaweicloud.com/api-oce/api_order_00014.html)接口查看订单的状态
 
 请求示例
 
 ```
 GET 
-https://bss.myhuaweicloud.com/v1.0/{domain_id}/common/order-mgr/orders-resource/CS2007281506xxxxx
+https://bss.myhuaweicloud.com/v2/orders/customer-orders/details/CS2007281506xxxxx
 ```
 
 响应示例
 
 ```
 {
-    "totalSize": 1,
-    "resources": [
-        {
-            "resourceId": "01c*****5f7",
-            "cloudServiceType": "hws.service.type.ec2",
-            "regionCode": "xxxxx",
-            "resourceType": "hws.resource.type.vm",
-            "resourceSpecCode": "h1.8xlarge.4.gwc01",
-            "resourceSize": null,
-            "resouceSizeMeasureId": null,
-            "status": 6
-        }
+    "total_count": 1,
+    "order_info": {
+        "order_id": "CS2007281506xxxxx",
+        "customer_id": "982f05775ec94da390c3f174xxxxxxxx",
+        "service_type_code": "hws.service.type.ecs",
+        "source_type": 1,
+        "status": 6,
+         ……
 }
 ```
 
@@ -328,7 +324,7 @@ GET https://ecs.cn-east-2.myhuaweicloud.com/v1/05041fea8a8025662f4ac00927982f3e/
      ...
     "os_extra_specs": {
         "cond:spot_block:operation:az": "cn-east-2a(sellout),cn-east-2b(normal),cn-east-2c(normal),cn-east-2d(normal)",
-        "cond:operation:az":  ,"cn-east-2d(sellout),cn-east-2a(normal),cn-east-2b(normal)"
+        "cond:operation:az": "cn-east-2d(sellout),cn-east-2a(normal),cn-east-2b(normal)"
         ...
         "cond:operation:status": "abandon", 
         "cond:spot_block:operation:interrupt_policy":  "cn-east-2d(immediate),cn-east-2a(immediate),cn-east-2b(immediate),cn-east-2c(immediate)", 
@@ -345,7 +341,7 @@ GET https://ecs.cn-east-2.myhuaweicloud.com/v1/05041fea8a8025662f4ac00927982f3e/
 
 ## 付费方式<a name="section171001547869"></a>
 
-创建包周期的云服务器时（chargingMode为prePaid），通过extendparam.isAutoPay字段控制订单的支付方式。
+创建包年/包月的云服务器时（chargingMode为prePaid），通过extendparam.isAutoPay字段控制订单的支付方式。
 
 取值为true在订单创建完成后自动支付。
 

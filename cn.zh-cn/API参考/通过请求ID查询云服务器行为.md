@@ -4,6 +4,10 @@
 
 查询弹性云服务器的某个请求行为。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaShowServerAction)中调试该接口。
+
 ## URI<a name="zh-cn_topic_0057973179_section15083054"></a>
 
 GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-instance-actions/\{request\_id\}

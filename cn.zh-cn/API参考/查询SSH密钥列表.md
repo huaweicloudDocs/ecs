@@ -4,6 +4,10 @@
 
 查询SSH密钥信息列表。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListKeypairs)中调试该接口。
+
 ## URI<a name="section60057706"></a>
 
 GET /v2.1/\{project\_id\}/os-keypairs

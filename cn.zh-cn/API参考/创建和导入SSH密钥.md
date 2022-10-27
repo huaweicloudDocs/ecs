@@ -8,6 +8,10 @@
 
 密钥对创建后默认是属于创建用户的，如果是子帐号创建的密钥，包括主帐号在内的其他用户无法查看不属于本用户的密钥对。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaCreateKeypair)中调试该接口。
+
 ## URI<a name="section6615485"></a>
 
 POST /v2.1/\{project\_id\}/os-keypairs
@@ -209,7 +213,9 @@ POST /v2.1/\{project\_id\}/os-keypairs
 </tbody>
 </table>
 
-## 请求示例（导入SSH密钥）<a name="section1176153117145"></a>
+## 请求示例<a name="section1176153117145"></a>
+
+导入SSH密钥：
 
 ```
 POST https://{endpoint}/v2.1/{project_id}/os-keypairs
@@ -226,7 +232,7 @@ POST https://{endpoint}/v2.1/{project_id}/os-keypairs
 }
 ```
 
-## 请求示例（创建SSH密钥）<a name="section17825152411017"></a>
+创建SSH密钥：
 
 ```
 POST https://{endpoint}/v2.1/{project_id}/os-keypairs
@@ -240,7 +246,9 @@ POST https://{endpoint}/v2.1/{project_id}/os-keypairs
 }
 ```
 
-## 响应示例（导入SSH密钥）<a name="section8681151155119"></a>
+## 响应示例<a name="section8681151155119"></a>
+
+导入SSH密钥：
 
 ```
 {
@@ -253,7 +261,7 @@ POST https://{endpoint}/v2.1/{project_id}/os-keypairs
 }
 ```
 
-## 响应示例（创建SSH密钥）<a name="section97601124125214"></a>
+创建SSH密钥：
 
 ```
 {

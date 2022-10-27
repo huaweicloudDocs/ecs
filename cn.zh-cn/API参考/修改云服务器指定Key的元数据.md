@@ -11,6 +11,10 @@
 
 云服务器状态（云服务器的OS-EXT-STS:vm\_state属性）必须是active，stopped，paused或者suspended。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaUpdateServerMetadataItem)中调试该接口。
+
 ## URI<a name="section48549151192629"></a>
 
 PUT /v2.1/\{project\_id\}/servers/\{server\_id\}/metadata/\{key\}

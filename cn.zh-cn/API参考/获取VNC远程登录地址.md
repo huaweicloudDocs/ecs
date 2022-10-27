@@ -4,6 +4,10 @@
 
 获取弹性云服务器VNC远程登录地址。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=ShowServerRemoteConsole)中调试该接口。
+
 ## URI<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section15083054"></a>
 
 POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
@@ -153,14 +157,14 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
 </td>
 <td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p20448447111014"><a name="p20448447111014"></a><a name="p20448447111014"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p64491447131016"><a name="p64491447131016"></a><a name="p64491447131016"></a><span>远程登录的协议</span></p>
+<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p64491447131016"><a name="p64491447131016"></a><a name="p64491447131016"></a>远程登录的协议</p>
 </td>
 </tr>
 <tr id="row112741544151614"><td class="cellrowborder" valign="top" width="28.48%" headers="mcps1.2.4.1.1 "><p id="p627404410168"><a name="p627404410168"></a><a name="p627404410168"></a>url</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p92741044141612"><a name="p92741044141612"></a><a name="p92741044141612"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p10274544151617"><a name="p10274544151617"></a><a name="p10274544151617"></a><span>远程登录</span>的url</p>
+<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p10274544151617"><a name="p10274544151617"></a><a name="p10274544151617"></a>远程登录的url</p>
 </td>
 </tr>
 </tbody>

@@ -136,7 +136,7 @@ GET /v1/\{project\_id\}/cloudservers/fpga\_image/detail?fpga\_image\_id=\{fpga\_
 <td class="cellrowborder" valign="top" width="23.75%" headers="mcps1.2.4.1.2 "><p id="p29509334211756"><a name="p29509334211756"></a><a name="p29509334211756"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="50.24999999999999%" headers="mcps1.2.4.1.3 "><p id="p63235550211311"><a name="p63235550211311"></a><a name="p63235550211311"></a>FPGA镜像状态。取值如下：</p>
-<a name="ul10437195973916"></a><a name="ul10437195973916"></a><ul id="ul10437195973916"><li>initialling：表示创建FPGA镜像任务初始化中。</li><li>scheduling：表示FPGA镜像等待调度创建。</li><li>creating：表示FPGA镜像正在创建中。</li><li>saving：表示FPGA镜像正在上传文件到后端存储。</li><li>deleting：表示FPGA镜像正在删除中。</li><li>error：表示FPGA镜像创建失败。</li><li>active：表示FPGA镜像可以正常使用。</li></ul>
+<a name="ul10437195973916"></a><a name="ul10437195973916"></a><ul id="ul10437195973916"><li>initialing：表示创建FPGA镜像任务初始化中。</li><li>scheduling：表示FPGA镜像等待调度创建。</li><li>creating：表示FPGA镜像正在创建中。</li><li>saving：表示FPGA镜像正在上传文件到后端存储。</li><li>deleting：表示FPGA镜像正在删除中。</li><li>error：表示FPGA镜像创建失败。</li><li>active：表示FPGA镜像可以正常使用。</li></ul>
 </td>
 </tr>
 <tr id="row23208874211756"><td class="cellrowborder" valign="top" width="26%" headers="mcps1.2.4.1.1 "><p id="p50294579211756"><a name="p50294579211756"></a><a name="p50294579211756"></a>size</p>

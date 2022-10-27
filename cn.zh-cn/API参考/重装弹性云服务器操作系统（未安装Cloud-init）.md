@@ -13,6 +13,10 @@
 -   不包含系统盘的弹性云服务器不能执行重装操作。
 -   执行重装操作系统任务时，请勿并行执行其他任务，否则可能会引起重装操作系统失败。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=ReinstallServerWithoutCloudInit)中调试该接口。
+
 ## URI<a name="section15482662"></a>
 
 POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
@@ -158,6 +162,12 @@ POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/reinstallos
 ## 响应示例<a name="section1760151015465"></a>
 
 请参考[响应（任务类）](响应（任务类）.md)。
+
+```
+{      
+    "job_id": "70a599e0-31e7-49b7-b260-868f441e862b" 
+}
+```
 
 ## 返回值<a name="section27037160"></a>
 

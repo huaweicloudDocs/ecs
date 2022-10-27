@@ -12,6 +12,10 @@
 -   不包含系统盘的弹性云服务器不能切换操作系统。
 -   执行切换操作系统任务时，请勿并行执行其他任务，否则可能会引起切换操作系统失败。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=ChangeServerOsWithCloudInit)中调试该接口。
+
 ## URI<a name="section15482662"></a>
 
 POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
@@ -99,7 +103,9 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员帐户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
 <p id="p11576631102714"><a name="p11576631102714"></a><a name="p11576631102714"></a>建议密码复杂度如下：</p>
 <a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?~#*）中的三种。</li></ul>
-<div class="note" id="note15723730113732"><a name="note15723730113732"></a><a name="note15723730113732"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul1384211203571"></a><a name="ul1384211203571"></a><ul id="ul1384211203571"><li>Windows<span id="text1944152117246"><a name="text1944152117246"></a><a name="text1944152117246"></a>云服务器</span>的密码，不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>对于Linux弹性云服务器也可使用user_data字段实现密码注入，此时adminpass字段无效。</li><li>adminpass和keyname不能同时有值。</li><li>adminpass和keyname如果同时为空，此时，metadata中的user_data属性必须有值。</li><li>对于已安装Cloud-init的<span id="text1579052111243"><a name="text1579052111243"></a><a name="text1579052111243"></a>云服务器</span>，使用adminpass字段切换操作系统时，系统如果提示您使用keypair方式切换操作系统，表示当前区域暂不支持使用密码方式。</li></ul>
+<div class="note" id="note15723730113732"><a name="note15723730113732"></a><a name="note15723730113732"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul1384211203571"></a><a name="ul1384211203571"></a><ul id="ul1384211203571"><li>Windows<span id="text1944152117246"><a name="text1944152117246"></a><a name="text1944152117246"></a>云服务器</span>的密码，不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>对于Linux弹性云服务器也可使用user_data字段实现密码注入，此时adminpass字段无效。</li><li>adminpass和keyname不能同时有值。</li><li>adminpass和keyname如果同时为空，此时，linux可使用metadata中的user_data。</li><li>仅在使用私有镜像密码或切换后设置密码的场景，adminpass、keyname和metadata中的user_data属性值可以同时为空，且有以下约束条件：<p id="p937583515510"><a name="p937583515510"></a><a name="p937583515510"></a>Windows操作系统不支持使用私有镜像密码。</p>
+<p id="p14309125118527"><a name="p14309125118527"></a><a name="p14309125118527"></a>如需在切换后设置密码，需确保镜像__os_feature_list字段必须含有{"onekey_resetpasswd": "true"}，请在切换后重置云服务器密码。</p>
+</li><li>对于已安装Cloud-init的<span id="text1579052111243"><a name="text1579052111243"></a><a name="text1579052111243"></a>云服务器</span>，使用adminpass字段切换操作系统时，系统如果提示您使用keypair方式切换操作系统，表示当前区域暂不支持使用密码方式。</li></ul>
 </div></div>
 </td>
 </tr>
@@ -110,7 +116,7 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <td class="cellrowborder" valign="top" width="15.879999999999999%" headers="mcps1.2.5.1.3 "><p id="p21985640"><a name="p21985640"></a><a name="p21985640"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p36006428"><a name="p36006428"></a><a name="p36006428"></a>密钥名称。</p>
-<p id="p12355338417"><a name="p12355338417"></a><a name="p12355338417"></a><span>密钥可以通过密钥创建接口</span><span>进行</span><span>创建 </span><a href="创建和导入SSH密钥.md">创建和导入SSH密钥</a><span>（请参见），或使用SSH密钥查询接口</span><span>查</span><span>询已有的密钥（请参见</span><a href="查询SSH密钥列表.md">查询SSH密钥列表</a><span> ）。</span></p>
+<p id="p12355338417"><a name="p12355338417"></a><a name="p12355338417"></a>密钥可以通过密钥创建接口进行创建 <a href="创建和导入SSH密钥.md">创建和导入SSH密钥</a>（请参见），或使用SSH密钥查询接口查询已有的密钥（请参见<a href="查询SSH密钥列表.md">查询SSH密钥列表</a> ）。</p>
 </td>
 </tr>
 <tr id="row2345411710289"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p2073531110289"><a name="p2073531110289"></a><a name="p2073531110289"></a>userid</p>
@@ -119,8 +125,8 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </td>
 <td class="cellrowborder" valign="top" width="15.879999999999999%" headers="mcps1.2.5.1.3 "><p id="p1471297410289"><a name="p1471297410289"></a><a name="p1471297410289"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。当传入keyname参数时，此参数为必选。</p>
-<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ecs_02_0201_ol118119201404"></a><a name="ecs_02_0201_ol118119201404"></a><ol id="ecs_02_0201_ol118119201404"><li>登录管理控制台。</li><li><span>单击用户名，在下拉列表中单击“我的凭证”。</span>在该页面查看用户ID。</li></ol>
+<td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。当传入keyname参数时，优先使用本参数设置的userid，若userid为空，默认使用当前token中的userid。</p>
+<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ecs_02_0201_ol118119201404"></a><a name="ecs_02_0201_ol118119201404"></a><ol id="ecs_02_0201_ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看用户ID。</li></ol>
 </div>
 </td>
 </tr>
@@ -189,7 +195,7 @@ echo 111 &gt; c:\aaa.txt</pre>
 </li></ul>
 <p id="p16762152318318"><a name="p16762152318318"></a><a name="p16762152318318"></a>base64编码后：</p>
 <a name="ul2069415489311"></a><a name="ul2069415489311"></a><ul id="ul2069415489311"><li>Linux服务器：<pre class="screen" id="screen1769415480317"><a name="screen1769415480317"></a><a name="screen1769415480317"></a>IyEgL2Jpbi9iYXNoDQplY2hvIHVzZXJfdGVzdCAmZ3Q7Jmd0OyAvaG9tZS91c2VyLnR4dA==</pre>
-</li><li>Windows服务器：<pre class="screen" id="screen1969444873114"><a name="screen1969444873114"></a><a name="screen1969444873114"></a>cmVtIGNtZA0KZWNobyAxMTEgJmd0OyBjOlxhYWEudHh0</pre>
+</li><li>Windows服务器：<pre class="screen" id="screen1969444873114"><a name="screen1969444873114"></a><a name="screen1969444873114"></a>cmVtIGNtZAplY2hvIDExMSA+IGM6XGFhYS50eHQ=</pre>
 </li></ul>
 </td>
 </tr>
@@ -239,6 +245,12 @@ echo 111 &gt; c:\aaa.txt</pre>
 ## 响应示例<a name="section449243013451"></a>
 
 请参考[响应（任务类）](响应（任务类）.md)。
+
+```
+{      
+    "job_id": "70a599e0-31e7-49b7-b260-868f441e862b" 
+}
+```
 
 ## 返回值<a name="section27037160"></a>
 

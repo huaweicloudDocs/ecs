@@ -4,6 +4,10 @@
 
 查询指定的规格的详细信息。
 
+## 调试<a name="section926243314015"></a>
+
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaShowFlavorExtraSpecs)中调试该接口。
+
 ## URI<a name="zh-cn_topic_0057973064_section36592045"></a>
 
 GET /v2.1/\{project\_id\}/flavors/\{flavor\_id\}/os-extra\_specs
@@ -60,7 +64,7 @@ GET /v2.1/\{project\_id\}/flavors/\{flavor\_id\}/os-extra\_specs
 </thead>
 <tbody><tr id="zh-cn_topic_0057973064_row46433444"><td class="cellrowborder" valign="top" width="28.910000000000004%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0057973064_p3012613"><a name="zh-cn_topic_0057973064_p3012613"></a><a name="zh-cn_topic_0057973064_p3012613"></a>extra_specs</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.830000000000002%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0057973064_p42695066"><a name="zh-cn_topic_0057973064_p42695066"></a><a name="zh-cn_topic_0057973064_p42695066"></a>Object</p>
+<td class="cellrowborder" valign="top" width="22.830000000000002%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0057973064_p42695066"><a name="zh-cn_topic_0057973064_p42695066"></a><a name="zh-cn_topic_0057973064_p42695066"></a>Map&lt;String,String&gt;</p>
 </td>
 <td class="cellrowborder" valign="top" width="48.26%" headers="mcps1.2.4.1.3 "><p id="p1679511281174"><a name="p1679511281174"></a><a name="p1679511281174"></a>描述<span id="text27145231511"><a name="text27145231511"></a><a name="text27145231511"></a>弹性云服务器</span>规格的键值对。</p>
 <p id="p194000157416"><a name="p194000157416"></a><a name="p194000157416"></a>返回字段详细说明请参见<a href="查询规格详情和规格扩展信息列表.md#table59078165">表6</a>章节os_extra_specs数据结构说明。</p>

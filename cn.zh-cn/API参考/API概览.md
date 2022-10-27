@@ -4,7 +4,7 @@
 
 ## 调试<a name="section926243314015"></a>
 
-您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS)中直接运行调试接口。
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS)中调试接口。
 
 ## ECS接口说明<a name="section13231524145513"></a>
 
@@ -24,7 +24,7 @@
 </tr>
 <tr id="zh-cn_topic_0121588224_row1987820263297"><td class="cellrowborder" valign="top" width="22.85%" headers="mcps1.2.3.1.1 "><p id="p73459108269"><a name="p73459108269"></a><a name="p73459108269"></a><a href="状态管理.md">状态管理</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="77.14999999999999%" headers="mcps1.2.3.1.2 "><p id="p1345191072617"><a name="p1345191072617"></a><a name="p1345191072617"></a>包括<span id="text73961648134112"><a name="text73961648134112"></a><a name="text73961648134112"></a>弹性云服务器</span>的变更规格、重装/切换操作系统、自动恢复等接口。</p>
+<td class="cellrowborder" valign="top" width="77.14999999999999%" headers="mcps1.2.3.1.2 "><p id="p1345191072617"><a name="p1345191072617"></a><a name="p1345191072617"></a>包括<span id="text73961648134112"><a name="text73961648134112"></a><a name="text73961648134112"></a>弹性云服务器</span>的变更规格、重装/切换操作系统等接口。</p>
 </td>
 </tr>
 <tr id="row11930129135114"><td class="cellrowborder" valign="top" width="22.85%" headers="mcps1.2.3.1.1 "><p id="p1610133715115"><a name="p1610133715115"></a><a name="p1610133715115"></a><a href="批量操作.md">批量操作</a></p>
@@ -73,7 +73,7 @@
 <td class="cellrowborder" valign="top" width="77.14999999999999%" headers="mcps1.2.3.1.2 "><p id="p19159811456"><a name="p19159811456"></a><a name="p19159811456"></a>一键重置<span id="text15593252174111"><a name="text15593252174111"></a><a name="text15593252174111"></a>弹性云服务器</span>密码。</p>
 </td>
 </tr>
-<tr id="row1515624817263"><td class="cellrowborder" valign="top" width="22.85%" headers="mcps1.2.3.1.1 "><p id="p1315604822616"><a name="p1315604822616"></a><a name="p1315604822616"></a><a href="FPGA逻辑文件管理.md">FPGA逻辑文件管理</a></p>
+<tr id="row1515624817263"><td class="cellrowborder" valign="top" width="22.85%" headers="mcps1.2.3.1.1 "><p id="p1315604822616"><a name="p1315604822616"></a><a name="p1315604822616"></a><a href="FPGA逻辑文件管理-46.md">FPGA逻辑文件管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.14999999999999%" headers="mcps1.2.3.1.2 "><p id="p915634822615"><a name="p915634822615"></a><a name="p915634822615"></a>包括注册、删除、查询FPGA镜像等接口，用于FPGA加速型云服务器。</p>
 </td>
@@ -102,12 +102,12 @@
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><a name="ul1050314364565"></a><a name="ul1050314364565"></a><ul id="ul1050314364565"><li>查询API版本信息列表</li><li>查询指定API版本信息</li></ul>
 </td>
 </tr>
-<tr id="row750319364568"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p9503183612561"><a name="p9503183612561"></a><a name="p9503183612561"></a><a href="生命周期管理（OpenStack原生）.md">生命周期管理</a></p>
+<tr id="row750319364568"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p9503183612561"><a name="p9503183612561"></a><a name="p9503183612561"></a><a href="生命周期管理-0.md">生命周期管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p8503173613562"><a name="p8503173613562"></a><a name="p8503173613562"></a>包括<span id="text11701753194111"><a name="text11701753194111"></a><a name="text11701753194111"></a>弹性云服务器</span>的创建、删除、修改、查询等接口。</p>
 </td>
 </tr>
-<tr id="row850317367568"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1650315362568"><a name="p1650315362568"></a><a name="p1650315362568"></a><a href="状态管理（OpenStack原生）.md">状态管理</a></p>
+<tr id="row850317367568"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1650315362568"><a name="p1650315362568"></a><a name="p1650315362568"></a><a href="状态管理-6.md">状态管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p17503236105619"><a name="p17503236105619"></a><a name="p17503236105619"></a>包括<span id="text1171318533413"><a name="text1171318533413"></a><a name="text1171318533413"></a>弹性云服务器</span>的开机、关机、重启、锁定/解锁定、变更/回退变更规格等接口。</p>
 </td>
@@ -128,27 +128,27 @@
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p185041736185614"><a name="p185041736185614"></a><a name="p185041736185614"></a>包括添加、移除、查询、创建、更新、删除安全组及安全组规则等接口。</p>
 </td>
 </tr>
-<tr id="row13504103645616"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p15041236145617"><a name="p15041236145617"></a><a name="p15041236145617"></a><a href="规格管理（OpenStack原生）.md">规格管理</a></p>
+<tr id="row13504103645616"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p15041236145617"><a name="p15041236145617"></a><a name="p15041236145617"></a><a href="规格管理-8.md">规格管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p6504173617564"><a name="p6504173617564"></a><a name="p6504173617564"></a>查询<span id="text1899375417415"><a name="text1899375417415"></a><a name="text1899375417415"></a>弹性云服务器</span>的规格列表、详情等接口。</p>
 </td>
 </tr>
-<tr id="row25041836195615"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p3504183620564"><a name="p3504183620564"></a><a name="p3504183620564"></a><a href="网卡管理（OpenStack原生）.md">网卡管理</a></p>
+<tr id="row25041836195615"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p3504183620564"><a name="p3504183620564"></a><a name="p3504183620564"></a><a href="网卡管理-9.md">网卡管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p450516362569"><a name="p450516362569"></a><a name="p450516362569"></a>包括添加、删除、查询<span id="text95697558415"><a name="text95697558415"></a><a name="text95697558415"></a>弹性云服务器</span>的网卡等接口。</p>
 </td>
 </tr>
-<tr id="row20505123675616"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p450503610566"><a name="p450503610566"></a><a name="p450503610566"></a><a href="磁盘管理（OpenStack原生）.md">磁盘管理</a></p>
+<tr id="row20505123675616"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p450503610566"><a name="p450503610566"></a><a name="p450503610566"></a><a href="磁盘管理-11.md">磁盘管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p250516366566"><a name="p250516366566"></a><a name="p250516366566"></a>包括<span id="text17129656144118"><a name="text17129656144118"></a><a name="text17129656144118"></a>弹性云服务器</span>的挂载、卸载、查询等接口。</p>
 </td>
 </tr>
-<tr id="row650543635614"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1950553620566"><a name="p1950553620566"></a><a name="p1950553620566"></a><a href="元数据管理（OpenStack原生）.md">元数据管理</a></p>
+<tr id="row650543635614"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1950553620566"><a name="p1950553620566"></a><a name="p1950553620566"></a><a href="元数据管理-12.md">元数据管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p250523615620"><a name="p250523615620"></a><a name="p250523615620"></a>包括更新、设置、删除、查询、获取、修改<span id="text19689135618414"><a name="text19689135618414"></a><a name="text19689135618414"></a>弹性云服务器</span>元数据等接口。</p>
 </td>
 </tr>
-<tr id="row250515369566"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1050513610567"><a name="p1050513610567"></a><a name="p1050513610567"></a><a href="租户配额管理（OpenStack原生）.md">租户配额管理</a></p>
+<tr id="row250515369566"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1050513610567"><a name="p1050513610567"></a><a name="p1050513610567"></a><a href="租户配额管理-15.md">租户配额管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p17505536185615"><a name="p17505536185615"></a><a name="p17505536185615"></a>查询租户配额。</p>
 </td>
@@ -164,12 +164,12 @@
 <p id="p947643110593"><a name="p947643110593"></a><a name="p947643110593"></a>当前浮动IP管理的API已废弃，请使用对应的网络服务接口。</p>
 </td>
 </tr>
-<tr id="row155052036195616"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p450513620563"><a name="p450513620563"></a><a name="p450513620563"></a><a href="云服务器组管理（OpenStack原生）.md">云服务器组管理</a></p>
+<tr id="row155052036195616"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p450513620563"><a name="p450513620563"></a><a name="p450513620563"></a><a href="云服务器组管理-19.md">云服务器组管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p350553655614"><a name="p350553655614"></a><a name="p350553655614"></a>包括创建、查询、删除<span id="text567376155317"><a name="text567376155317"></a><a name="text567376155317"></a>云服务器</span>组等接口。</p>
 </td>
 </tr>
-<tr id="row7123632195817"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1212333295810"><a name="p1212333295810"></a><a name="p1212333295810"></a><a href="云服务器组管理（OpenStack原生）-0.md">云服务器操作管理</a></p>
+<tr id="row7123632195817"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p1212333295810"><a name="p1212333295810"></a><a name="p1212333295810"></a><a href="云服务器操作管理.md">云服务器操作管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p10123532135813"><a name="p10123532135813"></a><a name="p10123532135813"></a>包括查询云服务器操作行为列表、通过请求ID查询<span id="text18496181245316"><a name="text18496181245316"></a><a name="text18496181245316"></a>云服务器</span>行为。</p>
 </td>
@@ -190,7 +190,7 @@
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p9505183611565"><a name="p9505183611565"></a><a name="p9505183611565"></a>查询可用区列表。</p>
 </td>
 </tr>
-<tr id="row050573695613"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p4505103635617"><a name="p4505103635617"></a><a name="p4505103635617"></a><a href="标签管理（OpenStack原生）.md">标签管理</a></p>
+<tr id="row050573695613"><td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.2.3.1.1 "><p id="p4505103635617"><a name="p4505103635617"></a><a name="p4505103635617"></a><a href="标签管理-24.md">标签管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="77.16%" headers="mcps1.2.3.1.2 "><p id="p8505193645614"><a name="p8505193645614"></a><a name="p8505193645614"></a>包括<span id="text865105815416"><a name="text865105815416"></a><a name="text865105815416"></a>弹性云服务器</span>一维标签的创建、删除、查询等接口。</p>
 </td>

@@ -98,7 +98,7 @@ Token的有效期为24小时，获取Token后建议及时保存，避免频繁�
 
 您还可以主动查询某个Token的过期时间。通过调用[检验Token有效性](https://support.huaweicloud.com/api-iam/iam_30_0004.html)的接口查看Token的有效时期。
 
-您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneValidateToken)中直接运行调试该接口。
+您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneValidateToken)中调试该接口。
 
 本例以检验华东-上海二区域的Token为例：
 

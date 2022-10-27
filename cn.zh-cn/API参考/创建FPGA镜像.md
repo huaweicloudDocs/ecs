@@ -22,7 +22,7 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row830111963119"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p1928401510314"><a name="p1928401510314"></a><a name="p1928401510314"></a>initialling</p>
+<tbody><tr id="row830111963119"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p1928401510314"><a name="p1928401510314"></a><a name="p1928401510314"></a>initialing</p>
 </td>
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p716919361990"><a name="p716919361990"></a><a name="p716919361990"></a>创建FPGA镜像任务初始化中</p>
 </td>
@@ -219,7 +219,7 @@ POST /v2/\{project\_id\}/cloudservers/fpga\_image
 <td class="cellrowborder" valign="top" width="20.69%" headers="mcps1.2.4.1.2 "><p id="p64423181211311"><a name="p64423181211311"></a><a name="p64423181211311"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="55.43%" headers="mcps1.2.4.1.3 "><p id="p63235550211311"><a name="p63235550211311"></a><a name="p63235550211311"></a>FPGA镜像状态。取值如下：</p>
-<a name="ul10437195973916"></a><a name="ul10437195973916"></a><ul id="ul10437195973916"><li>initialling：表示创建FPGA镜像任务初始化中。</li><li>scheduling：表示等待调度创建。</li><li>creating：表示FPGA镜像正在创建中。</li><li>deleting：表示FPGA镜像正在删除中。</li><li>error：表示FPGA镜像创建失败。</li><li>active：表示FPGA镜像可以正常使用。</li></ul>
+<a name="ul10437195973916"></a><a name="ul10437195973916"></a><ul id="ul10437195973916"><li>initialing：表示创建FPGA镜像任务初始化中。</li><li>scheduling：表示等待调度创建。</li><li>creating：表示FPGA镜像正在创建中。</li><li>deleting：表示FPGA镜像正在删除中。</li><li>error：表示FPGA镜像创建失败。</li><li>active：表示FPGA镜像可以正常使用。</li></ul>
 </td>
 </tr>
 </tbody>
@@ -247,7 +247,7 @@ POST https://{endpoint}/v2/{project_id}/cloudservers/fpga_image
 ```
 {
   "fpga_image": {
-    "status": "initialling",
+    "status": "initialing",
     "id": "4010a32c5c62bad9015c62dc2290002b"
   }
 }
