@@ -94,7 +94,7 @@ KVM实例变更为擎天实例的操作流程如[图1](#fig10268287430)所示。
     **bash offload\_check\_blockdevice.sh**
 
     **图 2**  运行脚本<a name="fig12977105264911"></a>  
-    ![](figures/运行脚本-12.png "运行脚本-12")
+    ![](figures/运行脚本-14.png "运行脚本-14")
 
     请耐心等待脚本运行结束。如果回显提示“fstab file looks fine”，表示规格变更优化脚本执行成功，云服务器可以变更擎天实例。
 

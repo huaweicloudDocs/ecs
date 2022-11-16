@@ -105,7 +105,7 @@
     **python batch\_update\_log4j\_version\_for\_all\_user.py**
 
     **图 1**  运行脚本<a name="zh-cn_topic_0000001238762193_fig2583720175813"></a>  
-    ![](figures/运行脚本-28.png "运行脚本-28")
+    ![](figures/运行脚本-29.png "运行脚本-29")
 
 9.  执行如下命令，在“/root/logs/exec\_origin.log”的最后一行查看运行结果日志。
 
@@ -114,6 +114,6 @@
     若如[图2](#zh-cn_topic_0000001238762193_fig11117142718453)所示，则表示运行成功。
 
     **图 2**  运行成功<a name="zh-cn_topic_0000001238762193_fig11117142718453"></a>  
-    ![](figures/运行成功-29.png "运行成功-29")
+    ![](figures/运行成功-30.png "运行成功-30")
 
 

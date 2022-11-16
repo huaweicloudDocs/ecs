@@ -6,23 +6,23 @@
 
 -   父虚拟机
 
-    父虚拟机（主虚拟机、父实例）是一个能够将其CPU及内存资源隔离分配给擎天Enclave的ECS实例。这些资源能够在擎天Enclave的生存周期内被其使用。启动成功之后，该擎天Enclave只能与其父虚拟机进行安全通信。
+    父虚拟机是一个能够将其CPU及内存资源隔离分配给擎天Enclave的ECS实例。这些资源能够在擎天Enclave的生存周期内被其使用。启动擎天Enclave成功后，该擎天Enclave只能与其父虚拟机进行安全通信。
 
 -   擎天Enclave镜像文件
 
-    擎天Enclave镜像文件（.eif）提供了启动擎天Enclave并在其中运行擎天Enclave应用程序所需的系统信息，包括Linux操作系统、库和擎天Enclave应用程序。镜像创建详情见[Linux系统上擎天Enclave应用程序开发](Linux系统上擎天Enclave应用的开发.md)。
+    擎天Enclave镜像文件（.eif）提供了启动擎天Enclave并在其中运行擎天Enclave应用程序所需的系统信息，包括Linux操作系统、其他第三方库和擎天Enclave应用程序。镜像创建详情见[Linux系统上擎天Enclave应用程序开发](Linux系统上擎天Enclave应用的开发.md)。
 
 -   擎天命令行工具
 
-    作为华为云擎天命令行工具（qt CLI），在擎天Enclave使用场景中，qt CLI可以用于创建、关闭和查询擎天Enclave信息。qt CLI必须在父虚拟机上安装和使用。详情可见[擎天CLI（qt CLI）](擎天CLI（qt-CLI）.md)。
+    作为华为云擎天命令行工具（qt CLI），在擎天Enclave使用场景中，qt CLI可以用于创建、关闭和查询擎天Enclave信息。qt CLI必须在父虚拟机上安装和使用。详情见[擎天CLI（qt CLI）](擎天CLI（qt-CLI）.md)。
 
 -   Enclave SDK
 
-    Enclave SDK由一系列开源库组成，以便用户开发自己的擎天Enclave应用程序。它集成了一些与华为云数据加密服务（DEW）的KMS子服务交互的接口，例如加解密和产生随机数等，并为远程证明提供了内在支持。
+    Enclave SDK由一系列开源库组成，以便用户开发自己的擎天Enclave应用程序。它集成了一些与华为云KMS交互的接口，例如加解密和产生随机数等，并为远程证明提供了内在支持。
 
 -   擎天密码学证明
 
-    擎天密码学证明是擎天Enclave在与外部服务交互时证明自己合法性的过程。它依赖擎天Hypervisor产生的具有数字签名的证明文档。一个擎天Enclave证明文档内包含的具体信息可以作为第三方服务认证及鉴权的条件。您可以在IAM服务中使用kms:RecipientAttestation相关条件键值（condition key）来控制对KMS服务特定接口操作的访问权限，例如生成随机数或者加解密操作。
+    擎天密码学证明是擎天Enclave在与KMS服务交互时证明自己合法性的过程。它依赖擎天Hypervisor产生的具有数字签名的证明文档。一个擎天Enclave证明文档内包含的具体信息可以作为第三方服务认证及鉴权的条件。您可以在IAM服务中使用kms:RecipientAttestation相关条件键值（condition key）来控制对KMS服务特定接口操作的访问权限，例如生成随机数或者加解密操作。
 
 -   证明文档
 

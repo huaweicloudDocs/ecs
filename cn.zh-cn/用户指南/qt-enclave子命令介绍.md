@@ -181,7 +181,7 @@ Examples
 
 -   EnclaveID：擎天Enclave虚拟机的id号；
 
--   ProcessID：父实例中持有擎天Enclave资源的进程的进程号PID；
+-   ProcessID：父虚拟机中持有擎天Enclave资源的进程的进程号PID；
 
 -   EnclaveCID：擎天Enclave虚拟机与父虚拟机通信使用的vsock socket id；
 

@@ -120,7 +120,7 @@
     **python3.6 batch\_update\_log4j\_version\_for\_windows.py**
 
     **图 2**  运行脚本<a name="zh-cn_topic_0000001238762193_fig2583720175813"></a>  
-    ![](figures/运行脚本-30.png "运行脚本-30")
+    ![](figures/运行脚本-31.png "运行脚本-31")
 
 9.  执行如下命令，在“/root/logs/exec\_origin.log”的最后一行查看运行结果日志。
 
@@ -129,6 +129,6 @@
     若如下图所示，则表示运行成功。
 
     **图 3**  运行成功<a name="fig12071336131414"></a>  
-    ![](figures/运行成功-31.png "运行成功-31")
+    ![](figures/运行成功-32.png "运行成功-32")
 
 
