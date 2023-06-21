@@ -4,7 +4,7 @@
 
 Token的有效期为24小时，获取Token后建议及时保存，避免频繁调用。无论是否重新获取Token，在有效期内的Token始终有效。使用Token前请确保Token离过期有足够的时间，防止调用API的过程中Token过期导致调用API失败。
 
-针对用户调用接口中常常出现的Token过期导致的调用失败问题，我们介绍了获取Token并检验Token有效期的方法。
+针对用户调用接口中常常出现的Token过期导致的调用失败问题，本文将介绍获取Token并检验Token有效期的方法。
 
 若Token即将超期（无法满足一次完整的API调用或者完整的一套组合的调用）则需要重新获取Token，防止调用过程中Token超期，调用中断。或推荐您[使用SDK](https://support.huaweicloud.com/sdkreference-ecs/ecs_sdk_0101.html)，采用AK/SK方式认证鉴权。
 

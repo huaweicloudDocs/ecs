@@ -164,7 +164,8 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
 </td>
 <td class="cellrowborder" valign="top" width="18.63%" headers="mcps1.2.4.1.2 "><p id="p92741044141612"><a name="p92741044141612"></a><a name="p92741044141612"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p10274544151617"><a name="p10274544151617"></a><a name="p10274544151617"></a>远程登录的url</p>
+<td class="cellrowborder" valign="top" width="52.89%" headers="mcps1.2.4.1.3 "><p id="p10274544151617"><a name="p10274544151617"></a><a name="p10274544151617"></a>远程登录的URL。</p>
+<p id="p19368610185711"><a name="p19368610185711"></a><a name="p19368610185711"></a>VNC登录的URL中包含一次性token，请您妥善保管，用完即可丢弃。</p>
 </td>
 </tr>
 </tbody>

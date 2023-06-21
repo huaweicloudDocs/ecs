@@ -126,6 +126,16 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。</p>
 </td>
 </tr>
+<tr id="row6144862102847"><td class="cellrowborder" valign="top" width="21.62216221622162%" headers="mcps1.2.5.1.1 "><p id="p27971812102847"><a name="p27971812102847"></a><a name="p27971812102847"></a>metadata</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.72137213721372%" headers="mcps1.2.5.1.2 "><p id="p51124270102847"><a name="p51124270102847"></a><a name="p51124270102847"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p47425188102847"><a name="p47425188102847"></a><a name="p47425188102847"></a>Object</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16235056102847"><a name="p16235056102847"></a><a name="p16235056102847"></a>重装云服务器的元数据。</p>
+<p id="p3830913711291"><a name="p3830913711291"></a><a name="p3830913711291"></a>更多信息，请参见<a href="#table9120223">表4</a>。</p>
+</td>
+</tr>
 <tr id="row11625112219"><td class="cellrowborder" valign="top" width="21.62216221622162%" headers="mcps1.2.5.1.1 "><p id="p184731425012"><a name="p184731425012"></a><a name="p184731425012"></a>mode</p>
 </td>
 <td class="cellrowborder" valign="top" width="13.72137213721372%" headers="mcps1.2.5.1.2 "><p id="p440141715114"><a name="p440141715114"></a><a name="p440141715114"></a>否</p>
@@ -135,6 +145,43 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p15551537416"><a name="p15551537416"></a><a name="p15551537416"></a>取值为withStopServer ，支持开机状态下重装<span id="text12241204994818"><a name="text12241204994818"></a><a name="text12241204994818"></a>弹性云服务器</span>。</p>
 <p id="p15289182385312"><a name="p15289182385312"></a><a name="p15289182385312"></a>mode取值为withStopServer时，对开机状态的</p>
 <p id="p122661523155311"><a name="p122661523155311"></a><a name="p122661523155311"></a><span id="text109125011482"><a name="text109125011482"></a><a name="text109125011482"></a>弹性云服务器</span>执行重装操作，系统自动对云服务器先执行关机，再重装操作系统。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 4**  metadata字段数据结构说明
+
+<a name="table9120223"></a>
+<table><thead align="left"><tr id="row45607220"><th class="cellrowborder" valign="top" width="21.62%" id="mcps1.2.5.1.1"><p id="p281394610369"><a name="p281394610369"></a><a name="p281394610369"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="13.719999999999999%" id="mcps1.2.5.1.2"><p id="p188291346183618"><a name="p188291346183618"></a><a name="p188291346183618"></a>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="21.42%" id="mcps1.2.5.1.3"><p id="p682911463367"><a name="p682911463367"></a><a name="p682911463367"></a>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="43.24%" id="mcps1.2.5.1.4"><p id="p98291846203618"><a name="p98291846203618"></a><a name="p98291846203618"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1666125613534"><td class="cellrowborder" valign="top" width="21.62%" headers="mcps1.2.5.1.1 "><p id="p1562408795622"><a name="p1562408795622"></a><a name="p1562408795622"></a>__system__encrypted</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.719999999999999%" headers="mcps1.2.5.1.2 "><p id="p5759155095622"><a name="p5759155095622"></a><a name="p5759155095622"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.42%" headers="mcps1.2.5.1.3 "><p id="p3440400295622"><a name="p3440400295622"></a><a name="p3440400295622"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.24%" headers="mcps1.2.5.1.4 "><p id="p729227516614"><a name="p729227516614"></a><a name="p729227516614"></a>metadata中的表示加密功能的字段，0代表不加密，1代表加密。</p>
+<p id="p3526077895622"><a name="p3526077895622"></a><a name="p3526077895622"></a>该字段不存在时，系统盘默认为不加密。</p>
+</td>
+</tr>
+<tr id="row146669561533"><td class="cellrowborder" valign="top" width="21.62%" headers="mcps1.2.5.1.1 "><p id="p241272995622"><a name="p241272995622"></a><a name="p241272995622"></a>__system__cmkid</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.719999999999999%" headers="mcps1.2.5.1.2 "><p id="p683657101711"><a name="p683657101711"></a><a name="p683657101711"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.42%" headers="mcps1.2.5.1.3 "><p id="p5933737595622"><a name="p5933737595622"></a><a name="p5933737595622"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.24%" headers="mcps1.2.5.1.4 "><p id="p20670814113715"><a name="p20670814113715"></a><a name="p20670814113715"></a>用户主密钥ID，是metadata中的表示加密功能的字段，与__system__encrypted配合使用。</p>
+<div class="note" id="note153392271895"><a name="note153392271895"></a><a name="note153392271895"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p1859814343917"><a name="p1859814343917"></a><a name="p1859814343917"></a>请参考<a href="https://support.huaweicloud.com/api-dew/ListKeys.html" target="_blank" rel="noopener noreferrer">查询密钥列表</a>，通过HTTPS请求获取密钥ID。</p>
+</div></div>
 </td>
 </tr>
 </tbody>
@@ -154,7 +201,11 @@ POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/reinstallos
 {
     "os-reinstall": {
         "keyname": "KeyPair-350b", 
-        "userid": "7e25b1da389f4697a79df3a0e5bd494e"
+        "userid": "7e25b1da389f4697a79df3a0e5bd494e",
+        "metadata": {
+              "__system__encrypted": "1",
+              "__system__cmkid": "83cdb52d-9ebf-4469-9cfa-e7b5b80da846"
+        }
     }
 }
 ```

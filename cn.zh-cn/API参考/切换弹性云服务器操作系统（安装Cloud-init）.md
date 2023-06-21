@@ -199,6 +199,27 @@ echo 111 &gt; c:\aaa.txt</pre>
 </li></ul>
 </td>
 </tr>
+<tr id="row836814432234"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p1562408795622"><a name="p1562408795622"></a><a name="p1562408795622"></a>__system__encrypted</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.09%" headers="mcps1.2.5.1.2 "><p id="p5759155095622"><a name="p5759155095622"></a><a name="p5759155095622"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.909999999999998%" headers="mcps1.2.5.1.3 "><p id="p3440400295622"><a name="p3440400295622"></a><a name="p3440400295622"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p729227516614"><a name="p729227516614"></a><a name="p729227516614"></a>metadata中的表示加密功能的字段，0代表不加密，1代表加密。</p>
+<p id="p3526077895622"><a name="p3526077895622"></a><a name="p3526077895622"></a>该字段不存在时，系统盘默认为不加密。</p>
+</td>
+</tr>
+<tr id="row68291447246"><td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.5.1.1 "><p id="p241272995622"><a name="p241272995622"></a><a name="p241272995622"></a>__system__cmkid</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.09%" headers="mcps1.2.5.1.2 "><p id="p683657101711"><a name="p683657101711"></a><a name="p683657101711"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.909999999999998%" headers="mcps1.2.5.1.3 "><p id="p5933737595622"><a name="p5933737595622"></a><a name="p5933737595622"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="48%" headers="mcps1.2.5.1.4 "><p id="p20670814113715"><a name="p20670814113715"></a><a name="p20670814113715"></a>用户主密钥ID，是metadata中的表示加密功能的字段，与__system__encrypted配合使用。</p>
+<div class="note" id="note153392271895"><a name="note153392271895"></a><a name="note153392271895"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p1859814343917"><a name="p1859814343917"></a><a name="p1859814343917"></a>请参考<a href="https://support.huaweicloud.com/api-dew/ListKeys.html" target="_blank" rel="noopener noreferrer">查询密钥列表</a>，通过HTTPS请求获取密钥ID。</p>
+</div></div>
+</td>
+</tr>
 </tbody>
 </table>
 

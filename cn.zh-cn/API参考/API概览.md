@@ -83,6 +83,16 @@
 <td class="cellrowborder" valign="top" width="77.14999999999999%" headers="mcps1.2.3.1.2 "><p id="p663063925517"><a name="p663063925517"></a><a name="p663063925517"></a>包括创建、删除<span id="text1260734611527"><a name="text1260734611527"></a><a name="text1260734611527"></a>云服务器</span>组接口、<span id="text98267500524"><a name="text98267500524"></a><a name="text98267500524"></a>云服务器</span>组添加成员、删除成员接口。</p>
 </td>
 </tr>
+<tr id="row14529143433320"><td class="cellrowborder" valign="top" width="22.85%" headers="mcps1.2.3.1.1 "><p id="p052953493311"><a name="p052953493311"></a><a name="p052953493311"></a><a href="智能购买组管理.md">智能购买组管理</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="77.14999999999999%" headers="mcps1.2.3.1.2 "><p id="p10529183483314"><a name="p10529183483314"></a><a name="p10529183483314"></a>包括创建、修改、删除、查询智能购买组等接口。</p>
+</td>
+</tr>
+<tr id="row159918616343"><td class="cellrowborder" valign="top" width="22.85%" headers="mcps1.2.3.1.1 "><p id="p129915618341"><a name="p129915618341"></a><a name="p129915618341"></a><a href="规格推荐管理.md">规格推荐管理</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="77.14999999999999%" headers="mcps1.2.3.1.2 "><p id="p79915613341"><a name="p79915613341"></a><a name="p79915613341"></a>包括地域推荐接口。</p>
+</td>
+</tr>
 </tbody>
 </table>
 

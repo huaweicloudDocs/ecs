@@ -139,6 +139,16 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <p id="p528161524217"><a name="p528161524217"></a><a name="p528161524217"></a>镜像的ID可以从控制台或者参考<a href="https://support.huaweicloud.com/api-ims/ims_03_0702.html" target="_blank" rel="noopener noreferrer">《镜像服务API参考》</a>的“查询镜像列表”的章节获取。</p>
 </td>
 </tr>
+<tr id="row6144862102847"><td class="cellrowborder" valign="top" width="21.74217421742174%" headers="mcps1.2.5.1.1 "><p id="p27971812102847"><a name="p27971812102847"></a><a name="p27971812102847"></a>metadata</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.601360136013602%" headers="mcps1.2.5.1.2 "><p id="p51124270102847"><a name="p51124270102847"></a><a name="p51124270102847"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p47425188102847"><a name="p47425188102847"></a><a name="p47425188102847"></a>Object</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16235056102847"><a name="p16235056102847"></a><a name="p16235056102847"></a>切换云服务器的元数据。</p>
+<p id="p45467933113554"><a name="p45467933113554"></a><a name="p45467933113554"></a>更多信息，请参见<a href="#table9120223">表4</a>。</p>
+</td>
+</tr>
 <tr id="row341611732318"><td class="cellrowborder" valign="top" width="21.74217421742174%" headers="mcps1.2.5.1.1 "><p id="p184731425012"><a name="p184731425012"></a><a name="p184731425012"></a>mode</p>
 </td>
 <td class="cellrowborder" valign="top" width="13.601360136013602%" headers="mcps1.2.5.1.2 "><p id="p440141715114"><a name="p440141715114"></a><a name="p440141715114"></a>否</p>
@@ -148,6 +158,43 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p15551537416"><a name="p15551537416"></a><a name="p15551537416"></a>取值为withStopServer ，支持开机状态下切换<span id="text540118559481"><a name="text540118559481"></a><a name="text540118559481"></a>弹性云服务器</span>操作系统。</p>
 <p id="p15289182385312"><a name="p15289182385312"></a><a name="p15289182385312"></a>mode取值为withStopServer时，对开机状态的</p>
 <p id="p122661523155311"><a name="p122661523155311"></a><a name="p122661523155311"></a><span id="text11777105644816"><a name="text11777105644816"></a><a name="text11777105644816"></a>弹性云服务器</span>执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 4**  metadata字段数据结构说明
+
+<a name="table9120223"></a>
+<table><thead align="left"><tr id="row45607220"><th class="cellrowborder" valign="top" width="21.62%" id="mcps1.2.5.1.1"><p id="p17545124116392"><a name="p17545124116392"></a><a name="p17545124116392"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="13.719999999999999%" id="mcps1.2.5.1.2"><p id="p115457418391"><a name="p115457418391"></a><a name="p115457418391"></a>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="21.42%" id="mcps1.2.5.1.3"><p id="p154524113397"><a name="p154524113397"></a><a name="p154524113397"></a>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="43.24%" id="mcps1.2.5.1.4"><p id="p12545104110392"><a name="p12545104110392"></a><a name="p12545104110392"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row8797171742418"><td class="cellrowborder" valign="top" width="21.62%" headers="mcps1.2.5.1.1 "><p id="p1562408795622"><a name="p1562408795622"></a><a name="p1562408795622"></a>__system__encrypted</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.719999999999999%" headers="mcps1.2.5.1.2 "><p id="p5759155095622"><a name="p5759155095622"></a><a name="p5759155095622"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.42%" headers="mcps1.2.5.1.3 "><p id="p3440400295622"><a name="p3440400295622"></a><a name="p3440400295622"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.24%" headers="mcps1.2.5.1.4 "><p id="p729227516614"><a name="p729227516614"></a><a name="p729227516614"></a>metadata中的表示加密功能的字段，0代表不加密，1代表加密。</p>
+<p id="p3526077895622"><a name="p3526077895622"></a><a name="p3526077895622"></a>该字段不存在时，系统盘默认为不加密。</p>
+</td>
+</tr>
+<tr id="row469292072413"><td class="cellrowborder" valign="top" width="21.62%" headers="mcps1.2.5.1.1 "><p id="p241272995622"><a name="p241272995622"></a><a name="p241272995622"></a>__system__cmkid</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.719999999999999%" headers="mcps1.2.5.1.2 "><p id="p683657101711"><a name="p683657101711"></a><a name="p683657101711"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.42%" headers="mcps1.2.5.1.3 "><p id="p5933737595622"><a name="p5933737595622"></a><a name="p5933737595622"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.24%" headers="mcps1.2.5.1.4 "><p id="p20670814113715"><a name="p20670814113715"></a><a name="p20670814113715"></a>用户主密钥ID，是metadata中的表示加密功能的字段，与__system__encrypted配合使用。</p>
+<div class="note" id="note153392271895"><a name="note153392271895"></a><a name="note153392271895"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p1859814343917"><a name="p1859814343917"></a><a name="p1859814343917"></a>请参考<a href="https://support.huaweicloud.com/api-dew/ListKeys.html" target="_blank" rel="noopener noreferrer">查询密钥列表</a>，通过HTTPS请求获取密钥ID。</p>
+</div></div>
 </td>
 </tr>
 </tbody>
@@ -169,6 +216,10 @@ POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/changeos
         "keyname": "KeyPair-350b", 
         "userid": "7e25b1da389f4697a79df3a0e5bd494e", 
         "imageid": "e215580f-73ad-429d-b6f2-5433947433b0",
+        "metadata": {
+              "__system__encrypted": "1",
+              "__system__cmkid": "83cdb52d-9ebf-4469-9cfa-e7b5b80da846"
+        },
        "mode": "withStopServer"
     }
 }
