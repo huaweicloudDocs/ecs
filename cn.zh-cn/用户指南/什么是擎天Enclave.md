@@ -39,7 +39,10 @@
 
 另外还需要注意：
 
-1.  支持擎天Enclave特性的父虚拟机规格： c7e
+1.  支持擎天Enclave特性的父虚拟机规格： c7t
+
+    c7t规格还处于公测阶段，请通过[提交工单](https://console.huaweicloud.com/ticket/#/ticketindex/createIndex)联系客服申请公测。
+
 2.  支持擎天Enclave特性的局点： 华东-上海一
 3.  如果您在擎天Enclave中的业务被意外终止，您需要手动重新运行该业务
 4.  擎天Enclave的默认配置为使用1G大页，具有1G内存，2vcpu

@@ -15,7 +15,7 @@
     修改远程登录端口请参考[修改远程登录端口](https://support.huaweicloud.com/ecs_faq/ecs_faq_0530.html)。配置安全组规则请参考[配置安全组规则](配置安全组规则.md)。
 
 -   如果在创建云服务器时未设置密码，请先重置密码后再登录云服务器。
--   使用CloudShell通过私网远程连接云服务器时，需要具有Security Administrator权限的用户进行服务授权。
+-   使用CloudShell连接云服务器支持公网连接和私网连接两种方式。当使用CloudShell通过私网远程连接云服务器时，需要具有Security Administrator权限的用户进行服务授权。
 
     服务授权区域级生效，仅需在每个区域首次使用时执行一次，授权后，用户即可在当前区域使用。
 
@@ -24,10 +24,18 @@
     **图 1**  服务授权<a name="fig3603174319351"></a>  
     ![](figures/服务授权.png "服务授权")
 
+    若用户无Security Administrator权限，页面将提示“请添加Security Administrator管理员”，可以联系管理员（具有admin权限的用户）为该用户添加Security Administrator权限后重试。
+
+    **图 2**  无权限<a name="fig594135432018"></a>  
+    ![](figures/无权限.png "无权限")
+
+    授权方式为：
+
+    1.  创建用户组，并给用户组授权添加Security Administrator权限，详细操作请参考[创建用户组并授权](https://support.huaweicloud.com/usermanual-iam/iam_03_0001.html)。
+    2.  将用户添加到用户组中，详细操作请参考[用户组添加用户](https://support.huaweicloud.com/usermanual-iam/iam_03_0002.html)。
+
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >-   如果首次使用该方式的用户是IAM用户，推荐具有委托账号权限的用户（具有Administrator权限或者Security Administrator权限）先远程连接云服务器，并完成“服务授权”。授权后，该用户所属IAM用户可正常使用CloudShell远程连接云服务器，无需再次进行服务授权。
-    >    若要通过IAM用户完成服务授权，则需要为IAM用户增加Security Administrator权限，否则会提示授权失败。为IAM用户增加权限策略的详细操作，请参见[创建用户并授权使用ECS](创建用户并授权使用ECS.md)。
-    >-   使用CloudShell通过公网远程连接云服务器时，无需进行服务授权。
+    >使用CloudShell通过公网远程连接云服务器时，无需进行服务授权。
 
 
 ## 操作步骤<a name="section1969153812313"></a>
@@ -48,33 +56,33 @@
         1.  在CloudShell配置向导中设置云服务器的端口（默认22）、用户名、认证方式、密码（或密钥）等参数。
         2.  单击“连接”登录云服务器。
 
-            如果点击“连接”没有反应，可能是云服务器未设置登录密码或密码错误，请重置密码后重新登录。
+            如果单击“连接”没有反应，可能是云服务器未设置登录密码或密码错误，请重置密码后重新登录。
 
-            **图 2**  CloudShell配置向导（公网IP）<a name="fig85517479715"></a>  
+            **图 3**  CloudShell配置向导（公网IP）<a name="fig85517479715"></a>  
             ![](figures/CloudShell配置向导（公网IP）.png "CloudShell配置向导（公网IP）")
 
             连接成功后，CloudShell界面提示如下。
 
-            **图 3**  操作结果<a name="fig1635428121914"></a>  
+            **图 4**  操作结果<a name="fig1635428121914"></a>  
             ![](figures/操作结果.png "操作结果")
 
     -   若勾选云服务器的私网IP（私有IP）。
         1.  单击“跳转”，打开新的CloudShell配置向导页。
 
-            **图 4**  CloudShell配置向导（私网IP）1<a name="fig20321172982017"></a>  
+            **图 5**  CloudShell配置向导（私网IP）1<a name="fig20321172982017"></a>  
             ![](figures/CloudShell配置向导（私网IP）1.png "CloudShell配置向导（私网IP）1")
 
         2.  在CloudShell配置向导中设置云服务器的端口（默认22）、用户名、认证方式、密码（或密钥）等参数。
         3.  单击“连接”登录云服务器。
 
-            如果点击“连接”没有反应，可能是云服务器未设置登录密码或密码错误，请重置密码后重新登录。
+            如果单击“连接”没有反应，可能是云服务器未设置登录密码或密码错误，请重置密码后重新登录。
 
-            **图 5**  CloudShell配置向导（私网IP）2<a name="fig32082046142213"></a>  
+            **图 6**  CloudShell配置向导（私网IP）2<a name="fig32082046142213"></a>  
             ![](figures/CloudShell配置向导（私网IP）2.png "CloudShell配置向导（私网IP）2")
 
             连接成功后，CloudShell界面提示如下。
 
-            **图 6**  操作结果<a name="fig13209174619224"></a>  
+            **图 7**  操作结果<a name="fig13209174619224"></a>  
             ![](figures/操作结果-4.png "操作结果-4")
 
 

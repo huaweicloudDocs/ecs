@@ -11,6 +11,7 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
 
 >![](public_sys-resources/icon-note.gif) **说明：** 
 >当前已支持使用自动化脚本安装GPU驱动，建议优先使用自动安装方式，脚本获取以及安装指导请参考[（推荐）GPU加速型实例自动安装GPU驱动（Linux）](（推荐）GPU加速型实例自动安装GPU驱动（Linux）.md)和[（推荐）GPU加速型实例自动安装GPU驱动（Windows）](（推荐）GPU加速型实例自动安装GPU驱动（Windows）.md)。
+>GPU虚拟化型实例，需要严格按照[表1](GPU加速型实例安装GRID驱动.md#table188851534175019)选择合适的驱动版本下载使用。
 
 ## 安装须知<a name="section14189185733910"></a>
 
@@ -96,7 +97,7 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
         **lsmod | grep nouveau**
 
         -   如果回显信息中包含Nouveau驱动信息，说明Nouveau驱动已安装，则需要禁用Nouveau驱动，请执行步骤[9.b](#li073251517124)。
-        -   如果回显信息没有Nouveau驱动信息，说明Nouveau驱动已被禁用，请执行步骤[9.d](#li9819105753916)。
+        -   如果回显信息没有Nouveau驱动信息，说明Nouveau驱动已被禁用，请执行步骤[10](#li1516433810618)。
 
     2.  <a name="li073251517124"></a>执行如下命令编辑blacklist.conf文件。
 
@@ -123,11 +124,11 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
             **dracut -v /boot/initramfs-$\(uname -r\).img $\(uname -r\)**
 
 
-    1.  <a name="li9819105753916"></a>执行以下命令，重启云服务器。
+    1.  执行以下命令，重启云服务器。
 
         **reboot**
 
-10. 根据安装提示，连续三次选择“OK”。完成驱动的安装。
+10. <a name="li1516433810618"></a>根据安装提示，连续三次选择“OK”。完成驱动的安装。
 
     **图 6**  NVIDIA驱动安装完成<a name="fig1643713142594"></a>  
     ![](figures/NVIDIA驱动安装完成.png "NVIDIA驱动安装完成")

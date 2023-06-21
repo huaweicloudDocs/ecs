@@ -8,6 +8,7 @@ GPU加速型实例支持两种类型的驱动：GRID驱动和Tesla驱动。
 
 >![](public_sys-resources/icon-note.gif) **说明：** 
 >当前已支持使用自动化脚本安装GPU驱动，建议优先使用自动安装方式，脚本获取以及安装指导请参考[（推荐）GPU加速型实例自动安装GPU驱动（Linux）](（推荐）GPU加速型实例自动安装GPU驱动（Linux）.md)和[（推荐）GPU加速型实例自动安装GPU驱动（Windows）](（推荐）GPU加速型实例自动安装GPU驱动（Windows）.md)。
+>GPU虚拟化型实例，需要严格按照[表1](GPU加速型实例安装GRID驱动.md#table188851534175019)选择合适的驱动版本下载使用。
 
 -   如果需要使用OpenGL/DirectX/Vulkan等图形加速能力，则需要安装GRID驱动并自行购买和配置使用GRID License。此外，GRID驱动配合vDWS类型License，也支持CUDA，用来满足既需要计算加速也需要图形加速的场景。
     -   使用公共镜像创建的图形加速型（G系列）实例默认已安装特定版本的GRID驱动，但GRID License需自行购买和配置使用，请提前确认GPU加速型实例是否已经预装或者预装版本是否符合需求。

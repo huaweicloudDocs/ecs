@@ -11,7 +11,7 @@
 -   云服务器已经绑定弹性公网IP，绑定方式请参见[绑定弹性公网IP](绑定弹性公网IP.md)。
 
 -   所在安全组入方向已开放3389端口，配置方式请参见[配置安全组规则](配置安全组规则.md)。
--   移动设备已安装Microsoft Remote Desktop。
+-   移动设备已安装[Microsoft Remote Desktop](https://apps.microsoft.com/store/detail/microsoft-remote-desktop/9WZDNCRFJ3PS?hl=en-us&gl=us)。
 
 ## 操作步骤<a name="zh-cn_topic_0186715294_section116615151465"></a>
 

@@ -13,7 +13,7 @@
 -   所在安全组入方向已开放3389端口，配置方式请参见[配置安全组规则](配置安全组规则.md)。
 -   已安装Microsoft Remote Desktop for Mac或其他Mac OS系统适用的远程连接工具。[下载Microsoft Remote Desktop for Mac](https://docs.microsoft.com/zh-cn/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)。
 
-    微软官方已停止提供Remote Desktop客户端的下载链接，您可点击[Microsoft Remote Desktop Beta](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)下载Beta版本使用。
+    微软官方已停止提供Remote Desktop客户端的下载链接，您可单击[Microsoft Remote Desktop Beta](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)下载Beta版本使用。
 
 
 ## 操作步骤<a name="zh-cn_topic_0186715294_section116615151465"></a>

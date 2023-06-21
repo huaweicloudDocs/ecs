@@ -55,7 +55,10 @@
 
 如果本地主机为Linux操作系统，您可以在计算机的命令行中运行如下命令登录弹性云服务器。
 
-**ssh** **_弹性云服务器__绑定的__弹性公网IP_**
+**ssh** _**xx.xx.xx.xx**_
+
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>xx.xx.xx.xx表示弹性云服务器绑定的弹性公网IP。
 
 ## 相关链接<a name="section2826432183510"></a>
 

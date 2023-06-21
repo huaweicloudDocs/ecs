@@ -7,6 +7,10 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
 -   使用公共镜像创建的图形加速型（G系列）实例默认已安装特定版本的GRID驱动，但GRID License需自行购买和配置使用。
 -   使用私有镜像创建的GPU加速型实例，则需要安装GRID驱动并自行购买和配置使用GRID License。
 
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>如果通过私有镜像创建的GPU实例使用虚拟化类型的GPU显卡（如G6v），请确保下载和安装与公共镜像创建云服务器时相同的GRID驱动版本，以确保驱动与主机配套，云服务器可正常运行。
+>GRID驱动版本，请参见[表1](#table188851534175019)。
+
 本节操作介绍如何安装GRID驱动，购买或者申请GRID License，以及如何配置License服务器。
 
 安装GRID驱动操作步骤：
@@ -68,7 +72,7 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
     </td>
     <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p2361596227"><a name="p2361596227"></a><a name="p2361596227"></a>GPU虚拟化型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1362673810234"></a><a name="ul1362673810234"></a><ul id="ul1362673810234"><li>Windows Server 2016 Standard 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1362673810234"></a><a name="ul1362673810234"></a><ul id="ul1362673810234"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 7.6 64bit</li><li>Ubuntu Server 20.04 64bit</li><li>Ubuntu Server 18.04 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p48111812192311"><a name="p48111812192311"></a><a name="p48111812192311"></a>GRID 11.1</p>
     </td>
@@ -79,7 +83,7 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
     </td>
     <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p11882634175015"><a name="p11882634175015"></a><a name="p11882634175015"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul128821934165016"></a><a name="ul128821934165016"></a><ul id="ul128821934165016"><li>Windows Server 2016 Standard 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul128821934165016"></a><a name="ul128821934165016"></a><ul id="ul128821934165016"><li>Windows Server 2019 标准版 64bit</li><li>Windows Server 2016 标准版 64bit</li><li>Windows Server 2019 数据中心版 64bit</li><li>Windows Server 2016 数据中心版 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 8.1 64bit</li><li>CentOS 8.0 64bit</li><li>CentOS 7.9 64bit</li><li>CentOS 7.8 64bit</li><li>CentOS 7.7 64bit</li><li>CentOS 7.6 64bit</li><li>CentOS 7.5 64bit</li><li>Ubuntu Server 22.04 64bit</li><li>Ubuntu Server 20.04 64bit</li><li>Ubuntu Server 18.04 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>Huawei Cloud EulerOS 2.0 64bit for GPU</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p11882153495013"><a name="p11882153495013"></a><a name="p11882153495013"></a>按需选择版本</p>
     </td>
@@ -223,7 +227,7 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
 
 ## 部署和配置License Server<a name="section19229135113439"></a>
 
-我们以CentOS 7.5操作系统的云服务器为例演示部署和配置License Server。
+以CentOS 7.5操作系统的云服务器为例演示部署和配置License Server。
 
 >![](public_sys-resources/icon-note.gif) **说明：** 
 >-   云服务器规格不小于2vCPU，内存不小于4GiB。
@@ -279,7 +283,7 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
     >微软的远程登录协议不支持使用GPU的3D硬件加速能力，如需使用请安装VNC/PCoIP/NICE DCV等第三方桌面协议软件，并通过相应客户端连接GPU实例，使用GPU图形图像加速能力。
 
 2.  使用第三方桌面协议连接后，在Windows控制面板中打开NVIDIA控制面板 。
-3.  在一级许可证服务器中填入部署的License server的IP和端口，并点击应用。当出现“您的系统已获GRID vGPU许可”则代表安装GRID驱动成功，并且可以在License Server管理控制台Licensed Clients中看到已安装GRID驱动并使用了License的GPU实例的MAC地址。
+3.  在一级许可证服务器中填入部署的License server的IP和端口，并单击应用。当出现“您的系统已获GRID vGPU许可”则代表安装GRID驱动成功，并且可以在License Server管理控制台Licensed Clients中看到已安装GRID驱动并使用了License的GPU实例的MAC地址。
 
     **图 11**  License Server管理控制台<a name="fig7104162713349"></a>  
     ![](figures/License-Server管理控制台.png "License-Server管理控制台")

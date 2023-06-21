@@ -14,6 +14,12 @@
 
 详细内容请参考[弹性公网IP的分配策略](https://support.huaweicloud.com/eip_faq/faq_eip_0016.html)。
 
+## 前提条件<a name="section43711438161213"></a>
+
+已购买新的弹性公网IP。
+
+详细内容，请参见[申请弹性公网IP](https://support.huaweicloud.com/usermanual-eip/eip_0008.html)。
+
 ## 解绑弹性公网IP<a name="section357272742214"></a>
 
 1.  登录管理控制台。

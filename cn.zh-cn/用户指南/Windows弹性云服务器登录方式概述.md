@@ -46,7 +46,7 @@
 <tr id="row936071901815"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p2361319191814"><a name="p2361319191814"></a><a name="p2361319191814"></a>Windows</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p6756423191411"><a name="p6756423191411"></a><a name="p6756423191411"></a>使用mstsc方式登录<span id="text12191134417192"><a name="text12191134417192"></a><a name="text12191134417192"></a>云服务器</span>。</p>
-<p id="p16756723121413"><a name="p16756723121413"></a><a name="p16756723121413"></a>在本地主机点击“开始”菜单，输入<strong id="b14756102317142"><a name="b14756102317142"></a><a name="b14756102317142"></a>mstsc</strong>命令，打开远程桌面对话框。</p>
+<p id="p16756723121413"><a name="p16756723121413"></a><a name="p16756723121413"></a>在本地主机单击“开始”菜单，输入<strong id="b14756102317142"><a name="b14756102317142"></a><a name="b14756102317142"></a>mstsc</strong>命令，打开远程桌面对话框。</p>
 <p id="p3825173141916"><a name="p3825173141916"></a><a name="p3825173141916"></a><a href="远程桌面连接（MSTSC方式）.md">远程桌面连接（MSTSC方式）</a>。</p>
 </td>
 </tr>

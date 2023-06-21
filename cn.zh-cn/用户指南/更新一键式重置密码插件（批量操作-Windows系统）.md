@@ -87,7 +87,7 @@
 
     请根据云服务器所在区域选择脚本的下载地址：
 
-    -   华北-北京一：[https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/windows/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent\_windows.bat](https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/windows/batch_update_resetpwd/update_log4j_version_for_resetpwdagent_windows.bat)
+    -   华北-北京一：[https://cn-north-1-cloud-reset-pwd.obs.cn-north-1.myhuaweicloud.com/windows/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent\_windows.bat](https://cn-north-1-cloud-reset-pwd.obs.cn-north-1.myhuaweicloud.com/windows/batch_update_resetpwd/update_log4j_version_for_resetpwdagent_windows.bat)
     -   华北-北京四：[https://cn-north-4-cloud-reset-pwd.obs.cn-north-4.myhuaweicloud.com/windows/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent\_windows.bat](https://cn-north-4-cloud-reset-pwd.obs.cn-north-4.myhuaweicloud.com/windows/batch_update_resetpwd/update_log4j_version_for_resetpwdagent_windows.bat)
     -   华东-上海二：[https://cn-east-2-cloud-reset-pwd.obs.cn-east-2.myhuaweicloud.com/windows/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent\_windows.bat](https://cn-east-2-cloud-reset-pwd.obs.cn-east-2.myhuaweicloud.com/windows/batch_update_resetpwd/update_log4j_version_for_resetpwdagent_windows.bat)
     -   华南-广州：[https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/windows/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent\_windows.bat](https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/windows/batch_update_resetpwd/update_log4j_version_for_resetpwdagent_windows.bat)
@@ -120,7 +120,7 @@
     **python3.6 batch\_update\_log4j\_version\_for\_windows.py**
 
     **图 2**  运行脚本<a name="zh-cn_topic_0000001238762193_fig2583720175813"></a>  
-    ![](figures/运行脚本-31.png "运行脚本-31")
+    ![](figures/运行脚本-30.png "运行脚本-30")
 
 9.  执行如下命令，在“/root/logs/exec\_origin.log”的最后一行查看运行结果日志。
 
@@ -129,6 +129,6 @@
     若如下图所示，则表示运行成功。
 
     **图 3**  运行成功<a name="fig12071336131414"></a>  
-    ![](figures/运行成功-32.png "运行成功-32")
+    ![](figures/运行成功-31.png "运行成功-31")
 
 

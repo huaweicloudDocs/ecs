@@ -128,7 +128,7 @@ COPY . vsocket
 RUN apt-get update && \
     apt-get install python3 -y && \
     apt-get install gcc -y && \
-    apt-get install gawk –y
+    apt-get install gawk -y
 # Launch a client
 CMD ["python3", "/home/builder/vsocket/SocketCommunication.py","Server","-p 9999"]
 ```
@@ -136,7 +136,7 @@ CMD ["python3", "/home/builder/vsocket/SocketCommunication.py","Server","-p 9999
 1.  构建docker镜像：
 
 ```
-sudo docker build -t vsock-sample-client –f Dockerfile .
+sudo docker build -t vsock-sample-client -f Dockerfile .
 ```
 
 1.  将docker镜像转化为擎天Enclave镜像：
@@ -148,20 +148,20 @@ qt enclave make-img --docker-uri vsock-sample-client --eif vsock_sample.eif
 1.  使用vsock\_sample.eif以debug模式启动擎天Enclave:
 
 ```
-qt enclave start --cpus 2 --mem 4096 --eif vsock_sample.eif –-debug-mode –-cid 4
+qt enclave start --cpus 2 --mem 4096 --eif vsock_sample.eif --debug-mode --cid 4
 ```
 
 然后使用qt enclave console命令查看擎天Enclave内只读终端输出：
 
 ```
-qt enclave console –-enclave-id 0
+qt enclave console --enclave-id 0
 waiting for a connection
 ```
 
 1.  然后另起一个父虚拟机终端，启动客户端程序：
 
 ```
-Python3 SocketCommunication.py Client –c 4 –p 9999
+Python3 SocketCommunication.py Client -c 4 -p 9999
 ```
 
 1.  当服务端程序收到来着vsock的消息后，会打印如下消息到终端上：

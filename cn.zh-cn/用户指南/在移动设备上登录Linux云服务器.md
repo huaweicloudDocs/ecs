@@ -17,7 +17,7 @@
 
 ## IOS设备上登录Linux云服务器<a name="zh-cn_topic_0186706399_section647707162512"></a>
 
-如果您使用iOS设备，请确保已经安装了SSH客户端工具，我们以Termius为例。本示例中使用CentOS 7.6操作系统，使用用户名和密码进行认证。
+如果您使用iOS设备，请确保已经安装了SSH客户端工具，以Termius为例。本示例中使用CentOS 7.6操作系统，使用用户名和密码进行认证。
 
 1.  启动Termius，单击New Host。
 
