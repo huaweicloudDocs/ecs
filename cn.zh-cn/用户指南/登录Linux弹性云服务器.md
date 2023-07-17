@@ -12,7 +12,7 @@
 
 -   **[在移动设备上登录Linux云服务器](在移动设备上登录Linux云服务器.md)**  
 
--   **[Mac OS系统登录Linux弹性云服务器](Mac-OS系统登录Linux弹性云服务器.md)**  
+-   **[macOS系统登录Linux弹性云服务器](macOS系统登录Linux弹性云服务器.md)**  
 
 -   **[使用华为云APP连接Linux云服务器](使用华为云APP连接Linux云服务器.md)**  
 

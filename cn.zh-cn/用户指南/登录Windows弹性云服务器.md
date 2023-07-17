@@ -12,6 +12,6 @@
 
 -   **[在移动设备上登录Windows云服务器](在移动设备上登录Windows云服务器.md)**  
 
--   **[Mac OS系统登录Windows云服务器](Mac-OS系统登录Windows云服务器.md)**  
+-   **[macOS系统登录Windows云服务器](macOS系统登录Windows云服务器.md)**  
 
 

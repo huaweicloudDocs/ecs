@@ -1,8 +1,8 @@
-# Mac OS系统登录Windows云服务器<a name="ZH-CN_TOPIC_0216905452"></a>
+# macOS系统登录Windows云服务器<a name="ZH-CN_TOPIC_0216905452"></a>
 
 ## 操作场景<a name="zh-cn_topic_0186715294_section119855715410"></a>
 
-本节操作以使用“Microsoft Remote Desktop for Mac”工具远程连接“Windows Server 2012 R2 数据中心版 64位”操作系统云服务器为例，介绍Mac OS系统登录Windows云服务器的操作步骤。
+本节操作以使用“Microsoft Remote Desktop for Mac”工具远程连接“Windows Server 2012 R2 数据中心版 64位”操作系统云服务器为例，介绍macOS系统登录Windows云服务器的操作步骤。
 
 ## 前提条件<a name="zh-cn_topic_0186715294_section30111449112059"></a>
 
@@ -11,7 +11,7 @@
 -   弹性云服务器已经绑定弹性公网IP，绑定方式请参见[绑定弹性公网IP](绑定弹性公网IP.md)。
 
 -   所在安全组入方向已开放3389端口，配置方式请参见[配置安全组规则](配置安全组规则.md)。
--   已安装Microsoft Remote Desktop for Mac或其他Mac OS系统适用的远程连接工具。[下载Microsoft Remote Desktop for Mac](https://docs.microsoft.com/zh-cn/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)。
+-   已安装Microsoft Remote Desktop for Mac或其他macOS系统适用的远程连接工具。[下载Microsoft Remote Desktop for Mac](https://docs.microsoft.com/zh-cn/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)。
 
     微软官方已停止提供Remote Desktop客户端的下载链接，您可单击[Microsoft Remote Desktop Beta](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)下载Beta版本使用。
 
