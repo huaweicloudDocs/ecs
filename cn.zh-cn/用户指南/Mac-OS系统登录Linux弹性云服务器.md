@@ -1,8 +1,8 @@
-# Mac OS系统登录Linux弹性云服务器<a name="ecs_03_0194"></a>
+# macOS系统登录Linux弹性云服务器<a name="ecs_03_0194"></a>
 
 ## 操作场景<a name="section4777132715121"></a>
 
-本节为您介绍如何在Mac OS系统主机上登录Linux云服务器。
+本节为您介绍如何在macOS系统主机上登录Linux云服务器。
 
 ## 前提条件<a name="section796403214133"></a>
 
@@ -14,7 +14,7 @@
 
 ## 操作步骤<a name="section13366111713156"></a>
 
-您可以通过Mac OS系统自带的终端（Terminal）登录Linux云服务器。
+您可以通过macOS系统自带的终端（Terminal）登录Linux云服务器。
 
 -   SSH密码方式
     1.  打开系统自带的终端（Terminal），执行以下命令，登录云服务器。

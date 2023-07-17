@@ -56,10 +56,10 @@
 <p id="p1116112813566"><a name="p1116112813566"></a><a name="p1116112813566"></a><a href="在Linux主机上登录Windows云服务器.md">在Linux主机上登录Windows云服务器</a>。</p>
 </td>
 </tr>
-<tr id="row20754202301818"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p575416238183"><a name="p575416238183"></a><a name="p575416238183"></a>Mac OS系统</p>
+<tr id="row20754202301818"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p575416238183"><a name="p575416238183"></a><a name="p575416238183"></a>macOS系统</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p4953317122213"><a name="p4953317122213"></a><a name="p4953317122213"></a>安装远程连接工具，例如Microsoft Remote Desktop for Mac在Mac OS系统上登录。</p>
-<p id="p2754523141820"><a name="p2754523141820"></a><a name="p2754523141820"></a><a href="Mac-OS系统登录Windows云服务器.md">Mac OS系统登录Windows云服务器</a>。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p4953317122213"><a name="p4953317122213"></a><a name="p4953317122213"></a>安装远程连接工具，例如Microsoft Remote Desktop for Mac在macOS系统上登录。</p>
+<p id="p2754523141820"><a name="p2754523141820"></a><a name="p2754523141820"></a><a href="macOS系统登录Windows云服务器.md">macOS系统登录Windows云服务器</a>。</p>
 </td>
 </tr>
 <tr id="row12754112311185"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p1775462381810"><a name="p1775462381810"></a><a name="p1775462381810"></a>移动设备</p>

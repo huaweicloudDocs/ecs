@@ -62,10 +62,10 @@
 <p id="p188451941565"><a name="p188451941565"></a><a name="p188451941565"></a><a href="使用华为云APP连接Linux云服务器.md">使用华为云APP连接Linux云服务器</a>。</p>
 </td>
 </tr>
-<tr id="row12926465567"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p5922469560"><a name="p5922469560"></a><a name="p5922469560"></a>Mac OS系统</p>
+<tr id="row12926465567"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p5922469560"><a name="p5922469560"></a><a name="p5922469560"></a>macOS系统</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p792124655616"><a name="p792124655616"></a><a name="p792124655616"></a>使用系统自带的终端（Terminal）：</p>
-<p id="p12492045155716"><a name="p12492045155716"></a><a name="p12492045155716"></a><a href="Mac-OS系统登录Linux弹性云服务器.md">Mac OS系统登录Linux弹性云服务器</a>。</p>
+<p id="p12492045155716"><a name="p12492045155716"></a><a name="p12492045155716"></a><a href="macOS系统登录Linux弹性云服务器.md">macOS系统登录Linux弹性云服务器</a>。</p>
 </td>
 </tr>
 <tr id="row11628142404520"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p5628324104515"><a name="p5628324104515"></a><a name="p5628324104515"></a>Windows</p>
