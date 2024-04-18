@@ -8,23 +8,19 @@
 
 ## 约束与限制<a name="zh-cn_topic_0000001341503852_section431mcpsimp"></a>
 
-AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-上海二”以及“华南-广州”区域上线公测。
-
-## 前提条件<a name="section859817213466"></a>
-
-需要完成AOM 2.0公测申请，详细操作，请参考[开通AOM 2.0](https://support.huaweicloud.com/usermanual-aom2/aom_03_0001.html)。
+AOM 2.0目前仅在部分区域上线，详细内容，请参见[开通AOM 2.0](https://support.huaweicloud.com/usermanual-aom2/aom_03_0001.html)。
 
 ## Linux弹性云服务器插件更新方法<a name="zh-cn_topic_0000001341503852_section435mcpsimp"></a>
 
 **安装UniAgent**
 
 1.  登录[AOM华为云官网](https://www.huaweicloud.com/product/aom.html)。
-2.  在AOM产品简介下方单击“AOM 2.0公测中”，进入应用运维管理控制台。
+2.  在AOM产品简介下方单击“AOM2.0控制台”，进入应用运维管理控制台。
 
     **图 1**  AOM 2.0入口<a name="fig1322315235546"></a>  
     ![](figures/AOM-2-0入口.png "AOM-2-0入口")
 
-3.  在应用运维管理控制台上方的菜单栏，单击“采集管理”，进入采集管理控制台。
+3.  在应用运维管理控制台左侧导航栏，单击“采集管理”，进入采集管理控制台。
 
     **图 2**  采集管理控制台<a name="fig88181585814"></a>  
     ![](figures/采集管理控制台.png "采集管理控制台")
@@ -49,7 +45,6 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
     **图 3**  安装UniAgent（手动安装）<a name="fig1672635161916"></a>  
     ![](figures/安装UniAgent（手动安装）.png "安装UniAgent（手动安装）")
 
-
 1.  <a name="li13325133618215"></a>登录待安装UniAgent的弹性云服务器，执行复制的Linux安装命令。
 
     若出现如下显示说明安装成功。
@@ -62,38 +57,42 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
     **图 5**  安装成功的虚拟机<a name="fig178181134132719"></a>  
     ![](figures/安装成功的虚拟机.png "安装成功的虚拟机")
 
-2.  在虚机接入界面，单击“安装UniAgent”为其余虚拟机安装UniAgent。
-3.  在UniAgent安装界面的上方，单击“远程安装”。
+2.  在已安装成功的虚拟机“操作列”，单击“更多 \> 设置安装机”，将该虚拟机作为安装机。
 
-    **图 6**  安装UniAgent（远程安装）<a name="fig17508635193713"></a>  
+    **图 6**  设置安装机<a name="fig8549122910521"></a>  
+    ![](figures/设置安装机.png "设置安装机")
+
+3.  在虚机接入界面，单击“安装UniAgent”为其余虚拟机安装UniAgent。
+4.  在UniAgent安装界面的上方，单击“远程安装”。
+
+    **图 7**  安装UniAgent（远程安装）<a name="fig17508635193713"></a>  
     ![](figures/安装UniAgent（远程安装）.png "安装UniAgent（远程安装）")
 
-4.  设置参数。
+5.  设置参数。
     1.  选择步骤[7](#li13325133618215)装好的虚拟机作为安装机。
     2.  添加需安装UniAgent的主机。
 
         单击“添加主机信息”可添加多个主机，最多支持添加100个主机。
 
-        添加主机的方式有手动添加和批量导入两种方式，推荐使用手动添加方式。详细的参数设置，请参考[安装UniAgent](https://support.huaweicloud.com/usermanual-aom2/agent_01_0005.html)。
+        详细的参数设置，请参考[安装UniAgent](https://support.huaweicloud.com/usermanual-aom2/agent_01_0005.html)。
 
-        -   手动添加
-            -   主机IP：主机的IP。
-            -   操作系统：主机的操作系统，例如Linux。
+        -   主机IP：主机的IP。
 
-            -   登录帐号：登录主机的帐号。建议使用root帐号，可保证有足够的读写权限。
+            操作系统：主机的操作系统，例如Linux。
 
-            -   登陆端口：访问主机的端口。
+            登录账号：登录主机的账号。建议使用root账号，可保证有足够的读写权限。
 
-            -   认证方式：认证方式为密码。
+            登录端口：访问主机的端口。
 
-            -   密码：登录主机的密码。
+            认证方式：认证方式为密码。
 
-            -   连接测试结果：测试安装机和需安装主机间的网络连通性以及密码正确性。
+            密码：登录主机的密码。
 
-            -   操作：删除、复制和连接测试。
+            连接测试结果：测试安装机和需安装主机间的网络连通性以及密码正确性。
 
+            操作：删除、复制和连接测试。
 
-5.  <a name="li638720137370"></a>单击“立即安装”。
+6.  <a name="li638720137370"></a>单击“立即安装”。
 
 **创建脚本**
 
@@ -107,29 +106,26 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
     -   华南-广州：[https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/linux/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent.sh](https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/linux/batch_update_resetpwd/update_log4j_version_for_resetpwdagent.sh)
     -   中国-香港：[https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/linux/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent.sh](https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/linux/batch_update_resetpwd/update_log4j_version_for_resetpwdagent.sh)
 
-2.  在采集管理页面上方，选择“变更管理”，并单击左侧导航栏的“脚本管理”。
-
-    **图 7**  脚本管理<a name="fig1336141375512"></a>  
-    ![](figures/脚本管理.png "脚本管理")
-
-3.  <a name="li447521285418"></a>在脚本管理页面，单击“创建脚本”。
+2.  返回应用运维管理控制台，在左侧导航栏单击“自动化运维”。
+3.  在自动化运维控制台，单击左侧导航栏的“脚本管理”。
+4.  <a name="li447521285418"></a>在脚本管理页面，单击“创建脚本”。
 
     **图 8**  创建脚本<a name="fig119045019017"></a>  
     ![](figures/创建脚本.png "创建脚本")
 
-4.  <a name="li416619551215"></a>输入“脚本名称”，并将步骤[1](#li751051565718)下载的脚本文件复制到“版本内容”区域。
+5.  <a name="li416619551215"></a>输入“脚本名称”，并将步骤[1](#li751051565718)下载的脚本文件复制到“版本内容”区域。
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >请确认脚本内容wget URL之后带有参数-q，没有则需要手动添加，否则会导致下载软件包日志过多，影响性能。
 
-5.  手动替换脚本中下载地址，下载对应操作系统架构的一键式重置密码插件包。
+6.  手动替换脚本中下载地址，下载对应操作系统架构的一键式重置密码插件包。
 
     仅未绑定弹性公网IP的弹性云服务器需要执行本步骤。若待更新的弹性云服务器均已绑定弹性公网IP，则跳过本步骤，无需操作。
 
     **图 9**  脚本内容<a name="fig4131937125"></a>  
     ![](figures/脚本内容.png "脚本内容")
 
-    脚本下载地址为：http://\{region-id\} -cloud-reset-pwd.obs.\{region-id\}.myhuaweicloud.com
+    如[图9](#fig4131937125)所示，图中红框内容为脚本中的插件下载地址，需要参考[获取一键式重置密码插件](https://support.huaweicloud.com/usermanual-ecs/ecs_13_0117.html#section3)进行替换。
 
     以“华南-广州”区域为例：
 
@@ -148,31 +144,30 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >已上传一键式重置密码插件至OBS桶的区域包括：华北-北京一、华北-北京四、华东-上海二、华南-广州、中国-香港。
 
-
 1.  单击“保存”。
 2.  单击“上线”。
 
 **执行脚本**
 
-1.  上线完成后，单击“执行”。
+1.  上线完成后，单击“执行”，创建执行脚本任务。
 
-    执行账号为root，目标服务器选择已经安装好uniagent的机器。
+    **图 10**  创建执行脚本任务<a name="fig86021615392"></a>  
+    ![](figures/创建执行脚本任务.png "创建执行脚本任务")
+
+    设置执行账号为root，目标实例选择已经安装好UniAgent的机器。
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >执行脚本时目标服务器数量建议不要超过100台，否则会影响性能。
+    >执行脚本时目标实例数量建议不要超过100台，否则会影响性能。
 
-    **图 10**  执行脚本<a name="fig8984144617207"></a>  
-    ![](figures/执行脚本.png "执行脚本")
-
-2.  查看脚本是否执行成功，有如下显示说明执行成功。
+2.  单击“立即执行”。
+3.  查看脚本是否执行成功，有如下显示说明执行成功。
 
     **图 11**  执行成功<a name="fig1298515463208"></a>  
     ![](figures/执行成功.png "执行成功")
 
-
 **检查插件是否更新成功**
 
-1.  参考步骤[3](#li447521285418)\~步骤[4](#li416619551215)，创建检查服务状态的脚本，脚本内容为：
+1.  参考步骤[4](#li447521285418)\~步骤[5](#li416619551215)，创建检查服务状态的脚本，脚本内容为：
 
     **service cloudResetPwdAgent status**
 
@@ -183,18 +178,17 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
 
     如果服务CloudResetPwdAgent的状态不是“unrecognized service”，表示插件安装成功，否则安装失败。
 
-
 ## Windows弹性云服务器插件更新方法<a name="zh-cn_topic_0000001341503852_section613mcpsimp"></a>
 
 **安装UniAgent**
 
 1.  登录[AOM华为云官网](https://www.huaweicloud.com/product/aom.html)。
-2.  在AOM产品简介下方单击“AOM 2.0公测中”，进入应用运维管理控制台。
+2.  在AOM产品简介下方单击“AOM2.0控制台”，进入应用运维管理控制台。
 
     **图 12**  AOM 2.0入口<a name="ecs_03_2007_fig1322315235546"></a>  
     ![](figures/AOM-2-0入口.png "AOM-2-0入口")
 
-3.  在应用运维管理控制台上方的菜单栏，单击“采集管理”，进入采集管理控制台。
+3.  在应用运维管理控制台左侧导航栏，单击“采集管理”，进入采集管理控制台。
 
     **图 13**  采集管理控制台<a name="ecs_03_2007_fig88181585814"></a>  
     ![](figures/采集管理控制台.png "采集管理控制台")
@@ -209,8 +203,7 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
 2.  <a name="li62303201275"></a>在安装UniAgent页面中，复制Windows操作系统的安装包下载地址。
 
     **图 14**  安装UniAgent（手动安装）<a name="fig2023072022715"></a>  
-    ![](figures/安装UniAgent（手动安装）-22.png "安装UniAgent（手动安装）-22")
-
+    ![](figures/安装UniAgent（手动安装）-39.png "安装UniAgent（手动安装）-39")
 
 1.  登录待安装UniAgent的弹性云服务器，打开PowerShell、命令行工具或者在浏览器中复制链接下载UniAgent安装包。
 
@@ -223,8 +216,7 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
     安装完成后，在虚机接入界面可以看到已经安装成功的虚拟机。
 
     **图 15**  安装成功的虚拟机<a name="fig1358341193812"></a>  
-    ![](figures/安装成功的虚拟机-23.png "安装成功的虚拟机-23")
-
+    ![](figures/安装成功的虚拟机-40.png "安装成功的虚拟机-40")
 
 1.  重复步骤[5](#li12170151173011)\~步骤[8](#li1338711293519)，为其余虚拟机安装UniAgent。
 
@@ -240,25 +232,22 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
     -   华南-广州：[https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/windows/uniagent/update\_log4j\_version\_for\_resetpwdagent\_windows\_for\_uniagent.bat](https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/windows/uniagent/update_log4j_version_for_resetpwdagent_windows_for_uniagent.bat)
     -   中国-香港：[https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/windows/uniagent/update\_log4j\_version\_for\_resetpwdagent\_windows\_for\_uniagent.bat](https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/windows/uniagent/update_log4j_version_for_resetpwdagent_windows_for_uniagent.bat)
 
-2.  在采集管理页面上方，选择“变更管理”，并单击左侧导航栏的“脚本管理”。
+2.  返回应用运维管理控制台，在左侧导航栏单击“自动化运维”。
+3.  在自动化运维控制台，单击左侧导航栏的“脚本管理”。
+4.  在脚本管理页面，单击“创建脚本”。
 
-    **图 16**  脚本管理<a name="ecs_03_2007_fig1336141375512"></a>  
-    ![](figures/脚本管理.png "脚本管理")
-
-3.  在脚本管理页面，单击“创建脚本”。
-
-    **图 17**  创建脚本<a name="ecs_03_2007_fig119045019017"></a>  
+    **图 16**  创建脚本<a name="ecs_03_2007_fig119045019017"></a>  
     ![](figures/创建脚本.png "创建脚本")
 
-4.  输入“脚本名称”，并将步骤[1](#li225264584118)下载的脚本文件复制到“版本内容”区域。
-5.  手动替换脚本中下载地址，下载对应操作系统架构的一键式重置密码插件包。
+5.  输入“脚本名称”，并将步骤[1](#li225264584118)下载的脚本文件复制到“版本内容”区域。
+6.  手动替换脚本中下载地址，下载对应操作系统架构的一键式重置密码插件包。
 
     仅未绑定弹性公网IP的弹性云服务器需要执行本步骤。若待更新的弹性云服务器均已绑定弹性公网IP，则跳过本步骤，无需操作。
 
-    **图 18**  脚本内容<a name="fig1966918144613"></a>  
-    ![](figures/脚本内容-24.png "脚本内容-24")
+    **图 17**  脚本内容<a name="fig1966918144613"></a>  
+    ![](figures/脚本内容-41.png "脚本内容-41")
 
-    脚本下载地址为：http://\{region-id\} -cloud-reset-pwd.obs.\{region-id\}.myhuaweicloud.com
+    如[图17](#fig1966918144613)所示，图中红框内容为脚本中的插件下载地址，需要参考[获取一键式重置密码插件](https://support.huaweicloud.com/usermanual-ecs/ecs_13_0117.html#section3)进行替换。
 
     以“华南-广州”区域为例：
 
@@ -267,33 +256,32 @@ AOM 2.0目前仅在“华北-北京四”、“华东-上海一”、“华东-�
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >已上传一键式重置密码插件至OBS桶的区域包括：华北-北京一、华北-北京四、华东-上海二、华南-广州、中国-香港。
 
-6.  单击“保存”。
-7.  单击“上线”。
+7.  单击“保存”。
+8.  单击“上线”。
 
 **执行脚本**
 
-1.  上线完成后，单击“执行”。
+1.  上线完成后，单击“执行”，创建执行脚本任务。
 
-    执行账号为Administrator，目标服务器选择已经安装好uniagent的机器。
+    **图 18**  创建执行脚本任务<a name="fig2664343133118"></a>  
+    ![](figures/创建执行脚本任务-42.png "创建执行脚本任务-42")
 
-    **图 19**  执行脚本<a name="fig21941240104911"></a>  
-    ![](figures/执行脚本-25.png "执行脚本-25")
+    设置执行账号为Administrator，目标实例选择已经安装好UniAgent的机器。
 
 2.  查看脚本是否执行成功，有如下显示说明执行成功。
 
-    **图 20**  执行成功<a name="fig151951340154918"></a>  
-    ![](figures/执行成功-26.png "执行成功-26")
+    **图 19**  执行成功<a name="fig151951340154918"></a>  
+    ![](figures/执行成功-43.png "执行成功-43")
 
     如果脚本执行有如下报错，请检查脚本下载地址是否正确。如果地址正确，请重试或者绑定弹性公网IP后更换其他区域的下载地址。
 
-    **图 21**  执行失败<a name="fig6535151385820"></a>  
+    **图 20**  执行失败<a name="fig6535151385820"></a>  
     ![](figures/执行失败.png "执行失败")
-
 
 **检查插件是否更新成功**
 
 登录windows云服务器，有如下显示说明更新成功。
 
-**图 22**  插件更新成功<a name="fig188881912807"></a>  
+**图 21**  插件更新成功<a name="fig188881912807"></a>  
 ![](figures/插件更新成功.png "插件更新成功")
 

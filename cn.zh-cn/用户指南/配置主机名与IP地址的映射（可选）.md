@@ -68,4 +68,3 @@
 
     **ping  _hostname_**
 
-

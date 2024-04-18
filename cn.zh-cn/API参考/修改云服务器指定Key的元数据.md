@@ -117,11 +117,11 @@ PUT /v2.1/\{project\_id\}/servers/\{server\_id\}/metadata/\{key\}
 
 ## 请求示例<a name="section1854919457276"></a>
 
-```
-PUT https://{endpoint}/v2.1/{project_id}/servers/{server_id}/metadata/{key}
-```
+设置指定云服务器的指定key的元数据。
 
 ```
+PUT https://{endpoint}/v2.1/{project_id}/servers/{server_id}/metadata/{key}
+
 {
     "meta":{
         "key":"value"

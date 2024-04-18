@@ -53,8 +53,10 @@ DELETE /v2.1/\{project\_id\}/os-keypairs/\{keypair\_name\}
 
 ## 请求示例<a name="section118665219435"></a>
 
+删除名称为“KeyPair-123”的SSH密钥。
+
 ```
-DELETE https://{endpoint}/v2.1/{project_id}/os-keypairs/{keypair_name}
+DELETE https://{endpoint}/v2.1/{project_id}/os-keypairs/KeyPair-123
 ```
 
 ## 响应示例<a name="section19716123044320"></a>

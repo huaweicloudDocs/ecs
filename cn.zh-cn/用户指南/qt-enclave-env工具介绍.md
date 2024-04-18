@@ -1,6 +1,6 @@
 # qt-enclave-env工具介绍<a name="ecs_03_1418"></a>
 
-qt-enclave-env是一个service，service启动后从qt-enclave-env.conf配置文件中读取需要隔离的资源信息，并执行资源隔离操作。隔离操作需要在创建擎天Enclave虚拟机之前执行。接下来我们将介绍该服务的配置文件/etc/qingtian/enclave/qt-enclave-env.conf：
+qt-enclave-env是一个service，service启动后从qt-enclave-env.conf配置文件中读取需要隔离的资源信息，并执行资源隔离操作。隔离操作需要在创建QingTian Enclave虚拟机之前执行。接下来我们将介绍该服务的配置文件/etc/qingtian/enclave/qt-enclave-env.conf：
 
 ```
 #enclave虚拟机隔离大页内存类型，可配置2或1024，分别表示2M大页或1G大页 

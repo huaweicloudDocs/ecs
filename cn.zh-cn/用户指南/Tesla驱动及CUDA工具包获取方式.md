@@ -122,4 +122,3 @@ Tesla驱动及CUDA工具包安装操作指导请参考[GPU加速型实例安装T
     **图 2**  选择CUDA Toolkit对应版本<a name="fig55614344014"></a>  
     ![](figures/选择CUDA-Toolkit对应版本.png "选择CUDA-Toolkit对应版本")
 
-

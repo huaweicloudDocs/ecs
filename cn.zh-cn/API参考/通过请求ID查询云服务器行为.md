@@ -230,6 +230,8 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-instance-actions/\{request\_
 
 ## 请求示例<a name="zh-cn_topic_0057973179_section37574207"></a>
 
+查询指定云服务器的某个请求行为。
+
 ```
 GET https://{endpoint}/v2.1/89655fe61c4c4a08b9f3e7f9095441b8/servers/e723eb40-f56e-40f9-8c8c-caa517fe06ba/os-instance-actions/req-5a429946-c9cc-45cc-b5bd-68864209e5c
 ```

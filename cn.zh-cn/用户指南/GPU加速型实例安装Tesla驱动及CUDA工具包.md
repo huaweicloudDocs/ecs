@@ -34,7 +34,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
     -   [Linux操作系统安装CUDA工具包](#section1034245773916)
     -   [Windows操作系统安装CUDA工具包](#section0337133719497)
 
-
 ## Linux操作系统云服务器安装Tesla驱动<a name="section1728514576397"></a>
 
 以下操作以Ubuntu 16.04 64bit操作系统，GPU实例安装CUDA 10.1对应的Tesla驱动为例。
@@ -123,7 +122,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
 
             **dracut -v /boot/initramfs-$\(uname -r\).img $\(uname -r\)**
 
-
     1.  执行以下命令，重启云服务器。
 
         **reboot**
@@ -142,7 +140,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
 
     **图 7**  查看NVIDIA驱动的版本<a name="fig61971535809"></a>  
     ![](figures/查看NVIDIA驱动的版本.png "查看NVIDIA驱动的版本")
-
 
 ## Windows操作系统云服务器安装Tesla驱动<a name="section244363219171"></a>
 
@@ -200,8 +197,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
         **图 15**  查看NVIDIA驱动安装版本<a name="fig125251621439"></a>  
         ![](figures/查看NVIDIA驱动安装版本.png "查看NVIDIA驱动安装版本")
 
-
-
 ## Linux操作系统安装CUDA工具包<a name="section1034245773916"></a>
 
 以下操作以Ubuntu 16.04 64bit操作系统，GPU实例使用run包安装CUDA 10.1为例。
@@ -230,7 +225,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
     **图 17**  复制CUDA下载地址<a name="fig970482862918"></a>  
     ![](figures/复制CUDA下载地址.png "复制CUDA下载地址")
 
-
 1.  在云服务器内部执行如下命令进行下载。
 
     **wget 复制的链接地址**
@@ -239,7 +233,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
 
     **图 18**  Linux云服务器下载CUDA<a name="fig8354143184612"></a>  
     ![](figures/Linux云服务器下载CUDA.png "Linux云服务器下载CUDA")
-
 
 1.  CUDA工具包下载完成后，按照NVIDIA官网安装指引进行安装。
 
@@ -292,7 +285,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
 
     启用持久模式设置可以优化Linux实例上GPU设备的性能。
 
-
 ## Windows操作系统安装CUDA工具包<a name="section0337133719497"></a>
 
 以下操作以Windows Server 2016 Standard 64bit操作系统GPU实例安装CUDA 10.1为例。
@@ -324,7 +316,6 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
     **图 29**  CUDA安装完成<a name="fig2266175711165"></a>  
     ![](figures/CUDA安装完成.png "CUDA安装完成")
 
-
 1.  检查CUDA是否安装成功。
 
     打开cmd命令窗口，执行以下命令。
@@ -335,5 +326,4 @@ GPU加速型云服务器，需要安装Tesla驱动和CUDA工具包以实现计�
 
     **图 30**  CUDA安装成功<a name="fig6475101453"></a>  
     ![](figures/CUDA安装成功.png "CUDA安装成功")
-
 

@@ -6,7 +6,7 @@
 
 ## 前提条件<a name="zh-cn_topic_0000001238762193_section148505353295"></a>
 
--   登录已准备好的执行机，执行机需满足的条件请参见[约束与限制](#zh-cn_topic_0000001238762193_ecs_03_0187_section19369162055818)。
+-   准备好执行机，执行机需满足的条件请参见[约束与限制](#zh-cn_topic_0000001238762193_ecs_03_0187_section19369162055818)。
 -   需要提前准备待批量安装插件的云服务器的IP地址、root用户的密码信息或者私钥文件。
 -   执行机应该与待更新机器在同一VPC下。
 -   在执行完步骤[7](#zh-cn_topic_0000001238762193_li1740314273362)之后可以解绑eip。
@@ -22,15 +22,16 @@
 
 ## 操作步骤<a name="zh-cn_topic_0000001238762193_ecs_03_0187_section1837542012588"></a>
 
-1.  执行以下命令，安装批量脚本运行所需要的依赖。
+1.  以root用户登录执行机。
+2.  执行以下命令，安装批量脚本运行所需要的依赖。
 
-    **yum install ansible –y**
+    **yum install ansible -y**
 
-2.  请参考[获取并校验一键式重置密码插件完整性（Linux）](获取一键式重置密码插件.md#section15564103103311)，下载对应的一键式重置密码插件CloudResetPwdAgent.zip并完成完整性校验。
+3.  请参考[获取并校验一键式重置密码插件完整性（Linux）](获取一键式重置密码插件.md#section15564103103311)，下载对应的一键式重置密码插件CloudResetPwdAgent.zip并完成完整性校验。
 
     安装一键式重置密码插件对插件的具体放置目录无特殊要求，请您自定义。
 
-3.  执行以下命令，将批量操作脚本下载到root目录下。
+4.  执行以下命令，将批量操作脚本下载到root目录下。
 
     **curl  _URL_  \> \~/batch\_update\_log4j\_version.py**
 
@@ -45,7 +46,7 @@
     -   中国-香港：[https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/linux/batch\_update\_resetpwd/batch\_update\_log4j\_version.py](https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/linux/batch_update_resetpwd/batch_update_log4j_version.py)
     -   亚太-曼谷：[https://ap-southeast-2-cloud-reset-pwd.obs.ap-southeast-2.myhuaweicloud.com/linux/batch\_update\_resetpwd/batch\_update\_log4j\_version.py](https://ap-southeast-2-cloud-reset-pwd.obs.ap-southeast-2.myhuaweicloud.com/linux/batch_update_resetpwd/batch_update_log4j_version.py)
 
-4.  执行以下命令，将更新插件脚本下载到root目录下。
+5.  执行以下命令，将更新插件脚本下载到root目录下。
 
     **curl  _URL_  \> \~/update\_log4j\_version\_for\_resetpwdagent.sh**
 
@@ -60,24 +61,16 @@
     -   中国-香港：[https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/linux/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent.sh](https://ap-southeast-1-cloud-reset-pwd.obs.ap-southeast-1.myhuaweicloud.com/linux/batch_update_resetpwd/update_log4j_version_for_resetpwdagent.sh)
     -   亚太-曼谷：[https://ap-southeast-2-cloud-reset-pwd.obs.ap-southeast-2.myhuaweicloud.com/linux/batch\_update\_resetpwd/update\_log4j\_version\_for\_resetpwdagent.sh](https://ap-southeast-2-cloud-reset-pwd.obs.ap-southeast-2.myhuaweicloud.com/linux/batch_update_resetpwd/update_log4j_version_for_resetpwdagent.sh)
 
-5.  <a name="zh-cn_topic_0000001238762193_li1740314273362"></a>检查如下脚本是否在root目录下：
+6.  <a name="zh-cn_topic_0000001238762193_li1740314273362"></a>检查如下脚本是否在root目录下：
     -   batch\_update\_log4j\_version.py
     -   update\_log4j\_version\_for\_resetpwdagent.sh
     -   CloudResetPwdAgent.zip
 
-6.  执行以下命令，新建并编辑host\_list.txt，按i进入编辑模式。
+7.  执行以下命令，新建并编辑host\_list.txt，按i进入编辑模式。
 
     **vi host\_list.txt**
 
     将需要自动安装驱动的云服务器的相关信息填写到host\_list.txt文件中。
-
-    示例：
-
-    ```
-    [x86_64]
-    182.168.64.21
-    182.168.64.22
-    ```
 
     文件填写格式与登录待切换弹性云服务器的方式需要匹配。
 
@@ -108,30 +101,33 @@
         192.168.1.11,'**********'
         ```
 
-7.  运行批量执行操作脚本“batch\_update\_log4j\_version.py”。
+8.  运行批量执行操作脚本“batch\_update\_log4j\_version.py”。
     -   密钥对鉴权方式的服务器
 
         如果私钥文件与批量操作执行脚本在一个目录下，则直接指定私钥文件名称即可。
 
         **python batch\_update\_log4j\_version.py  _\{私钥文件路径/私钥文件名称\}_**
 
-        **图 1**  运行脚本<a name="zh-cn_topic_0000001238762193_fig1828395334018"></a>  
-        ![](figures/运行脚本-27.png "运行脚本-27")
+        **图 1**  运行成功<a name="zh-cn_topic_0000001238762193_fig1828395334018"></a>  
+        ![](figures/运行成功-44.png "运行成功-44")
+
+        若如[图1](#zh-cn_topic_0000001238762193_fig1828395334018)所示，则表示脚本运行成功。
 
     -   密码方式鉴权的服务器。
 
         **python batch\_update\_log4j\_version.py**
 
-        **图 2**  运行脚本<a name="zh-cn_topic_0000001238762193_fig2583720175813"></a>  
-        ![](figures/运行脚本-28.png "运行脚本-28")
+        **图 2**  运行成功<a name="zh-cn_topic_0000001238762193_fig2583720175813"></a>  
+        ![](figures/运行成功-45.png "运行成功-45")
 
-8.  执行如下命令，在“/root/logs/exec\_origin.log”的最后一行查看运行结果日志。
+        若如[图2](#zh-cn_topic_0000001238762193_fig2583720175813)所示，则表示脚本运行成功。
+
+9.  执行如下命令，在“/root/logs/exec\_origin.log”的最后一行查看运行结果日志。
 
     **vim /root/logs/exec\_origin.log**
 
-    若如[图3](#zh-cn_topic_0000001238762193_fig11117142718453)所示，则表示运行成功。
+    若如[图3](#zh-cn_topic_0000001238762193_fig11117142718453)所示，则表示批量更新一键式重置密码插件成功。
 
-    **图 3**  运行成功<a name="zh-cn_topic_0000001238762193_fig11117142718453"></a>  
-    ![](figures/运行成功-29.png "运行成功-29")
-
+    **图 3**  运行结果日志<a name="zh-cn_topic_0000001238762193_fig11117142718453"></a>  
+    ![](figures/运行结果日志.png "运行结果日志")
 

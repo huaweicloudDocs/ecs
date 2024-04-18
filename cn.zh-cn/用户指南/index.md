@@ -16,6 +16,7 @@
 
     -   [购买云服务器]
         -   [购买相同配置云服务器](购买相同配置云服务器.md)
+        -   [通过规格选型引导购买云服务器](通过规格选型引导购买云服务器.md)
         -   [开启/关闭超线程](开启-关闭超线程.md)
 
     -   [查看弹性云服务器信息]
@@ -27,22 +28,22 @@
 
     -   [登录Windows弹性云服务器]
         -   [Windows弹性云服务器登录方式概述](Windows弹性云服务器登录方式概述.md)
-        -   [Windows弹性云服务器管理控制台远程登录（VNC方式）](Windows弹性云服务器管理控制台远程登录（VNC方式）.md)
-        -   [使用RDP文件登录Windows云服务器](使用RDP文件登录Windows云服务器.md)
-        -   [远程桌面连接（MSTSC方式）](远程桌面连接（MSTSC方式）.md)
-        -   [在Linux主机上登录Windows云服务器](在Linux主机上登录Windows云服务器.md)
-        -   [在移动设备上登录Windows云服务器](在移动设备上登录Windows云服务器.md)
-        -   [Mac OS系统登录Windows云服务器](Mac-OS系统登录Windows云服务器.md)
+        -   [远程登录Windows弹性云服务器（VNC方式）](远程登录Windows弹性云服务器（VNC方式）.md)
+        -   [远程登录Windows弹性云服务器（RDP文件方式）](远程登录Windows弹性云服务器（RDP文件方式）.md)
+        -   [远程登录Windows弹性云服务器（MSTSC方式）](远程登录Windows弹性云服务器（MSTSC方式）.md)
+        -   [远程登录Windows弹性云服务器（通过Linux系统主机）](远程登录Windows弹性云服务器（通过Linux系统主机）.md)
+        -   [远程登录Windows弹性云服务器（通过移动设备）](远程登录Windows弹性云服务器（通过移动设备）.md)
+        -   [远程登录Windows弹性云服务器（通过macOS系统主机）](远程登录Windows弹性云服务器（通过macOS系统主机）.md)
 
     -   [登录Linux弹性云服务器]
         -   [Linux弹性云服务器登录方式概述](Linux弹性云服务器登录方式概述.md)
-        -   [使用CloudShell登录云服务器](使用CloudShell登录云服务器.md)
-        -   [Linux弹性云服务器远程登录（VNC方式）](Linux弹性云服务器远程登录（VNC方式）.md)
-        -   [SSH密钥方式登录](SSH密钥方式登录.md)
-        -   [SSH密码方式登录](SSH密码方式登录.md)
-        -   [在移动设备上登录Linux云服务器](在移动设备上登录Linux云服务器.md)
-        -   [Mac OS系统登录Linux弹性云服务器](Mac-OS系统登录Linux弹性云服务器.md)
-        -   [使用华为云APP连接Linux云服务器](使用华为云APP连接Linux云服务器.md)
+        -   [远程登录Linux弹性云服务器（CloudShell方式）](远程登录Linux弹性云服务器（CloudShell方式）.md)
+        -   [远程登录Linux弹性云服务器（VNC方式）](远程登录Linux弹性云服务器（VNC方式）.md)
+        -   [远程登录Linux弹性云服务器（SSH密钥方式）](远程登录Linux弹性云服务器（SSH密钥方式）.md)
+        -   [远程登录Linux弹性云服务器（SSH密码方式）](远程登录Linux弹性云服务器（SSH密码方式）.md)
+        -   [远程登录Linux弹性云服务器（通过移动设备）](远程登录Linux弹性云服务器（通过移动设备）.md)
+        -   [远程登录Linux弹性云服务器（通过macOS系统主机）](远程登录Linux弹性云服务器（通过macOS系统主机）.md)
+        -   [远程登录Linux弹性云服务器（通过华为云APP）](远程登录Linux弹性云服务器（通过华为云APP）.md)
 
     -   [管理弹性云服务器]
         -   [修改云服务器名称](修改云服务器名称.md)
@@ -54,13 +55,14 @@
 
     -   [变更规格（vCPU和内存）]
         -   [变更规格通用操作](变更规格通用操作.md)
+        -   [变更规格（批量操作）](变更规格（批量操作）.md)
         -   [变更规格（性能助手版）](变更规格（性能助手版）.md)
         -   [XEN实例变更为KVM实例（Windows）](XEN实例变更为KVM实例（Windows）.md)
         -   [XEN实例变更为KVM实例（Linux-自动配置）](XEN实例变更为KVM实例（Linux-自动配置）.md)
         -   [XEN实例变更为KVM实例（Linux-手动配置）](XEN实例变更为KVM实例（Linux-手动配置）.md)
         -   [XEN实例变更为KVM实例（Linux-批量自动配置）](XEN实例变更为KVM实例（Linux-批量自动配置）.md)
-        -   [KVM实例变更为擎天实例（Windows）](KVM实例变更为擎天实例（Windows）.md)
-        -   [KVM实例变更为擎天实例（Linux）](KVM实例变更为擎天实例（Linux）.md)
+        -   [KVM实例变更为QingTian实例（Windows）](KVM实例变更为QingTian实例（Windows）.md)
+        -   [KVM实例变更为QingTian实例（Linux）](KVM实例变更为QingTian实例（Linux）.md)
 
     -   [迁移云服务器](迁移云服务器.md)
     -   [使用实例自定义数据和元数据]
@@ -96,8 +98,8 @@
 
 -   [网卡]
     -   [网卡概述](网卡概述.md)
-    -   [添加网卡](添加网卡.md)
-    -   [删除网卡](删除网卡.md)
+    -   [绑定弹性网卡](绑定弹性网卡.md)
+    -   [解绑弹性网卡](解绑弹性网卡.md)
     -   [切换虚拟私有云](切换虚拟私有云.md)
     -   [修改私有IP地址](修改私有IP地址.md)
     -   [管理虚拟IP地址](管理虚拟IP地址.md)
@@ -120,21 +122,23 @@
         -   [安全组配置示例](安全组配置示例.md)
         -   [配置安全组规则](配置安全组规则.md)
         -   [更改安全组](更改安全组.md)
+        -   [加入安全组](加入安全组.md)
+        -   [移出安全组](移出安全组.md)
 
     -   [主机安全](主机安全.md)
     -   [管理项目和企业项目](管理项目和企业项目.md)
     -   [敏感操作保护](敏感操作保护.md)
 
--   [擎天Enclave管理]
-    -   [擎天Enclave简介]
-        -   [什么是擎天Enclave](什么是擎天Enclave.md)
-        -   [擎天Enclave概念](擎天Enclave概念.md)
+-   [QingTian Enclave管理]
+    -   [QingTian Enclave简介]
+        -   [什么是QingTian Enclave](什么是QingTian-Enclave.md)
+        -   [QingTian Enclave概念](QingTian-Enclave概念.md)
 
     -   [快速入门](快速入门.md)
     -   [典型使用案例]
         -   [工作流程](工作流程.md)
-        -   [构建擎天Enclave镜像](构建擎天Enclave镜像.md)
-        -   [启动擎天Enclave](启动擎天Enclave.md)
+        -   [构建QingTian Enclave镜像](构建QingTian-Enclave镜像.md)
+        -   [启动QingTian Enclave](启动QingTian-Enclave.md)
 
     -   [密码学证明]
         -   [PCR简介](PCR简介.md)
@@ -142,10 +146,10 @@
         -   [文档签名验证](文档签名验证.md)
         -   [结合华为云KMS服务](结合华为云KMS服务.md)
 
-    -   [擎天Enclave应用开发]
-        -   [Linux系统上擎天Enclave应用的开发](Linux系统上擎天Enclave应用的开发.md)
+    -   [QingTian Enclave应用开发]
+        -   [Linux系统上QingTian Enclave应用的开发](Linux系统上QingTian-Enclave应用的开发.md)
 
-    -   [擎天CLI（qt CLI）]
+    -   [QingTian CLI（qt CLI）]
         -   [安装qt CLI](安装qt-CLI.md)
         -   [qt-enclave-env工具介绍](qt-enclave-env工具介绍.md)
         -   [qt enclave子命令介绍](qt-enclave子命令介绍.md)
@@ -159,7 +163,7 @@
 
     -   [一键式重置密码插件]
         -   [获取一键式重置密码插件](获取一键式重置密码插件.md)
-        -   [安装一键式重置密码插件（可选）](安装一键式重置密码插件（可选）.md)
+        -   [安装一键式重置密码插件（单台操作）](安装一键式重置密码插件（单台操作）.md)
         -   [更新一键式重置密码插件（单台操作）](更新一键式重置密码插件（单台操作）.md)
         -   [更新一键式重置密码插件（AOM方式）](更新一键式重置密码插件（AOM方式）.md)
         -   [更新一键式重置密码插件（批量操作-Linux系统root用户）](更新一键式重置密码插件（批量操作-Linux系统root用户）.md)
@@ -188,6 +192,22 @@
     -   [创建智能购买组](创建智能购买组.md)
     -   [管理智能购买组](管理智能购买组.md)
 
+-   [事件管理]
+    -   [事件概述](事件概述.md)
+    -   [查询事件](查询事件.md)
+    -   [响应事件]
+        -   [授权换盘](授权换盘.md)
+        -   [立即重部署](立即重部署.md)
+        -   [授权重部署](授权重部署.md)
+        -   [授权维护](授权维护.md)
+
+    -   [换盘预处理]
+        -   [本地盘换盘预处理（磁盘增强型实例）](本地盘换盘预处理（磁盘增强型实例）.md)
+        -   [本地盘换盘预处理（超高I/O型实例）](本地盘换盘预处理（超高I-O型实例）.md)
+        -   [本地盘换盘预处理（裸金属类型实例）](本地盘换盘预处理（裸金属类型实例）.md)
+
+    -   [实例重部署预处理](实例重部署预处理.md)
+
 -   [资源与标签]
     -   [标签管理]
         -   [标签概述](标签概述.md)
@@ -196,6 +216,7 @@
         -   [删除标签](删除标签.md)
 
     -   [配额调整](配额调整.md)
+    -   [搜索云服务器（旧版）](搜索云服务器（旧版）.md)
     -   [搜索云服务器](搜索云服务器.md)
 
 -   [监控]
@@ -203,7 +224,8 @@
     -   [弹性云服务器支持的基础监控指标](弹性云服务器支持的基础监控指标.md)
     -   [弹性云服务器支持的操作系统监控指标（安装Agent）](弹性云服务器支持的操作系统监控指标（安装Agent）.md)
     -   [弹性云服务器支持的进程监控指标（安装Agent）](弹性云服务器支持的进程监控指标（安装Agent）.md)
-    -   [GPU加速型实例安装GPU监控插件（Linux）](GPU加速型实例安装GPU监控插件（Linux）.md)
+    -   [异构类实例安装支持对应监控的CES Agent（Linux）](异构类实例安装支持对应监控的CES-Agent（Linux）.md)
+    -   [异构类实例安装支持对应监控的CES Agent（Windows）](异构类实例安装支持对应监控的CES-Agent（Windows）.md)
     -   [设置告警规则](设置告警规则.md)
     -   [查看监控指标](查看监控指标.md)
 

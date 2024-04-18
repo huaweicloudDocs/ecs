@@ -18,7 +18,7 @@ Welcome to the cool QingTian new CLI!
     enclave : Enclave life-circle management.
 ```
 
-qt enclave中提供enclave相关的镜像制作，拉起、销毁、查询擎天Enclave等子命令：
+qt enclave中提供enclave相关的镜像制作，拉起、销毁、查询QingTian Enclave等子命令：
 
 ```
 [root@localhost ~]# qt enclave
@@ -40,7 +40,7 @@ Commands:
 
 ## qt enclave make-img<a name="zh-cn_topic_0000001409233153_section1754984025717"></a>
 
-该命令用于将用户制作好的docker镜像转换为擎天Enclave虚拟机可用的镜像，命令格式如下：
+该命令用于将用户制作好的docker镜像转换为QingTian Enclave虚拟机可用的镜像，命令格式如下：
 
 ```
 [root@localhost ~]# qt enclave make-img -h
@@ -77,11 +77,11 @@ Examples
 
 必选项：--eif，提供路径名称用于存放生成后的EIF镜像
 
-可选项：--private-key，提供对擎天Enclave镜像进行签名的私钥绝对路径，如果指定了PRIVATE-KEY， 要求必须同时指定签名密钥SIGNING-CERTIFICATE；
+可选项：--private-key，提供对QingTian Enclave镜像进行签名的私钥绝对路径，如果指定了PRIVATE-KEY， 要求必须同时指定签名密钥SIGNING-CERTIFICATE；
 
-可选项：--signing-certificate，提供对擎天Enclave镜像进行签名的秘钥绝对路径，如果指定了SIGNING-CERTIFICATE， 如要同时指定签名密钥PRIVATE-KEY；
+可选项：--signing-certificate，提供对QingTian Enclave镜像进行签名的证书绝对路径，如果指定了SIGNING-CERTIFICATE， 如要同时指定签名密钥PRIVATE-KEY；
 
-命令行返回值：如果配置了以上两项证书可选项，必须保证证书有效。证书有效情况下命令输出将包括额外的PCR0，PCR8散列值用于。证书无效，镜像创建失败。
+命令行返回值：如果配置了以上两项证书可选项，必须保证证书有效。证书有效情况下命令输出将包括额外的PCR0，PCR8散列值用于度量Enclave镜像与签名证书。证书无效，镜像创建失败。
 
 创建镜像命令示例：
 
@@ -96,7 +96,7 @@ Examples
 
 ## qt enclave start<a name="zh-cn_topic_0000001409233153_section7188009592"></a>
 
-该命令用于创建擎天Enclave虚拟机，命令格式如下：
+该命令用于创建QingTian Enclave虚拟机，命令格式如下：
 
 ```
 [root@localhost ~]# qt enclave start -h
@@ -105,12 +105,12 @@ Command
   qt enclave start : Start an enclave via an eif image.
 ​
 Arguments
-  --cid  [Required]
-  --eif  [Required]
-  --cpus       : Default: 2.
-  --debug-mode
-  --mem        : Default: 1024.
-​
+  --cid        : Default: 4.
+  --eif        [Required] 
+  --cpus       : Default: 2. 
+  --debug-mode 
+  --mem        : Default: 1024. 
+
 Global Arguments
   --debug       : Increase logging verbosity to show all debug logs.
   --help -h      : Show this help message and exit.
@@ -128,15 +128,15 @@ Examples
 
 可选项：--cpus，指定要分配给enclave虚拟机的vCPU数量，不能大于隔离的cpu数目， 未配置使用默认值2；
 
-可选项：--mem，指定分配给擎天Enclave虚拟机的内存大小（MB），不能大于隔离内存大小，需大于擎天Enclave镜像大小，未配置使用默认值1024MB；
+可选项：--mem，指定分配给QingTian Enclave虚拟机的内存大小（MB），不能大于隔离内存大小，需大于QingTian Enclave镜像大小，未配置使用默认值1024MB；
 
 必选项：--eif，指定EIF镜像路径；
 
-可选项：--cid，设置擎天Enclave虚拟机cid，用于指定父虚拟机与擎天Enclave虚拟机间vsock通信的socket IP。可用的cid范围为：4-4294967294，未配置使用默认值4；
+可选项：--cid，设置QingTian Enclave虚拟机cid，用于指定父虚拟机与QingTian Enclave虚拟机间vsock通信的socket IP。可用的cid范围为：4-4294967294，未配置使用默认值4；
 
-可选项：--debug-mode，指定是否在调试模式下启动擎天Enclave实例，该模式下使用全部为0的PCR散列值，可以收集打印擎天Enclave虚拟机内部日志；
+可选项：--debug-mode，指定是否在调试模式下启动QingTian Enclave实例，该模式下使用全部为0的PCR散列值，可以收集打印QingTian Enclave虚拟机内部日志；
 
-命令行返回值：创建成功后输出创建的擎天Enclave虚拟机详细信息。
+命令行返回值：创建成功后输出创建的QingTian Enclave虚拟机详细信息。
 
 Enclave虚拟机启动命令示例：
 
@@ -146,7 +146,7 @@ qt enclave start --cpus 2 --mem 1024 --eif /home/docker/ubuntu.eif --cid 4
 
 ## qt enclave query<a name="zh-cn_topic_0000001409233153_section1519411261101"></a>
 
-该命令用于在父虚拟机内查询当前已创建的擎天Enclave虚拟机信息，命令格式如下：
+该命令用于在父虚拟机内查询当前已创建的QingTian Enclave虚拟机信息，命令格式如下：
 
 ```
 [root@localhost ~]# qt enclave query -h
@@ -175,21 +175,21 @@ Examples
     qt enclave query
 ```
 
-可选项：--enclave-id，query时带此参数则查询指定擎天Enclave虚拟机信息，否则查询全部当前已存在擎天Enclave虚拟机信息；
+可选项：--enclave-id，query时带此参数则查询指定QingTian Enclave虚拟机信息，否则查询全部当前已存在QingTian Enclave虚拟机信息；
 
-命令行返回值，查询到的擎天Enclave虚拟机信息：
+命令行返回值，查询到的QingTian Enclave虚拟机信息：
 
--   EnclaveID：擎天Enclave虚拟机的id号；
+-   EnclaveID：QingTian Enclave虚拟机的id号；
 
--   ProcessID：父虚拟机中持有擎天Enclave资源的进程的进程号PID；
+-   ProcessID：父虚拟机中持有QingTian Enclave资源的进程号PID；
 
--   EnclaveCID：擎天Enclave虚拟机与父虚拟机通信使用的vsock socket id；
+-   EnclaveCID：QingTian Enclave虚拟机与父虚拟机通信使用的vsock socket id；
 
--   NumberOfCPUs：从父虚拟机分配给擎天Enclave虚拟机的vCPU个数；
+-   NumberOfCPUs：从父虚拟机分配给QingTian Enclave虚拟机的vCPU个数；
 
--   MemoryMiB：从父虚拟机分配给擎天Enclave虚拟机的内存大小\(MB\)；
+-   MemoryMiB：从父虚拟机分配给QingTian Enclave虚拟机的内存大小\(MB\)；
 
-擎天Enclave虚拟机查询命令示例：
+QingTian Enclave虚拟机查询命令示例：
 
 ```
 [root@localhost ~]#qt enclave query
@@ -203,13 +203,13 @@ Examples
     }]
 ```
 
-若当前无擎天Enclave虚拟机存在，则该命令查询返回空；
+若当前无QingTian Enclave虚拟机存在，则该命令查询返回空；
 
-带--enclave-id参数查询场景，若指定enclave-id的擎天Enclave虚拟机不存在， 查询命令返回空。
+带--enclave-id参数查询场景，若指定enclave-id的QingTian Enclave虚拟机不存在， 查询命令返回空。
 
 ## qt enclave stop<a name="zh-cn_topic_0000001409233153_section17553194211114"></a>
 
-该命令用于在父虚拟机内销毁已创建的擎天Enclave虚拟机，命令格式如下：
+该命令用于在父虚拟机内销毁已创建的QingTian Enclave虚拟机，命令格式如下：
 
 ```
 [root@localhost ~]# qt enclave stop -h
@@ -235,11 +235,11 @@ Examples
    qt enclave stop --enclave-id [ENCLAVE-ID]
 ```
 
-必选项：--enclave-id，指定需要销毁的擎天Enclave虚拟机的enclave-id
+必选项：--enclave-id，指定需要销毁的QingTian Enclave虚拟机的enclave-id
 
 命令行返回值：成功返回销毁成功，销毁失败无返回。
 
-擎天Enclave虚拟机销毁命令示例：
+QingTian Enclave虚拟机销毁命令示例：
 
 ```
 [root@localhost ~]# qt enclave stop --enclave-id 1
@@ -248,7 +248,7 @@ stop 1 success
 
 ## qt enclave console<a name="zh-cn_topic_0000001409233153_section31371042185915"></a>
 
-在启动擎天Enclave时，指定为debug-mode时，用于在父虚拟机中查看擎天Enclave中的只读控制台输出，命令格式如下：
+在启动QingTian Enclave时，指定为debug-mode时，用于在父虚拟机中查看QingTian Enclave中的只读控制台输出，命令格式如下：
 
 ```
 [root@localhost ~]# qt enclave console -h
@@ -274,9 +274,9 @@ Examples
         qt enclave console --enclave-id [ENCLAVE-ID]
 ```
 
-必选项：--enclave-id，指定需要获取只读控制台输出的擎天Enclave虚拟机的enclave-id。
+必选项：--enclave-id，指定需要获取只读控制台输出的QingTian Enclave虚拟机的enclave-id。
 
-命令行执行成功后，会打印擎天Enclave虚拟机的只读控制台输出，如下所示：
+命令行执行成功后，会打印QingTian Enclave虚拟机的只读控制台输出，如下所示：
 
 ```
 hello enclave! 
@@ -285,5 +285,5 @@ hello enclave!
 hello enclave!
 ```
 
-您可以使用ctrl+c的方式退出该命令。需要注意的是，在同一时间我们只允许一个qt enclave console命令作用于一个指定的擎天Enclave实例。
+您可以使用ctrl+c的方式退出该命令。需要注意的是，在同一时间我们只允许一个qt enclave console命令作用于一个指定的QingTian Enclave实例。
 

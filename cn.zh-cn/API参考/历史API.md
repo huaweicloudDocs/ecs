@@ -24,4 +24,3 @@
 
 -   **[快照管理（OpenStack Nova API）](快照管理（OpenStack-Nova-API）.md)**  
 
-

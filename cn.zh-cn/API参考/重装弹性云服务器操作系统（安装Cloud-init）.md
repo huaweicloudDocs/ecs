@@ -4,6 +4,8 @@
 
 重装弹性云服务器的操作系统。支持弹性云服务器数据盘不变的情况下，使用原镜像重装系统盘。
 
+本接口为异步接口，当前重装弹性云服务器操作系统请求下发成功后会返回job\_id，此时重装弹性云服务器操作系统并没有立即完成，需要通过调用[查询任务的执行状态](查询任务的执行状态.md)查询job状态，当Job状态为 SUCCESS 时代表云服务器操作系统重装成功。
+
 调用该接口后，系统将卸载系统盘，然后使用原镜像重新创建系统盘，并挂载至弹性云服务器，实现重装操作系统功能。
 
 ## 接口约束<a name="section2842257210401"></a>
@@ -99,8 +101,8 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 </td>
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p25162958"><a name="p25162958"></a><a name="p25162958"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16847167112050"><a name="p16847167112050"></a><a name="p16847167112050"></a><span id="text26955862318"><a name="text26955862318"></a><a name="text26955862318"></a>云服务器</span>管理员帐户的初始登录密码。</p>
-<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员帐户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
+<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16847167112050"><a name="p16847167112050"></a><a name="p16847167112050"></a><span id="text26955862318"><a name="text26955862318"></a><a name="text26955862318"></a>云服务器</span>管理员账户的初始登录密码。</p>
+<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员账户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
 <p id="p11576631102714"><a name="p11576631102714"></a><a name="p11576631102714"></a>建议密码复杂度如下：</p>
 <a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?~#*）中的三种。</li></ul>
 <div class="note" id="note65349643112129"><a name="note65349643112129"></a><a name="note65349643112129"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul58921915515"></a><a name="ul58921915515"></a><ul id="ul58921915515"><li>对于Windows<span id="text1891219483"><a name="text1891219483"></a><a name="text1891219483"></a>弹性云服务器</span>，密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>对于Linux弹性云服务器也可使用user_data字段实现密码注入，此时adminpass字段无效。</li><li>adminpass和keyname不能同时有值。</li><li>adminpass和keyname如果同时为空，此时，metadata中的user_data属性必须有值。</li></ul>
@@ -124,7 +126,7 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p1471297410289"><a name="p1471297410289"></a><a name="p1471297410289"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。</p>
-<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ol118119201404"></a><a name="ol118119201404"></a><ol id="ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看用户ID。</li></ol>
+<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ol118119201404"></a><a name="ol118119201404"></a><ol id="ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看IAM用户ID。</li></ol>
 </div>
 </td>
 </tr>
@@ -177,13 +179,13 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 <p id="p10685165919553"><a name="p10685165919553"></a><a name="p10685165919553"></a>了解更多实例自定义数据注入请参考<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html" target="_blank" rel="noopener noreferrer">用户数据注入</a>。</p>
 <p id="p1633783620117"><a name="p1633783620117"></a><a name="p1633783620117"></a>示例：</p>
 <p id="p12545313524"><a name="p12545313524"></a><a name="p12545313524"></a>base64编码前：</p>
-<a name="ul13541314520"></a><a name="ul13541314520"></a><ul id="ul13541314520"><li>Linux服务器：<pre class="screen" id="screen16541531125220"><a name="screen16541531125220"></a><a name="screen16541531125220"></a>#! /bin/bash
-echo user_test &gt;&gt; /home/user.txt</pre>
+<a name="ul13541314520"></a><a name="ul13541314520"></a><ul id="ul13541314520"><li>Linux服务器：<pre class="screen" id="screen16541531125220"><a name="screen16541531125220"></a><a name="screen16541531125220"></a>#!/bin/bash
+echo user_test &gt; /home/user.txt</pre>
 </li><li>Windows服务器：<pre class="screen" id="screen35418316520"><a name="screen35418316520"></a><a name="screen35418316520"></a>rem cmd
 echo 111 &gt; c:\aaa.txt</pre>
 </li></ul>
 <p id="p16762152318318"><a name="p16762152318318"></a><a name="p16762152318318"></a>base64编码后：</p>
-<a name="ul2069415489311"></a><a name="ul2069415489311"></a><ul id="ul2069415489311"><li>Linux服务器：<pre class="screen" id="screen1769415480317"><a name="screen1769415480317"></a><a name="screen1769415480317"></a>IyEgL2Jpbi9iYXNoDQplY2hvIHVzZXJfdGVzdCAmZ3Q7Jmd0OyAvaG9tZS91c2VyLnR4dA==</pre>
+<a name="ul2069415489311"></a><a name="ul2069415489311"></a><ul id="ul2069415489311"><li>Linux服务器：<pre class="screen" id="screen1769415480317"><a name="screen1769415480317"></a><a name="screen1769415480317"></a>IyEvYmluL2Jhc2gKZWNobyB1c2VyX3Rlc3QgPiAvaG9tZS91c2VyLnR4dA==</pre>
 </li><li>Windows服务器：<pre class="screen" id="screen1969444873114"><a name="screen1969444873114"></a><a name="screen1969444873114"></a>cmVtIGNtZAplY2hvIDExMSA+IGM6XGFhYS50eHQ=</pre>
 </li></ul>
 </td>
@@ -218,28 +220,25 @@ echo 111 &gt; c:\aaa.txt</pre>
 
 ## 请求示例<a name="section4722162513312"></a>
 
--   请求URL示例
+-   重装云服务器操作系统，重装后采用密码方式登录鉴权，建议将密码在配置文件或者环境变量中密文存放，使用时解密，确保安全。
 
     ```
     POST https://{endpoint}/v2/{project_id}/cloudservers/{server_id}/reinstallos
-    ```
-
--   请求示例1（使用密码方式远程登录重装后的系统）
-
-    ```
+    
     {
         "os-reinstall": {
-            "adminpass": "!QAZxsw2", 
+            "adminpass": "$ADMIN_PASS",
             "userid": "7e25b1da389f4697a79df3a0e5bd494e",
             "mode": "withStopServer"
         }
     }
     ```
 
-
--   请求示例2（使用密钥方式远程登录重装后的系统）
+-   重装云服务器操作系统，重装后采用密钥方式登录鉴权。
 
     ```
+    POST https://{endpoint}/v2/{project_id}/cloudservers/{server_id}/reinstallos
+    
     {
         "os-reinstall": {
             "keyname": "KeyPair-350b", 
@@ -248,6 +247,22 @@ echo 111 &gt; c:\aaa.txt</pre>
     }
     ```
 
+-   使用系统盘加密的整机镜像重装云服务器的操作系统，重装后使用密码方式登录鉴权，建议将密码在配置文件或者环境变量中密文存放，使用时解密，确保安全。
+
+    ```
+    POST https://{endpoint}/v2/{project_id}/cloudservers/{server_id}/reinstallos
+    
+    {
+        "os-reinstall": { 
+            "adminpass": "$ADMIN_PASS",
+            "userid": "7e25b1da389f4697a79df3a0e5bd494e",
+            "metadata": {
+                  "__system__encrypted": "1",
+                  "__system__cmkid": "83cdb52d-9ebf-4469-9cfa-e7b5b80da846"
+            }
+        }
+    }
+    ```
 
 ## 响应示例<a name="section079845214419"></a>
 
@@ -255,7 +270,7 @@ echo 111 &gt; c:\aaa.txt</pre>
 
 ```
 {      
-    "job_id": "70a599e0-31e7-49b7-b260-868f441e862b" 
+    "job_id": "ff80808288d41e1b018990260955686a" 
 }
 ```
 

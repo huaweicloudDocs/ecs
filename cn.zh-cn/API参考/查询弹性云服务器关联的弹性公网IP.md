@@ -22,7 +22,7 @@
 
     -   请求示例
 
-        GET:   https://_\{endpoint__\}_/v1/743b4c0428d945316666666666666666/cloudservers/893c7791-f1df-4c3d-8383-3caae9656c62
+        GET https://_\{endpoint__\}_/v1/743b4c0428d945316666666666666666/cloudservers/893c7791-f1df-4c3d-8383-3caae9656c62
 
         \{endpoint\}信息请从[地区和终端节点](https://developer.huaweicloud.com/endpoint?ECS)获取。
 
@@ -138,7 +138,7 @@
 
     -   请求示例
 
-        GET:   https://_\{endpoint__\}_/v1/743b4c0428d945316666666666666666/publicips?public\_ip\_address=121.xx.xx.64
+        GET https://_\{endpoint__\}_/v1/743b4c0428d945316666666666666666/publicips?public\_ip\_address=121.xx.xx.64
 
         \{endpoint\}信息请从[地区和终端节点](https://developer.huaweicloud.com/endpoint?ECS)获取。
 
@@ -167,6 +167,4 @@
         	}]
         }
         ```
-
-
 

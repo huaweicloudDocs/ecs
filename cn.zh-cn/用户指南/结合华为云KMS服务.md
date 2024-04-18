@@ -1,8 +1,8 @@
 # 结合华为云KMS服务<a name="ecs_03_1413"></a>
 
-华为云KMS服务内置了对擎天Enclave证明的支持。通过使用擎天Enclave SDK中包含的华为云KMS API，您可以在擎天Enclave实例中基于擎天Enclave证明来执行华为云KMS操作，比如解密、生成随机数和加密等操作。华为云KMS服务提取来自擎天Enclave的证明文档并根据预设的IAM授权策略对其进行访问权限控制。
+华为云KMS服务内置了对QingTian Enclave证明的支持。通过使用QingTian Enclave SDK中包含的华为云KMS API，您可以在QingTian Enclave实例中基于QingTian Enclave证明来执行华为云KMS操作，比如解密、生成随机数和加密等操作。华为云KMS服务提取来自QingTian Enclave的证明文档并根据预设的IAM授权策略对其进行访问权限控制。
 
-比如，如下是一个IAM授权策略的举例。该授权策略允许调用KMS的解密数据或解密数据密钥功能API，但限制条件是要求请求者必须在擎天Enclave环境中运行，且Enclave的度量值PCR0和PCR8都必须和指定的PCR值相同。
+比如，如下是一个IAM授权策略的举例。该授权策略允许调用KMS的解密数据或解密数据密钥功能API，但限制条件是要求请求者必须在QingTian Enclave环境中运行，且Enclave的度量值PCR0和PCR8都必须和指定的PCR值相同。
 
 ```
 { 

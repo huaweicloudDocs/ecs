@@ -4,6 +4,8 @@
 
 切换弹性云服务器操作系统。
 
+本接口为异步接口，当前切换弹性云服务器操作系统请求下发成功后会返回job\_id，此时切换弹性云服务器操作系统并没有立即完成，需要通过调用[查询任务的执行状态](查询任务的执行状态.md)查询job状态，当Job状态为 SUCCESS 时代表云服务器操作系统切换成功。
+
 调用该接口后，系统将卸载系统盘，然后使用新镜像重新创建系统盘，并挂载至弹性云服务器，实现切换操作系统功能。
 
 该接口支持未安装Cloud-init或Cloudbase-init的镜像使用，如果镜像安装了Cloud-init或者Cloudbase-init，请使用  [切换弹性云服务器操作系统（安装Cloud-init）](切换弹性云服务器操作系统（安装Cloud-init）.md)接口。
@@ -100,8 +102,8 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </td>
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p25162958"><a name="p25162958"></a><a name="p25162958"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p47739706113712"><a name="p47739706113712"></a><a name="p47739706113712"></a>云服务器管理员帐户的初始登录密码。</p>
-<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员帐户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
+<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p47739706113712"><a name="p47739706113712"></a><a name="p47739706113712"></a>云服务器管理员账户的初始登录密码。</p>
+<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员账户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
 <p id="p11576631102714"><a name="p11576631102714"></a><a name="p11576631102714"></a>建议密码复杂度如下：</p>
 <a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?~#*）中的三种。</li></ul>
 <div class="note" id="note15723730113732"><a name="note15723730113732"></a><a name="note15723730113732"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul11278217125417"></a><a name="ul11278217125417"></a><ul id="ul11278217125417"><li>Windows云服务器仅支持密码方式，且密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>adminpass和keyname不能同时为空。</li><li>adminpass和keyname不能同时有值。</li></ul>
@@ -125,7 +127,7 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p1471297410289"><a name="p1471297410289"></a><a name="p1471297410289"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。当传入keyname参数时，优先使用本参数设置的userid，若userid为空，默认使用当前token中的userid。</p>
-<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ecs_02_0201_ol118119201404"></a><a name="ecs_02_0201_ol118119201404"></a><ol id="ecs_02_0201_ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看用户ID。</li></ol>
+<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ecs_02_0201_ol118119201404"></a><a name="ecs_02_0201_ol118119201404"></a><ol id="ecs_02_0201_ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看IAM用户ID。</li></ol>
 </div>
 </td>
 </tr>
@@ -137,6 +139,18 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </td>
 <td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p25692204104537"><a name="p25692204104537"></a><a name="p25692204104537"></a>切换系统所使用的新镜像的ID，格式为UUID。</p>
 <p id="p528161524217"><a name="p528161524217"></a><a name="p528161524217"></a>镜像的ID可以从控制台或者参考<a href="https://support.huaweicloud.com/api-ims/ims_03_0702.html" target="_blank" rel="noopener noreferrer">《镜像服务API参考》</a>的“查询镜像列表”的章节获取。</p>
+</td>
+</tr>
+<tr id="row1751215714443"><td class="cellrowborder" valign="top" width="21.74217421742174%" headers="mcps1.2.5.1.1 "><p id="p0740226391"><a name="p0740226391"></a><a name="p0740226391"></a>isAutoPay</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.601360136013602%" headers="mcps1.2.5.1.2 "><p id="p27401623392"><a name="p27401623392"></a><a name="p27401623392"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p147404223914"><a name="p147404223914"></a><a name="p147404223914"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p187401822393"><a name="p187401822393"></a><a name="p187401822393"></a>下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。</p>
+<a name="ul1126212684113"></a><a name="ul1126212684113"></a><ul id="ul1126212684113"><li>“true”：是（自动支付）</li><li>“false”：否（需要客户手动支付）</li></ul>
+<div class="note" id="note614413415406"><a name="note614413415406"></a><a name="note614413415406"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p41601641154019"><a name="p41601641154019"></a><a name="p41601641154019"></a>适用于包年/包月虚拟机费用发生变化时，不传该字段时默认为客户手动支付。</p>
+</div></div>
 </td>
 </tr>
 <tr id="row6144862102847"><td class="cellrowborder" valign="top" width="21.74217421742174%" headers="mcps1.2.5.1.1 "><p id="p27971812102847"><a name="p27971812102847"></a><a name="p27971812102847"></a>metadata</p>
@@ -206,11 +220,11 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 
 ## 请求示例<a name="section7786195110396"></a>
 
-```
-POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/changeos
-```
+切换云服务器操作系统，切换后采用密钥方式登录鉴权。
 
 ```
+POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/changeos
+
 {
     "os-change": {
         "keyname": "KeyPair-350b", 
@@ -220,7 +234,7 @@ POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/changeos
               "__system__encrypted": "1",
               "__system__cmkid": "83cdb52d-9ebf-4469-9cfa-e7b5b80da846"
         },
-       "mode": "withStopServer"
+        "mode": "withStopServer"
     }
 }
 ```
@@ -231,7 +245,7 @@ POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/changeos
 
 ```
 {      
-    "job_id": "70a599e0-31e7-49b7-b260-868f441e862b" 
+    "job_id": "ff80808288d41e1b018990260955686a"
 } 
 ```
 

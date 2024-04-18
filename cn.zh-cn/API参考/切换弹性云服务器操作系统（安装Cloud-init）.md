@@ -4,6 +4,8 @@
 
 切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。
 
+本接口为异步接口，当前切换弹性云服务器操作系统请求下发成功后会返回job\_id，此时切换弹性云服务器操作系统并没有立即完成，需要通过调用[查询任务的执行状态](查询任务的执行状态.md)查询job状态，当Job状态为 SUCCESS 时代表云服务器操作系统切换成功。
+
 调用该接口后，系统将卸载系统盘，然后使用新镜像重新创建系统盘，并挂载至弹性云服务器，实现切换操作系统功能。
 
 ## 接口约束<a name="section2842257210401"></a>
@@ -99,8 +101,8 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </td>
 <td class="cellrowborder" valign="top" width="15.879999999999999%" headers="mcps1.2.5.1.3 "><p id="p25162958"><a name="p25162958"></a><a name="p25162958"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p47739706113712"><a name="p47739706113712"></a><a name="p47739706113712"></a><span id="text51831520162420"><a name="text51831520162420"></a><a name="text51831520162420"></a>云服务器</span>管理员帐户的初始登录密码。</p>
-<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员帐户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
+<td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p47739706113712"><a name="p47739706113712"></a><a name="p47739706113712"></a><span id="text51831520162420"><a name="text51831520162420"></a><a name="text51831520162420"></a>云服务器</span>管理员账户的初始登录密码。</p>
+<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员账户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
 <p id="p11576631102714"><a name="p11576631102714"></a><a name="p11576631102714"></a>建议密码复杂度如下：</p>
 <a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?~#*）中的三种。</li></ul>
 <div class="note" id="note15723730113732"><a name="note15723730113732"></a><a name="note15723730113732"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul1384211203571"></a><a name="ul1384211203571"></a><ul id="ul1384211203571"><li>Windows<span id="text1944152117246"><a name="text1944152117246"></a><a name="text1944152117246"></a>云服务器</span>的密码，不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>对于Linux弹性云服务器也可使用user_data字段实现密码注入，此时adminpass字段无效。</li><li>adminpass和keyname不能同时有值。</li><li>adminpass和keyname如果同时为空，此时，linux可使用metadata中的user_data。</li><li>仅在使用私有镜像密码或切换后设置密码的场景，adminpass、keyname和metadata中的user_data属性值可以同时为空，且有以下约束条件：<p id="p937583515510"><a name="p937583515510"></a><a name="p937583515510"></a>Windows操作系统不支持使用私有镜像密码。</p>
@@ -126,7 +128,7 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <td class="cellrowborder" valign="top" width="15.879999999999999%" headers="mcps1.2.5.1.3 "><p id="p1471297410289"><a name="p1471297410289"></a><a name="p1471297410289"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p5090020910289"><a name="p5090020910289"></a><a name="p5090020910289"></a>用户ID。当传入keyname参数时，优先使用本参数设置的userid，若userid为空，默认使用当前token中的userid。</p>
-<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ecs_02_0201_ol118119201404"></a><a name="ecs_02_0201_ol118119201404"></a><ol id="ecs_02_0201_ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看用户ID。</li></ol>
+<div class="p" id="p650419516719"><a name="p650419516719"></a><a name="p650419516719"></a>查看用户ID方法：<a name="ecs_02_0201_ol118119201404"></a><a name="ecs_02_0201_ol118119201404"></a><ol id="ecs_02_0201_ol118119201404"><li>登录管理控制台。</li><li>单击用户名，在下拉列表中单击“我的凭证”。在该页面查看IAM用户ID。</li></ol>
 </div>
 </td>
 </tr>
@@ -138,6 +140,18 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 </td>
 <td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p25692204104537"><a name="p25692204104537"></a><a name="p25692204104537"></a>切换系统所使用的新镜像的ID，格式为UUID。</p>
 <p id="p528161524217"><a name="p528161524217"></a><a name="p528161524217"></a>镜像的ID可以从控制台或者参考<a href="https://support.huaweicloud.com/api-ims/ims_03_0702.html" target="_blank" rel="noopener noreferrer">《镜像服务API参考》</a>的“查询镜像列表”的章节获取。</p>
+</td>
+</tr>
+<tr id="row12639653124210"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p7424654114219"><a name="p7424654114219"></a><a name="p7424654114219"></a>isAutoPay</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.01%" headers="mcps1.2.5.1.2 "><p id="p242417540427"><a name="p242417540427"></a><a name="p242417540427"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.879999999999999%" headers="mcps1.2.5.1.3 "><p id="p942412548429"><a name="p942412548429"></a><a name="p942412548429"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="48.120000000000005%" headers="mcps1.2.5.1.4 "><p id="p9425145464219"><a name="p9425145464219"></a><a name="p9425145464219"></a>下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。</p>
+<a name="ul11425205410423"></a><a name="ul11425205410423"></a><ul id="ul11425205410423"><li>“true”：是（自动支付）</li><li>“false”：否（需要客户手动支付）</li></ul>
+<div class="note" id="note642595413424"><a name="note642595413424"></a><a name="note642595413424"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p104256542424"><a name="p104256542424"></a><a name="p104256542424"></a>适用于包年/包月虚拟机费用发生变化时，不传该字段时默认为客户手动支付。</p>
+</div></div>
 </td>
 </tr>
 <tr id="row6144862102847"><td class="cellrowborder" valign="top" width="21.990000000000002%" headers="mcps1.2.5.1.1 "><p id="p27971812102847"><a name="p27971812102847"></a><a name="p27971812102847"></a>metadata</p>
@@ -188,13 +202,13 @@ POST /v2/\{project\_id\}/cloudservers/\{server\_id\}/changeos
 <p id="p10685165919553"><a name="p10685165919553"></a><a name="p10685165919553"></a>了解更多实例自定义数据注入请参考<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html" target="_blank" rel="noopener noreferrer">用户数据注入</a>。</p>
 <p id="p1633783620117"><a name="p1633783620117"></a><a name="p1633783620117"></a>示例：</p>
 <p id="p12545313524"><a name="p12545313524"></a><a name="p12545313524"></a>base64编码前：</p>
-<a name="ul13541314520"></a><a name="ul13541314520"></a><ul id="ul13541314520"><li>Linux服务器：<pre class="screen" id="screen16541531125220"><a name="screen16541531125220"></a><a name="screen16541531125220"></a>#! /bin/bash
-echo user_test &gt;&gt; /home/user.txt</pre>
+<a name="ul13541314520"></a><a name="ul13541314520"></a><ul id="ul13541314520"><li>Linux服务器：<pre class="screen" id="screen16541531125220"><a name="screen16541531125220"></a><a name="screen16541531125220"></a>#!/bin/bash
+echo user_test &gt; /home/user.txt</pre>
 </li><li>Windows服务器：<pre class="screen" id="screen35418316520"><a name="screen35418316520"></a><a name="screen35418316520"></a>rem cmd
 echo 111 &gt; c:\aaa.txt</pre>
 </li></ul>
 <p id="p16762152318318"><a name="p16762152318318"></a><a name="p16762152318318"></a>base64编码后：</p>
-<a name="ul2069415489311"></a><a name="ul2069415489311"></a><ul id="ul2069415489311"><li>Linux服务器：<pre class="screen" id="screen1769415480317"><a name="screen1769415480317"></a><a name="screen1769415480317"></a>IyEgL2Jpbi9iYXNoDQplY2hvIHVzZXJfdGVzdCAmZ3Q7Jmd0OyAvaG9tZS91c2VyLnR4dA==</pre>
+<a name="ul2069415489311"></a><a name="ul2069415489311"></a><ul id="ul2069415489311"><li>Linux服务器：<pre class="screen" id="screen1769415480317"><a name="screen1769415480317"></a><a name="screen1769415480317"></a>IyEvYmluL2Jhc2gKZWNobyB1c2VyX3Rlc3QgPiAvaG9tZS91c2VyLnR4dA==</pre>
 </li><li>Windows服务器：<pre class="screen" id="screen1969444873114"><a name="screen1969444873114"></a><a name="screen1969444873114"></a>cmVtIGNtZAplY2hvIDExMSA+IGM6XGFhYS50eHQ=</pre>
 </li></ul>
 </td>
@@ -229,19 +243,14 @@ echo 111 &gt; c:\aaa.txt</pre>
 
 ## 请求示例<a name="section6230163813416"></a>
 
--   请求URL示例
+-   切换云服务器操作系统，切换后采用密码方式登录鉴权，建议将密码在配置文件或者环境变量中密文存放，使用时解密，确保安全。
 
     ```
     POST https://{endpoint}/v2/{project_id}/cloudservers/{server_id}/changeos
-    ```
-
-
--   请求示例1（使用密码方式远程登录重装后的系统）
-
-    ```
+    
     {
         "os-change": {
-            "adminpass": "1qazXSW@", 
+            "adminpass": "$ADMIN_PASS",
             "userid": "7e25b1da389f4697a79df3a0e5bd494e", 
             "imageid": "e215580f-73ad-429d-b6f2-5433947433b0",
             "mode": "withStopServer"
@@ -249,10 +258,11 @@ echo 111 &gt; c:\aaa.txt</pre>
     }
     ```
 
-
--   请求示例2（使用密钥方式远程登录重装后的系统）
+-   切换云服务器操作系统，切换后采用密钥方式登录鉴权。
 
     ```
+    POST https://{endpoint}/v2/{project_id}/cloudservers/{server_id}/changeos
+    
     {
         "os-change": {
             "keyname": "KeyPair-350b", 
@@ -262,6 +272,23 @@ echo 111 &gt; c:\aaa.txt</pre>
     }
     ```
 
+-   使用系统盘加密的整机镜像切换云服务器的操作系统，切换后使用密码方式登录鉴权，建议将密码在配置文件或者环境变量中密文存放，使用时解密，确保安全。
+
+    ```
+    POST https://{endpoint}/v2/{project_id}/cloudservers/{server_id}/changeos
+    
+    {
+        "os-change": {
+            "adminpass": "$ADMIN_PASS",
+            "userid": "7e25b1da389f4697a79df3a0e5bd494e", 
+            "imageid": "e215580f-73ad-429d-b6f2-5433947433b0", 
+            "metadata": {
+                  "__system__encrypted": "1",
+                  "__system__cmkid": "83cdb52d-9ebf-4469-9cfa-e7b5b80da846"
+            }
+        }
+    }
+    ```
 
 ## 响应示例<a name="section449243013451"></a>
 
@@ -269,7 +296,7 @@ echo 111 &gt; c:\aaa.txt</pre>
 
 ```
 {      
-    "job_id": "70a599e0-31e7-49b7-b260-868f441e862b" 
+    "job_id": "ff80808288d41e1b018990260955686a" 
 }
 ```
 

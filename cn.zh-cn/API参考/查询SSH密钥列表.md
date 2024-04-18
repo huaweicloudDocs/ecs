@@ -131,6 +131,8 @@ GET /v2.1/\{project\_id\}/os-keypairs
 
 ## 请求示例<a name="section13755153085015"></a>
 
+查询SSH密钥信息列表。
+
 ```
 GET https://{endpoint}/v2.1/{project_id}/os-keypairs
 ```
@@ -142,10 +144,10 @@ GET https://{endpoint}/v2.1/{project_id}/os-keypairs
     "keypairs": [
         {
             "keypair": {
-                "fingerprint": "15:b0:f8:b3:f9:48:63:71:cf:7b:5b:38:6d:44:2d:4a",
+                "fingerprint": "15:b0:f8:b3:f9:48:63:**:**:**:**:**:**:**:**:**",
                 "name": "keypair-601a2305-4f25-41ed-89c6-2a966fc8027a",
                 "type": "ssh",
-                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQC+Eo/RZRngaGTkFs7I62ZjsIlO79KklKbMXi8F+KITD4bVQHHn+kV+4gRgkgCRbdoDqoGfpaDFs877DYX9n4z6FrAIZ4PES8TNKhatifpn9NdQYWA+IkU8CuvlEKGuFpKRi/k7JLos/gHi2hy7QUwgtRvcefvD/vgQZOVw/mGR9Q== Generated-by-Nova\n"
+                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQC+Eo/RZRngaGTkFs7I62ZjsIlO79Kkl****************************************************************************************************************************************************** Generated-by-Nova\n"
             }
         }
     ]

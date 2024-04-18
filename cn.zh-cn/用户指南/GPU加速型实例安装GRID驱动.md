@@ -34,14 +34,13 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
 
     打开[NVIDIA官方网站](https://www.nvidia.com/object/nvidia-enterprise-account.html)，填写相关信息。
 
-    注册帐号和申请试用版License的注意事项请参见[NVIDIA官方帮助页](https://nvid.nvidia.com/NvidiaUtilities/#/needHelp)。
+    注册账号和申请试用版License的注意事项请参见[NVIDIA官方帮助页](https://nvid.nvidia.com/NvidiaUtilities/#/needHelp)。
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >试用版License的使用方法和正式版本的License一致，可以保留试用版帐号激活正式版本的License，无需重新注册。试用版License有限期限为90天，帐号过期将无法使用，请尽快购买正式版本。
+    >试用版License的使用方法和正式版本的License一致，可以保留试用版账号激活正式版本的License，无需重新注册。试用版License有限期限为90天，账号过期将无法使用，请尽快购买正式版本。
 
     **图 1**  申请试用版License<a name="fig45088922717"></a>  
     ![](figures/申请试用版License.png "申请试用版License")
-
 
 ## 下载GRID驱动及License软件包<a name="section91244318407"></a>
 
@@ -56,9 +55,9 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
     **表 1**  GPU实例类型支持的GRID驱动版本
 
     <a name="table188851534175019"></a>
-    <table><thead align="left"><tr id="row38821334115015"><th class="cellrowborder" valign="top" width="10.59105910591059%" id="mcps1.2.6.1.1"><p id="p11882134205019"><a name="p11882134205019"></a><a name="p11882134205019"></a>实例类型</p>
+    <table><thead align="left"><tr id="row38821334115015"><th class="cellrowborder" valign="top" width="10.611061106110611%" id="mcps1.2.6.1.1"><p id="p11882134205019"><a name="p11882134205019"></a><a name="p11882134205019"></a>实例类型</p>
     </th>
-    <th class="cellrowborder" valign="top" width="16.181618161816182%" id="mcps1.2.6.1.2"><p id="p15882113415507"><a name="p15882113415507"></a><a name="p15882113415507"></a>GPU挂载方式</p>
+    <th class="cellrowborder" valign="top" width="16.16161616161616%" id="mcps1.2.6.1.2"><p id="p15882113415507"><a name="p15882113415507"></a><a name="p15882113415507"></a>GPU挂载方式</p>
     </th>
     <th class="cellrowborder" valign="top" width="38.76387638763876%" id="mcps1.2.6.1.3"><p id="p68821634185016"><a name="p68821634185016"></a><a name="p68821634185016"></a>操作系统</p>
     </th>
@@ -68,121 +67,121 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
     </th>
     </tr>
     </thead>
-    <tbody><tr id="row23595915223"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p123585952219"><a name="p123585952219"></a><a name="p123585952219"></a>G6v</p>
+    <tbody><tr id="row23595915223"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p123585952219"><a name="p123585952219"></a><a name="p123585952219"></a>G6v</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p2361596227"><a name="p2361596227"></a><a name="p2361596227"></a>GPU虚拟化型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p2361596227"><a name="p2361596227"></a><a name="p2361596227"></a>GPU虚拟化型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1362673810234"></a><a name="ul1362673810234"></a><ul id="ul1362673810234"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 7.6 64bit</li><li>Ubuntu Server 20.04 64bit</li><li>Ubuntu Server 18.04 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul44951548306"></a><a name="ul44951548306"></a><ul id="ul44951548306"><li>CentOS 8.2 64bit</li><li>CentOS 7.6 64bit</li><li>Ubuntu 20.04 server 64bit</li><li>Ubuntu 18.04 server 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p48111812192311"><a name="p48111812192311"></a><a name="p48111812192311"></a>GRID 11.1</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p4811121242315"><a name="p4811121242315"></a><a name="p4811121242315"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1288220341507"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p17882143415503"><a name="p17882143415503"></a><a name="p17882143415503"></a>G6</p>
+    <tr id="row1288220341507"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p17882143415503"><a name="p17882143415503"></a><a name="p17882143415503"></a>G6</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p11882634175015"><a name="p11882634175015"></a><a name="p11882634175015"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p11882634175015"><a name="p11882634175015"></a><a name="p11882634175015"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul128821934165016"></a><a name="ul128821934165016"></a><ul id="ul128821934165016"><li>Windows Server 2019 标准版 64bit</li><li>Windows Server 2016 标准版 64bit</li><li>Windows Server 2019 数据中心版 64bit</li><li>Windows Server 2016 数据中心版 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 8.1 64bit</li><li>CentOS 8.0 64bit</li><li>CentOS 7.9 64bit</li><li>CentOS 7.8 64bit</li><li>CentOS 7.7 64bit</li><li>CentOS 7.6 64bit</li><li>CentOS 7.5 64bit</li><li>Ubuntu Server 22.04 64bit</li><li>Ubuntu Server 20.04 64bit</li><li>Ubuntu Server 18.04 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>Huawei Cloud EulerOS 2.0 64bit for GPU</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul154511636224"></a><a name="ul154511636224"></a><ul id="ul154511636224"><li>Huawei Cloud EulerOS 2.0 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 8.1 64bit</li><li>CentOS 8.0 64bit</li><li>CentOS 7.9 64bit</li><li>CentOS 7.8 64bit</li><li>CentOS 7.7 64bit</li><li>CentOS 7.6 64bit</li><li>CentOS 7.5 64bit</li><li>Ubuntu 22.04 64bit</li><li>Ubuntu 20.04 64bit</li><li>Ubuntu 18.04 64bit</li><li>Ubuntu 16.04 64bit</li><li>Windows Server 2022 Standard 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2022 Datacenter 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p11882153495013"><a name="p11882153495013"></a><a name="p11882153495013"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p138821834155016"><a name="p138821834155016"></a><a name="p138821834155016"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1088383418500"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p6173323202415"><a name="p6173323202415"></a><a name="p6173323202415"></a>G5.8xlarge.4</p>
+    <tr id="row1088383418500"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p6173323202415"><a name="p6173323202415"></a><a name="p6173323202415"></a>G5.8xlarge.4</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p5882133411506"><a name="p5882133411506"></a><a name="p5882133411506"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p5882133411506"><a name="p5882133411506"></a><a name="p5882133411506"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul288211347506"></a><a name="ul288211347506"></a><ul id="ul288211347506"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 7.6 64bit</li><li>CentOS 7.5 64bit</li><li>Ubuntu Server 20.04 64bit</li><li>Ubuntu Server 18.04 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1113872049"></a><a name="ul1113872049"></a><ul id="ul1113872049"><li>CentOS 8.2 64bit</li><li>CentOS 7.6 64bit</li><li>CentOS 7.5 64bit</li><li>Ubuntu 20.04 64bit</li><li>Ubuntu 18.04 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p1788253412506"><a name="p1788253412506"></a><a name="p1788253412506"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p888233485010"><a name="p888233485010"></a><a name="p888233485010"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row8883143415018"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p1088343415016"><a name="p1088343415016"></a><a name="p1088343415016"></a>G3</p>
+    <tr id="row8883143415018"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p1088343415016"><a name="p1088343415016"></a><a name="p1088343415016"></a>G3</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p1688363495015"><a name="p1688363495015"></a><a name="p1688363495015"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p1688363495015"><a name="p1688363495015"></a><a name="p1688363495015"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul4883534185016"></a><a name="ul4883534185016"></a><ul id="ul4883534185016"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul079474513"></a><a name="ul079474513"></a><ul id="ul079474513"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p17883203435012"><a name="p17883203435012"></a><a name="p17883203435012"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p2883434145012"><a name="p2883434145012"></a><a name="p2883434145012"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1688333425020"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p5883234135012"><a name="p5883234135012"></a><a name="p5883234135012"></a>G1</p>
+    <tr id="row1688333425020"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p5883234135012"><a name="p5883234135012"></a><a name="p5883234135012"></a>G1</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p1788343411505"><a name="p1788343411505"></a><a name="p1788343411505"></a>GPU虚拟化型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p1788343411505"><a name="p1788343411505"></a><a name="p1788343411505"></a>GPU虚拟化型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul6883434145013"></a><a name="ul6883434145013"></a><ul id="ul6883434145013"><li>Windows Server 2016 Standard 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul067121613720"></a><a name="ul067121613720"></a><ul id="ul067121613720"><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p13883534125016"><a name="p13883534125016"></a><a name="p13883534125016"></a>vGPU 4.1：GRID for UVP</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p1788318343509"><a name="p1788318343509"></a><a name="p1788318343509"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row18841534145013"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p15883133418509"><a name="p15883133418509"></a><a name="p15883133418509"></a>P2vs</p>
+    <tr id="row18841534145013"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p15883133418509"><a name="p15883133418509"></a><a name="p15883133418509"></a>P2vs</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p1988318348507"><a name="p1988318348507"></a><a name="p1988318348507"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p1988318348507"><a name="p1988318348507"></a><a name="p1988318348507"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1188310348506"></a><a name="ul1188310348506"></a><ul id="ul1188310348506"><li>Windows Server 2016 Standard 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>CentOS 7.5 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1837817314814"></a><a name="ul1837817314814"></a><ul id="ul1837817314814"><li>CentOS 7.5 64bit</li><li>Ubuntu 16.04 Server 64bit</li><li>Windows Server 2016 Standard 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p98841134115015"><a name="p98841134115015"></a><a name="p98841134115015"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p588413341503"><a name="p588413341503"></a><a name="p588413341503"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row16884113418504"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p1688473412501"><a name="p1688473412501"></a><a name="p1688473412501"></a>P2s</p>
+    <tr id="row16884113418504"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p1688473412501"><a name="p1688473412501"></a><a name="p1688473412501"></a>P2s</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p68846348507"><a name="p68846348507"></a><a name="p68846348507"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p68846348507"><a name="p68846348507"></a><a name="p68846348507"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul19884193485017"></a><a name="ul19884193485017"></a><ul id="ul19884193485017"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 7.6 64bit</li><li>Ubuntu Server 20.04 64bit</li><li>Ubuntu Server 18.04</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul146315251597"></a><a name="ul146315251597"></a><ul id="ul146315251597"><li>Huawei Cloud EulerOS 2.0 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 8.1 64bit</li><li>CentOS 8.0 64bit</li><li>CentOS 7.9 64bit</li><li>CentOS 7.8 64bit</li><li>CentOS 7.7 64bit</li><li>CentOS 7.6 64bit</li><li>Ubuntu 22.04 Server 64bit</li><li>Ubuntu 20.04 Server 64bit</li><li>Ubuntu 18.04 Server 64bit</li><li>Ubuntu 16.04 Server 64bit</li><li>Windows Server 2022 Standard 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2022 Datacenter 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p188412347506"><a name="p188412347506"></a><a name="p188412347506"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p11884103413504"><a name="p11884103413504"></a><a name="p11884103413504"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row188463416506"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p88847349507"><a name="p88847349507"></a><a name="p88847349507"></a>P2v</p>
+    <tr id="row188463416506"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p88847349507"><a name="p88847349507"></a><a name="p88847349507"></a>P2v</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p78841634205014"><a name="p78841634205014"></a><a name="p78841634205014"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p78841634205014"><a name="p78841634205014"></a><a name="p78841634205014"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul188843346508"></a><a name="ul188843346508"></a><ul id="ul188843346508"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>CentOS 7.4 64bit</li><li>EulerOS 2.2 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul12465123829"></a><a name="ul12465123829"></a><ul id="ul12465123829"><li>CentOS 7.4 64bit</li><li>EulerOS 2.2 64bit</li><li>Ubuntu 20.04 Server 64bit</li><li>Ubuntu 18.04 Server 64bit</li><li>Ubuntu 16.04 Server 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p788420344509"><a name="p788420344509"></a><a name="p788420344509"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p688413475015"><a name="p688413475015"></a><a name="p688413475015"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1088563415507"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p168841734135014"><a name="p168841734135014"></a><a name="p168841734135014"></a>P1</p>
+    <tr id="row1088563415507"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p168841734135014"><a name="p168841734135014"></a><a name="p168841734135014"></a>P1</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p19884113418507"><a name="p19884113418507"></a><a name="p19884113418507"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p19884113418507"><a name="p19884113418507"></a><a name="p19884113418507"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1888563455018"></a><a name="ul1888563455018"></a><ul id="ul1888563455018"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>Debian 8.0 64bit</li><li>CentOS 7.3 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>EulerOS 2.2 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul711710185817"></a><a name="ul711710185817"></a><ul id="ul711710185817"><li>CentOS 7.3 64bit</li><li>Ubuntu 16.04 Server 64bit</li><li>EulerOS 2.2 64bit</li><li>Debian 8.0.0 64bit</li><li>Windows Server 2022 Standard 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2022 Datacenter 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p48856342502"><a name="p48856342502"></a><a name="p48856342502"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p15885203475011"><a name="p15885203475011"></a><a name="p15885203475011"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row1885134185018"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p288510344504"><a name="p288510344504"></a><a name="p288510344504"></a>Pi2</p>
+    <tr id="row1885134185018"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p288510344504"><a name="p288510344504"></a><a name="p288510344504"></a>Pi2</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p148857346506"><a name="p148857346506"></a><a name="p148857346506"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p148857346506"><a name="p148857346506"></a><a name="p148857346506"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul1376510289287"></a><a name="ul1376510289287"></a><ul id="ul1376510289287"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>CentOS 7.5 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul33877451516"></a><a name="ul33877451516"></a><ul id="ul33877451516"><li>Huawei Cloud EulerOS 2.0 64bit</li><li>CentOS 8.2 64bit</li><li>CentOS 8.1 64bit</li><li>CentOS 8.0 64bit</li><li>CentOS 7.9 64bit</li><li>CentOS 7.8 64bit</li><li>CentOS 7.7 64bit</li><li>CentOS 7.6 64bit</li><li>CentOS 7.5 64bit</li><li>Ubuntu 22.04 Server 64bit</li><li>Ubuntu 20.04 Server 64bit</li><li>Ubuntu 18.04 Server 64bit</li><li>Ubuntu 16.04 Server 64bit</li><li>Windows Server 2022 Standard 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2022 Datacenter 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p1488593415507"><a name="p1488593415507"></a><a name="p1488593415507"></a>按需选择版本</p>
     </td>
     <td class="cellrowborder" valign="top" width="11.111111111111112%" headers="mcps1.2.6.1.5 "><p id="p11885934165013"><a name="p11885934165013"></a><a name="p11885934165013"></a>x86_64</p>
     </td>
     </tr>
-    <tr id="row48851834205018"><td class="cellrowborder" valign="top" width="10.59105910591059%" headers="mcps1.2.6.1.1 "><p id="p888523416502"><a name="p888523416502"></a><a name="p888523416502"></a>Pi1</p>
+    <tr id="row48851834205018"><td class="cellrowborder" valign="top" width="10.611061106110611%" headers="mcps1.2.6.1.1 "><p id="p888523416502"><a name="p888523416502"></a><a name="p888523416502"></a>Pi1</p>
     </td>
-    <td class="cellrowborder" valign="top" width="16.181618161816182%" headers="mcps1.2.6.1.2 "><p id="p16885113414509"><a name="p16885113414509"></a><a name="p16885113414509"></a>GPU直通型实例</p>
+    <td class="cellrowborder" valign="top" width="16.16161616161616%" headers="mcps1.2.6.1.2 "><p id="p16885113414509"><a name="p16885113414509"></a><a name="p16885113414509"></a>GPU直通型实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul108851734175018"></a><a name="ul108851734175018"></a><ul id="ul108851734175018"><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2016 Standard 64bit</li><li>CentOS 7.3 64bit</li><li>Ubuntu Server 16.04 64bit</li><li>Ubuntu Server 14.04 64bit</li></ul>
+    <td class="cellrowborder" valign="top" width="38.76387638763876%" headers="mcps1.2.6.1.3 "><a name="ul108851734175018"></a><a name="ul108851734175018"></a><ul id="ul108851734175018"><li>CentOS 7.3 64bit</li><li>Ubuntu 20.04 Server 64bit</li><li>Ubuntu 16.04 Server 64bit</li><li>Ubuntu 14.04 Server 64bit</li><li>Windows Server 2019 Standard 64bit</li><li>Windows Server 2019 Datacenter 64bit</li><li>Windows Server 2016 Datacenter 64bit</li></ul>
     </td>
     <td class="cellrowborder" valign="top" width="23.352335233523352%" headers="mcps1.2.6.1.4 "><p id="p198851134145013"><a name="p198851134145013"></a><a name="p198851134145013"></a>按需选择版本</p>
     </td>
@@ -219,11 +218,10 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
 
 8.  对照[表1](#table188851534175019)选择相应版本的GRID驱动下载。
 9.  解压缩GRID驱动包，并选择和弹性云服务器操作系统匹配的驱动进行安装。
-10. 在“SOFTWARE DOWNLOADS”页面，单击“ADDITIONAL SOFTWARE”，下载License软件包。
+10. <a name="li1783092110416"></a>在“SOFTWARE DOWNLOADS”页面，单击“ADDITIONAL SOFTWARE”，下载License软件包。
 
     **图 6**  选择SOFTWARE DOWNLOADS<a name="fig13215124318392"></a>  
     ![](figures/选择SOFTWARE-DOWNLOADS.png "选择SOFTWARE-DOWNLOADS")
-
 
 ## 部署和配置License Server<a name="section19229135113439"></a>
 
@@ -238,42 +236,104 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
     -   如使用VPC网络访问License Server：请确保License Server和使用GRID驱动的GPU加速型实例处在同一个VPC子网内。
     -   如使用公网IP访问License Server：请配置License Server所在的安全组，增加入方向规则：TCP 7070和TCP 8080。
 
-
 1.  安装License Server。
+    1.  执行以下命令，解压缩安装包。其中“安装程序.zip”为[10](#li1783092110416)获取到的安装包名称。
 
-    具体过程请参考[NVIDIA官方License Server安装文档](https://docs.nvidia.com/grid/ls/latest/grid-license-server-user-guide/index.html#installing-nvidia-grid-license-server)。
+        **unzip 安装程序.zip**
 
-2.  获取License文件
-    1.  新建页签，登录[NVIDIA网站](http://nvid.nvidia.com/dashboard/)，选择“LICENSE SERVERS”。
+    2.  执行以下命令，为安装程序添加执行权限。
+
+        **chmod +x setup.bin**
+
+    3.  以root用户运行安装程序。
+
+        **sudo ./setup.bin -i console**
+
+    4.  在Introduction部分，单击回车键继续。
+
+        ![](figures/p395765.png)
+
+    5.  在License Agreement部分，通过单击回车键进行翻页，翻页结束后接受许可协议。
+
+        当您达成许可协议时，系统会提示您接受许可协议条款，请输入“Y”，并单击回车键。
+
+        ![](figures/6-11-4-02.png)
+
+    6.  在Choose Install Folder部分，单击回车键，保持默认的License Server软件安装路径。
+    7.  在Choose Local Tomcat Server Path部分，输入Tomcat的本地路径，默认为/var/lib/tomcat版本号，例如：/var/lib/tomcat8。
+    8.  在Choose Firewall Options部分，确认需要在防火墙中打开的端口，单击回车键，保持默认选项即可。
+
+        ![](figures/6-11-4-03.png)
+
+    9.  在Pre-Installation Summary部分，确认信息并单击回车键启动安装。
+
+        ![](figures/6-11-4-04.png)
+
+    10. 在Install Complete部分，单击回车键，结束安装。
+
+        ![](figures/6-11-4-05.png)
+
+2.  获取License文件。
+    1.  新建页签，登录[NVIDIA网站](https://nvid.nvidia.com/dashboard/)，选择“LICENSE SERVERS”。
 
         **图 7**  选择LICENSE SERVERS<a name="fig1319854518598"></a>  
         ![](figures/选择LICENSE-SERVERS.png "选择LICENSE-SERVERS")
 
-    2.  单击“CREATE SERVER”.
-    3.  填写Server Name、Description、MAC Address（License服务器的MAC地址）。
-    4.  选择Feature，在Licenses框中输入需要的license数目，单击“ADD”。
+    2.  单击“CREATE SERVER”。
+    3.  在“Create License Server”界面，根据界面提示配置参数。
 
-        如果是主备部署的情况需要把备服务器的名称填入 Failover License Server，MAC地址填入Failover MAC Address中。
-
-    5.  单击“CREATE LICENSE SERVER”。
-
-        **图 8**  填写LICENSE SERVERS信息<a name="fig1865418576181"></a>  
+        **图 8**  填写LICENSE SERVERS信息<a name="fig189743262919"></a>  
         ![](figures/填写LICENSE-SERVERS信息.png "填写LICENSE-SERVERS信息")
 
-    6.  下载license文件
+        **表 2**  LICENSE SERVERS信息填写说明
 
-        **图 9**  下载license文件<a name="fig19995314613"></a>  
-        ![](figures/下载license文件.png "下载license文件")
+        <a name="table1800936152111"></a>
+        <table><thead align="left"><tr id="row2801183614219"><th class="cellrowborder" valign="top" width="32.93%" id="mcps1.2.3.1.1"><p id="p13801336162111"><a name="p13801336162111"></a><a name="p13801336162111"></a>参数</p>
+        </th>
+        <th class="cellrowborder" valign="top" width="67.07%" id="mcps1.2.3.1.2"><p id="p168017363212"><a name="p168017363212"></a><a name="p168017363212"></a>说明</p>
+        </th>
+        </tr>
+        </thead>
+        <tbody><tr id="row6801036192116"><td class="cellrowborder" valign="top" width="32.93%" headers="mcps1.2.3.1.1 "><p id="p1680113618215"><a name="p1680113618215"></a><a name="p1680113618215"></a>Server Name</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="67.07%" headers="mcps1.2.3.1.2 "><p id="p080143682111"><a name="p080143682111"></a><a name="p080143682111"></a>自定义需要的License Server名称。</p>
+        </td>
+        </tr>
+        <tr id="row1980173612110"><td class="cellrowborder" valign="top" width="32.93%" headers="mcps1.2.3.1.1 "><p id="p5801236122115"><a name="p5801236122115"></a><a name="p5801236122115"></a>Description</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="67.07%" headers="mcps1.2.3.1.2 "><p id="p380133682110"><a name="p380133682110"></a><a name="p380133682110"></a>License Server的描述信息。</p>
+        </td>
+        </tr>
+        <tr id="row1480112366214"><td class="cellrowborder" valign="top" width="32.93%" headers="mcps1.2.3.1.1 "><p id="p1180133672118"><a name="p1180133672118"></a><a name="p1180133672118"></a>MAC Address</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="67.07%" headers="mcps1.2.3.1.2 "><p id="p777433112319"><a name="p777433112319"></a><a name="p777433112319"></a>填写用于搭建License Server的ECS实例的MAC地址。</p>
+        <p id="p167741731112319"><a name="p167741731112319"></a><a name="p167741731112319"></a>您可以登录实例，使用ipconfig -a命令进行查询。</p>
+        </td>
+        </tr>
+        <tr id="row10289135112212"><td class="cellrowborder" valign="top" width="32.93%" headers="mcps1.2.3.1.1 "><p id="p628918514224"><a name="p628918514224"></a><a name="p628918514224"></a>Feature</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="67.07%" headers="mcps1.2.3.1.2 "><p id="p1946718273246"><a name="p1946718273246"></a><a name="p1946718273246"></a>在Licenses框中输入需要的license数目，单击“ADD”。</p>
+        <p id="p148461724182419"><a name="p148461724182419"></a><a name="p148461724182419"></a>如果是主备部署的情况需要把备服务器的名称填入 Failover License Server，MAC地址填入Failover MAC Address中。</p>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+    4.  单击“CREATE LICENSE SERVER”。
+    5.  下载License文件。
+
+        **图 9**  下载License文件<a name="fig19995314613"></a>  
+        ![](figures/下载License文件.png "下载License文件")
 
 3.  在Web浏览器中，根据安装时配置的管理页面链接，访问License Server管理界面的主页。
 
     默认访问链接为：http://_弹性公网IP地址_:8080/licserver。
 
-4.  单击“License Server \> License Management”，使用License服务器配置菜单导入，并单击“Upload”上传许可证\*.bin文件，完成License Server的配置。
+4.  在左侧导航树中，单击“License Server \> License Management”。
+5.  使用License服务器配置菜单导入，并单击“Upload”上传许可证\*.bin文件，完成License Server的配置。
 
     **图 10**  上传许可证文件<a name="fig101141159980"></a>  
     ![](figures/上传许可证文件.png "上传许可证文件")
-
 
 ## 安装GRID驱动并配置License<a name="section17545653184812"></a>
 
@@ -287,5 +347,4 @@ GPU加速型实例如需使用OpenGL/DirectX/Vulkan等图形加速能力则需�
 
     **图 11**  License Server管理控制台<a name="fig7104162713349"></a>  
     ![](figures/License-Server管理控制台.png "License-Server管理控制台")
-
 

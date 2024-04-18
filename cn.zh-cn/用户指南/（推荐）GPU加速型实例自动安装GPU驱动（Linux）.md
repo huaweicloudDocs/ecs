@@ -18,7 +18,7 @@
 -   仅部分Linux公共镜像支持通过脚本自动安装GPU驱动，如下所示：
 
     -   CentOS 7.6、CentOS 7.9、CentOS 8.2。
-    -   Ubuntu 18.04、Ubuntu 20.04。
+    -   Ubuntu 18.04、Ubuntu 20.04、Ubuntu22.04。
 
     如果在支持的Linux公共镜像中没有您需要的操作系统及版本，请参考[GPU加速型实例安装Tesla驱动及CUDA工具包](GPU加速型实例安装Tesla驱动及CUDA工具包.md)，手动安装GPU驱动。
 
@@ -66,7 +66,6 @@
     </tr>
     </tbody>
     </table>
-
 
 ## 驱动安装脚本支持区域及获取方式<a name="section14165102314255"></a>
 
@@ -150,7 +149,6 @@
     wget -t 10 --timeout=10 https://hgcs-drivers-af-south-1.obs.af-south-1.myhuaweicloud.com/release/script/auto_install.sh && bash auto_install.sh
     ```
 
-
 ## 操作步骤<a name="section19871421172610"></a>
 
 以下操作以Ubuntu 20.04 64bit操作系统，P2v规格的GPU加速型实例安装CUDA 11.0对应的Tesla驱动为例进行介绍。
@@ -160,7 +158,6 @@
 1.  执行以下命令，获取驱动安装脚本并运行。
 
     **wget -t 10 --timeout=10  _https://hgcs-drivers-cn-east-2.obs.cn-east-2.myhuaweicloud.com_/release/script/auto\_install.sh && bash auto\_install.sh**
-
 
 1.  根据界面提示，选择需要安装的驱动版本。
 
@@ -189,7 +186,7 @@
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >卸载完成后，开始安装驱动，此过程会持续几分钟，请耐心等待。
 
-3.  驱动安装完成后，会自动重启云服务器后，请重新以root帐号登录。
+3.  驱动安装完成后，会自动重启云服务器后，请重新以root账号登录。
 
 1.  执行以下命令，检查驱动是否安装成功。
 
@@ -224,6 +221,4 @@
 
         **图 7**  查看CUDA安装结果<a name="fig940173116549"></a>  
         ![](figures/查看CUDA安装结果.png "查看CUDA安装结果")
-
-
 

@@ -53,7 +53,6 @@ GPU驱动卸载命令与GPU驱动的安装方式和操作系统类型相关，�
 
     确认NVDIA驱动卸载完成后，可以先不重启云服务器，直接安装新的NVIDIA驱动。
 
-
 ## Linux操作系统卸载驱动<a name="section3864455115811"></a>
 
 对于使用run安装包安装的NVIDIA Tesla驱动，建议您按照以下步骤卸载NVIDIA Tesla驱动。
@@ -75,7 +74,7 @@ GPU驱动卸载命令与GPU驱动的安装方式和操作系统类型相关，�
 
     2.  执行以下命令，基于查询的“nvidia-uninstall”路径，卸载驱动。
 
-        **/usr/bin/nvidia-unistall**
+        **/usr/bin/nvidia-uninstall**
 
     3.  选择”Yes”，单击回车键。
 
@@ -116,6 +115,4 @@ GPU驱动卸载命令与GPU驱动的安装方式和操作系统类型相关，�
     1.  移除CUDA库和cuDNN库：
 
         **rm –rf /usr/local/cuda-11.2**
-
-
 

@@ -36,9 +36,9 @@ Token的有效期为24小时，获取Token后建议及时保存，避免频繁�
                 "password": {
                     "user": {
                         "name": "请填写用户名",
-                        "password": "用户登录密码",
+                        "password": "$ADMIN_PASS",     //建议在配置文件或者环境变量中密文存放，使用时解密，确保安全
                         "domain": {
-                            "name": "用户所属的帐号名称"
+                            "name": "用户所属的账号名称"
                         }
                     }
                 }
@@ -51,7 +51,6 @@ Token的有效期为24小时，获取Token后建议及时保存，避免频繁�
         }
     }
     ```
-
 
 -   查看获取的Token：单击响应头，x-subject-token的取值即为获取的Token。请妥善保存Token信息，在后续的创建云服务器的请求头信息中需要使用Token认证。
 
@@ -91,7 +90,6 @@ Token的有效期为24小时，获取Token后建议及时保存，避免频繁�
     }
     ```
 
-
 ## 检验Token的有效期<a name="section99501635172312"></a>
 
 调用API时判断Token有效期是否充足，若您的应用程序缓存了Token，建议每12小时刷新一次Token。以确保Token有足够长的有效期。
@@ -105,7 +103,7 @@ Token的有效期为24小时，获取Token后建议及时保存，避免频繁�
 -   请求URI：GET https://iam.cn-east-2.myhuaweicloud.com/v3/auth/tokens
 -   请求消息头：
     -   Content-Type=application/json;charset=utf8
-    -   X-Auth-Token：管理员校验本帐号中IAM用户的token的有效性：拥有Security Administrator权限的token。
+    -   X-Auth-Token：管理员校验本账号中IAM用户的token的有效性：拥有Security Administrator权限的token。
 
         IAM用户校验自己token的有效性：该IAM用户的token（无需特殊权限）。
 
@@ -125,5 +123,4 @@ Token的有效期为24小时，获取Token后建议及时保存，避免频繁�
     	}
     }
     ```
-
 

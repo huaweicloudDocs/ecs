@@ -196,7 +196,6 @@ GET /v2/cloudimages?__imagetype=gold&visibility=public&protected=true&marker=af9
 
     GET /v2/cloudimages?\_\_imagetype=gold&\_\_support\_xxx=true&virtual\_env\_type=Ironic
 
-
 如果未指定镜像类型，那么可以通过响应信息中的\_\_imagetype字段判断镜像类型。
 
 ## 包年/包月资源续费<a name="section115381558613"></a>

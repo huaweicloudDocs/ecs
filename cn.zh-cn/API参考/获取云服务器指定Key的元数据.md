@@ -81,6 +81,8 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/metadata/\{key\}
 
 ## 请求示例<a name="zh-cn_topic_0057973169_section14594295"></a>
 
+获取指定云服务器的指定key的元数据信息。
+
 ```
 GET https://{endpoint}/v2.1/9c53a566cb3443ab910cf0daebca90c4/servers/998af54b-5762-4041-abc1-f98a2c27b3a2/metadata/key1
 ```

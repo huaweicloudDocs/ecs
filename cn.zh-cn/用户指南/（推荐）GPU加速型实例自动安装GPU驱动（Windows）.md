@@ -16,7 +16,6 @@
 
     如果您的规格、操作系统或驱动版本不支持通过脚本自动安装GPU驱动，请参考[GPU加速型实例安装GRID驱动](GPU加速型实例安装GRID驱动.md)和[GPU加速型实例安装Tesla驱动及CUDA工具包](GPU加速型实例安装Tesla驱动及CUDA工具包.md)，手动安装GPU驱动。
 
-
 ## 驱动安装脚本支持区域及获取方式<a name="section14165102314255"></a>
 
 您可以在PowerShell上执行以下命令，获取驱动安装脚本。
@@ -99,7 +98,6 @@
     Start-BitsTransfer -Source https://hgcs-drivers-af-south-1.obs.af-south-1.myhuaweicloud.com/release/script/auto_install.ps1 -Destination auto_install.ps1; ./auto_install.ps1
     ```
 
-
 ## 操作步骤<a name="section19871421172610"></a>
 
 以下操作以Windows Server 2019 数据中心版操作系统，G6规格的GPU加速型实例安装Grid驱动为例进行介绍。
@@ -116,7 +114,6 @@
     以“华北-北京四”为例介绍，更多区域请参考[驱动安装脚本支持区域及获取方式](#section14165102314255)。
 
     **Start-BitsTransfer -Source https://hgcs-drivers-cn-north-4.obs.cn-north-4.myhuaweicloud.com/release/script/auto\_install.ps1 -Destination auto\_install.ps1; ./auto\_install.ps1**
-
 
 1.  选择驱动版本与保存路径。
 
@@ -151,5 +148,4 @@
 
     **图 8**  驱动版本<a name="fig19371215348"></a>  
     ![](figures/驱动版本.png "驱动版本")
-
 

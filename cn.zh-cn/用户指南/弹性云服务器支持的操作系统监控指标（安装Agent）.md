@@ -4,9 +4,13 @@
 
 通过在弹性云服务器中安装Agent插件，可以为用户提供服务器的系统级、主动式、细颗粒度监控服务。本节定义了弹性云服务器上报云监控的操作系统监控指标。
 
-操作系统监控目前支持的监控指标有：CPU相关监控项、CPU负载类相关监控项、内存相关监控项、磁盘相关监控项、磁盘I/O相关监控项、文件系统类相关监控项、网卡类相关监控项、NTP类相关监控项、TCP连接数类相关监控、GPU相关监控项。
+操作系统监控目前支持的监控指标有：CPU相关监控项、CPU负载类相关监控项、内存相关监控项、磁盘相关监控项、磁盘I/O相关监控项、文件系统类相关监控项、网卡类相关监控项、NTP类相关监控项、TCP连接数类相关监控、GPU相关监控项、NPU相关监控项。
 
 安装Agent后，对于不同的操作系统、不同的弹性云服务器类型，您可以查看不同类型的操作系统监控指标。指标采集周期是1分钟。
+
+## 命名空间<a name="section24282572112133"></a>
+
+AGT.ECS
 
 ## 操作系统监控指标：CPU<a name="section47952021926"></a>
 
@@ -273,7 +277,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="33.72662733726628%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p56603522431"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p56603522431"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p56603522431"></a>该指标用于统计测量对象的内存使用率。</p>
 <p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1271515216422"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1271515216422"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1271515216422"></a>单位：百分比</p>
-<a name="zh-cn_topic_0084814075_ul15740448151918"></a><a name="zh-cn_topic_0084814075_ul15740448151918"></a><ul id="zh-cn_topic_0084814075_ul15740448151918"><li>采集方式（Linux）：通过/proc/meminfo文件获取,(MemTotal-MemAvailable)/MemTotal<a name="ul2093415489228"></a><a name="ul2093415489228"></a><ul id="ul2093415489228"><li>若/proc/meminfo中显示MemAvailable，则MemUsedPercent=(MemTotal-MemAvailable)/MemTotal</li><li>若/proc/meminfo中不显示MemAvailable，则MemUsedPercent=(MemTotal-MemFree-Buffers-Cached)/MemTotal</li></ul>
+<a name="zh-cn_topic_0084814075_ul15740448151918"></a><a name="zh-cn_topic_0084814075_ul15740448151918"></a><ul id="zh-cn_topic_0084814075_ul15740448151918"><li>采集方式（Linux）：通过/proc/meminfo文件获取，(MemTotal-MemAvailable)/MemTotal<a name="ul2093415489228"></a><a name="ul2093415489228"></a><ul id="ul2093415489228"><li>若/proc/meminfo中显示MemAvailable，则MemUsedPercent=(MemTotal-MemAvailable)/MemTotal</li><li>若/proc/meminfo中不显示MemAvailable，则MemUsedPercent=(MemTotal-MemFree-Buffers-Cached)/MemTotal</li></ul>
 </li><li>采集方式（Windows）：计算方法为（ 已用内存量/内存总量*100%）。</li></ul>
 </td>
 <td class="cellrowborder" valign="top" width="14.428557144285575%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p168151550164215"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p168151550164215"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p168151550164215"></a>0-100%</p>
@@ -347,6 +351,13 @@
 </table>
 
 ## 操作系统监控指标：磁盘<a name="section098622153112"></a>
+
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>-   目前仅支持物理磁盘指标的采集，不支持通过网络文件系统协议挂载的磁盘。
+>-   会默认屏蔽docker相关的挂载点。挂载点前缀如下：
+>    ```
+>    /var/lib/docker;/mnt/paas/kubernetes;/var/lib/mesos
+>    ```
 
 **表 4**  磁盘相关监控指标说明
 
@@ -639,6 +650,21 @@
 <td class="cellrowborder" valign="top" width="14.008599140085995%" headers="mcps1.2.7.1.6 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p9904203116583"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p9904203116583"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p9904203116583"></a>1分钟</p>
 </td>
 </tr>
+<tr id="row11792121320589"><td class="cellrowborder" valign="top" width="13.118688131186884%" headers="mcps1.2.7.1.1 "><p id="p16161312175117"><a name="p16161312175117"></a><a name="p16161312175117"></a>disk_device_used_percent</p>
+<p id="p1861671219512"><a name="p1861671219512"></a><a name="p1861671219512"></a></p>
+</td>
+<td class="cellrowborder" valign="top" width="14.518548145185484%" headers="mcps1.2.7.1.2 "><p id="p1161712128517"><a name="p1161712128517"></a><a name="p1161712128517"></a>块设备使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="34.13658634136587%" headers="mcps1.2.7.1.3 "><p id="p8617191215116"><a name="p8617191215116"></a><a name="p8617191215116"></a>该指标用于统计测量对象物理磁盘使用率，以百分比为单位。计算方式为: 所有已挂载磁盘分区已用存储量/磁盘存储总量。</p>
+<a name="ul361761225114"></a><a name="ul361761225114"></a><ul id="ul361761225114"><li>采集方式（Linux）：通过汇总每个挂载点的磁盘使用量，在通过磁盘扇区大小和扇区数量计算出磁盘总大小，计算出整体磁盘使用率</li><li>（Windows）：暂不支持。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.708629137086294%" headers="mcps1.2.7.1.4 "><p id="p379317135582"><a name="p379317135582"></a><a name="p379317135582"></a>0-100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.508949105089494%" headers="mcps1.2.7.1.5 "><p id="p1342573410210"><a name="p1342573410210"></a><a name="p1342573410210"></a><span id="text74737571305"><a name="text74737571305"></a><a name="text74737571305"></a>云服务器</span> - 磁盘</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.008599140085995%" headers="mcps1.2.7.1.6 "><p id="p37937136584"><a name="p37937136584"></a><a name="p37937136584"></a>1分钟</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -891,7 +917,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="34.8965103489651%" headers="mcps1.2.7.1.3 "><p id="p8804183310375"><a name="p8804183310375"></a><a name="p8804183310375"></a>该指标用于统计测量对象当前NTP偏移量。</p>
 <p id="p580413334374"><a name="p580413334374"></a><a name="p580413334374"></a>单位：ms</p>
-<p id="p18041733183713"><a name="p18041733183713"></a><a name="p18041733183713"></a>采集方式（Linux）：执行nvidia-smi命令，查看Perf列数据。</p>
+<p id="p18041733183713"><a name="p18041733183713"></a><a name="p18041733183713"></a>采集方式（Linux）：执行chronyc sources -v命令，获取偏移量。</p>
 </td>
 <td class="cellrowborder" valign="top" width="12.818718128187182%" headers="mcps1.2.7.1.4 "><p id="p11804133319373"><a name="p11804133319373"></a><a name="p11804133319373"></a>≥ 0 ms</p>
 </td>
@@ -1012,6 +1038,21 @@
 <td class="cellrowborder" valign="top" width="13.940000000000003%" headers="mcps1.2.7.1.6 "><p id="p1185717280241"><a name="p1185717280241"></a><a name="p1185717280241"></a>1分钟</p>
 </td>
 </tr>
+<tr id="row176431172716"><td class="cellrowborder" valign="top" width="12.89%" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0000001531134066_p7769124765414"><a name="zh-cn_topic_0000001531134066_p7769124765414"></a><a name="zh-cn_topic_0000001531134066_p7769124765414"></a>net_tcp_time_wait</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.740000000000004%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000001531134066_p1376910476547"><a name="zh-cn_topic_0000001531134066_p1376910476547"></a><a name="zh-cn_topic_0000001531134066_p1376910476547"></a>(Agent) TCP TIME_WAIT</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.53000000000001%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000001531134066_p5769114795417"><a name="zh-cn_topic_0000001531134066_p5769114795417"></a><a name="zh-cn_topic_0000001531134066_p5769114795417"></a>该指标用于统计测量对象处于TIME_WAIT状态的TCP连接数量。</p>
+<p id="p104177342710"><a name="p104177342710"></a><a name="p104177342710"></a>单位：Count</p>
+<a name="zh-cn_topic_0000001531134066_ul9453193313156"></a><a name="zh-cn_topic_0000001531134066_ul9453193313156"></a><ul id="zh-cn_topic_0000001531134066_ul9453193313156"><li>采集方式（Linux）：通过/proc/net/tcp文件获取到所有状态的TCP连接，再统计每个状态的连接数量。</li><li>采集方式（Windows）：通过WindowsAPI GetTcpTable2获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.24%" headers="mcps1.2.7.1.4 "><p id="p15635113711714"><a name="p15635113711714"></a><a name="p15635113711714"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.660000000000002%" headers="mcps1.2.7.1.5 "><p id="p1635133719711"><a name="p1635133719711"></a><a name="p1635133719711"></a><span id="text363515379715"><a name="text363515379715"></a><a name="text363515379715"></a>云服务器</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="13.940000000000003%" headers="mcps1.2.7.1.6 "><p id="p263511374716"><a name="p263511374716"></a><a name="p263511374716"></a>1分钟</p>
+</td>
+</tr>
 <tr id="row22561622101712"><td class="cellrowborder" valign="top" width="12.89%" headers="mcps1.2.7.1.1 "><p id="p132566224174"><a name="p132566224174"></a><a name="p132566224174"></a>net_tcp_close</p>
 </td>
 <td class="cellrowborder" valign="top" width="14.740000000000004%" headers="mcps1.2.7.1.2 "><p id="p1325602212175"><a name="p1325602212175"></a><a name="p1325602212175"></a>(Agent) TCP CLOSE</p>
@@ -1025,6 +1066,21 @@
 <td class="cellrowborder" valign="top" width="10.660000000000002%" headers="mcps1.2.7.1.5 "><p id="p7637329102413"><a name="p7637329102413"></a><a name="p7637329102413"></a><span id="text108169614100"><a name="text108169614100"></a><a name="text108169614100"></a>云服务器</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="13.940000000000003%" headers="mcps1.2.7.1.6 "><p id="p176371529192411"><a name="p176371529192411"></a><a name="p176371529192411"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row12213454777"><td class="cellrowborder" valign="top" width="12.89%" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0000001531134066_p476994710544"><a name="zh-cn_topic_0000001531134066_p476994710544"></a><a name="zh-cn_topic_0000001531134066_p476994710544"></a>net_tcp_close_wait</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.740000000000004%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000001531134066_p3769154711548"><a name="zh-cn_topic_0000001531134066_p3769154711548"></a><a name="zh-cn_topic_0000001531134066_p3769154711548"></a>(Agent) TCP CLOSE_WAIT</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.53000000000001%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000001531134066_p1876964720547"><a name="zh-cn_topic_0000001531134066_p1876964720547"></a><a name="zh-cn_topic_0000001531134066_p1876964720547"></a>该指标用于统计测量对象处于CLOSE_WAIT状态的TCP连接数量。</p>
+<p id="p7367201889"><a name="p7367201889"></a><a name="p7367201889"></a>单位：Count</p>
+<a name="zh-cn_topic_0000001531134066_ul7273192771517"></a><a name="zh-cn_topic_0000001531134066_ul7273192771517"></a><ul id="zh-cn_topic_0000001531134066_ul7273192771517"><li>采集方式（Linux）：通过/proc/net/tcp文件获取到所有状态的TCP连接，再统计每个状态的连接数量。</li><li>采集方式（Windows）：通过WindowsAPI GetTcpTable2获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.24%" headers="mcps1.2.7.1.4 "><p id="p103611239814"><a name="p103611239814"></a><a name="p103611239814"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.660000000000002%" headers="mcps1.2.7.1.5 "><p id="p73616231811"><a name="p73616231811"></a><a name="p73616231811"></a><span id="text536112231782"><a name="text536112231782"></a><a name="text536112231782"></a>云服务器</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="13.940000000000003%" headers="mcps1.2.7.1.6 "><p id="p236252310813"><a name="p236252310813"></a><a name="p236252310813"></a>1分钟</p>
 </td>
 </tr>
 <tr id="row136373771716"><td class="cellrowborder" valign="top" width="12.89%" headers="mcps1.2.7.1.1 "><p id="p836323719173"><a name="p836323719173"></a><a name="p836323719173"></a>net_tcp_last_ack</p>
@@ -1255,7 +1311,7 @@
 <td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p1296192392"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p1296192392"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p1296192392"></a>P0-P15、P32，</p>
 <a name="ul111151237134320"></a><a name="ul111151237134320"></a><ul id="ul111151237134320"><li>P0：表示最大性能状态</li><li>P15：表示最小性能状态</li><li>P32：表示状态未知</li></ul>
 </td>
-<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><p id="p1271263184210"><a name="p1271263184210"></a><a name="p1271263184210"></a><span id="text97551813181114"><a name="text97551813181114"></a><a name="text97551813181114"></a>云服务器</span> - GPU</p>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul7767155612230"></a><a name="ul7767155612230"></a><ul id="ul7767155612230"><li><span id="text12767195614239"><a name="text12767195614239"></a><a name="text12767195614239"></a>云服务器</span></li><li><span id="text576720564238"><a name="text576720564238"></a><a name="text576720564238"></a>云服务器</span> - GPU</li></ul>
 </td>
 <td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1220811616315"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1220811616315"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1220811616315"></a>1分钟</p>
 </td>
@@ -1270,7 +1326,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p18712195314515"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p18712195314515"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_zh-cn_topic_0083516942_p18712195314515"></a>0-100%</p>
 </td>
-<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><p id="p66611685427"><a name="p66611685427"></a><a name="p66611685427"></a><span id="text168401631117"><a name="text168401631117"></a><a name="text168401631117"></a>云服务器</span> - GPU</p>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul6883856182310"></a><a name="ul6883856182310"></a><ul id="ul6883856182310"><li><span id="text14883115615231"><a name="text14883115615231"></a><a name="text14883115615231"></a>云服务器</span></li><li><span id="text14883185615232"><a name="text14883185615232"></a><a name="text14883185615232"></a>云服务器</span> - GPU</li></ul>
 </td>
 <td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p7533165316"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p7533165316"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p7533165316"></a>1分钟</p>
 </td>
@@ -1285,13 +1341,383 @@
 </td>
 <td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1223616464528"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1223616464528"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p1223616464528"></a>0-100%</p>
 </td>
-<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><p id="p1878219137422"><a name="p1878219137422"></a><a name="p1878219137422"></a><span id="text65111920161110"><a name="text65111920161110"></a><a name="text65111920161110"></a>云服务器</span> - GPU</p>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul396805602314"></a><a name="ul396805602314"></a><ul id="ul396805602314"><li><span id="text996745602314"><a name="text996745602314"></a><a name="text996745602314"></a>云服务器</span></li><li><span id="text1096813564232"><a name="text1096813564232"></a><a name="text1096813564232"></a>云服务器</span> - GPU</li></ul>
 </td>
 <td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p478591611316"><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p478591611316"></a><a name="zh-cn_topic_0084814075_zh-cn_topic_0084814075_p478591611316"></a>1分钟</p>
 </td>
 </tr>
+<tr id="row724624116115"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p10247154119117"><a name="p10247154119117"></a><a name="p10247154119117"></a>gpu_free_mem</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p18247154117111"><a name="p18247154117111"></a><a name="p18247154117111"></a>GPU显存剩余量</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p18996134214477"><a name="p18996134214477"></a><a name="p18996134214477"></a>该指标用于统计测量对象当前的GPU显存剩余量。</p>
+<p id="p9247174121116"><a name="p9247174121116"></a><a name="p9247174121116"></a>单位：MB</p>
+<a name="ul9742112672318"></a><a name="ul9742112672318"></a><ul id="ul9742112672318"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p12247194181113"><a name="p12247194181113"></a><a name="p12247194181113"></a>≥ 0 MB</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul558157182312"></a><a name="ul558157182312"></a><ul id="ul558157182312"><li><span id="text17576578235"><a name="text17576578235"></a><a name="text17576578235"></a>云服务器</span></li><li><span id="text1757135717233"><a name="text1757135717233"></a><a name="text1757135717233"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p208133416428"><a name="p208133416428"></a><a name="p208133416428"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row4247124181118"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p324774111110"><a name="p324774111110"></a><a name="p324774111110"></a>gpu_graphics_clocks</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p0247204119118"><a name="p0247204119118"></a><a name="p0247204119118"></a>GPU显卡时钟频率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p760611118492"><a name="p760611118492"></a><a name="p760611118492"></a>该指标用于统计测量对象当前的GPU显卡（着色器）时钟频率。</p>
+<p id="p1779417467157"><a name="p1779417467157"></a><a name="p1779417467157"></a>单位：MHz</p>
+<a name="ul681320298238"></a><a name="ul681320298238"></a><ul id="ul681320298238"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p82478417110"><a name="p82478417110"></a><a name="p82478417110"></a>≥ 0 MHz</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul1214619577231"></a><a name="ul1214619577231"></a><ul id="ul1214619577231"><li><span id="text2145257102319"><a name="text2145257102319"></a><a name="text2145257102319"></a>云服务器</span></li><li><span id="text18146145710238"><a name="text18146145710238"></a><a name="text18146145710238"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p47715357422"><a name="p47715357422"></a><a name="p47715357422"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row62489418116"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p202482041121117"><a name="p202482041121117"></a><a name="p202482041121117"></a>gpu_mem_clocks</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p19248541111120"><a name="p19248541111120"></a><a name="p19248541111120"></a>GPU内存时钟频率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p598152211494"><a name="p598152211494"></a><a name="p598152211494"></a>该指标用于统计测量对象当前的GPU内存时钟频率。</p>
+<p id="p9248541181120"><a name="p9248541181120"></a><a name="p9248541181120"></a>单位：MHz</p>
+<a name="ul18701432152315"></a><a name="ul18701432152315"></a><ul id="ul18701432152315"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p8248124112111"><a name="p8248124112111"></a><a name="p8248124112111"></a>≥ 0 MHz</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul18233145792314"></a><a name="ul18233145792314"></a><ul id="ul18233145792314"><li><span id="text1023285772316"><a name="text1023285772316"></a><a name="text1023285772316"></a>云服务器</span></li><li><span id="text9232115702316"><a name="text9232115702316"></a><a name="text9232115702316"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p1226119364421"><a name="p1226119364421"></a><a name="p1226119364421"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row5248134115118"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p724874191118"><a name="p724874191118"></a><a name="p724874191118"></a>gpu_power_draw</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p1824874161110"><a name="p1824874161110"></a><a name="p1824874161110"></a>GPU功率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p186587348492"><a name="p186587348492"></a><a name="p186587348492"></a>该指标用于统计测量对象当前的GPU功率。</p>
+<p id="p13248104117115"><a name="p13248104117115"></a><a name="p13248104117115"></a>单位：W</p>
+<a name="ul69618372234"></a><a name="ul69618372234"></a><ul id="ul69618372234"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p324884161113"><a name="p324884161113"></a><a name="p324884161113"></a>NA</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul18321657182310"></a><a name="ul18321657182310"></a><ul id="ul18321657182310"><li><span id="text153216570239"><a name="text153216570239"></a><a name="text153216570239"></a>云服务器</span></li><li><span id="text13321357122315"><a name="text13321357122315"></a><a name="text13321357122315"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p19539103718420"><a name="p19539103718420"></a><a name="p19539103718420"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row172481411112"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p13249174131120"><a name="p13249174131120"></a><a name="p13249174131120"></a>gpu_rx_throughput_pci</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p7249194119118"><a name="p7249194119118"></a><a name="p7249194119118"></a>GPU PCI入方向带宽</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p16574648174914"><a name="p16574648174914"></a><a name="p16574648174914"></a>该指标用于统计测量对象当前的GPU PCI入方向带宽。</p>
+<p id="p1124910416116"><a name="p1124910416116"></a><a name="p1124910416116"></a>单位：MByte/s</p>
+<a name="ul1583953972315"></a><a name="ul1583953972315"></a><ul id="ul1583953972315"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p1249114114118"><a name="p1249114114118"></a><a name="p1249114114118"></a>≥ 0 MByte/s</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul18406657132319"></a><a name="ul18406657132319"></a><ul id="ul18406657132319"><li><span id="text040615578234"><a name="text040615578234"></a><a name="text040615578234"></a>云服务器</span></li><li><span id="text134061057142317"><a name="text134061057142317"></a><a name="text134061057142317"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p14995193944219"><a name="p14995193944219"></a><a name="p14995193944219"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row224934141110"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p202496417113"><a name="p202496417113"></a><a name="p202496417113"></a>gpu_sm_clocks</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p1124914111117"><a name="p1124914111117"></a><a name="p1124914111117"></a>GPU流式处理器时钟频率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p147031724506"><a name="p147031724506"></a><a name="p147031724506"></a>该指标用于统计测量对象当前的GPU流式处理器时钟频率。</p>
+<p id="p17405161411201"><a name="p17405161411201"></a><a name="p17405161411201"></a>单位：MHz</p>
+<a name="ul6933154212315"></a><a name="ul6933154212315"></a><ul id="ul6933154212315"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p13249104121120"><a name="p13249104121120"></a><a name="p13249104121120"></a>≥ 0 MHz</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul18492125752318"></a><a name="ul18492125752318"></a><ul id="ul18492125752318"><li><span id="text17492145712313"><a name="text17492145712313"></a><a name="text17492145712313"></a>云服务器</span></li><li><span id="text1849217574236"><a name="text1849217574236"></a><a name="text1849217574236"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p79144114214"><a name="p79144114214"></a><a name="p79144114214"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row64581327121110"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p19458927181112"><a name="p19458927181112"></a><a name="p19458927181112"></a>gpu_temperature</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p13458327101113"><a name="p13458327101113"></a><a name="p13458327101113"></a>GPU温度</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p270171612507"><a name="p270171612507"></a><a name="p270171612507"></a>该指标用于统计测量对象当前的GPU温度。</p>
+<p id="p14458142781115"><a name="p14458142781115"></a><a name="p14458142781115"></a>单位：℃</p>
+<a name="ul771044515231"></a><a name="ul771044515231"></a><ul id="ul771044515231"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p1645818279117"><a name="p1645818279117"></a><a name="p1645818279117"></a>≥ 0 ℃</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul185811657112315"></a><a name="ul185811657112315"></a><ul id="ul185811657112315"><li><span id="text13580195717231"><a name="text13580195717231"></a><a name="text13580195717231"></a>云服务器</span></li><li><span id="text1758165742317"><a name="text1758165742317"></a><a name="text1758165742317"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p110915422428"><a name="p110915422428"></a><a name="p110915422428"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row7458102711114"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p4458122741113"><a name="p4458122741113"></a><a name="p4458122741113"></a>gpu_tx_throughput_pci</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p14458827181117"><a name="p14458827181117"></a><a name="p14458827181117"></a>GPU PCI出方向带宽</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p1425517294509"><a name="p1425517294509"></a><a name="p1425517294509"></a>该指标用于统计测量对象当前的GPU PCI出方向带宽。</p>
+<p id="p11459182711118"><a name="p11459182711118"></a><a name="p11459182711118"></a>单位：MByte/s</p>
+<a name="ul09311485234"></a><a name="ul09311485234"></a><ul id="ul09311485234"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p94666337447"><a name="p94666337447"></a><a name="p94666337447"></a>≥ 0 MByte/s</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul14672155710232"></a><a name="ul14672155710232"></a><ul id="ul14672155710232"><li><span id="text2067215712315"><a name="text2067215712315"></a><a name="text2067215712315"></a>云服务器</span></li><li><span id="text567225782314"><a name="text567225782314"></a><a name="text567225782314"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p4136154314210"><a name="p4136154314210"></a><a name="p4136154314210"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row1745922781119"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p7459162761112"><a name="p7459162761112"></a><a name="p7459162761112"></a>gpu_used_mem</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p12459127191112"><a name="p12459127191112"></a><a name="p12459127191112"></a>GPU显存使用量</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p145271542145018"><a name="p145271542145018"></a><a name="p145271542145018"></a>该指标用于统计测量对象当前的GPU显存使用量。</p>
+<p id="p13459192751115"><a name="p13459192751115"></a><a name="p13459192751115"></a>单位：MB</p>
+<a name="ul91819522231"></a><a name="ul91819522231"></a><ul id="ul91819522231"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p104591427121115"><a name="p104591427121115"></a><a name="p104591427121115"></a>≥ 0 MB</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul1375715577232"></a><a name="ul1375715577232"></a><ul id="ul1375715577232"><li><span id="text7757657112314"><a name="text7757657112314"></a><a name="text7757657112314"></a>云服务器</span></li><li><span id="text7757185732314"><a name="text7757185732314"></a><a name="text7757185732314"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p196114454423"><a name="p196114454423"></a><a name="p196114454423"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row10724269117"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p117242612117"><a name="p117242612117"></a><a name="p117242612117"></a>gpu_video_clocks</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p1572420619110"><a name="p1572420619110"></a><a name="p1572420619110"></a>GPU视频时钟频率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p1744265615015"><a name="p1744265615015"></a><a name="p1744265615015"></a>该指标用于统计测量对象当前的GPU视频（包含编解码）时钟频率。</p>
+<p id="p197241765111"><a name="p197241765111"></a><a name="p197241765111"></a>单位：MHz</p>
+<a name="ul3668105492317"></a><a name="ul3668105492317"></a><ul id="ul3668105492317"><li>采集方式（Linux）：通过调用GPU卡的libnvidia-ml.so.1库文件获取。</li><li>采集方式（Windows）：通过调用GPU卡的nvml.dll库获取。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p272419601114"><a name="p272419601114"></a><a name="p272419601114"></a>≥ 0 MHz</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul6847757102313"></a><a name="ul6847757102313"></a><ul id="ul6847757102313"><li><span id="text138471557102311"><a name="text138471557102311"></a><a name="text138471557102311"></a>云服务器</span></li><li><span id="text14847155717232"><a name="text14847155717232"></a><a name="text14847155717232"></a>云服务器</span> - GPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p1599544524218"><a name="p1599544524218"></a><a name="p1599544524218"></a>1分钟</p>
+</td>
+</tr>
 </tbody>
 </table>
+
+## 操作系统监控指标：NPU<a name="section1903193212814"></a>
+
+**表 11**  NPU类监控指标说明
+
+<a name="table843191416295"></a>
+<table><thead align="left"><tr id="row154321714192917"><th class="cellrowborder" valign="top" width="12.839999999999998%" id="mcps1.2.7.1.1"><p id="p143291416299"><a name="p143291416299"></a><a name="p143291416299"></a>指标</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.680000000000001%" id="mcps1.2.7.1.2"><p id="p3432101419296"><a name="p3432101419296"></a><a name="p3432101419296"></a>指标名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.61%" id="mcps1.2.7.1.3"><p id="p4432114152910"><a name="p4432114152910"></a><a name="p4432114152910"></a>指标含义</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.31%" id="mcps1.2.7.1.4"><p id="p194331714162920"><a name="p194331714162920"></a><a name="p194331714162920"></a>取值范围</p>
+</th>
+<th class="cellrowborder" valign="top" width="10.91%" id="mcps1.2.7.1.5"><p id="p1443391442913"><a name="p1443391442913"></a><a name="p1443391442913"></a>测量对象（维度）</p>
+</th>
+<th class="cellrowborder" valign="top" width="13.65%" id="mcps1.2.7.1.6"><p id="p643313148293"><a name="p643313148293"></a><a name="p643313148293"></a>监控周期（原始指标）</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row243351412913"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p6652132023215"><a name="p6652132023215"></a><a name="p6652132023215"></a>npu_device_health</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p12652142013323"><a name="p12652142013323"></a><a name="p12652142013323"></a>NPU健康状况</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p7652620143214"><a name="p7652620143214"></a><a name="p7652620143214"></a>该指标用于统计虚拟机上NPU卡的健康状态，是一个综合指标。</p>
+<p id="p1565212013212"><a name="p1565212013212"></a><a name="p1565212013212"></a>该指标无单位。</p>
+<p id="p13664101215339"><a name="p13664101215339"></a><a name="p13664101215339"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><a name="ul1434121415293"></a><a name="ul1434121415293"></a><ul id="ul1434121415293"><li>0：代表健康</li><li>1：代表存在一般告警</li><li>2：代表存在重要告警</li><li>3：代表存在紧急告警</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul93018122242"></a><a name="ul93018122242"></a><ul id="ul93018122242"><li><span id="text7331719249"><a name="text7331719249"></a><a name="text7331719249"></a>云服务器</span></li><li><span id="text1143416144292"><a name="text1143416144292"></a><a name="text1143416144292"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p18435131442914"><a name="p18435131442914"></a><a name="p18435131442914"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row54351114102919"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p765272010325"><a name="p765272010325"></a><a name="p765272010325"></a>npu_util_rate_mem</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p16652520203219"><a name="p16652520203219"></a><a name="p16652520203219"></a>NPU显存使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p126521020113214"><a name="p126521020113214"></a><a name="p126521020113214"></a>该指标用于统计该NPU的编码能力使用率。</p>
+<p id="p36525207326"><a name="p36525207326"></a><a name="p36525207326"></a>单位：百分比</p>
+<p id="p193801515143313"><a name="p193801515143313"></a><a name="p193801515143313"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p84351914202917"><a name="p84351914202917"></a><a name="p84351914202917"></a>0-100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul19990202742420"></a><a name="ul19990202742420"></a><ul id="ul19990202742420"><li><span id="text1399012782410"><a name="text1399012782410"></a><a name="text1399012782410"></a>云服务器</span></li><li><span id="text499032715245"><a name="text499032715245"></a><a name="text499032715245"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p7436151413297"><a name="p7436151413297"></a><a name="p7436151413297"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row1436141416296"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p56538203325"><a name="p56538203325"></a><a name="p56538203325"></a>npu_util_rate_ai_core</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p565316206326"><a name="p565316206326"></a><a name="p565316206326"></a>NPU卡AI核心使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p16531820163213"><a name="p16531820163213"></a><a name="p16531820163213"></a>该指标用于统计该NPU的AI核心使用率。</p>
+<p id="p146531920193214"><a name="p146531920193214"></a><a name="p146531920193214"></a>单位：百分比</p>
+<p id="p33411187339"><a name="p33411187339"></a><a name="p33411187339"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p3437151462912"><a name="p3437151462912"></a><a name="p3437151462912"></a>0-100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul11106132812416"></a><a name="ul11106132812416"></a><ul id="ul11106132812416"><li><span id="text13105028162414"><a name="text13105028162414"></a><a name="text13105028162414"></a>云服务器</span></li><li><span id="text11058280244"><a name="text11058280244"></a><a name="text11058280244"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p5438214122918"><a name="p5438214122918"></a><a name="p5438214122918"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row2025121712314"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p1165362073217"><a name="p1165362073217"></a><a name="p1165362073217"></a>npu_util_rate_ai_cpu</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p17653720193215"><a name="p17653720193215"></a><a name="p17653720193215"></a>NPU卡AI CPU使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p16653920103218"><a name="p16653920103218"></a><a name="p16653920103218"></a>该指标用于统计该NPU的AI CPU的使用率。</p>
+<p id="p16653102014329"><a name="p16653102014329"></a><a name="p16653102014329"></a>单位：百分比。</p>
+<p id="p2910192010339"><a name="p2910192010339"></a><a name="p2910192010339"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p7252101714312"><a name="p7252101714312"></a><a name="p7252101714312"></a>0-100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul1119652819245"></a><a name="ul1119652819245"></a><ul id="ul1119652819245"><li><span id="text2196122852416"><a name="text2196122852416"></a><a name="text2196122852416"></a>云服务器</span></li><li><span id="text1219613289244"><a name="text1219613289244"></a><a name="text1219613289244"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p89569863713"><a name="p89569863713"></a><a name="p89569863713"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row1185019192313"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p196541320123215"><a name="p196541320123215"></a><a name="p196541320123215"></a>npu_util_rate_ctrl_cpu</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p86541201328"><a name="p86541201328"></a><a name="p86541201328"></a>NPU控制CPU使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p196542020103217"><a name="p196542020103217"></a><a name="p196542020103217"></a>该指标用于统计该NPU的控制CPU的使用率。</p>
+<p id="p6654220163216"><a name="p6654220163216"></a><a name="p6654220163216"></a>单位：百分比。</p>
+<p id="p4365224133318"><a name="p4365224133318"></a><a name="p4365224133318"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p185061917318"><a name="p185061917318"></a><a name="p185061917318"></a>0-100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul1528682862415"></a><a name="ul1528682862415"></a><ul id="ul1528682862415"><li><span id="text142851628112420"><a name="text142851628112420"></a><a name="text142851628112420"></a>云服务器</span></li><li><span id="text928618286243"><a name="text928618286243"></a><a name="text928618286243"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p9432963718"><a name="p9432963718"></a><a name="p9432963718"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row11586132612314"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p66542201322"><a name="p66542201322"></a><a name="p66542201322"></a>npu_util_rate_mem_bandwidth</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p18654112083219"><a name="p18654112083219"></a><a name="p18654112083219"></a>NPU显存带宽使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p065462083220"><a name="p065462083220"></a><a name="p065462083220"></a>该指标用于统计该NPU的显存的带宽使用率。</p>
+<p id="p3654152011326"><a name="p3654152011326"></a><a name="p3654152011326"></a>单位：百分比。</p>
+<p id="p573482810337"><a name="p573482810337"></a><a name="p573482810337"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p1558712613110"><a name="p1558712613110"></a><a name="p1558712613110"></a>0-100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul8377162842415"></a><a name="ul8377162842415"></a><ul id="ul8377162842415"><li><span id="text133773284247"><a name="text133773284247"></a><a name="text133773284247"></a>云服务器</span></li><li><span id="text1637752832415"><a name="text1637752832415"></a><a name="text1637752832415"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p712849113712"><a name="p712849113712"></a><a name="p712849113712"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row15872026133114"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p6655192043217"><a name="p6655192043217"></a><a name="p6655192043217"></a>npu_freq_mem</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p96551020103213"><a name="p96551020103213"></a><a name="p96551020103213"></a>NPU显存频率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p14655120193216"><a name="p14655120193216"></a><a name="p14655120193216"></a>该指标用于统计该NPU的显存的时钟频率。</p>
+<p id="p11655120183210"><a name="p11655120183210"></a><a name="p11655120183210"></a>单位：兆赫兹（MHz）。</p>
+<p id="p369631163314"><a name="p369631163314"></a><a name="p369631163314"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p165872264316"><a name="p165872264316"></a><a name="p165872264316"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul94748285243"></a><a name="ul94748285243"></a><ul id="ul94748285243"><li><span id="text347312285249"><a name="text347312285249"></a><a name="text347312285249"></a>云服务器</span></li><li><span id="text1347482822420"><a name="text1347482822420"></a><a name="text1347482822420"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p32142912377"><a name="p32142912377"></a><a name="p32142912377"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row1115194513118"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p96551620163210"><a name="p96551620163210"></a><a name="p96551620163210"></a>npu_freq_ai_core</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p1865510207328"><a name="p1865510207328"></a><a name="p1865510207328"></a>NPU卡AI核心频率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p6655112019320"><a name="p6655112019320"></a><a name="p6655112019320"></a>该指标用于统计该NPU AI核心的时钟频率。</p>
+<p id="p1365512083217"><a name="p1365512083217"></a><a name="p1365512083217"></a>单位：兆赫兹（MHz）。</p>
+<p id="p2195234143319"><a name="p2195234143319"></a><a name="p2195234143319"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p81674518313"><a name="p81674518313"></a><a name="p81674518313"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul4567122810240"></a><a name="ul4567122810240"></a><ul id="ul4567122810240"><li><span id="text85673281249"><a name="text85673281249"></a><a name="text85673281249"></a>云服务器</span></li><li><span id="text656742812245"><a name="text656742812245"></a><a name="text656742812245"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p16296109153718"><a name="p16296109153718"></a><a name="p16296109153718"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row51634514317"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p465615205329"><a name="p465615205329"></a><a name="p465615205329"></a>npu_usage_mem</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p19656112010328"><a name="p19656112010328"></a><a name="p19656112010328"></a>NPU显存使用量</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p1565672083211"><a name="p1565672083211"></a><a name="p1565672083211"></a>该指标用于统计该NPU 显存的使用量。</p>
+<p id="p865682033212"><a name="p865682033212"></a><a name="p865682033212"></a>单位：兆Byte（MB）。</p>
+<p id="p10415113713336"><a name="p10415113713336"></a><a name="p10415113713336"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p1916145173114"><a name="p1916145173114"></a><a name="p1916145173114"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul4662142816246"></a><a name="ul4662142816246"></a><ul id="ul4662142816246"><li><span id="text1266202815246"><a name="text1266202815246"></a><a name="text1266202815246"></a>云服务器</span></li><li><span id="text1866222815240"><a name="text1866222815240"></a><a name="text1866222815240"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p83791999374"><a name="p83791999374"></a><a name="p83791999374"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row1316345123118"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p06561420123219"><a name="p06561420123219"></a><a name="p06561420123219"></a>npu_sbe</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p15656102017326"><a name="p15656102017326"></a><a name="p15656102017326"></a>NPU单bit错误数量</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p7656202043214"><a name="p7656202043214"></a><a name="p7656202043214"></a>该指标用于统计该NPU卡当前的单比特页错误的数量。</p>
+<p id="p176561020163214"><a name="p176561020163214"></a><a name="p176561020163214"></a>单位：个</p>
+<p id="p319664003313"><a name="p319664003313"></a><a name="p319664003313"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p71744511316"><a name="p71744511316"></a><a name="p71744511316"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul3759122816241"></a><a name="ul3759122816241"></a><ul id="ul3759122816241"><li><span id="text67593289244"><a name="text67593289244"></a><a name="text67593289244"></a>云服务器</span></li><li><span id="text975952872413"><a name="text975952872413"></a><a name="text975952872413"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p2458119133717"><a name="p2458119133717"></a><a name="p2458119133717"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row191716452313"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p106577207325"><a name="p106577207325"></a><a name="p106577207325"></a>npu_dbe</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p1565712207321"><a name="p1565712207321"></a><a name="p1565712207321"></a>NPU双bit错误数量</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p1665712020327"><a name="p1665712020327"></a><a name="p1665712020327"></a>该指标用于统计该NPU卡当前的多比特页错误的数量。</p>
+<p id="p2065702083213"><a name="p2065702083213"></a><a name="p2065702083213"></a>单位：个</p>
+<p id="p1541019431334"><a name="p1541019431334"></a><a name="p1541019431334"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p1417345113118"><a name="p1417345113118"></a><a name="p1417345113118"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul11850182872412"></a><a name="ul11850182872412"></a><ul id="ul11850182872412"><li><span id="text1185032812413"><a name="text1185032812413"></a><a name="text1185032812413"></a>云服务器</span></li><li><span id="text9850728162416"><a name="text9850728162416"></a><a name="text9850728162416"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p85471395379"><a name="p85471395379"></a><a name="p85471395379"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row7470205718312"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p765719202325"><a name="p765719202325"></a><a name="p765719202325"></a>npu_power</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p56571820183217"><a name="p56571820183217"></a><a name="p56571820183217"></a>NPU功率</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p106571920203218"><a name="p106571920203218"></a><a name="p106571920203218"></a>该指标用于统计该NPU卡的功率。其中，310卡仅支持显示额定功率，其余卡显示实际功率</p>
+<p id="p1665732063214"><a name="p1665732063214"></a><a name="p1665732063214"></a>单位：瓦（W）</p>
+<p id="p64051247113314"><a name="p64051247113314"></a><a name="p64051247113314"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p2471115753120"><a name="p2471115753120"></a><a name="p2471115753120"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul15941152816248"></a><a name="ul15941152816248"></a><ul id="ul15941152816248"><li><span id="text12941112810248"><a name="text12941112810248"></a><a name="text12941112810248"></a>云服务器</span></li><li><span id="text1294115281243"><a name="text1294115281243"></a><a name="text1294115281243"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p20629129113715"><a name="p20629129113715"></a><a name="p20629129113715"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row10471125783119"><td class="cellrowborder" valign="top" width="12.839999999999998%" headers="mcps1.2.7.1.1 "><p id="p13657620143214"><a name="p13657620143214"></a><a name="p13657620143214"></a>npu_temperature</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.680000000000001%" headers="mcps1.2.7.1.2 "><p id="p18657112003217"><a name="p18657112003217"></a><a name="p18657112003217"></a>NPU温度</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.61%" headers="mcps1.2.7.1.3 "><p id="p206571120123216"><a name="p206571120123216"></a><a name="p206571120123216"></a>该指标用于统计该NPU卡当前的温度</p>
+<p id="p1365722043219"><a name="p1365722043219"></a><a name="p1365722043219"></a>单位：摄氏度（℃）</p>
+<p id="p1010020502334"><a name="p1010020502334"></a><a name="p1010020502334"></a>采集方式（Linux）：通过调用NPU卡的libdcmi.so库文件获取。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.31%" headers="mcps1.2.7.1.4 "><p id="p9471175743111"><a name="p9471175743111"></a><a name="p9471175743111"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.91%" headers="mcps1.2.7.1.5 "><a name="ul5331329172413"></a><a name="ul5331329172413"></a><ul id="ul5331329172413"><li><span id="text1633162952416"><a name="text1633162952416"></a><a name="text1633162952416"></a>云服务器</span></li><li><span id="text1733162911245"><a name="text1733162911245"></a><a name="text1733162911245"></a>云服务器</span> - NPU</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="13.65%" headers="mcps1.2.7.1.6 "><p id="p177085919373"><a name="p177085919373"></a><a name="p177085919373"></a>1分钟</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>Windows系统暂不支持NPU类监控指标。
 
 ## 维度<a name="section36963297112133"></a>
 
@@ -1333,6 +1759,14 @@
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.1.4.1.3 "><p id="p41981157125620"><a name="p41981157125620"></a><a name="p41981157125620"></a>GPU类型<span id="text0460175018577"><a name="text0460175018577"></a><a name="text0460175018577"></a>云服务器</span>中显卡。</p>
 <p id="p53231813996"><a name="p53231813996"></a><a name="p53231813996"></a>该取值可通过云监控服务的“<a href="https://support.huaweicloud.com/api-ces/ListAgentDimensionInfo.html" target="_blank" rel="noopener noreferrer">查询主机监控维度指标信息</a>”获取。</p>
+</td>
+</tr>
+<tr id="row9462151453814"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.1.4.1.1 "><p id="p1946319149384"><a name="p1946319149384"></a><a name="p1946319149384"></a><span id="text18973182312386"><a name="text18973182312386"></a><a name="text18973182312386"></a>云服务器</span> - NPU</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.1.4.1.2 "><p id="p164637145380"><a name="p164637145380"></a><a name="p164637145380"></a>npu</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.1.4.1.3 "><p id="p2899149142514"><a name="p2899149142514"></a><a name="p2899149142514"></a>NPU类型<span id="text1090089122515"><a name="text1090089122515"></a><a name="text1090089122515"></a>云服务器</span>中显卡。</p>
+<p id="p139008918254"><a name="p139008918254"></a><a name="p139008918254"></a>该取值可通过云监控服务的“<a href="https://support.huaweicloud.com/api-ces/ListAgentDimensionInfo.html" target="_blank" rel="noopener noreferrer">查询主机监控维度指标信息</a>”获取。</p>
 </td>
 </tr>
 </tbody>

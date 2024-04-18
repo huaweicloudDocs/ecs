@@ -135,6 +135,8 @@ GET /
 
 ## 请求示例<a name="section39878380181842"></a>
 
+查询API支持版本信息列表。
+
 ```
 GET https://{endpoint}/
 ```
@@ -143,15 +145,34 @@ GET https://{endpoint}/
 
 ```
 {
- "versions": [{
-  "links": [{
-   "rel": "self",
-   "href": "https://ecs.service.domain.com:443/v2/"
-  }],
-  "id": "v2.0",
-  "updated": "2001-09-21T12:33:21Z",
-  "status": "SUPPORTED"
- }]
+    "versions":[
+        {
+            "min_version":"",
+            "links":[
+                {
+                    "rel":"self",
+                    "href":"https://{endpoint}/v2/"
+                }
+            ],
+            "id":"v2.0",
+            "updated":"2011-01-21T11:33:21Z",
+            "version":"",
+            "status":"SUPPORTED"
+        },
+        {
+            "min_version":"2.1",
+            "links":[
+                {
+                    "rel":"self",
+                    "href":"https://{endpoint}/v2.1/"
+                }
+            ],
+            "id":"v2.1",
+            "updated":"2013-07-23T11:33:21Z",
+            "version":"2.60",
+            "status":"CURRENT"
+        }
+    ]
 }
 ```
 

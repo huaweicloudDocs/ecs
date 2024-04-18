@@ -75,6 +75,8 @@ GET /v2.1/\{project\_id\}/flavors/\{flavor\_id\}/os-extra\_specs
 
 ## 请求示例<a name="zh-cn_topic_0057973064_section19584029"></a>
 
+查询指定云服务器规格的extra\_specs详情。
+
 ```
 GET https://{endpoint}/v2.1/743b4c0428d94531b9f2add666642e6b/flavors/c3.2xlarge.2/os-extra_specs
 ```

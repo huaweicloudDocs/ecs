@@ -21,7 +21,7 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row13978152915327"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p1928615162611"><a name="p1928615162611"></a><a name="p1928615162611"></a>创建浮动IP（OpenStack原生）</p>
+<tbody><tr id="row13978152915327"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p1928615162611"><a name="p1928615162611"></a><a name="p1928615162611"></a><a href="创建浮动IP（废弃）.md">创建浮动IP（OpenStack原生）</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="17.76177617761776%" headers="mcps1.1.9.1.2 "><p id="p1912112154117"><a name="p1912112154117"></a><a name="p1912112154117"></a>POST /v2.1/{project_id}/os-floating-ips</p>
 </td>
@@ -41,7 +41,7 @@
 <td class="cellrowborder" valign="top" width="7.520752075207521%" headers="mcps1.1.9.1.8 "><p id="p1153814568420"><a name="p1153814568420"></a><a name="p1153814568420"></a>×</p>
 </td>
 </tr>
-<tr id="row89781529103215"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p52861458261"><a name="p52861458261"></a><a name="p52861458261"></a>查询浮动IP列表（OpenStack原生）</p>
+<tr id="row89781529103215"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p52861458261"><a name="p52861458261"></a><a name="p52861458261"></a><a href="查询浮动IP列表（废弃）.md">查询浮动IP列表（OpenStack原生）</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="17.76177617761776%" headers="mcps1.1.9.1.2 "><p id="p75051616124113"><a name="p75051616124113"></a><a name="p75051616124113"></a>GET /v2.1/{project_id}/os-floating-ips</p>
 </td>
@@ -59,7 +59,7 @@
 <td class="cellrowborder" valign="top" width="7.520752075207521%" headers="mcps1.1.9.1.8 "><p id="p145381456194213"><a name="p145381456194213"></a><a name="p145381456194213"></a>×</p>
 </td>
 </tr>
-<tr id="row18978329133213"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p152861656262"><a name="p152861656262"></a><a name="p152861656262"></a>查询浮动IP（OpenStack原生）</p>
+<tr id="row18978329133213"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p152861656262"><a name="p152861656262"></a><a name="p152861656262"></a><a href="查询浮动IP（废弃）.md">查询浮动IP（OpenStack原生）</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="17.76177617761776%" headers="mcps1.1.9.1.2 "><p id="p14179172084116"><a name="p14179172084116"></a><a name="p14179172084116"></a>GET /v2.1/{project_id}/os-floating-ips/{floating_ip_id}</p>
 </td>
@@ -77,7 +77,7 @@
 <td class="cellrowborder" valign="top" width="7.520752075207521%" headers="mcps1.1.9.1.8 "><p id="p1253885624216"><a name="p1253885624216"></a><a name="p1253885624216"></a>×</p>
 </td>
 </tr>
-<tr id="row19781429183210"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p828616582617"><a name="p828616582617"></a><a name="p828616582617"></a>删除浮动IP（OpenStack原生）</p>
+<tr id="row19781429183210"><td class="cellrowborder" valign="top" width="9.29092909290929%" headers="mcps1.1.9.1.1 "><p id="p828616582617"><a name="p828616582617"></a><a name="p828616582617"></a><a href="删除浮动IP（废弃）.md">删除浮动IP（OpenStack原生）</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="17.76177617761776%" headers="mcps1.1.9.1.2 "><p id="p9371172418414"><a name="p9371172418414"></a><a name="p9371172418414"></a>DELETE /v2.1/{project_id}/os-floating-ips/{floating_ip_id}</p>
 </td>

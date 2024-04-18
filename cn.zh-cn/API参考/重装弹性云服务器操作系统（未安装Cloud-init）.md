@@ -4,6 +4,8 @@
 
 重装弹性云服务器的操作系统。
 
+本接口为异步接口，当前重装弹性云服务器操作系统请求下发成功后会返回job\_id，此时重装弹性云服务器操作系统并没有立即完成，需要通过调用[查询任务的执行状态](查询任务的执行状态.md)查询job状态，当Job状态为 SUCCESS 时代表云服务器操作系统重装成功。
+
 调用该接口后，系统将卸载系统盘，然后使用原镜像重新创建系统盘，并挂载至弹性云服务器，实现重装操作系统功能。
 
 该接口支持未安装Cloud-init或Cloudbase-init的镜像，如果镜像安装了Cloud-init或者Cloudbase-init，请使用  [重装弹性云服务器操作系统（安装Cloud-init）](重装弹性云服务器操作系统（安装Cloud-init）.md)接口。
@@ -100,8 +102,8 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 </td>
 <td class="cellrowborder" valign="top" width="21.61216121612161%" headers="mcps1.2.5.1.3 "><p id="p25162958"><a name="p25162958"></a><a name="p25162958"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16847167112050"><a name="p16847167112050"></a><a name="p16847167112050"></a>云服务器管理员帐户的初始登录密码。</p>
-<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员帐户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
+<td class="cellrowborder" valign="top" width="43.04430443044304%" headers="mcps1.2.5.1.4 "><p id="p16847167112050"><a name="p16847167112050"></a><a name="p16847167112050"></a>云服务器管理员账户的初始登录密码。</p>
+<p id="p8742832102714"><a name="p8742832102714"></a><a name="p8742832102714"></a>其中，Windows管理员账户的用户名为Administrator，Linux管理员账户的用户名为root。</p>
 <p id="p11576631102714"><a name="p11576631102714"></a><a name="p11576631102714"></a>建议密码复杂度如下：</p>
 <a name="ul37080817102714"></a><a name="ul37080817102714"></a><ul id="ul37080817102714"><li>长度为8-26位。</li><li>密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?~#*）中的三种。</li></ul>
 <div class="note" id="note65349643112129"><a name="note65349643112129"></a><a name="note65349643112129"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul8134516175112"></a><a name="ul8134516175112"></a><ul id="ul8134516175112"><li>对于Windows弹性云服务器，仅支持密码方式，且密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。</li><li>adminpass和keyname不能同时为空。</li><li>adminpass和keyname不能同时有值。</li></ul>
@@ -193,11 +195,11 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/reinstallos
 
 ## 请求示例<a name="section15863105410364"></a>
 
-```
-POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/reinstallos
-```
+重装云服务器操作系统，重装后采用密钥方式登录鉴权。
 
 ```
+POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/reinstallos
+
 {
     "os-reinstall": {
         "keyname": "KeyPair-350b", 
@@ -216,7 +218,7 @@ POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/reinstallos
 
 ```
 {      
-    "job_id": "70a599e0-31e7-49b7-b260-868f441e862b" 
+    "job_id": "ff80808288d41e1b018990260955686a" 
 }
 ```
 

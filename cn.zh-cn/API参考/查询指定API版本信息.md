@@ -13,7 +13,6 @@
     >如果使用OpenStack-API-Version的请求头，version对应的value取值格式为 compute 微版本号。
     >例如：key为OpenStack-API-Version的时候value需要填compute 2.27。
 
-
 ## 调试<a name="section926243314015"></a>
 
 您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaShowVersion)中调试该接口。
@@ -197,34 +196,40 @@ GET /\{api\_version\}
 
 ## 请求示例<a name="section19667838182144"></a>
 
+查询指定API的版本信息。
+
 ```
-GET https://{endpoint}/v2
+GET https://{endpoint}/v2.1
 ```
 
 ## 响应示例<a name="section20327115469"></a>
 
 ```
 {
- "version": {
-  "min_version": "",
-  "media-types": [{
-   "type": "application/vnd.openstack.compute+json;version=2",
-   "base": "application/json"
-  }],
-  "links": [{
-   "rel": "self",
-   "href": "https://ecs.service.domain.com:443/v2/"
-  },
-  {
-   "rel": "describedby",
-   "href": "http://docs.openstack.org/",
-   "type": "text/html"
-  }],
-  "id": "v2.0",
-  "updated": "1999-02-20T11:33:21Z",
-  "version": "",
-  "status": "SUPPORTED"
- }
+    "version":{
+        "min_version":"2.1",
+        "media-types":[
+            {
+                "type":"application/vnd.openstack.compute+json;version=2.1",
+                "base":"application/json"
+            }
+        ],
+        "links":[
+            {
+                "rel":"self",
+                "href":"https://{endpoint}/v2.1/"
+            },
+            {
+                "rel":"describedby",
+                "href":"http://docs.openstack.org/",
+                "type":"text/html"
+            }
+        ],
+        "id":"v2.1",
+        "updated":"2013-07-23T11:33:21Z",
+        "version":"2.60",
+        "status":"CURRENT"
+    }
 }
 ```
 

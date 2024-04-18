@@ -145,7 +145,6 @@ X-OpenStack-Nova-API-Version: 2.26或Openstack-API-Version: compute 2.26
 
     -   结论：响应消息体中没有"OS-EXT-SRV-ATTR:hostname"字段。
 
-
 -   **使用v2.1接口，加微版本号**
     -   GET: https://_\{Endpoint\}_/v2.1/74610f3a5ad941998e91f076297ecf27/servers/detail
 
@@ -274,7 +273,6 @@ X-OpenStack-Nova-API-Version: 2.26或Openstack-API-Version: compute 2.26
         ```
 
     -   结论：响应消息体中有"OS-EXT-SRV-ATTR:hostname"字段。
-
 
 ## 微版本响应样例<a name="section3389735132414"></a>
 

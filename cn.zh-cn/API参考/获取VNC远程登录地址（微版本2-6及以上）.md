@@ -173,11 +173,11 @@ POST /v2.1/\{project\_id\}/servers/\{server\_id\}/remote-consoles
 
 ## 请求示例<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section37574207"></a>
 
-```
-POST https://{endpoint}/v2.1/13c67a214ced4afb88d911ae4bd5721a/servers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote-consoles
-```
+获取指定云服务器的VNC远程登录地址。
 
 ```
+POST https://{endpoint}/v2.1/13c67a214ced4afb88d911ae4bd5721a/servers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote-consoles
+
 {
    "remote_console" : {
         "type" : "novnc",

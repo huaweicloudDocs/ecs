@@ -14,7 +14,6 @@
 
     Tight VNC下载地址：[https://www.tightvnc.com/download.php](https://www.tightvnc.com/download.php)
 
-
 ## 登录方式概述<a name="section15582182172010"></a>
 
 请根据需要选择登录方式，登录云服务器。
@@ -37,7 +36,7 @@
 <td class="cellrowborder" valign="top" width="14.4014401440144%" headers="mcps1.2.5.1.2 "><p id="p9165355081"><a name="p9165355081"></a><a name="p9165355081"></a>Windows</p>
 </td>
 <td class="cellrowborder" valign="top" width="45.604560456045604%" headers="mcps1.2.5.1.3 "><p id="p2971015171814"><a name="p2971015171814"></a><a name="p2971015171814"></a>（推荐使用）使用控制台提供的RDP文件登录<span id="text5811540161911"><a name="text5811540161911"></a><a name="text5811540161911"></a>云服务器</span>。</p>
-<p id="p1816517551783"><a name="p1816517551783"></a><a name="p1816517551783"></a><a href="使用RDP文件登录Windows云服务器.md">使用RDP文件登录Windows云服务器</a>。</p>
+<p id="p1816517551783"><a name="p1816517551783"></a><a name="p1816517551783"></a><a href="远程登录Windows弹性云服务器（RDP文件方式）.md">远程登录Windows弹性云服务器（RDP文件方式）</a>。</p>
 </td>
 <td class="cellrowborder" rowspan="5" valign="top" width="24.892489248924893%" headers="mcps1.2.5.1.4 "><p id="p196451914171"><a name="p196451914171"></a><a name="p196451914171"></a><span id="text173429117197"><a name="text173429117197"></a><a name="text173429117197"></a>云服务器</span>绑定<span id="text152848152188"><a name="text152848152188"></a><a name="text152848152188"></a>弹性公网IP</span></p>
 <p id="p109678294370"><a name="p109678294370"></a><a name="p109678294370"></a>（通过内网登录<span id="text15207159121916"><a name="text15207159121916"></a><a name="text15207159121916"></a>云服务器</span>时可以不绑定弹性公网IP，例如VPN、云专线等内网网络连通场景。）</p>
@@ -47,30 +46,30 @@
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p6756423191411"><a name="p6756423191411"></a><a name="p6756423191411"></a>使用mstsc方式登录<span id="text12191134417192"><a name="text12191134417192"></a><a name="text12191134417192"></a>云服务器</span>。</p>
 <p id="p16756723121413"><a name="p16756723121413"></a><a name="p16756723121413"></a>在本地主机单击“开始”菜单，输入<strong id="b14756102317142"><a name="b14756102317142"></a><a name="b14756102317142"></a>mstsc</strong>命令，打开远程桌面对话框。</p>
-<p id="p3825173141916"><a name="p3825173141916"></a><a name="p3825173141916"></a><a href="远程桌面连接（MSTSC方式）.md">远程桌面连接（MSTSC方式）</a>。</p>
+<p id="p3825173141916"><a name="p3825173141916"></a><a name="p3825173141916"></a><a href="远程登录Windows弹性云服务器（MSTSC方式）.md">远程登录Windows弹性云服务器（MSTSC方式）</a>。</p>
 </td>
 </tr>
 <tr id="row675410233182"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p1575442311815"><a name="p1575442311815"></a><a name="p1575442311815"></a>Linux</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p17754623141813"><a name="p17754623141813"></a><a name="p17754623141813"></a>安装远程连接工具，例如rdesktop，执行连接命令。</p>
-<p id="p1116112813566"><a name="p1116112813566"></a><a name="p1116112813566"></a><a href="在Linux主机上登录Windows云服务器.md">在Linux主机上登录Windows云服务器</a>。</p>
+<p id="p1116112813566"><a name="p1116112813566"></a><a name="p1116112813566"></a><a href="远程登录Windows弹性云服务器（通过Linux系统主机）.md">远程登录Windows弹性云服务器（通过Linux系统主机）</a>。</p>
 </td>
 </tr>
-<tr id="row20754202301818"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p575416238183"><a name="p575416238183"></a><a name="p575416238183"></a>Mac OS系统</p>
+<tr id="row20754202301818"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p575416238183"><a name="p575416238183"></a><a name="p575416238183"></a>macOS系统</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p4953317122213"><a name="p4953317122213"></a><a name="p4953317122213"></a>安装远程连接工具，例如Microsoft Remote Desktop for Mac在Mac OS系统上登录。</p>
-<p id="p2754523141820"><a name="p2754523141820"></a><a name="p2754523141820"></a><a href="Mac-OS系统登录Windows云服务器.md">Mac OS系统登录Windows云服务器</a>。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p4953317122213"><a name="p4953317122213"></a><a name="p4953317122213"></a>安装远程连接工具，例如Microsoft Remote Desktop for Mac在macOS系统上登录。</p>
+<p id="p2754523141820"><a name="p2754523141820"></a><a name="p2754523141820"></a><a href="远程登录Windows弹性云服务器（通过macOS系统主机）.md">远程登录Windows弹性云服务器（通过macOS系统主机）</a>。</p>
 </td>
 </tr>
 <tr id="row12754112311185"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p1775462381810"><a name="p1775462381810"></a><a name="p1775462381810"></a>移动设备</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p20436453224"><a name="p20436453224"></a><a name="p20436453224"></a>安装远程连接工具，例如Microsoft Remote Desktop在移动设备上登录。</p>
-<p id="p117543231189"><a name="p117543231189"></a><a name="p117543231189"></a><a href="在移动设备上登录Windows云服务器.md">在移动设备上登录Windows云服务器</a>。</p>
+<p id="p117543231189"><a name="p117543231189"></a><a name="p117543231189"></a><a href="远程登录Windows弹性云服务器（通过移动设备）.md">远程登录Windows弹性云服务器（通过移动设备）</a>。</p>
 </td>
 </tr>
 <tr id="row11628142404520"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p5628324104515"><a name="p5628324104515"></a><a name="p5628324104515"></a>Windows</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p1628172413458"><a name="p1628172413458"></a><a name="p1628172413458"></a>使用管理控制台远程登录方式：<a href="Windows弹性云服务器管理控制台远程登录（VNC方式）.md">Windows弹性云服务器管理控制台远程登录（VNC方式）</a>。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p1628172413458"><a name="p1628172413458"></a><a name="p1628172413458"></a>使用管理控制台远程登录方式：<a href="远程登录Windows弹性云服务器（VNC方式）.md">远程登录Windows弹性云服务器（VNC方式）</a>。</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><p id="p4667354174911"><a name="p4667354174911"></a><a name="p4667354174911"></a>不依赖<span id="text1436074610173"><a name="text1436074610173"></a><a name="text1436074610173"></a>弹性公网IP</span></p>
 </td>

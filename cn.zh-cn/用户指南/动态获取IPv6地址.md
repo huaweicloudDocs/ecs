@@ -7,13 +7,13 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
 按照[约束与限制](#zh-cn_topic_0129883696_section196731247131618)中的网络环境要求创建的云服务器，有些不能动态获取到IPv6地址，需要进行相关配置才行。如果云服务器使用的是公共镜像，则支持情况如下：
 
 -   Windows公共镜像默认已开启IPv6动态获取功能，无需配置，文中的[Windows 2012操作系统](#zh-cn_topic_0129883696_section0206266172)和[Windows 2008操作系统](#zh-cn_topic_0129883696_section73943214713)部分供您验证、参考。
--   Linux公共镜像开启动态获取IPv6功能时，需要先判断是否支持IPv6协议栈，再判断是否已开启动态获取IPv6。目前，所有Linux公共镜像均已支持IPv6协议栈，并且Ubuntu 16操作系统已默认开启动态获取IPv6。即Ubuntu 16操作系统无需配置，其他Linux公共镜像需要执行开启动态获取IPv6的操作。
+-   Linux公共镜像开启动态获取IPv6功能时，需要先判断是否支持IPv6协议栈，再判断是否已开启动态获取IPv6。目前，所有Linux公共镜像均已支持IPv6协议栈。
 
 ## 约束与限制<a name="zh-cn_topic_0129883696_section196731247131618"></a>
 
 -   请确保云服务器所在的子网已开启IPv6功能。
 
-    若云服务器所在子网未开启IPv6功能，需参考[开启云服务器所属子网的IPv6](#zh-cn_topic_0129883696_section1967161905116)进行开启。
+    若云服务器所在子网未开启IPv6功能，需参考[开启云服务器的IPv6功能](#zh-cn_topic_0129883696_section1967161905116)进行开启，开启后不允许关闭。
 
 -   请确保云服务器规格支持IPv6功能。
 
@@ -33,7 +33,6 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
     **图 2**  选择“自动分配IPv6地址”<a name="zh-cn_topic_0129883696_fig1422543474910"></a>  
     ![](figures/选择-自动分配IPv6地址.png "选择-自动分配IPv6地址")
 
-
 -   云服务器启动之后动态插拔的网卡不支持IPv6地址动态获取功能。
 -   仅弹性云服务器支持IPv6双栈，裸金属服务器不支持。
 -   同一个网卡上，只能绑定一个IPv6地址。
@@ -44,7 +43,6 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
 -   Linux系统：本文提供了自动配置、手动配置两种方式启用IPv6，推荐您使用自动配置方法，如[表1](#zh-cn_topic_0129883696_table1091729658)所示。
 
     对于CentOS 6.x和Debian操作系统，云服务器内部配置IPv6自动获取功能之后，将该云服务器制作为私有镜像，使用该镜像在非IPv6网络环境中创建云服务器时，由于等待获取IPv6地址超时，导致云服务器启动较慢，此时您可以参考[设置云服务器获取IPv6地址超时时间](#zh-cn_topic_0129883696_section814912855814)操作。
-
 
 **表 1**  不同操作系统启用IPv6操作指导
 
@@ -88,12 +86,16 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
 </tbody>
 </table>
 
-## 开启云服务器所属子网的IPv6<a name="zh-cn_topic_0129883696_section1967161905116"></a>
+## 开启云服务器的IPv6功能<a name="zh-cn_topic_0129883696_section1967161905116"></a>
+
+**开启子网的IPv6网段**
+
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>云服务器所属子网的IPv6功能开启后会自动分配IPv6网段，开启后不允许关闭。
 
 1.  登录管理控制台。
 
-
-1.  在管理控制台左上角单击![](figures/icon-region-16.png)，选择区域和项目。
+1.  在管理控制台左上角单击![](figures/icon-region-22.png)，选择区域和项目。
 2.  单击“![](figures/service-list.jpg)”，选择“计算 \> 弹性云服务器”。
 3.  单击待开启IPv6功能的弹性云服务器，进入详情页面。
 4.  单击“虚拟私有云”名称，进入弹性云服务器所属虚拟私有云列表。
@@ -106,7 +108,21 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
     进入子网详情页面。
 
 7.  在子网详情页，单击“开启IPv6”。
-8.  单击“是”，完成子网IPv6功能的开启。
+8.  单击“是”，完成子网IPv6网段的开启。
+
+**开启云服务器网卡的IPv6功能**
+
+1.  返回弹性云服务器详情页面。
+2.  在“弹性网卡”页签，单击网卡折叠面板右上角的“开启IPv6”。
+
+    **图 3**  开启网卡的IPv6<a name="fig514832513478"></a>  
+    ![](figures/开启网卡的IPv6.png "开启网卡的IPv6")
+
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >若不再使用弹性云服务器的IPv6功能，可以在当前页面单击“关闭IPv6”，关闭网卡的IPv6功能，关闭后该网卡的“IPv6地址”为空。
+    >关闭IPv6后，如果重新开启弹性云服务器的IPv6，在重启云服务器后，需要登录弹性云服务器手动清理IPv6缓存，并重新请求获取IPv6地址。
+
+3.  单击“是”，完成开启网卡的IPv6功能。
 
 ## Windows 2012操作系统<a name="zh-cn_topic_0129883696_section0206266172"></a>
 
@@ -118,35 +134,34 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
 
     -   如果已启用IPv6，则会显示IPv6的地址。
 
-        **图 3**  显示IPv6的地址<a name="zh-cn_topic_0129883696_fig9159201613216"></a>  
+        **图 4**  显示IPv6的地址<a name="zh-cn_topic_0129883696_fig9159201613216"></a>  
         ![](figures/显示IPv6的地址.png "显示IPv6的地址")
 
     -   如果显示只有本地链接IPv6地址，则表示无法动态获取到IPv6地址。请执行[2](#zh-cn_topic_0129883696_li2024825592115)。
 
-        **图 4**  本地链接IPv6地址<a name="zh-cn_topic_0129883696_fig1415910169218"></a>  
+        **图 5**  本地链接IPv6地址<a name="zh-cn_topic_0129883696_fig1415910169218"></a>  
         ![](figures/本地链接IPv6地址.png "本地链接IPv6地址")
 
     -   如果未启用IPv6，则不会显示IPv6的地址。请执行[3](#zh-cn_topic_0129883696_li35521349132511)。
 
-        **图 5**  未启用IPv6<a name="zh-cn_topic_0129883696_fig171591916152113"></a>  
+        **图 6**  未启用IPv6<a name="zh-cn_topic_0129883696_fig171591916152113"></a>  
         ![](figures/未启用IPv6.png "未启用IPv6")
 
         >![](public_sys-resources/icon-note.gif) **说明：** 
-        >Windows公共镜像默认已经配置了IPv6动态获取功能，即回显如[图3](#zh-cn_topic_0129883696_fig9159201613216)所示，无需特殊配置。
-
+        >Windows公共镜像默认已经配置了IPv6动态获取功能，即回显如[图4](#zh-cn_topic_0129883696_fig9159201613216)所示，无需特殊配置。
 
 2.  <a name="zh-cn_topic_0129883696_li2024825592115"></a>配置动态获取IPv6。
     1.  单击“开始 \> 控制面板”。
     2.  单击“网络和共享中心”。
     3.  单击以太网连接。
 
-        **图 6**  以太网连接<a name="zh-cn_topic_0129883696_fig48126812315"></a>  
+        **图 7**  以太网连接<a name="zh-cn_topic_0129883696_fig48126812315"></a>  
         ![](figures/以太网连接.png "以太网连接")
 
     4.  在以太网状态的弹窗中单击左下角的“属性”。
     5.  勾选“Internet协议版本 6 \(TCP/IPv6\)”，然后单击“确定”。
 
-        **图 7**  配置动态获取IPv6<a name="zh-cn_topic_0129883696_fig875054216245"></a>  
+        **图 8**  配置动态获取IPv6<a name="zh-cn_topic_0129883696_fig875054216245"></a>  
         ![](figures/配置动态获取IPv6.png "配置动态获取IPv6")
 
     6.  执行[1](#zh-cn_topic_0129883696_li64771254152011)检查是否已开启动态获取IPv6。
@@ -158,7 +173,7 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
         -   子网前缀长度：64
         -   DNS服务器：推荐使用240c::6666
 
-        **图 8**  在控制台获取IPv6地址<a name="zh-cn_topic_0129883696_fig5267143722717"></a>  
+        **图 9**  在控制台获取IPv6地址<a name="zh-cn_topic_0129883696_fig5267143722717"></a>  
         ![](figures/在控制台获取IPv6地址.png "在控制台获取IPv6地址")
 
     2.  （可选配置）根据操作系统不同请分别执行以下命令。
@@ -168,7 +183,6 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
         **Set-NetIPv6Protocol -RandomizeIdentifiers disabled**
 
     3.  执行[1](#zh-cn_topic_0129883696_li64771254152011)检查是否已开启动态获取IPv6。
-
 
 ## Windows 2008操作系统<a name="zh-cn_topic_0129883696_section73943214713"></a>
 
@@ -180,22 +194,21 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
 
     -   如果已启用IPv6，则会显示IPv6的地址。
 
-        **图 9**  显示IPv6的地址<a name="zh-cn_topic_0129883696_fig15843174118353"></a>  
-        ![](figures/显示IPv6的地址-17.png "显示IPv6的地址-17")
+        **图 10**  显示IPv6的地址<a name="zh-cn_topic_0129883696_fig15843174118353"></a>  
+        ![](figures/显示IPv6的地址-23.png "显示IPv6的地址-23")
 
     -   如果显示只有本地链接IPv6地址，则表示无法动态获取到IPv6地址。请执行[2](#zh-cn_topic_0129883696_li163121855114515)。
 
-        **图 10**  本地链接IPv6地址<a name="zh-cn_topic_0129883696_fig14741755113514"></a>  
-        ![](figures/本地链接IPv6地址-18.png "本地链接IPv6地址-18")
+        **图 11**  本地链接IPv6地址<a name="zh-cn_topic_0129883696_fig14741755113514"></a>  
+        ![](figures/本地链接IPv6地址-24.png "本地链接IPv6地址-24")
 
     -   如果未启用IPv6，则不会显示IPv6的地址。请执行[3](#zh-cn_topic_0129883696_li17876141612467)。
 
-        **图 11**  未启用IPv6<a name="zh-cn_topic_0129883696_fig1176055812351"></a>  
-        ![](figures/未启用IPv6-19.png "未启用IPv6-19")
+        **图 12**  未启用IPv6<a name="zh-cn_topic_0129883696_fig1176055812351"></a>  
+        ![](figures/未启用IPv6-25.png "未启用IPv6-25")
 
         >![](public_sys-resources/icon-note.gif) **说明：** 
-        >Windows公共镜像默认已经配置了IPv6动态获取功能，即回显如[图9](#zh-cn_topic_0129883696_fig15843174118353)所示，无需特殊配置。
-
+        >Windows公共镜像默认已经配置了IPv6动态获取功能，即回显如[图10](#zh-cn_topic_0129883696_fig15843174118353)所示，无需特殊配置。
 
 2.  <a name="zh-cn_topic_0129883696_li163121855114515"></a>配置动态获取IPv6。
     1.  单击“开始 \> 控制面板”。
@@ -204,8 +217,8 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
     4.  右键单击网络连接并选择“属性”。
     5.  勾选“Internet协议版本 6 \(TCP/IPv6\)”，然后单击“确定”。
 
-        **图 12**  配置动态获取IPv6<a name="zh-cn_topic_0129883696_fig1018018532017"></a>  
-        ![](figures/配置动态获取IPv6-20.png "配置动态获取IPv6-20")
+        **图 13**  配置动态获取IPv6<a name="zh-cn_topic_0129883696_fig1018018532017"></a>  
+        ![](figures/配置动态获取IPv6-26.png "配置动态获取IPv6-26")
 
     6.  执行[1](#zh-cn_topic_0129883696_li1183617234192)检查是否已开启动态获取IPv6。
 
@@ -213,17 +226,17 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
     1.  选择“开始 \> 控制面板 \> 网络连接 \> 本地连接”。
     2.  选择“属性”，确认勾选以下选项后单击“安装”。
 
-        **图 13**  启用和配置IPv6<a name="zh-cn_topic_0129883696_fig3215821216479"></a>  
+        **图 14**  启用和配置IPv6<a name="zh-cn_topic_0129883696_fig3215821216479"></a>  
         ![](figures/启用和配置IPv6.png "启用和配置IPv6")
 
     3.  选择“协议”，然后单击“添加”。
 
-        **图 14**  添加协议<a name="zh-cn_topic_0129883696_fig142302587297"></a>  
+        **图 15**  添加协议<a name="zh-cn_topic_0129883696_fig142302587297"></a>  
         ![](figures/添加协议.png "添加协议")
 
     4.  在网络协议列表中选择“Microsoft TCP/IP版本 6”，然后单击“确定”。
 
-        **图 15**  网络协议列表<a name="zh-cn_topic_0129883696_fig9233896302"></a>  
+        **图 16**  网络协议列表<a name="zh-cn_topic_0129883696_fig9233896302"></a>  
         ![](figures/网络协议列表.png "网络协议列表")
 
     5.  （可选配置）根据操作系统不同请分别执行以下命令。
@@ -240,7 +253,6 @@ IPv6的使用，可以有效弥补IPv4网络地址资源有限的问题。如果
 
     6.  执行[1](#zh-cn_topic_0129883696_li1183617234192)检查是否已开启动态获取IPv6。
 
-
 ## Linux操作系统（自动配置启用IPv6）<a name="zh-cn_topic_0129883696_section106971627556"></a>
 
 ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动态获取IPv6地址。其中，xxx表示工具系列：rhel或debian。
@@ -255,33 +267,33 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
 
     **ip addr**
 
-    -   如果没有开启IPv6协议栈，则只能看到IPv4地址，如下图所示，请参考[2](#zh-cn_topic_0129883696_li4950165016451)先开启IPv6协议栈。
+    -   如果没有开启IPv6协议栈，则只能看到IPv4地址，如下图所示，请参考[设置云服务器获取IPv6地址超时时间](#zh-cn_topic_0129883696_section814912855814)先开启IPv6协议栈。
 
-        **图 16**  云服务器未开启IPv6协议栈<a name="zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig620715214343"></a>  
+        **图 17**  云服务器未开启IPv6协议栈<a name="zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig620715214343"></a>  
         ![](figures/云服务器未开启IPv6协议栈.png "云服务器未开启IPv6协议栈")
 
     -   如果已开启IPv6协议栈，则可以看到LLA地址（fe80开头）。
 
-        **图 17**  云服务器已开启IPv6协议栈<a name="zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig1176932510308"></a>  
+        **图 18**  云服务器已开启IPv6协议栈<a name="zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig1176932510308"></a>  
         ![](figures/云服务器已开启IPv6协议栈.png "云服务器已开启IPv6协议栈")
 
     -   如果已开启IPv6协议栈并且已获取到IPv6地址，则会看到如下地址：
 
-        **图 18**  云服务器已开启IPv6协议栈并且已获取到IPv6地址<a name="zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig785442117429"></a>  
+        **图 19**  云服务器已开启IPv6协议栈并且已获取到IPv6地址<a name="zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig785442117429"></a>  
         ![](figures/云服务器已开启IPv6协议栈并且已获取到IPv6地址.png "云服务器已开启IPv6协议栈并且已获取到IPv6地址")
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >Linux公共镜像均已开启IPv6协议栈，如[图17](#zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig1176932510308)所示；Ubuntu 16公共镜像不仅已开启IPv6协议栈，而且可以获取到IPv6地址，如[图18](#zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig785442117429)所示，无需特殊配置。
+    >Linux公共镜像均已开启IPv6协议栈，如[图18](#zh-cn_topic_0129883696_zh-cn_topic_0129883696_fig1176932510308)所示；
 
-2.  <a name="zh-cn_topic_0129883696_li4950165016451"></a>开启Linux云服务器IPv6协议栈。
+2.  开启Linux云服务器IPv6协议栈。
     1.  执行如下命令，确认内核是否支持IPv6协议栈。
 
         **sysctl -a | grep ipv6**
 
         -   如果有输出信息，表示内核支持IPv6协议栈。
-        -   如果没有任何输出，说明内核不支持IPv6协议栈，需要执行[2.b](#zh-cn_topic_0129883696_zh-cn_topic_0129883696_li193875248395)加载IPv6模块。
+        -   如果没有任何输出，说明内核不支持IPv6协议栈，需要执行[2.b](#zh-cn_topic_0129883696_li193875248395)加载IPv6模块。
 
-    2.  <a name="zh-cn_topic_0129883696_zh-cn_topic_0129883696_li193875248395"></a>执行以下命令，加载IPv6模块。
+    2.  执行以下命令，加载IPv6模块。
 
         **modprobe ipv6**
 
@@ -318,7 +330,7 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
         </tr>
         <tr id="zh-cn_topic_0129883696_row38451248121114"><td class="cellrowborder" valign="top" width="22.31223122312231%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0129883696_p78450485119"><a name="zh-cn_topic_0129883696_p78450485119"></a><a name="zh-cn_topic_0129883696_p78450485119"></a>Debian</p>
         </td>
-        <td class="cellrowborder" valign="top" width="34.233423342334234%" headers="mcps1.2.4.1.2 "><a name="zh-cn_topic_0129883696_ul16899164014137"></a><a name="zh-cn_topic_0129883696_ul16899164014137"></a><ul id="zh-cn_topic_0129883696_ul16899164014137"><li>Ubuntu 16/18/20</li><li>Debian 8/9/10</li></ul>
+        <td class="cellrowborder" valign="top" width="34.233423342334234%" headers="mcps1.2.4.1.2 "><a name="zh-cn_topic_0129883696_ul16899164014137"></a><a name="zh-cn_topic_0129883696_ul16899164014137"></a><ul id="zh-cn_topic_0129883696_ul16899164014137"><li>Ubuntu 16/18</li><li>Debian 8/9/10</li></ul>
         </td>
         <td class="cellrowborder" valign="top" width="43.45434543454345%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0129883696_p17845104815119"><a name="zh-cn_topic_0129883696_p17845104815119"></a><a name="zh-cn_topic_0129883696_p17845104815119"></a><a href="https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/ipv6/ipv6-setup-debian" target="_blank" rel="noopener noreferrer">https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/ipv6/ipv6-setup-debian</a></p>
         </td>
@@ -342,8 +354,6 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
         >-   如需对所有网卡配置动态获取IPv6地址，命令为**./ipv6-setup-**_xxx_，即不带参数。
         >-   如需查询工具的用法，请执行命令**./ipv6-setup-**_xxx_ **--help**。
 
-
-
 ## Linux操作系统（手动配置启用IPv6）<a name="zh-cn_topic_0129883696_section7426172116710"></a>
 
 >![](public_sys-resources/icon-caution.gif) **注意：** 
@@ -355,21 +365,21 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
 
     -   如果没有开启IPv6协议栈，则只能看到IPv4地址，如下图所示，请参考[2](#zh-cn_topic_0129883696_li615511220439)先开启IPv6协议栈。
 
-        **图 19**  未开启IPv6协议栈<a name="zh-cn_topic_0129883696_fig620715214343"></a>  
+        **图 20**  未开启IPv6协议栈<a name="zh-cn_topic_0129883696_fig620715214343"></a>  
         ![](figures/未开启IPv6协议栈.png "未开启IPv6协议栈")
 
     -   如果已开启IPv6协议栈，则可以看到LLA地址（fe80开头）。
 
-        **图 20**  已开启IPv6协议栈<a name="zh-cn_topic_0129883696_fig1176932510308"></a>  
+        **图 21**  已开启IPv6协议栈<a name="zh-cn_topic_0129883696_fig1176932510308"></a>  
         ![](figures/已开启IPv6协议栈.png "已开启IPv6协议栈")
 
     -   如果已开启IPv6协议栈并且已获取到IPv6地址，则会看到如下地址：
 
-        **图 21**  已开启IPv6协议栈并且已获取到IPv6地址<a name="zh-cn_topic_0129883696_fig785442117429"></a>  
+        **图 22**  已开启IPv6协议栈并且已获取到IPv6地址<a name="zh-cn_topic_0129883696_fig785442117429"></a>  
         ![](figures/已开启IPv6协议栈并且已获取到IPv6地址.png "已开启IPv6协议栈并且已获取到IPv6地址")
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >Linux公共镜像均已开启IPv6协议栈，如[图20](#zh-cn_topic_0129883696_fig1176932510308)所示；Ubuntu 16公共镜像不仅已开启IPv6协议栈，而且可以获取到IPv6地址，如[图21](#zh-cn_topic_0129883696_fig785442117429)所示，无需特殊配置。
+    >Linux公共镜像均已开启IPv6协议栈，如[图21](#zh-cn_topic_0129883696_fig1176932510308)所示；
 
 2.  <a name="zh-cn_topic_0129883696_li615511220439"></a>开启Linux云服务器IPv6协议栈。
     1.  执行如下命令，确认内核是否支持IPv6协议栈。
@@ -392,12 +402,8 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
         **sysctl -p**
 
 3.  手动配置启用IPv6。操作系统不同，步骤有所差别。
-    -   Ubuntu操作系统云服务器配置动态获取IPv6。
-
-        >![](public_sys-resources/icon-note.gif) **说明：** 
-        >Ubuntu 18.04和20.04请执行以下操作步骤；Ubuntu 16.04操作系统已默认启用IPv6，不需要做任何配置操作。
-
-        1.  执行以下命令，进入“/etc/netpaln/”。
+    -   Ubuntu 18.04/20.04操作系统云服务器配置动态获取IPv6。
+        1.  执行以下命令，进入“/etc/netplan/”。
 
             **cd /etc/netplan**
 
@@ -405,7 +411,7 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
 
             **ls**
 
-            **图 22**  查询配置文件名<a name="zh-cn_topic_0129883696_fig1217211410225"></a>  
+            **图 23**  查询配置文件名<a name="zh-cn_topic_0129883696_fig1217211410225"></a>  
             ![](figures/查询配置文件名.png "查询配置文件名")
 
         3.  执行以下命令，编辑“01-network-manager-all.yaml”配置文件。
@@ -420,7 +426,7 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
               dhcp6: true
             ```
 
-            **图 23**  修改结果<a name="zh-cn_topic_0129883696_fig948715183116"></a>  
+            **图 24**  修改结果<a name="zh-cn_topic_0129883696_fig948715183116"></a>  
             ![](figures/修改结果.png "修改结果")
 
             修改完成后保存退出。
@@ -428,6 +434,64 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
         5.  执行以下命令，使更改生效。
 
             **sudo netplan apply**
+
+    -   Ubuntu 22.04操作系统云服务器配置动态获取IPv6。
+        1.  执行以下命令，进入“/etc/netplan/”。
+
+            **cd /etc/netplan**
+
+        2.  执行以下命令，查询配置文件名。
+
+            **ls**
+
+            **图 25**  查询配置文件名<a name="zh-cn_topic_0129883696_fig61711817155214"></a>  
+            ![](figures/查询配置文件名-27.png "查询配置文件名-27")
+
+        3.  执行以下命令，编辑“01-netcfg.yaml”配置文件。
+
+            **vi 01-netcfg.yaml**
+
+        4.  在“01-netcfg.yaml”中增加如下内容，注意yaml文件格式及缩进：
+
+            ```
+            ethernets:
+             eth0:
+              dhcp6: true
+            ```
+
+            **图 26**  修改结果<a name="zh-cn_topic_0129883696_fig1317261705219"></a>  
+            ![](figures/修改结果-28.png "修改结果-28")
+
+            修改完成后保存退出。
+
+        5.  执行以下命令，使更改生效。
+
+            **sudo netplan apply**
+
+        6.  执行以下命令，编辑“/etc/NetworkManager/NetworkManager.conf”文件。
+
+            **vi /etc/NetworkManager/NetworkManager.conf**
+
+        7.  在“NetworkManager.conf”中增加如下内容，注意文件格式及缩进：
+
+            ```
+            [main]
+            plugins=ifupdown,keyfile
+            dhcp=dhclient
+            
+            [ifupdown]
+            managed=true
+            
+            [device]
+            wifi.scan-rand-mac-address=no
+            ```
+
+            **图 27**  修改结果<a name="fig1358010810419"></a>  
+            ![](figures/修改结果-29.png "修改结果-29")
+
+        8.  执行以下命令，使配置生效。
+
+            **systemctl restart NetworkManager**
 
     -   Debian操作系统云服务器配置动态获取IPv6。
         1.  编辑“/etc/network/interfaces”文件，使之包含以下内容：
@@ -494,7 +558,7 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
 
                 **service ip6tables save**
 
-                **图 24**  命令示例<a name="zh-cn_topic_0129883696_fig858811198222"></a>  
+                **图 28**  命令示例<a name="zh-cn_topic_0129883696_fig858811198222"></a>  
                 ![](figures/命令示例.png "命令示例")
 
         4.  （可选配置）CentOS 7/CentOS 8系列需要将扩展网卡的IPv6 LLA地址模式修改为EUI64。
@@ -502,7 +566,7 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
 
                 **nmcli con**
 
-                **图 25**  查看网卡信息<a name="zh-cn_topic_0129883696_fig1174640133111"></a>  
+                **图 29**  查看网卡信息<a name="zh-cn_topic_0129883696_fig1174640133111"></a>  
                 ![](figures/查看网卡信息.png "查看网卡信息")
 
             2.  将eth1的IPv6 LLA地址模式按以下命令修改为EUI64：
@@ -539,8 +603,6 @@ ipv6-setup-xxx工具能为开启IPv6协议栈的Linux操作系统自动配置动
 
         CoreOS 10.10.5无需特殊配置。
 
-
-
 ## 设置云服务器获取IPv6地址超时时间<a name="zh-cn_topic_0129883696_section814912855814"></a>
 
 CentOS 6.x和Debian操作系统的云服务器内部配置IPv6自动获取功能之后，将该云服务器制作为私有镜像，使用该镜像在非IPv6网络环境中创建云服务器时，由于等待获取IPv6地址超时，导致云服务器启动较慢，您可以参考本节操作设置获取IPv6地址超时时间为30s，然后再重新制作私有镜像。
@@ -565,12 +627,11 @@ CentOS 6.x和Debian操作系统的云服务器内部配置IPv6自动获取功能
 
     1.  按“i”进入编辑模式，增加延迟命令timeout，修改点如下图所示。
 
-        **图 26**  修改点1<a name="zh-cn_topic_0129883696_fig754774645719"></a>  
+        **图 30**  修改点1<a name="zh-cn_topic_0129883696_fig754774645719"></a>  
         ![](figures/修改点1.png "修改点1")
 
-        **图 27**  修改点2<a name="zh-cn_topic_0129883696_fig14593974597"></a>  
+        **图 31**  修改点2<a name="zh-cn_topic_0129883696_fig14593974597"></a>  
         ![](figures/修改点2.png "修改点2")
-
 
 -   Debian 8.2.0/8.8.0
     1.  执行以下命令编辑“network-pre.conf”文件。
@@ -584,12 +645,10 @@ CentOS 6.x和Debian操作系统的云服务器内部配置IPv6自动获取功能
         TimeoutStartSec=30
         ```
 
-
 -   Debian 9.0
     1.  执行以下命令编辑“networking.service”文件。
 
         **vi /etc/system/system/network-online.target.wants/networking.service**
 
     2.  按“i”进入编辑模式，将TimeoutStartSec=5min改为TimeoutStartSec=30。
-
 

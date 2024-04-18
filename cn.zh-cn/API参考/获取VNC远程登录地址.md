@@ -173,11 +173,11 @@ POST /v1/\{project\_id\}/cloudservers/\{server\_id\}/remote\_console
 
 ## 请求示例<a name="zh-cn_topic_0092803065_ecs_03_0601_zh-cn_topic_0057973179_section37574207"></a>
 
-```
-POST https://{endpoint}/v1/13c67a214ced4afb88d911ae4bd5721a/cloudservers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote_console
-```
+获取ID为“47bc79ae-df61-4ade-9197-283a74e5d70e”的云服务器的VNC远程登录地址。
 
 ```
+POST https://{endpoint}/v1/13c67a214ced4afb88d911ae4bd5721a/cloudservers/47bc79ae-df61-4ade-9197-283a74e5d70e/remote_console
+
 {
     "remote_console": {
         "protocol": "vnc",
@@ -193,7 +193,7 @@ POST https://{endpoint}/v1/13c67a214ced4afb88d911ae4bd5721a/cloudservers/47bc79a
    "remote_console": {
         "type": "novnc",
         "protocol": "vnc",
-        "url": "https://nova-novncproxy.az1.dc1.domainname.com:8002/vnc_auto.html?token=0fda3eca-8232-4249-a69f-44ce8ab31be6&lang=EN&tLength=70"
+        "url": "https://nova-novncproxy.az1.dc1.domainname.com:8002/vnc_auto.html?token=0fda3eca-8232-4249-****-************&lang=EN&tLength=70"
     }
 }
 ```
